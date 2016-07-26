@@ -1,0 +1,13 @@
+module editor/fsml-Outliner
+
+imports
+  
+  include/fsml
+  lib/runtime/editor/outline-library
+  lib/runtime/editor/origins
+  editor/fsml-Outliner.generated
+
+rules
+  
+  to-outline-label = fail
+  

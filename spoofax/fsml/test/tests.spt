@@ -1,0 +1,47 @@
+language fsml
+
+test Determinisim not ok [[
+	initial state stateA {
+  		eventI / actionI -> stateB;
+  		eventI / actionII -> stateC;
+	}
+	state stateB { }
+	state stateC { }	
+]] 2 error
+
+test Ids not ok [[
+	initial state stateA {
+  		eventI/actionI -> stateZ;
+	}
+	state stateA {
+  		eventII/actionII -> stateZ;
+	}
+	state stateZ { }
+]] 2 error
+
+test Initial not ok 1 [[
+	state stateA {
+  		eventI/actionI -> stateB;
+	}
+	state stateB {
+  		eventII/actionII -> stateA;
+	}
+]] 1 error
+
+test Initial not ok 2 [[
+	initial state stateA {
+  		eventI/actionI -> stateC;
+	}
+	initial state stateB { 
+  		eventI/actionII -> stateC;
+	}
+	state stateC {}
+]] 1 error
+
+test Reachability not ok [[
+	initial state stateA {
+  		eventI/actionI -> stateB;
+	}
+	state stateB { }
+	state stateC { }
+]] 1 warning

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/fsml/fsml.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/fsml/runtime/fsml.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/fsml/sandbox/fsml.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/fsml.build/fsml.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/fsml.test/fsml.test.msd" folder="" />
+    </projectModules>
+  </component>
+</project>

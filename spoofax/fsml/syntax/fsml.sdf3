@@ -1,0 +1,26 @@
+module fsml
+
+imports
+
+	Common
+
+context-free start-symbols
+  
+	Fsm
+
+context-free syntax
+  
+Fsm.Fsm = State *
+
+State.State = <<Initial ?> state <ID> {
+	<Transition *>
+}>
+
+Transition.Transition = <<Input> <Action ?> <Target ?>;>
+  
+Initial.Initial = <initial>
+  
+Input.Input = <<ID>>
+Action.Action = </ <ID>>
+Target.Target = <-\> <ID>>
+   	

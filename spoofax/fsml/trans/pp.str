@@ -1,0 +1,80 @@
+module pp
+
+imports
+
+	include/fsml
+	include/fsml-parenthesize
+	libstratego-gpp
+	lib/runtime/refactoring/-
+  	runtime/tmpl/pp
+	src-gen/pp/fsml-pp
+  	src-gen/pp/Common-pp
+
+rules
+	
+	pp-fsml-string:
+		ast ->	
+			<box2text-string(|120)> x
+		with
+			x := <pp-fsm> ast
+		
+  	pp-partial-fsml-string:
+  		ast -> ast
+	      
+  	pp-debug:
+  		ast -> ast
+  	
+	pp-fsm:
+		Fsm(states) ->
+			[H([], [states'])]
+		with
+			states' := <pp-V-list(pp-state)> states
+			
+	pp-state:
+		State(initial, id_, transition*) -> 
+			[H([], [initial', S("state"), id_', V([], [S("{"), Z([], [transitions', S("}")])])])]
+		with
+			initial' := <pp-option(pp-initial)> initial;
+			id_' := <prettyprint-ID> id_;
+			transitions' := <pp-V-list(pp-transition)> transition*
+			
+	pp-initial:
+		Initial() -> [H([], [S("initial")])]
+		
+	pp-transition:
+		Transition(input, action, target) -> [H([], [input', action', target', S(";")])]
+		with
+			input' := <pp-input> input;
+			action' := <pp-option(pp-action)> action;
+			target' := <pp-option(pp-target)> target
+			
+	pp-input:
+		Input(id_) -> [H([], [id_'])]
+		with
+			id_' := <prettyprint-ID> id_
+
+	pp-action:
+		Action(id_) -> [H([], [S("/"), id_'])]
+		with
+			id_' := <prettyprint-ID> id_
+			
+	pp-target:
+		Target(id_) -> [H([], [S("->"), id_'])]
+		with
+			id_' := <prettyprint-ID> id_			
+		
+
+
+	
+	
+rules
+  
+  /**
+  * Given an old AST and a new AST, pretty-prints the new AST while presevering 
+  * layout (e.g. whitespacing and comments) associated with the old AST.
+  *
+  * Example:
+  *   new-text := <construct-textual-change> (old-ast, new-ast)
+  */
+  construct-textual-change = construct-textual-change(pp-partial-fsml-string, parenthesize, override-reconstruction, resugar)
+
