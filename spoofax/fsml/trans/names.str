@@ -1,0 +1,140 @@
+module names
+
+imports
+  lib/runtime/nabl/-
+  lib/runtime/task/-
+  lib/runtime/properties/-
+  lib/runtime/types/-
+  lib/runtime/relations/-
+  lib/runtime/editor/-
+  include/fsml
+
+
+signature
+  constructors
+    NablNsFsm        : Namespace
+    NablNsState      : Namespace
+    NablNsTransition : Namespace
+    NablNsInput      : Namespace
+
+
+signature
+  constructors
+    
+
+
+rules
+
+  nabl-custom-properties(add-properties) =
+    ![] ; add-properties
+
+
+rules
+
+  nabl-scoping-site =
+    ?Fsm(_)
+    ; nabl-scope(|[NablNsState()])
+
+  nabl-get-scope =
+    ?Fsm(_) ; ![NablNsState()]
+
+  nabl-get-scope =
+    ?State(_, 'id, _)
+    ; ![NablNsTransition()]
+
+  nabl-get-name :
+    State(_, 'id, _) -> 'id
+
+  nabl-name-apply(s) =
+    State(id, s, id)
+
+  nabl-def-site(child-uris__, sibl-uris__, implicits__|lang__, ctx__, uniques__, uri__, states__) =
+    ?State(_, 'id, _)
+    ; origin-track-forced(
+        State(
+          id
+        , nabl-def(
+            ?c-uri1__
+          , ?s-uri1__
+          | lang__
+          , ctx__
+          , uniques__
+          , uri__
+          , uri__
+          , NablNsState()
+          , Unique()
+          , Current()
+          , [NablNsTransition()]
+          , []
+          )
+        , id
+        )
+      |
+      )
+    ; match(child-uris__|c-uri1__)
+    ; match(sibl-uris__|s-uri1__)
+    ; match(implicits__|[])
+
+  nabl-get-name :
+    Transition(input, _, _) -> input
+
+  nabl-name-apply(s) =
+    Transition(s, id, id)
+
+  nabl-def-site(child-uris__, sibl-uris__, implicits__|lang__, ctx__, uniques__, uri__, states__) =
+    ?Transition(input, _, _)
+    ; origin-track-forced(
+        Transition(
+          nabl-def(
+            ?c-uri1__
+          , ?s-uri1__
+          | lang__
+          , ctx__
+          , uniques__
+          , uri__
+          , uri__
+          , NablNsTransition()
+          , Unique()
+          , Current()
+          , []
+          , []
+          )
+        , id
+        , id
+        )
+      |
+      )
+    ; match(child-uris__|c-uri1__)
+    ; match(sibl-uris__|s-uri1__)
+    ; match(implicits__|[])
+
+  nabl-get-name :
+    Target('id) -> 'id
+
+  nabl-name-apply(s) =
+    Target(s)
+
+  nabl-use-site(|lang__, ctx__, uniques__, uris__, states__) =
+    ?Target('id)
+    ; origin-track-forced(
+        Target(
+          nabl-use(
+          | lang__
+          , ctx__
+          , uniques__
+          , uris__
+          , [ <{:
+                 id
+                 ; !UseCandidate(
+                      NablNsState()
+                    , []
+                    , Current()
+                    , True()
+                    , []
+                    )
+               }>
+            ]
+          )
+        )
+      |
+      )

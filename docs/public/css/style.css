@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+a {
+    color: #a61717;
+    text-decoration: none;
+}
+
+a[href^='http']:after {
+    background: url('../img/external_link.svg') no-repeat;
+    color: #202020;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    content: '';
+}
+
+h1 {
+    margin: 0;
+}
+
+html {
+    color: #202020;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin: auto;
+}
+
+@media (min-width: 80rem) {
+    .content {
+        padding: 1rem;
+        width: 80rem;
+    }
+}
+
+@media (min-width: 50rem) {
+    .content {
+        padding: 1rem;
+        width: 50rem;
+    }
+}
+
+.header {
+    height: 33vh;
+}
+
+.header.header-img {
+    align-items: center;
+    justify-content: center;
+    background: url('../img/header.jpg') no-repeat center;
+    background-size: 100% auto;
+    box-shadow: 0 0 1rem #202020 inset;
+    border-bottom: .3rem solid #202020;
+    display: flex;
+    width: 100%;
+}
+
+.header.header-text {
+    text-shadow: 0 0 1rem;
+    mix-blend-mode: multiply;
+    height: 7vh;
+    font-size: 7vh;
+    pointer-events: none;
+}
+
+.material-icons {
+    font-size: inherit;
+}
+
+.nav {
+    position: relative;
+    z-index: 1000;
+}
+
+.nav.nav-wrapper {
+    height: 3rem;
+    background: #202020;
+}
+
+.nav.nav-button {
+    background: #202020;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 3rem;
+    outline: none;
+    padding: 0;
+}
+
+.nav.nav-links {
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 1.5rem 0;
+    text-align: center;
+    left: 0;
+    transition: all .5s ease-in-out;
+    transform-origin: top;
+    top: 3em;
+    width: 100%;
+}
+
+.nav.nav-link {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 1s ease-in-out;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+.nav.nav-links-shown .nav.nav-link {
+    transition: all .1s ease-in-out;
+    transform: rotateX(0deg);
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(1) {
+    transform: rotateX(0deg);
+    transition-delay: .05s;
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(2) {
+    transform: rotateX(0deg);
+    transition-delay: .1s;
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(3) {
+    transform: rotateX(0deg);
+    transition-delay: .15s;
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(4) {
+    transform: rotateX(0deg);
+    transition-delay: .2s;
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(5) {
+    transform: rotateX(0deg);
+    transition-delay: .25s;
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(6) {
+    transform: rotateX(0deg);
+    transition-delay: .3s;
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(7) {
+    transform: rotateX(0deg);
+    transition-delay: .35s;
+}
+
+.nav.nav-links-shown {
+    transform: rotateX(0deg);
+    border-radius: 0 0 0 0;
+}
+
+.nav.nav-links-hidden {
+    transform: rotateX(90deg);
+    border-radius: 0 0 50% 50%;
+}
+
+.nav.nav-links-hidden .nav.nav-link {
+    transform: rotateX(90deg);
+}

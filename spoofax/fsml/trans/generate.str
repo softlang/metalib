@@ -1,0 +1,90 @@
+module generate
+
+imports
+	
+	include/fsml
+	
+rules
+	generate-java:
+		(selected, position, ast, path, project-path) -> (filename, result)
+		with
+			filename := <guarantee-extension(|"java")> path;
+			result	 := <to-java> selected
+			
+rules
+	
+	to-java:
+    	Fsm(state*) ->
+	    $[
+	    	package de.sschauss.fsml;
+    		
+    		public class Sample {
+    			
+    			public static Fsm fsm;
+    			
+    			static {
+    				fsm = new Fsm();
+    				
+    				[state'*]    				
+				}
+    			
+    		} 
+	    ]
+		with
+      		state'* := <to-java> state*
+	     
+	to-java:
+		State(Some(intial), id_, transition*) ->
+	    $[
+    	fsm.getStates().add(new State(true, "[id_])");     
+ 	[transition'*]]
+	    with transition'* := <to-java> transition*
+	    
+	to-java:
+		State(None(), id_, transition*) ->
+	    $[
+		fsm.getStates().add(new State(false, "[id_])");	      
+  	[transition'*]]
+	    with transition'* := <to-java> transition*
+ 	
+ 	to-java:
+ 		Transition(input, Some(action), Some(target)) ->
+ 		$[fsm.getTransitions().add(new Transition([input'], [action'], [target']));
+ 		]
+ 		with input' := <to-java> input
+		with action' := <to-java> action
+		with target' := <to-java> target
+ 		
+ 	to-java:
+ 		Transition(input, Some(action), None()) ->
+ 		$[fsm.getTransitions().add(new Transition([input'], [action'], null));
+		]
+ 		with input' := <to-java> input
+		with action' := <to-java> action
+ 		
+ 	to-java:
+ 		Transition(input, None(), Some(target)) ->
+ 		$[fsm.getTransitions().add(new Transition([input'], null, [target']));
+		]
+ 		with input' := <to-java> input
+		with target' := <to-java> target
+ 		
+ 	to-java:
+ 		Transition(input, None(), None()) ->
+ 		$[fsm.getTransitions().add(new Transition([input'], null, null));
+		]
+ 		with input' := <to-java> input
+
+	to-java:
+		Input(input) -> $["[input]"]
+
+	to-java:
+		Action(action) -> $["[action]"]
+
+	to-java:
+		Target(target) -> $["[target]"]
+	        
+	to-java:
+    	t* -> <map(to-java)> t*
+    	
+    	

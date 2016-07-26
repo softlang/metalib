@@ -1,0 +1,23 @@
+module names
+
+imports
+	
+	include/fsml
+	
+namespaces
+	Fsm State Transition Input
+	
+binding rules	
+
+	Fsm(_):		
+		scopes State
+		
+	State(_, id, _):
+		defines unique State id
+		scopes Transition  
+		
+	Transition(input, _, _):
+		defines unique Transition input
+		
+	Target(id):
+		refers to State id

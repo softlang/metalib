@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+<body>
+<nav class="nav nav-wrapper">
+    <button class="nav nav-button" onclick="toggleNav()">
+        <i class="material-icons">menu</i>
+    </button>
+    <div class="nav nav-links nav-links-hidden">
+        <a href="{{ site.baseurl }}/index.html" class="nav nav-link">
+            Home
+        </a>
+        {% for technology in site.technologies %}
+        <a href="{{ site.baseurl }}{{ technology.url }}" class="nav nav-link">
+            {{ technology.title }}
+        </a>
+        {% endfor %}
+    </div>
+</nav>
+<header class="header">
+    <div class="header header-img">
+        <h1 class="header header-text">{{ page.title }}</h1>
+    </div>
+</header>
+<div class="content">
+    {{ content }}
+</div>
+</body>
+<script>
+    document
+        .querySelectorAll('.header.header-img')
+        .forEach(function (headerImg) {
+            headerImg.addEventListener('mouseenter', function (event) {
+                event.target.querySelectorAll('.header.header-text').forEach(function (headerText) {
+                    headerText.style.transition = 'none';
+                });
+            });
+            headerImg.addEventListener('mousemove', function (event) {
+                var target = event.target;
+                var clientWidth = target.clientWidth;
+                var clientHeight = target.clientHeight;
+                var x = event.x / clientWidth - 1 / 2;
+                var y = event.y / clientHeight - 1 / 2;
+                target.querySelectorAll('.header.header-text').forEach(function (headerText) {
+                    headerText.style.textShadow = -2 * x + 'rem ' + -2 * y + 'rem 1rem';
+                });
+            });
+            headerImg.addEventListener('mouseout', function (event) {
+                event.target.querySelectorAll('.header.header-text').forEach(function (headerText) {
+                    headerText.style.transition = 'all 1s ease-in-out';
+                    headerText.style.textShadow = 0 + ' ' + 0 + ' 1rem';
+                });
+            });
+        });
+    function toggleNav() {
+        document
+            .querySelectorAll('.nav.nav-links')
+            .forEach(function (navLinks) {
+                if (navLinks.classList.contains('nav-links-hidden')) {
+                    navLinks.classList.remove('nav-links-hidden');
+                    navLinks.classList.add('nav-links-shown');
+                } else {
+                    navLinks.classList.add('nav-links-hidden');
+                    navLinks.classList.remove('nav-links-shown');
+                }
+            });
+    }
+</script>
+</html>

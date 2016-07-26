@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="all" name="fsml">
+    
+    <!-- Key input modules -->
+    <property name="sdfmodule" value="fsml"/>
+	<property name="metasdfmodule" value="Stratego-fsml"/>
+	<property name="esvmodule" value="fsml"/>
+	<property name="strmodule" value="fsml"/>
+	<property name="ppmodule" value="fsml-pp"/>
+	<property name="sigmodule" value="fsml-sig"/> 
+	
+    <!-- Project directories -->
+    <property location="trans" name="trans"/>
+    <property location="editor/java" name="src-gen"/>
+    <property location="editor/java" name="src-dirs"/>
+    <property location="include" name="include"/>
+    <property location="lib" name="lib"/>
+    <property location="target/classes" name="build"/>
+    <property location="src-gen" name="sdf-src-gen"/>
+	<property location="${sdf-src-gen}/pp" name="pp"/>
+	<property location="${sdf-src-gen}/signatures" name="signatures"/>
+	<property location="${include}" name="lib-gen"/>
+	<property location="src-gen/syntax" name="syntax"/>
+	<property location="${syntax}" name="syntax.rel" relative="yes"/>
+	<property location="trans" name="trans.rel" relative="yes"/>
+	<property location="${include}" name="include.rel" relative="yes"/>
+	<property location="${lib-gen}" name="lib-gen.rel" relative="yes"/>
+    
+    <!-- Imports -->
+    <property name="build.sdf.imports" value=""/>
+    <property name="build.stratego.args" value="                     --library                     -I &quot;${trans}&quot;                     -I &quot;${basedir}&quot;                     -la stratego-lib -la stratego-sglr -la stratego-gpp -la stratego-xtc -la stratego-aterm -la stratego-parallel"/>
+    
+    <!-- Optional: external .def and .jar locations
+    <property name="externaldef" location="syntax/${sdfmodule}.def"/>
+    <property name="externaljar" value="../lib.jar"/>
+    <property name="externaljarflags" value="-la org.lib"/>
+    -->
+
+    <!-- Environment configuration for command-line builds -->
+    <condition else="" property="build.strategoxt.sdf" value="${eclipse.spoofaximp.nativeprefix}">
+        <isset property="eclipse.spoofaximp.nativeprefix"/>
+    </condition>
+    <property name="nativepath" value="${build.strategoxt.sdf}/"/>
+	<property location="${user.home}/.nix-profile/bin" name="build.strategoxt.sdf"/>
+		
+    <!-- used for building inside of Eclipse -->
+    <import file="build.generated.xml"/>   
+
+    <!-- Main target -->
+    <target depends="spoofaximp.default.ctree" name="all"/>
+    <target depends="generate-sources-ctree" name="generate-sources"/>
+    <target depends="package-ctree" name="package"/>
+</project>
