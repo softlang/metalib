@@ -1,0 +1,50 @@
+---
+layout: default
+title: "metalib"
+---
+
+The metalib is collection of implementations of the FSML (Finite State Machine Language)
+using metaprogramming languages and language workbenches. This documentation tries to reduce
+the effort of learning and understanding different metaprogramming techniques.
+
+{% highlight text %}
+initial state locked {
+    ticket / collect -> unlocked;
+    pass / alarm -> exception;
+}
+
+state unlocked {
+    ticket / eject;
+    pass -> locked;
+}
+
+state exception {
+    ticket / eject;
+    pass;
+    mute;
+    release -> locked;
+}
+{% endhighlight %}
+
+<hr>
+
+<a href="http://www.softlang.org/book">Software languages - A slightly Haskell-biased introduction</a>
+
+<hr>
+
+<div class="toc">
+    <ul class="post">
+        {% for item in site.technologies do %}
+
+        <li class="post-title">
+            <a href="{{ site.baseurl }}{{ item.url }}">
+                {{ item.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+
+
