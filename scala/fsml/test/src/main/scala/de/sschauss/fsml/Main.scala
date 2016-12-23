@@ -1,7 +1,5 @@
 package de.sschauss.fsml
 
-import de.sschauss.fsml.macros.Fsm
-
 object Main extends App {
 
   @Fsm
@@ -12,12 +10,12 @@ object Main extends App {
     }
 
     state unlocked {
-      ticket / action;
+      ticket / eject;
       pass -> locked;
     }
 
     state exception {
-      ticket / action;
+      ticket / eject;
       pass;
       mute;
       release -> locked;

@@ -1,16 +1,14 @@
 package de.sschauss.fsml
 
-import scala.annotation.tailrec
+import scala.annotation.{StaticAnnotation, compileTimeOnly}
+import scala.language.experimental.macros
 
-package object macros {
+object FsmMacro {
 
-  import de.sschauss.fsml.macros.ast.{FsmNode, StateNode, TransitionNode}
-
-  import scala.language.experimental.macros
   import scala.language.{implicitConversions, postfixOps}
   import scala.reflect.macros.whitebox
 
-  def fsmMacro(c: whitebox.Context)(annottees: c.Tree*): c.Tree = (new {
+  def impl(c: whitebox.Context)(annottees: c.Tree*): c.Tree = (new {
 
     import c.universe._
 
@@ -18,9 +16,9 @@ package object macros {
 
     implicit val unliftStateDefinition: Unliftable[StateNode] = Unliftable {
       case q"initial state ${id: Name} { ..${transitions: List[TransitionNode]} }" =>
-        StateNode(true, id, transitions)
+        StateNode(initial = true, id, transitions)
       case q"state ${id: Name} { ..${transitions: List[TransitionNode]} }" =>
-        StateNode(false, id, transitions)
+        StateNode(initial = false, id, transitions)
     }
 
     implicit val unliftTransitionExpression: Unliftable[TransitionNode] = Unliftable {
@@ -52,52 +50,22 @@ package object macros {
     def apply(): c.Tree = {
       val q"object $objectName extends ..$parents { ..${states: List[StateNode]} }" = annottees.head
       val fsmNode = FsmNode(states)
-      check(c)(fsmNode)
+      Checker.check(c)(fsmNode)
       q"""
         object $objectName extends ..$parents {
-          def apply() = ${TermName(getInitialState(fsmNode).id)}
+          def apply() = ${
+        TermName((fsmNode.states filter {
+          _.initial
+        } head) id)
+      }
           ..$states
         }
       """
     }
-
   }) ()
+}
 
-  private def getInitialStates(fsmNode: FsmNode): List[StateNode] = fsmNode.states filter { _.initial }
-  private def getInitialState(fsmNode: FsmNode): StateNode = getInitialStates(fsmNode) head
-
-  private def check(c: whitebox.Context)(fsm: FsmNode): Unit =
-    List[whitebox.Context => FsmNode => Unit](checkSingleInitial, checkReachability) foreach {
-      _ (c)(fsm)
-    }
-
-  private def checkSingleInitial(c: whitebox.Context)(fsm: FsmNode): Unit =
-    fsm.states count {
-      _.initial
-    } match {
-      case 0 => c.error(c.enclosingPosition, "No initial state defined")
-      case 1 =>
-      case _ => c.error(c.enclosingPosition, "Multiple initial states defined")
-    }
-
-  private def checkReachability(c: whitebox.Context)(fsmNode: FsmNode): Unit =
-    (fsmNode.states toSet) diff checkReachability(fsmNode, Set(), getInitialStates(fsmNode) toSet) toList match {
-      case Nil =>
-      case states => states foreach {
-        s => c.error(c.enclosingPosition, s"unreachable state ${s.id}")
-      }
-    }
-
-  @tailrec private def checkReachability(fsm: FsmNode, visitedStates: Set[StateNode], statesToVisit: Set[StateNode]): Set[StateNode] =
-    statesToVisit toList match {
-      case Nil => visitedStates
-      case state :: states => checkReachability(fsm, visitedStates + state, (state.transitions flatMap {
-        _.target
-      } flatMap { targetID =>
-        fsm.states filter {
-          _.id == targetID
-        }
-      } toSet) union (states toSet) diff (visitedStates + state))
-    }
-
+@compileTimeOnly("macro annotation for the FSML")
+class Fsm extends StaticAnnotation {
+  def macroTransform(annottees: Any*): Any = macro FsmMacro.impl
 }
