@@ -114,49 +114,53 @@ body {
 .nav.nav-link {
     color: white;
     font-size: 1.5rem;
-    transition: all 1s ease-in-out;
     transform-origin: top;
+    transition: all .5s ease-in-out;
     transform: rotateX(90deg);
 }
 
 .nav.nav-links-shown .nav.nav-link {
-    transition: all .1s ease-in-out;
     transform: rotateX(0deg);
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(1) {
     transform: rotateX(0deg);
-    transition-delay: .05s;
+    transition-delay: .2s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(2) {
     transform: rotateX(0deg);
-    transition-delay: .1s;
+    transition-delay: .25s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(3) {
     transform: rotateX(0deg);
-    transition-delay: .15s;
+    transition-delay: .3s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(4) {
     transform: rotateX(0deg);
-    transition-delay: .2s;
+    transition-delay: .35s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(5) {
     transform: rotateX(0deg);
-    transition-delay: .25s;
+    transition-delay: .4s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(6) {
     transform: rotateX(0deg);
-    transition-delay: .3s;
+    transition-delay: .45s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(7) {
     transform: rotateX(0deg);
-    transition-delay: .35s;
+    transition-delay: .5s;
+}
+
+.nav.nav-links-shown .nav.nav-link:nth-child(7) {
+    transform: rotateX(0deg);
+    transition-delay: .55s;
 }
 
 .nav.nav-links-shown {
