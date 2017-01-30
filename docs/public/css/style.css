@@ -24,6 +24,7 @@ html {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
+    text-align: justify;
 }
 
 body {
@@ -47,6 +48,20 @@ body {
         padding: 1rem;
         width: 50rem;
     }
+}
+
+.hero {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 1rem;
+}
+
+.hero-element {
+    margin: .5rem;
+}
+
+.hero-element:first-child {
+    font-weight: 900;
 }
 
 .header {
@@ -77,7 +92,7 @@ body {
 }
 
 .nav {
-    position: relative;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -105,7 +120,7 @@ body {
     padding: 1.5rem 0;
     text-align: center;
     left: 0;
-    transition: all .5s ease-in-out;
+    transition: all .56s ease-in-out;
     transform-origin: top;
     top: 3em;
     width: 100%;
@@ -114,9 +129,8 @@ body {
 .nav.nav-link {
     color: white;
     font-size: 1.5rem;
+    transition: all .56s ease-in-out;
     transform-origin: top;
-    transition: all .5s ease-in-out;
-    transform: rotateX(90deg);
 }
 
 .nav.nav-links-shown .nav.nav-link {
@@ -124,43 +138,31 @@ body {
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(1) {
-    transform: rotateX(0deg);
-    transition-delay: .2s;
+    transition-delay: .08s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(2) {
-    transform: rotateX(0deg);
-    transition-delay: .25s;
+    transition-delay: .12s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(3) {
-    transform: rotateX(0deg);
-    transition-delay: .3s;
+    transition-delay: .16s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(4) {
-    transform: rotateX(0deg);
-    transition-delay: .35s;
+    transition-delay: .20s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(5) {
-    transform: rotateX(0deg);
-    transition-delay: .4s;
+    transition-delay: .24s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(6) {
-    transform: rotateX(0deg);
-    transition-delay: .45s;
+    transition-delay: .28s;
 }
 
 .nav.nav-links-shown .nav.nav-link:nth-child(7) {
-    transform: rotateX(0deg);
-    transition-delay: .5s;
-}
-
-.nav.nav-links-shown .nav.nav-link:nth-child(7) {
-    transform: rotateX(0deg);
-    transition-delay: .55s;
+    transition-delay: .32s;
 }
 
 .nav.nav-links-shown {
@@ -170,9 +172,38 @@ body {
 
 .nav.nav-links-hidden {
     transform: rotateX(90deg);
+    transition-delay: .08s;
     border-radius: 0 0 50% 50%;
 }
 
 .nav.nav-links-hidden .nav.nav-link {
     transform: rotateX(90deg);
+}
+
+.nav.nav-links-hidden .nav.nav-link:nth-child(1) {
+    transition-delay: .24s;
+}
+
+.nav.nav-links-hidden .nav.nav-link:nth-child(2) {
+    transition-delay: .20s;
+}
+
+.nav.nav-links-hidden .nav.nav-link:nth-child(3) {
+    transition-delay: .16s;
+}
+
+.nav.nav-links-hidden .nav.nav-link:nth-child(4) {
+    transition-delay: .12s;
+}
+
+.nav.nav-links-hidden .nav.nav-link:nth-child(5) {
+    transition-delay: .08s;
+}
+
+.nav.nav-links-hidden .nav.nav-link:nth-child(6) {
+    transition-delay: .04s;
+}
+
+.nav.nav-links-hidden .nav.nav-link:nth-child(7) {
+    transition-delay: 0.0s;
 }
