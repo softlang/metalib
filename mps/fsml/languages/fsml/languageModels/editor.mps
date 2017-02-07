@@ -2,7 +2,7 @@
 <model ref="r:d133ee2a-5f23-4996-9f69-d87bbf01dce7(fsml.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -79,7 +79,7 @@
       <node concept="3EZMnI" id="3V9BInOlhpK" role="b$wch">
         <node concept="3F0ifn" id="7k5EH56o29M" role="3EZMnx" />
         <node concept="3F2HdR" id="3V9BInOlhpR" role="3EZMnx">
-          <ref role="1NtTu8" to="go7p:3V9BInOl6xO" />
+          <ref role="1NtTu8" to="go7p:3V9BInOl6xO" resolve="states" />
           <node concept="2iRkQZ" id="3V9BInOlhpT" role="2czzBx" />
         </node>
         <node concept="2iRkQZ" id="3V9BInOlhpN" role="2iSdaV" />
@@ -93,14 +93,14 @@
     <ref role="1XX52x" to="go7p:3V9BInOkYn2" resolve="State" />
     <node concept="3EZMnI" id="3V9BInOmofP" role="2wV5jI">
       <node concept="3F1sOY" id="3V9BInOmohV" role="3EZMnx">
-        <ref role="1NtTu8" to="go7p:3V9BInOl6y0" />
+        <ref role="1NtTu8" to="go7p:3V9BInOl6y0" resolve="initial" />
       </node>
       <node concept="3F0ifn" id="3V9BInOmofR" role="3EZMnx">
         <property role="3F0ifm" value="state" />
       </node>
       <node concept="b$f91" id="3V9BInOpTiu" role="3EZMnx">
         <node concept="3F2HdR" id="3V9BInOpTiJ" role="b$wch">
-          <ref role="1NtTu8" to="go7p:3V9BInOl6y2" />
+          <ref role="1NtTu8" to="go7p:3V9BInOl6y2" resolve="transitions" />
           <node concept="2iRkQZ" id="3V9BInOpTiL" role="2czzBx" />
         </node>
         <node concept="3F0A7n" id="3V9BInOpTiA" role="b$u42">
@@ -132,7 +132,7 @@
     <ref role="1XX52x" to="go7p:3V9BInOl6dB" resolve="Transition" />
     <node concept="3EZMnI" id="3V9BInOmxza" role="2wV5jI">
       <node concept="3F1sOY" id="3V9BInOmxzk" role="3EZMnx">
-        <ref role="1NtTu8" to="go7p:3V9BInOl6yh" />
+        <ref role="1NtTu8" to="go7p:3V9BInOl6yh" resolve="input" />
       </node>
       <node concept="3F0ifn" id="3V9BInOmxzq" role="3EZMnx">
         <property role="3F0ifm" value="/" />
@@ -143,7 +143,7 @@
                 <node concept="2OqwBi" id="3V9BInOmyUp" role="2Oq$k0">
                   <node concept="pncrf" id="3V9BInOmyxB" role="2Oq$k0" />
                   <node concept="3TrEf2" id="3V9BInOmHX$" role="2OqNvi">
-                    <ref role="3Tt5mk" to="go7p:3V9BInOl6yj" />
+                    <ref role="3Tt5mk" to="go7p:3V9BInOl6yj" resolve="action" />
                   </node>
                 </node>
                 <node concept="3x8VRR" id="3V9BInOmIGz" role="2OqNvi" />
@@ -153,7 +153,7 @@
         </node>
       </node>
       <node concept="3F1sOY" id="3V9BInOmxzB" role="3EZMnx">
-        <ref role="1NtTu8" to="go7p:3V9BInOl6yj" />
+        <ref role="1NtTu8" to="go7p:3V9BInOl6yj" resolve="action" />
       </node>
       <node concept="3F0ifn" id="3V9BInOmxzL" role="3EZMnx">
         <property role="3F0ifm" value="-&gt;" />
@@ -164,7 +164,7 @@
                 <node concept="2OqwBi" id="3V9BInOmIWT" role="2Oq$k0">
                   <node concept="pncrf" id="3V9BInOmISv" role="2Oq$k0" />
                   <node concept="3TrEf2" id="3V9BInOmJbW" role="2OqNvi">
-                    <ref role="3Tt5mk" to="go7p:3V9BInOl6ym" />
+                    <ref role="3Tt5mk" to="go7p:3V9BInOl6ym" resolve="target" />
                   </node>
                 </node>
                 <node concept="3x8VRR" id="3V9BInOmJUM" role="2OqNvi" />
@@ -175,7 +175,7 @@
       </node>
       <node concept="2iRfu4" id="3V9BInOmxzd" role="2iSdaV" />
       <node concept="1iCGBv" id="3V9BInOmxzX" role="3EZMnx">
-        <ref role="1NtTu8" to="go7p:3V9BInOl6ym" />
+        <ref role="1NtTu8" to="go7p:3V9BInOl6ym" resolve="target" />
         <node concept="1sVBvm" id="3V9BInOmxzZ" role="1sWHZn">
           <node concept="3F0A7n" id="3V9BInOmx$a" role="2wV5jI">
             <property role="1Intyy" value="true" />

@@ -210,9 +210,6 @@
             </node>
           </node>
         </node>
-        <node concept="3aABGB" id="7k5EH56o2e6" role="3aBvqh">
-          <property role="TrG5h" value="asd" />
-        </node>
       </node>
     </node>
     <node concept="2YIFZL" id="3Gk1ZKpF5gy" role="jymVt">

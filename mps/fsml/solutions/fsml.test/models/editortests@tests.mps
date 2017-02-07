@@ -25,9 +25,6 @@
         <property id="1932269937152561478" name="useLabelSelection" index="OXtK3" />
         <property id="1229432188737" name="isLastPosition" index="ZRATv" />
       </concept>
-      <concept id="5097124989038916362" name="jetbrains.mps.lang.test.structure.TestInfo" flags="ng" index="2XOHcx">
-        <property id="5097124989038916363" name="projectPath" index="2XOHcw" />
-      </concept>
       <concept id="1225989773458" name="jetbrains.mps.lang.test.structure.InvokeIntentionStatement" flags="nn" index="1MFPAf">
         <reference id="1225989811227" name="intention" index="1MFYO6" />
       </concept>
@@ -132,9 +129,6 @@
         <ref role="1MFYO6" to="1pii:3V9BInOy7tk" resolve="Make_Initial" />
       </node>
     </node>
-  </node>
-  <node concept="2XOHcx" id="1uZsEKvtuLZ">
-    <property role="2XOHcw" value="/home/simon/dev/langtechs/mps/fsml" />
   </node>
 </model>
 
