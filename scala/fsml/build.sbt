@@ -17,3 +17,7 @@ lazy val core = project
 lazy val test = project
   .settings(commonSettings: _*)
   .dependsOn(core)
+
+lazy val app = project
+  .settings(commonSettings: _*)
+  .dependsOn(core)

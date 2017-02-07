@@ -1,4 +1,4 @@
-package de.sschauss.fsml
+package org.softlang.fsml
 
 import scala.annotation.{StaticAnnotation, compileTimeOnly}
 import scala.language.experimental.macros
@@ -22,14 +22,14 @@ object FsmMacro {
     }
 
     implicit val unliftTransitionExpression: Unliftable[TransitionNode] = Unliftable {
-      case q"${input: Name} / ${action: Name} -> ${target: Name}" =>
-        TransitionNode(input, Some(action), Some(target))
-      case q"${input: Name} / ${action: Name}" =>
-        TransitionNode(input, Some(action), None)
-      case q"${input: Name} -> ${target: Name}" =>
-        TransitionNode(input, None, Some(target))
-      case q"${input: Name}" =>
-        TransitionNode(input, None, None)
+      case q"${event: Name} / ${action: Name} -> ${target: Name}" =>
+        TransitionNode(event, Some(action), Some(target))
+      case q"${event: Name} / ${action: Name}" =>
+        TransitionNode(event, Some(action), None)
+      case q"${event: Name} -> ${target: Name}" =>
+        TransitionNode(event, None, Some(target))
+      case q"${event: Name}" =>
+        TransitionNode(event, None, None)
     }
 
     implicit val liftStateNode: Liftable[StateNode] = Liftable { s =>
@@ -37,14 +37,14 @@ object FsmMacro {
     }
 
     implicit val liftTransitionNode: Liftable[TransitionNode] = Liftable {
-      case TransitionNode(input, Some(action), Some(target)) =>
-        q"def ${TermName(s"$input")} = { println($action); ${TermName(target)} }"
-      case TransitionNode(input, Some(action), None) =>
-        q"def ${TermName(s"$input")} = { println($action); this }"
-      case TransitionNode(input, None, Some(target)) =>
-        q"def ${TermName(s"$input")} = ${TermName(target)}"
-      case TransitionNode(input, None, None) =>
-        q"def ${TermName(input)} = this"
+      case TransitionNode(event, Some(action), Some(target)) =>
+        q"def ${TermName(s"$event")} = { println($action); ${TermName(target)} }"
+      case TransitionNode(event, Some(action), None) =>
+        q"def ${TermName(s"$event")} = { println($action); this }"
+      case TransitionNode(event, None, Some(target)) =>
+        q"def ${TermName(s"$event")} = ${TermName(target)}"
+      case TransitionNode(event, None, None) =>
+        q"def ${TermName(event)} = this"
     }
 
     def apply(): c.Tree = {

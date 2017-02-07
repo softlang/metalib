@@ -1,4 +1,4 @@
-package de.sschauss.fsml
+package org.softlang.fsml
 
 import scala.annotation.tailrec
 import scala.language.postfixOps

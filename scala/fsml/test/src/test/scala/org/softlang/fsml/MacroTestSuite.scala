@@ -1,4 +1,5 @@
-package de.sschauss.fsml
+package org.softlang.fsml
+
 import org.scalatest.{FlatSpec, Matchers}
 
 class MacroTestSuite extends FlatSpec with Matchers {

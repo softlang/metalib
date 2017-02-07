@@ -1,4 +1,4 @@
-package de.sschauss.fsml
+package org.softlang.fsml
 
 object Main extends App {
 
