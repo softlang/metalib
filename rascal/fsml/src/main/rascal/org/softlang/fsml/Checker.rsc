@@ -1,9 +1,9 @@
-module main::rascal::de::sschauss::fsml::Checker
+module main::rascal::org::softlang::fsml::Checker
 
 import Prelude;
 import util::Maybe;
-import main::rascal::de::sschauss::fsml::ConcreteSyntax;
-import main::rascal::de::sschauss::fsml::Util;
+import main::rascal::org::softlang::fsml::ConcreteSyntax;
+import main::rascal::org::softlang::fsml::Util;
 
 public set[Message] checkConstraints(Fsm f) =
 	checkSingleInitial(f) +
@@ -38,8 +38,8 @@ private set[Message] checkResolvable(Fsm f) {
 	set[Id] stateIds = {};
 	visit(f) {
 		case State s: stateIds += s.id;
-		case (Transition)`<Input _> / <Action _> -\> <Id id>;`: referencedIds += id;
-		case (Transition)`<Input _> -\> <Id id>;`: referencedIds += id;
+		case (Transition)`<Event _> / <Action _> -\> <Id id>;`: referencedIds += id;
+		case (Transition)`<Event _> -\> <Id id>;`: referencedIds += id;
 	}
 	return {error("unresolved state <id>", id@\loc) | id <- referencedIds - stateIds};
 }
@@ -48,11 +48,11 @@ private set[Message] checkStateDeterministic(Fsm f) {
 	set[Message] messages = {};
 	visit(f) {
 		case State s: {
-			list[Input] inputs = [];
+			list[Event] events = [];
 			visit(s.transitions) {
-				case Input i: inputs += i;
+				case Event i: events += i;
 			};
-			messages += ({error("input <i> already defined in state <s.id>", i@\loc) | i <- getDuplicates(inputs)});
+			messages += ({error("event <i> already defined in state <s.id>", i@\loc) | i <- getDuplicates(events)});
 		}
 	};
 	return messages;
@@ -77,9 +77,9 @@ private set[Message] checkReachable(Fsm f) {
 private rel[State, State] getStateRelation(Fsm f, State state) {
 	rel[State, State] relation = {};
 	visit(state){
-		case (Transition)`<Input _> -\> <Id id>;`: 
+		case (Transition)`<Event _> -\> <Id id>;`: 
 			if(just(target) := getStateId(id, f)){relation += <state, target>;}			
-		case (Transition)`<Input _> / <Action _> -\> <Id id>;`:
+		case (Transition)`<Event _> / <Action _> -\> <Id id>;`:
 			if(just(target) := getStateId(id, f)){relation += <state, target>;}
 	}
 	return relation;

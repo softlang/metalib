@@ -1,9 +1,9 @@
-module main::rascal::de::sschauss::fsml::PrettyPrinter
+module main::rascal::org::softlang::fsml::PrettyPrinter
 
 import List;
 import Prelude;
 import String;
-import main::rascal::de::sschauss::fsml::ConcreteSyntax;
+import main::rascal::org::softlang::fsml::ConcreteSyntax;
 
 public void ppFsm(Tree tree, loc location) = writeFile(location, trim(ppFsm(tree)));
 
@@ -22,14 +22,15 @@ private str ppState((State)`state <Id id> { <Transition* transitions> }`) =
 	'}
 	'";
 	
-private str ppTransition((Transition)`<Input input>;`) =
-	"<input>;";
+private str ppTransition((Transition)`<Event event>;`) =
+	"<event>;";
 
-private str ppTransition((Transition)`<Input input> / <Action action>;`) =
-	"<input> / <action>;";
+private str ppTransition((Transition)`<Event event> / <Action action>;`) =
+	"<event> / <action>;";
 
-private str ppTransition((Transition)`<Input input> -\> <Id id>;`) =
-	"<input> -\> <id>;";
+private str ppTransition((Transition)`<Event event> -\> <Id id>;`) =
+	"<event> -\> <id>;";
 
-private str ppTransition((Transition)`<Input input> / <Action action> -\> <Id id>;`) =
-	"<input> / <action> -\> <id>;";
+private str ppTransition((Transition)`<Event event> / <Action action> -\> <Id id>;`) =
+	"<event> / <action> -\> <id>;";
+	

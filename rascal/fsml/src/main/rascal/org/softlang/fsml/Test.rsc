@@ -1,8 +1,8 @@
-module main::rascal::de::sschauss::fsml::Test
+module main::rascal::org::softlang::fsml::Test
 
 import Prelude;
-import main::rascal::de::sschauss::fsml::ConcreteSyntax;
-import main::rascal::de::sschauss::fsml::Checker;
+import main::rascal::org::softlang::fsml::ConcreteSyntax;
+import main::rascal::org::softlang::fsml::Checker;
 
 test bool initialNotOk2() {
 	Fsm fsm = parse(#Fsm, |project://fsml/src/main/resources/initialNotOk1.fsml|);
@@ -26,7 +26,7 @@ test bool resolutionNotOk() {
 
 test bool determinismNotOk() {
 	Fsm fsm = parse(#Fsm, |project://fsml/src/main/resources/determinismNotOk.fsml|);
-	return {H*, error("input eventI already defined in state stateA", L), T*} := checkConstraints(fsm);
+	return {H*, error("event eventI already defined in state stateA", L), T*} := checkConstraints(fsm);
 }
 
 test bool reachabilityNotOk() {

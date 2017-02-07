@@ -1,8 +1,8 @@
-module main::rascal::de::sschauss::fsml::Outliner
+module main::rascal::org::softlang::fsml::Outliner
 
 import Prelude;
 import util::IDE;
-import main::rascal::de::sschauss::fsml::ConcreteSyntax;
+import main::rascal::org::softlang::fsml::ConcreteSyntax;
 
 public node outlineFsm(Fsm f){
 	node outline = "states"([outlineState(s) | s <- f.states]);
@@ -16,7 +16,7 @@ private node outlineState(State s) {
 }
 
 private node outlineTransition(Transition t) {
-	node outline = "<t.input>"();
+	node outline = "<t.event>"();
 	outline@\loc = t@\loc;
 	return outline;
 }

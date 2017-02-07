@@ -1,9 +1,9 @@
-module main::rascal::de::sschauss::fsml::Generator
+module main::rascal::org::softlang::fsml::Generator
 
 import List;
 import Prelude;
 import String;
-import main::rascal::de::sschauss::fsml::ConcreteSyntax;
+import main::rascal::org::softlang::fsml::ConcreteSyntax;
 
 public void generateJava(Tree tree, loc location) =
 	writeFile(|<location.scheme>://<location.authority>/src/gen/java/org/softlang/fluent/<getFileName(location)>.java|, fsmToJava(tree, location));
@@ -30,14 +30,15 @@ private str stateToJava(State state) =
 	".state(\"<state.id>\")
 	'	<intercalate("\n", [transitionToJava(t) | t <- state.transitions])>";
 	
-private str transitionToJava((Transition)`<Input input>;`) =
-	".transition(\"<input>\", null, null)";
+private str transitionToJava((Transition)`<Event event>;`) =
+	".transition(\"<event>\", null, null)";
 	
-private str transitionToJava((Transition)`<Input input> / <Action action>;`) = 
-	".transition(\"<input>\", \"<action>\", null)";
+private str transitionToJava((Transition)`<Event event> / <Action action>;`) = 
+	".transition(\"<event>\", \"<action>\", null)";
 	
-private str transitionToJava((Transition)`<Input input> -\> <Id id>;`) = 
-	".transition(\"<input>\", null, \"<id>\")";
+private str transitionToJava((Transition)`<Event event> -\> <Id id>;`) = 
+	".transition(\"<event>\", null, \"<id>\")";
 	
-private str transitionToJava((Transition)`<Input input> / <Action action> -\> <Id id>;`) = 
-	".transition(\"<input>\", \"<action>\", \"<id>\")";
+private str transitionToJava((Transition)`<Event event> / <Action action> -\> <Id id>;`) = 
+	".transition(\"<event>\", \"<action>\", \"<id>\")";
+	
