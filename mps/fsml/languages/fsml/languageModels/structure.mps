@@ -75,7 +75,7 @@
     </node>
   </node>
   <node concept="1TIwiD" id="3V9BInOl6dn">
-    <property role="TrG5h" value="Input" />
+    <property role="TrG5h" value="Event" />
     <property role="EcuMT" value="4524322011154244439" />
     <node concept="PrWs8" id="3V9BInOl6du" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -86,10 +86,10 @@
     <property role="EcuMT" value="4524322011154244455" />
     <node concept="1TJgyj" id="3V9BInOl6yh" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="input" />
+      <property role="20kJfa" value="event" />
       <property role="20lbJX" value="1" />
       <property role="IQ2ns" value="4524322011154245777" />
-      <ref role="20lvS9" node="3V9BInOl6dn" resolve="Input" />
+      <ref role="20lvS9" node="3V9BInOl6dn" resolve="Event" />
     </node>
     <node concept="1TJgyj" id="3V9BInOl6yj" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
