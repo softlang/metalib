@@ -1,0 +1,21 @@
+grammar org.softlang.metalib.xtext.fsml.Fsml with org.eclipse.xtext.common.Terminals
+
+generate fsml "http://www.softlang.org/metalib/xtext/fsml/Fsml" 
+
+/**
+ * A FSM is a collection of multiple states
+ */
+FSM:
+	states+=FSMState*;
+
+	/**
+ * A state can be optional, has a name and is composed of multiple transitions
+ */
+FSMState:
+	(initial?='initial')? 'state' name=ID '{' transitions+=FSMTransition* '}';
+
+	/**
+ * A transition has an input, an optional action and an optional target state
+ */
+FSMTransition:
+	input=ID ('/' action=ID)? ('->' target=[FSMState])? ';';
