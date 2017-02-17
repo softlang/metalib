@@ -7,7 +7,7 @@
   * Install `Sirius 4.1`
 
 ## Import and run the Code
-* Go to `File > Import... > General > Existing Projects into Workspace` and import the `org.softlang.metalib.sirius.fsml.model`, `org.softlang.metalib.sirius.fsml.model.edit`, `org.softlang.metalib.sirius.fsml.model.editor` and `org.softlang.metalib.sirius.fsml.viewpoint` projects. Wait for *Eclipse* to index and build all the projects.  
+* Go to `File > Import... > General > Existing Projects into Workspace` and import the `org.softlang.metalib.sirius.fsml.*` and `org.softlang.metalib.sirius.fsml.model.*` projects. Wait for *Eclipse* to index and build all the projects.  
 * Go to `Run > Run Configurations...` and create a new Eclipse Application. Hereafter, press the *Run* button. The new *Eclipse* starting up now contains all the plugins required to edit and view the *FSML* files.  
 
 ## Work with the Editor
