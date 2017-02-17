@@ -19,4 +19,4 @@
 * Go to `New > Other... > Example EMF Model Creation Wizards` and create a new *Fsml Model* with *Model Object* chosen to be *FSM*.
 * Right-click on the project and check *Fsml* in `Viewpoints Selection`.
 * Navigate in the project explorer starting from the new Fsml file to the contained *FSM* entry. If *FSM* contains a nested *State Diagram* open it, otherwise create it first by right-clicking on *FSM* and selecting `New Representation > new State Diagram`.
-* Use *F2* to rename a state or transition. A transitions label follows the pattern input/action. Create nodes and transitions by using the tools in the right panel. Press *Del* to delete.
+* Use *F2* to rename a state or transition. A transition's label follows the pattern input/action. Create nodes and transitions by using the tools in the right panel. Press *Del* to delete.
