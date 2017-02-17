@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Fsml" version="11.1.1.201610211630">
+  <ownedViewpoints name="Fsml">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="fsml.FSM" label="State Diagram" initialisation="true" domainClass="fsml.FSM" enablePopupBars="true">
+      <metamodel href="http://www.softlang.org/metalib/sirius/fsml/model/Fsml#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="fsml.FSMState" deletionDescription="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@toolSections.0/@ownedTools[name='fsml.FSMState.delete']" labelDirectEdit="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@toolSections.0/@ownedTools[name='fsml.FSMState.editlabel']" domainClass="fsml.FSMState">
+          <conditionnalStyles predicateExpression="[self.initial._not()/]">
+            <style xsi:type="style:EllipseNodeDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="[self.initial/]">
+            <style xsi:type="style:DotDescription" showIcon="false" labelAlignment="RIGHT" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="fsml.FSMTransition" labelDirectEdit="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@toolSections.0/@ownedTools[name='fsml.FSMTransition.editlabel']" sourceMapping="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']" targetMapping="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']" targetFinderExpression="[self.target/]" sourceFinderExpression="[self.eContainer()/]" domainClass="fsml.FSMTransition" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="[self.input + '/' + self.action/]">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="fsml.tools" label="FSML Tools">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="fsml.FSMState.createInitial" label="Create Initial Node" nodeMappings="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="fsml.FSMState" referenceName="states">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['undefined'/]"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="initial" valueExpression="[true/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="fsml.FSMState.create" label="Create Node" nodeMappings="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="fsml.FSMState" referenceName="states">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['unnamed'/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="fsml.FSMState.editlabel" inputLabelExpression="[self.name/]">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="fsml.FSMTransition.create" label="Create Transition" inverseSelectionOrder="true" edgeMappings="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="fsml.FSMTransition" referenceName="transitions">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="[target/]"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="input" valueExpression="['undefined'/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="fsml.FSMTransition.editlabel" inputLabelExpression="[self.input + '/' + self.action/]">
+            <mask mask="{0}/{1}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="input" valueExpression="[arg0/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="action" valueExpression="[arg1/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="fsml.FSMState.delete">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]">
+                <subModelOperations xsi:type="tool_1:For" expression="[self.eContainer().oclAsType(FSM).states/]">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[i/]">
+                    <subModelOperations xsi:type="tool_1:For" expression="[self.oclAsType(FSMState).transitions/]" iteratorName="p">
+                      <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[p/]">
+                        <subModelOperations xsi:type="tool_1:If" conditionExpression="[self.oclAsType(FSMTransition).target = element/]">
+                          <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.softlang.metalib.sirius.fsml.viewpoint.Services"/>
+  </ownedViewpoints>
+</description:Group>

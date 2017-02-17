@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Fsml -->
+      <package
+            uri="http://www.softlang.org/metalib/sirius/fsml/model/Fsml"
+            class="org.softlang.metalib.sirius.fsml.model.fsml.FsmlPackage"
+            genModel="model/Fsml.genmodel"/>
+   </extension>
+
+</plugin>
