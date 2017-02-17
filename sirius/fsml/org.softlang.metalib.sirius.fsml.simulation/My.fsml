@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsml:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsml="http://www.softlang.org/metalib/sirius/fsml/model/Fsml">
+  <states initial="true" name="Closed">
+    <transitions input="coin" action="open" target="//@states.1"/>
+  </states>
+  <states name="Open">
+    <transitions input="enter" action="closing" target="//@states.0"/>
+  </states>
+</fsml:FSM>
