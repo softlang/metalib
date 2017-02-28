@@ -2,8 +2,8 @@ module main::rascal::org::softlang::fsml::ConcreteSyntax
 
 extend lang::std::Layout;
 
-start syntax Fsm = @Foldabel fsm: State* states;
-syntax State = @Foldable state: "initial"? "state" Id id "{" Transition* transitions "}"; 
+start syntax Fsm = fsm: State* states;
+syntax State = @foldable state: "initial"? "state" Id id "{" Transition* transitions "}"; 
 syntax Transition = transition: Event event ("/" Action action)? ("-\>" Id id)? ";";
 
 syntax Id = Name;
