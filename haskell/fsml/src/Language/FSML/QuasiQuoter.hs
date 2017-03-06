@@ -5,6 +5,7 @@ module Language.FSML.QuasiQuoter where
 import Data.Char
 import Data.List
 import Language.FSML.Ast         as Ast
+import Language.FSML.Checker     (check)
 import Language.FSML.Parser
 import Language.Haskell.TH
 import Language.Haskell.TH.Quote
@@ -25,12 +26,13 @@ quoteFsmlDec str = do  loc <- location
                            line = fst charPos
                            col = snd charPos
                        ast <- parseWithSourcePos fsm filename line col str
+                       _ <- check ast
                        initial <- genInitial ast
                        states <- genStates ast
                        transitions <- genTransitionFuns ast
                        return $ [initial, states] ++ transitions
 
-genInitial :: Ast.Fsm ->  DecQ
+genInitial :: Ast.Fsm -> DecQ
 genInitial (Ast.Fsm states) =
   valD
   (varP (mkName "initial"))

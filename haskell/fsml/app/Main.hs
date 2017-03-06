@@ -25,4 +25,4 @@ run :: [(State, [String]) -> (State, [String])] -> (State, [String])
 run events = foldl (\sa e -> e sa) initial events
 
 main :: IO ()
-main = putStrLn (show $ run [ticket, ticket, pass, pass, ticket, mute, release])
+main = putStrLn $ show $ run [ticket, ticket, pass, pass, ticket, mute, release]

@@ -14,3 +14,7 @@ data Transition = Transition { getEvent  :: String
                              , getAction :: Maybe String
                              , getTarget :: String } deriving (Show, Lift)
 
+
+instance Eq State where
+  x == y = (getInitial x) == (getInitial y)
+  x /= y = (getInitial x) /= (getInitial y)
