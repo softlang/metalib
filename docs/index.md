@@ -12,29 +12,6 @@ title: "metalib"
 ## Introduction
 
 At its current state we only provide implementations for the Finite State Machine language (FSML).
-The FSML is, as its name suggests, a tiny language to describe state machines.
-As an example for such a state machine use the following representation of a turnstile in the FSML's textual syntax we 
-want to implement.
-
-{% highlight text %}
-initial state locked {
-    ticket / collect -> unlocked;
-    pass / alarm -> exception;
-}
-
-state unlocked {
-    ticket / eject;
-    pass -> locked;
-}
-
-state exception {
-    ticket / eject;
-    pass;
-    mute;
-    release -> locked;
-}
-{% endhighlight %}
-
 For each technology we want to provide a guide with the same underlying template.
 The template consists of the following steps:
 
@@ -61,8 +38,7 @@ by Ralf Lämmel.
 
 ## Technologies
 
-The list of technologies does not claim to cover the whole space of metaprogramming languages
-and language workspaces.
+The list of technologies does not claim to cover the whole space of metaprogramming languages and language workspaces.
 The work done so far includes:
 
 <ul>

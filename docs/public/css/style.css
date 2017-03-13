@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 a {
@@ -206,4 +207,28 @@ body {
 
 .nav.nav-links-hidden .nav.nav-link:nth-child(7) {
     transition-delay: 0.0s;
+}
+
+code {
+    font-family: 'Fira Mono', monospace;
+    line-height: 1.25em;
+}
+
+pre {
+    background: #2b303b;
+}
+
+.button-code {
+    border: none;
+    color: #FFFFFF;
+    background: #202020;
+    font-size: 1.5em;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.hljs.folded {
+    height: 8.75em;
+    overflow: hidden;
 }
