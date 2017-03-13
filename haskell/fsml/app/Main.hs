@@ -22,7 +22,7 @@ import Language.FSML.QuasiQuoter
      |]
 
 run :: [(State, [String]) -> (State, [String])] -> (State, [String])
-run events = foldl (\sa e -> e sa) initial events
+run = foldl (\sa e -> e sa) initial
 
 main :: IO ()
 main = putStrLn $ show $ run [ticket, ticket, pass, pass, ticket, mute, release]
