@@ -26,11 +26,11 @@ var createToggleExpand = function (button, element) {
 
 var initHighlight = function (element) {
     var url = element.getAttribute('src');
-    var from = parseInt(element.getAttribute('from'));
-    var to = parseInt(element.getAttribute('to'));
+    var from = parseInt(element.getAttribute('from')) || -Infinity;
+    var to = parseInt(element.getAttribute('to')) || Infinity;
     var request = new XMLHttpRequest();
     request.open('GET', url);
-    request.onreadystatechange = function () {
+    request.onreadystatechange = function (event) {
         if (this.readyState === 4) {
             var contentLines =
                 event
@@ -38,7 +38,7 @@ var initHighlight = function (element) {
                     .response
                     .split(/\r\n|\r|\n/)
                     .filter(function (l, i) {
-                        return (from === 0 ? true : i >= from) && (to === 0 ? true : i <= to);
+                        return (from === 0 ? true : i + 1 >= from) && (to === 0 ? true : i + 1 <= to + 1);
                     });
             var trimCount = Math.min
                 .apply(null, contentLines.filter(function (l) {
@@ -60,15 +60,15 @@ var initHighlight = function (element) {
                 .reduce(function (agg, cur) {
                     return agg + '\r\n' + cur;
                 });
-            element.classList.add('folded');
-            hljs.highlightBlock(element);
-            if (from || to) {
+            if (contentLines.length > 7) {
+                element.classList.add('folded');
                 var button = document.createElement('button');
                 button.classList.add('button-code');
                 button.onclick = createToggleExpand(button, element);
-                element.parentNode.appendChild(button);
+                element.parentNode.parentNode.insertBefore(button, element.parentNode.nextSibling);
                 setButtonFolded(button);
             }
+            hljs.highlightBlock(element);
         }
     };
     request.send();

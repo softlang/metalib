@@ -16,10 +16,6 @@ a[href^='http']:after {
     content: '';
 }
 
-h1 {
-    margin: 0;
-}
-
 html {
     color: #202020;
     font-family: 'Raleway', sans-serif;
@@ -31,6 +27,11 @@ html {
 body {
     margin: 0;
     padding: 0;
+}
+
+sup {
+    vertical-align: top;
+    font-size: 0.75em;
 }
 
 .content {
@@ -212,10 +213,13 @@ body {
 code {
     font-family: 'Fira Mono', monospace;
     line-height: 1.25em;
+    transition: all .56s ease-in-out;
 }
 
 pre {
     background: #2b303b;
+    overflow-x: auto;
+    margin-bottom: 0;
 }
 
 .button-code {
