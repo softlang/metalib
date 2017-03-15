@@ -1,47 +1,48 @@
 package org.softlang.fsml
 
 import scala.annotation.tailrec
-import scala.language.postfixOps
+import scala.collection.immutable.{List, Seq, Set}
 
 object Checker {
 
-  import scala.reflect.macros.whitebox
-
-  def check(c: whitebox.Context)(fsm: FsmNode): Unit =
-    List[whitebox.Context => FsmNode => Unit](checkSingleInitial, checkReachability) foreach {
-      _ (c)(fsm)
+  def check(fsm: AST.Fsm): Unit = {
+    Seq[AST.Fsm => Seq[String]](checkSingleInitial, checkReachability) flatMap {
+      _ (fsm)
+    } match {
+      case Nil =>
+      case exceptions => throw new Exception(s"${exceptions.mkString("\n\t", "\n\t", "\n")}")
     }
+  }
 
-  def checkSingleInitial(c: whitebox.Context)(fsm: FsmNode): Unit =
+  def checkSingleInitial(fsm: AST.Fsm): Seq[String] =
     fsm.states count {
       _.initial
     } match {
-      case 0 => c.error(c.enclosingPosition, "No initial state defined")
-      case 1 =>
-      case _ => c.error(c.enclosingPosition, "Multiple initial states defined")
+      case 0 => Seq("no initial state defined")
+      case 1 => Seq()
+      case n => Seq(s"$n initial states defined")
     }
 
-  def checkReachability(c: whitebox.Context)(fsmNode: FsmNode): Unit =
-    (fsmNode.states toSet) diff checkReachability(fsmNode, Set(), fsmNode.states filter {
+  def checkReachability(fsm: AST.Fsm): Seq[String] = {
+    (fsm.states.toSet diff checkReachability(fsm, Set(), (fsm.states filter {
       _.initial
-    } toSet) toList match {
-      case Nil =>
-      case states => states foreach {
-        s => c.error(c.enclosingPosition, s"unreachable state ${s.id}")
-      }
+    }).to[Set])).to[Seq] match {
+      case Nil => Seq()
+      case states => states map { state => s"unreachable state ${state.id}" }
     }
+  }
 
   @tailrec
-  def checkReachability(fsm: FsmNode, visitedStates: Set[StateNode], statesToVisit: Set[StateNode]): Set[StateNode] =
-    statesToVisit toList match {
+  def checkReachability(fsm: AST.Fsm, visitedStates: Set[AST.State], statesToVisit: Set[AST.State]): Set[AST.State] =
+    statesToVisit.to[List] match {
       case Nil => visitedStates
       case state :: states => checkReachability(fsm, visitedStates + state, (state.transitions flatMap {
         _.target
-      } flatMap { targetID =>
+      } flatMap { target =>
         fsm.states filter {
-          _.id == targetID
+          _.id == target
         }
-      } toSet) union (states toSet) diff (visitedStates + state))
+      }).to[Set] union states.to[Set] diff (visitedStates + state))
     }
 
 }
