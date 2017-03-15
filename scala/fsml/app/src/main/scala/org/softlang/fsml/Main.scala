@@ -22,6 +22,5 @@ object Main extends App {
     }
   }
 
-  TurnstileFsm().ticket.ticket.pass.pass.ticket.mute.release
-
+  TurnstileFsm.run.ticket.ticket.pass.pass.ticket.mute.release
 }

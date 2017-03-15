@@ -2,11 +2,10 @@ package org.softlang.fsml
 
 import org.scalatest.{FlatSpec, Matchers}
 
-class MacroTestSuite extends FlatSpec with Matchers {
+class FsmSpecs extends FlatSpec with Matchers {
 
   "A Fsm" should "not compile when determinism not Ok" in {
     """
-    import de.sschauss.fsml.Fsm
     @Fsm
     object DeterminismNotOk {
       initial state stateA {
@@ -21,9 +20,8 @@ class MacroTestSuite extends FlatSpec with Matchers {
 
   it should "not compile when ids not ok" in {
     """
-    import de.sschauss.fsml.Fsm
     @Fsm
-    onject IdsNotOk {
+    object IdsNotOk {
       initial state stateA {
         eventI/actionI -> stateZ;
       }
@@ -37,7 +35,6 @@ class MacroTestSuite extends FlatSpec with Matchers {
 
   it should "not compile when no initial state defined" in {
     """
-    import de.sschauss.fsml.Fsm
     @Fsm
     object InitialNotOk1 {
       state stateA {
@@ -52,7 +49,6 @@ class MacroTestSuite extends FlatSpec with Matchers {
 
   it should "not compile when multiple initial states defined" in {
     """
-    import de.sschauss.fsml.Fsm
     @Fsm
     object InitialNotOk1 {
       initial state stateA {
@@ -68,7 +64,6 @@ class MacroTestSuite extends FlatSpec with Matchers {
 
   it should "not compile when unreachable states defined" in {
     """
-    import de.sschauss.fsml.Fsm
     @Fsm
     object ReachableNotOk {
       initial state stateA {
@@ -82,7 +77,6 @@ class MacroTestSuite extends FlatSpec with Matchers {
 
   it should "not compile when state resolution not ok" in {
     """
-    import de.sschauss.fsml.Fsm
     @Fsm
     object ResolutionNotOk {
       initial state stateA {
@@ -93,5 +87,4 @@ class MacroTestSuite extends FlatSpec with Matchers {
     }
     """ shouldNot compile
   }
-
 }
