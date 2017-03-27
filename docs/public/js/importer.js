@@ -1,3 +1,5 @@
+var hljs = window.hljs;
+
 var setButtonExpanded = function (button) {
     var buttonIcon = document.createElement('i');
     button.innerHTML = '';
@@ -19,8 +21,13 @@ var createToggleExpand = function (button, element) {
     return function () {
         expanded = !expanded;
         button.innerHTML = '';
-        expanded ? element.classList.remove('folded') : element.classList.add('folded');
-        (expanded ? setButtonExpanded : setButtonFolded)(button);
+        if (expanded) {
+            element.classList.remove('folded');
+            setButtonExpanded(button);
+        } else {
+            element.classList.add('folded');
+            setButtonFolded(button);
+        }
     };
 };
 
@@ -40,10 +47,11 @@ var initHighlight = function (element) {
                     .filter(function (l, i) {
                         return (from === 0 ? true : i + 1 >= from) && (to === 0 ? true : i + 1 <= to + 1);
                     });
-            var trimCount = Math.min
-                .apply(null, contentLines.filter(function (l) {
+            var trimCount = Math.min.apply(null, contentLines
+                .filter(function (l) {
                     return l.length > 0;
-                }).map(function (l) {
+                })
+                .map(function (l) {
                     var p = 0;
                     for (var i = 0; i < l.length; i++) {
                         if (l[i] !== ' ') {
