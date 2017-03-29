@@ -31,6 +31,8 @@ public class FsmlTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new FsmlTests("fsml Tests");
+		suite.addTestSuite(FSMTest.class);
+		suite.addTestSuite(FSMStateTest.class);
 		return suite;
 	}
 

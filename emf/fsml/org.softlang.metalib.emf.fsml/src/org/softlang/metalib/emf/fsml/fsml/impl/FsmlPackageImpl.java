@@ -4,15 +4,19 @@ package org.softlang.metalib.emf.fsml.fsml.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.softlang.metalib.emf.fsml.fsml.FSMState;
 import org.softlang.metalib.emf.fsml.fsml.FSMTransition;
 import org.softlang.metalib.emf.fsml.fsml.FsmlFactory;
 import org.softlang.metalib.emf.fsml.fsml.FsmlPackage;
+import org.softlang.metalib.emf.fsml.fsml.util.FsmlValidator;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,6 +98,15 @@ public class FsmlPackageImpl extends EPackageImpl implements FsmlPackage {
 		// Initialize created meta-data
 		theFsmlPackage.initializePackageContents();
 
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theFsmlPackage, 
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return FsmlValidator.INSTANCE;
+				 }
+			 });
+
 		// Mark meta-data to indicate it can't be changed
 		theFsmlPackage.freeze();
 
@@ -119,6 +132,15 @@ public class FsmlPackageImpl extends EPackageImpl implements FsmlPackage {
 	 */
 	public EReference getFSM_States() {
 		return (EReference)fsmEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFSM__HasExactOneInitialState__DiagnosticChain_Map() {
+		return fsmEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -155,6 +177,24 @@ public class FsmlPackageImpl extends EPackageImpl implements FsmlPackage {
 	 */
 	public EReference getFSMState_Transitions() {
 		return (EReference)fsmStateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFSMState__HasDistinctEvents__DiagnosticChain_Map() {
+		return fsmStateEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getFSMState__IsReachable__DiagnosticChain_Map() {
+		return fsmStateEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -223,11 +263,14 @@ public class FsmlPackageImpl extends EPackageImpl implements FsmlPackage {
 		// Create classes and their features
 		fsmEClass = createEClass(FSM);
 		createEReference(fsmEClass, FSM__STATES);
+		createEOperation(fsmEClass, FSM___HAS_EXACT_ONE_INITIAL_STATE__DIAGNOSTICCHAIN_MAP);
 
 		fsmStateEClass = createEClass(FSM_STATE);
 		createEAttribute(fsmStateEClass, FSM_STATE__INITIAL);
 		createEAttribute(fsmStateEClass, FSM_STATE__NAME);
 		createEReference(fsmStateEClass, FSM_STATE__TRANSITIONS);
+		createEOperation(fsmStateEClass, FSM_STATE___HAS_DISTINCT_EVENTS__DIAGNOSTICCHAIN_MAP);
+		createEOperation(fsmStateEClass, FSM_STATE___IS_REACHABLE__DIAGNOSTICCHAIN_MAP);
 
 		fsmTransitionEClass = createEClass(FSM_TRANSITION);
 		createEAttribute(fsmTransitionEClass, FSM_TRANSITION__INPUT);
@@ -268,15 +311,42 @@ public class FsmlPackageImpl extends EPackageImpl implements FsmlPackage {
 		initEClass(fsmEClass, org.softlang.metalib.emf.fsml.fsml.FSM.class, "FSM", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFSM_States(), this.getFSMState(), null, "states", null, 0, -1, org.softlang.metalib.emf.fsml.fsml.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		EOperation op = initEOperation(getFSM__HasExactOneInitialState__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasExactOneInitialState", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(ecorePackage.getEMap());
+		EGenericType g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(fsmStateEClass, FSMState.class, "FSMState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFSMState_Initial(), ecorePackage.getEBoolean(), "initial", null, 0, 1, FSMState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFSMState_Name(), ecorePackage.getEString(), "name", null, 0, 1, FSMState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFSMState_Name(), ecorePackage.getEString(), "name", null, 0, 1, FSMState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFSMState_Transitions(), this.getFSMTransition(), null, "transitions", null, 0, -1, FSMState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getFSMState__HasDistinctEvents__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "hasDistinctEvents", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getFSMState__IsReachable__DiagnosticChain_Map(), ecorePackage.getEBoolean(), "isReachable", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEDiagnosticChain(), "diagnostics", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEMap());
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEJavaObject());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "context", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(fsmTransitionEClass, FSMTransition.class, "FSMTransition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFSMTransition_Input(), ecorePackage.getEString(), "input", null, 0, 1, FSMTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFSMTransition_Action(), ecorePackage.getEString(), "action", null, 0, 1, FSMTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFSMTransition_Target(), this.getFSMState(), null, "target", null, 0, 1, FSMTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFSMTransition_Target(), this.getFSMState(), null, "target", null, 1, 1, FSMTransition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

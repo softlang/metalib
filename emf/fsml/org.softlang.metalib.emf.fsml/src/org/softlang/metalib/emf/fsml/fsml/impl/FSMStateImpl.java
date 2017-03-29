@@ -2,11 +2,20 @@
  */
 package org.softlang.metalib.emf.fsml.fsml.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+import java.util.Stack;
+import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -15,17 +24,19 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.softlang.metalib.emf.fsml.fsml.FSM;
 import org.softlang.metalib.emf.fsml.fsml.FSMState;
 import org.softlang.metalib.emf.fsml.fsml.FSMTransition;
 import org.softlang.metalib.emf.fsml.fsml.FsmlPackage;
+import org.softlang.metalib.emf.fsml.fsml.util.FsmlValidator;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>FSM State</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>FSM
+ * State</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -40,8 +51,7 @@ import org.softlang.metalib.emf.fsml.fsml.FsmlPackage;
 public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMState {
 	/**
 	 * The default value of the '{@link #isInitial() <em>Initial</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isInitial()
 	 * @generated
 	 * @ordered
@@ -50,8 +60,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 
 	/**
 	 * The cached value of the '{@link #isInitial() <em>Initial</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isInitial()
 	 * @generated
 	 * @ordered
@@ -60,8 +69,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -70,8 +78,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getName()
 	 * @generated
 	 * @ordered
@@ -80,8 +87,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 
 	/**
 	 * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getTransitions()
 	 * @generated
 	 * @ordered
@@ -89,8 +95,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	protected EList<FSMTransition> transitions;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected FSMStateImpl() {
@@ -98,8 +103,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -108,8 +112,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isInitial() {
@@ -117,8 +120,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setInitial(boolean newInitial) {
@@ -129,8 +131,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public String getName() {
@@ -138,8 +139,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setName(String newName) {
@@ -150,8 +150,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EList<FSMTransition> getTransitions() {
@@ -162,8 +161,63 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public boolean hasDistinctEvents(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (getTransitions().stream().map(x -> x.getInput()).collect(Collectors.toSet()).size() != getTransitions()
+				.size()) {
+			if (diagnostics != null) {
+				diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, FsmlValidator.DIAGNOSTIC_SOURCE,
+						FsmlValidator.FSM_STATE__HAS_DISTINCT_EVENTS,
+						EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
+								new Object[] { "hasDistinctEvents", EObjectValidator.getObjectLabel(this, context) }),
+						new Object[] { this }));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public boolean isReachable(DiagnosticChain diagnostics, Map<Object, Object> context) {
+		FSM fsm = (FSM) eContainer();
+
+		Set<FSMState> reachable = new HashSet<>();
+		Stack<FSMState> currents = new Stack<FSMState>();
+		currents.addAll(fsm.getStates().stream().filter(x -> x.isInitial()).collect(Collectors.toSet()));
+
+		while (!currents.isEmpty()) {
+			FSMState current = currents.pop();
+
+			if (current == this)
+				return true;
+			if (reachable.contains(current))
+				continue;
+
+			reachable.add(current);
+			for (FSMTransition transition : current.getTransitions())
+				if (transition.getTarget() != null)
+					currents.push(transition.getTarget());
+		}
+
+		if (diagnostics != null) {
+			diagnostics.add(new BasicDiagnostic(Diagnostic.ERROR, FsmlValidator.DIAGNOSTIC_SOURCE,
+					FsmlValidator.FSM_STATE__IS_REACHABLE,
+					EcorePlugin.INSTANCE.getString("_UI_GenericInvariant_diagnostic",
+							new Object[] { "isReachable", EObjectValidator.getObjectLabel(this, context) }),
+					new Object[] { this }));
+		}
+		return false;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -176,8 +230,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -194,8 +247,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
@@ -217,8 +269,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -238,8 +289,7 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -256,8 +306,23 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case FsmlPackage.FSM_STATE___HAS_DISTINCT_EVENTS__DIAGNOSTICCHAIN_MAP:
+				return hasDistinctEvents((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+			case FsmlPackage.FSM_STATE___IS_REACHABLE__DIAGNOSTICCHAIN_MAP:
+				return isReachable((DiagnosticChain)arguments.get(0), (Map<Object, Object>)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -273,4 +338,4 @@ public class FSMStateImpl extends MinimalEObjectImpl.Container implements FSMSta
 		return result.toString();
 	}
 
-} //FSMStateImpl
+} // FSMStateImpl

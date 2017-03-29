@@ -1,0 +1,62 @@
+-- @path Fsml=/org.softlang.metalib.emf.fsml/model/Fsml.ecore
+
+module rename;
+create OUT: Fsml from IN: Fsml;
+
+helper def: oldName: String =
+	'a';
+
+helper def: newName: String =
+	'b';
+
+rule CopyFsm {
+	from
+		s: Fsml!FSM
+	to
+		t: Fsml!FSM (
+			states <- s.states
+		)
+}
+
+rule CopyFSMTransition {
+	from
+		s: Fsml!FSMTransition
+	to
+		t: Fsml!FSMTransition (
+			action <- s.action,
+			input <- s.input,
+			target <- s.target
+		)
+}
+
+abstract rule AbstractFSMState {
+	from
+		s: Fsml!FSMState
+	to
+		t: Fsml!FSMState (
+			initial <- s.initial,
+			transitions <- s.transitions
+		)
+}
+
+rule CopyFSMState extends AbstractFSMState{
+	from
+		s: Fsml!FSMState (
+			not(thisModule.oldName = s.name)
+		)
+	to
+		t: Fsml!FSMState (
+			name <- s.name
+		)
+}
+
+rule RenameFSMState extends AbstractFSMState{
+	from
+		s: Fsml!FSMState (
+			thisModule.oldName = s.name
+		)
+	to
+		t: Fsml!FSMState (
+			name <- thisModule.newName
+		)
+}

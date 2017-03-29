@@ -2,6 +2,8 @@
  */
 package org.softlang.metalib.emf.fsml.fsml;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -62,7 +64,7 @@ public interface FSMState extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see org.softlang.metalib.emf.fsml.fsml.FsmlPackage#getFSMState_Name()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getName();
@@ -92,5 +94,21 @@ public interface FSMState extends EObject {
 	 * @generated
 	 */
 	EList<FSMTransition> getTransitions();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean hasDistinctEvents(DiagnosticChain diagnostics, Map<Object, Object> context);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean isReachable(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // FSMState

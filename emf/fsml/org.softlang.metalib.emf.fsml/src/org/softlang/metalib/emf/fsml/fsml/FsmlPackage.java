@@ -4,6 +4,7 @@ package org.softlang.metalib.emf.fsml.fsml;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -85,13 +86,22 @@ public interface FsmlPackage extends EPackage {
 	int FSM_FEATURE_COUNT = 1;
 
 	/**
+	 * The operation id for the '<em>Has Exact One Initial State</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM___HAS_EXACT_ONE_INITIAL_STATE__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
 	 * The number of operations of the '<em>FSM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_OPERATION_COUNT = 0;
+	int FSM_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.softlang.metalib.emf.fsml.fsml.impl.FSMStateImpl <em>FSM State</em>}' class.
@@ -140,13 +150,31 @@ public interface FsmlPackage extends EPackage {
 	int FSM_STATE_FEATURE_COUNT = 3;
 
 	/**
+	 * The operation id for the '<em>Has Distinct Events</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM_STATE___HAS_DISTINCT_EVENTS__DIAGNOSTICCHAIN_MAP = 0;
+
+	/**
+	 * The operation id for the '<em>Is Reachable</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM_STATE___IS_REACHABLE__DIAGNOSTICCHAIN_MAP = 1;
+
+	/**
 	 * The number of operations of the '<em>FSM State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_STATE_OPERATION_COUNT = 0;
+	int FSM_STATE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.softlang.metalib.emf.fsml.fsml.impl.FSMTransitionImpl <em>FSM Transition</em>}' class.
@@ -226,6 +254,16 @@ public interface FsmlPackage extends EPackage {
 	EReference getFSM_States();
 
 	/**
+	 * Returns the meta object for the '{@link org.softlang.metalib.emf.fsml.fsml.FSM#hasExactOneInitialState(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Exact One Initial State</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Has Exact One Initial State</em>' operation.
+	 * @see org.softlang.metalib.emf.fsml.fsml.FSM#hasExactOneInitialState(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getFSM__HasExactOneInitialState__DiagnosticChain_Map();
+
+	/**
 	 * Returns the meta object for class '{@link org.softlang.metalib.emf.fsml.fsml.FSMState <em>FSM State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -267,6 +305,26 @@ public interface FsmlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFSMState_Transitions();
+
+	/**
+	 * Returns the meta object for the '{@link org.softlang.metalib.emf.fsml.fsml.FSMState#hasDistinctEvents(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Distinct Events</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Has Distinct Events</em>' operation.
+	 * @see org.softlang.metalib.emf.fsml.fsml.FSMState#hasDistinctEvents(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getFSMState__HasDistinctEvents__DiagnosticChain_Map();
+
+	/**
+	 * Returns the meta object for the '{@link org.softlang.metalib.emf.fsml.fsml.FSMState#isReachable(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Is Reachable</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Reachable</em>' operation.
+	 * @see org.softlang.metalib.emf.fsml.fsml.FSMState#isReachable(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	EOperation getFSMState__IsReachable__DiagnosticChain_Map();
 
 	/**
 	 * Returns the meta object for class '{@link org.softlang.metalib.emf.fsml.fsml.FSMTransition <em>FSM Transition</em>}'.
@@ -353,6 +411,14 @@ public interface FsmlPackage extends EPackage {
 		EReference FSM__STATES = eINSTANCE.getFSM_States();
 
 		/**
+		 * The meta object literal for the '<em><b>Has Exact One Initial State</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FSM___HAS_EXACT_ONE_INITIAL_STATE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getFSM__HasExactOneInitialState__DiagnosticChain_Map();
+
+		/**
 		 * The meta object literal for the '{@link org.softlang.metalib.emf.fsml.fsml.impl.FSMStateImpl <em>FSM State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -385,6 +451,22 @@ public interface FsmlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FSM_STATE__TRANSITIONS = eINSTANCE.getFSMState_Transitions();
+
+		/**
+		 * The meta object literal for the '<em><b>Has Distinct Events</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FSM_STATE___HAS_DISTINCT_EVENTS__DIAGNOSTICCHAIN_MAP = eINSTANCE.getFSMState__HasDistinctEvents__DiagnosticChain_Map();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Reachable</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FSM_STATE___IS_REACHABLE__DIAGNOSTICCHAIN_MAP = eINSTANCE.getFSMState__IsReachable__DiagnosticChain_Map();
 
 		/**
 		 * The meta object literal for the '{@link org.softlang.metalib.emf.fsml.fsml.impl.FSMTransitionImpl <em>FSM Transition</em>}' class.

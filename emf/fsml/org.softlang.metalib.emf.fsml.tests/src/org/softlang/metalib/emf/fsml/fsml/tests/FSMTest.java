@@ -13,6 +13,12 @@ import org.softlang.metalib.emf.fsml.fsml.FsmlFactory;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>FSM</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link org.softlang.metalib.emf.fsml.fsml.FSM#hasExactOneInitialState(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Exact One Initial State</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class FSMTest extends TestCase {
@@ -84,6 +90,19 @@ public class FSMTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link org.softlang.metalib.emf.fsml.fsml.FSM#hasExactOneInitialState(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map) <em>Has Exact One Initial State</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.softlang.metalib.emf.fsml.fsml.FSM#hasExactOneInitialState(org.eclipse.emf.common.util.DiagnosticChain, java.util.Map)
+	 * @generated
+	 */
+	public void testHasExactOneInitialState__DiagnosticChain_Map() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //FSMTest

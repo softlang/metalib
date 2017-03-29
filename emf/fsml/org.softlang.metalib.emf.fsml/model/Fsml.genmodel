@@ -9,6 +9,10 @@
       ecorePackage="Fsml.ecore#/">
     <genClasses ecoreClass="Fsml.ecore#//FSM">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fsml.ecore#//FSM/states"/>
+      <genOperations ecoreOperation="Fsml.ecore#//FSM/hasDistinctIds">
+        <genParameters ecoreParameter="Fsml.ecore#//FSM/hasDistinctIds/diagnostics"/>
+        <genParameters ecoreParameter="Fsml.ecore#//FSM/hasDistinctIds/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="Fsml.ecore#//FSMState">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fsml.ecore#//FSMState/initial"/>

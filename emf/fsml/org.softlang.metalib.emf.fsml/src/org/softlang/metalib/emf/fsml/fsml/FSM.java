@@ -2,6 +2,8 @@
  */
 package org.softlang.metalib.emf.fsml.fsml;
 
+import java.util.Map;
+import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -38,5 +40,13 @@ public interface FSM extends EObject {
 	 * @generated
 	 */
 	EList<FSMState> getStates();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	boolean hasExactOneInitialState(DiagnosticChain diagnostics, Map<Object, Object> context);
 
 } // FSM
