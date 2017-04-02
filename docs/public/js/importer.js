@@ -33,7 +33,7 @@ var createToggleExpand = function (button, element) {
 
 var initHighlight = function (element) {
     var url = element.getAttribute('src');
-    var from = parseInt(element.getAttribute('from')) || -Infinity;
+    var from = parseInt(element.getAttribute('from')) || 0;
     var to = parseInt(element.getAttribute('to')) || Infinity;
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -45,7 +45,7 @@ var initHighlight = function (element) {
                     .response
                     .split(/\r\n|\r|\n/)
                     .filter(function (l, i) {
-                        return (from === 0 ? true : i + 1 >= from) && (to === 0 ? true : i + 1 <= to + 1);
+                        return (from === 0 ? true : i >= from - 1) && (to === Infinity ? true : i <= to - 1);
                     });
             var trimCount = Math.min.apply(null, contentLines
                 .filter(function (l) {
@@ -64,6 +64,9 @@ var initHighlight = function (element) {
             element.innerHTML = contentLines
                 .map(function (l) {
                     return l.slice(trimCount);
+                })
+                .map(function (l, i) {
+                    return (i + from ) + ' ' + l;
                 })
                 .reduce(function (agg, cur) {
                     return agg + '\r\n' + cur;
