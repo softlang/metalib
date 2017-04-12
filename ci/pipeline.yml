@@ -1,0 +1,40 @@
+resources:
+- name: metalib
+  type: git
+  source:
+    branch: concourse
+    uri: https://github.com/softlang/metalib.git
+- name: metadocs
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/sschauss/metadocs.git
+jobs:
+  - name: test-haskell
+    plan:
+      - get: metalib
+      - task: unit
+        file: metalib/ci/haskell.build.yml
+  - name: test-racket
+    plan:
+      - get: metalib
+      - task: unit
+        file: metalib/ci/racket.build.yml
+  - name: test-scala
+    plan:
+      - get: metalib
+      - task: unit
+        file: metalib/ci/scala.build.yml
+  - name: integration
+    plan:
+      - aggregate:
+        - get: metalib
+          passed:
+          - test-haskell
+          - test-racket
+          - test-scala
+  - name: build-docs
+    plan:
+      - get: metadocs
+      - task: unit
+        file: metadocs/ci/build.yml
