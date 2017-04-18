@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:fsml="http://www.softlang.org/metalib/emf/Fsml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ecore:nsPrefix="fsml" ecore:package="org.softlang.metalib.emf.fsml.fsml" targetNamespace="http://www.softlang.org/metalib/emf/Fsml">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.xsd"/>
+  <xsd:element ecore:ignore="true" name="FSM" type="fsml:FSM"/>
+  <xsd:element ecore:ignore="true" name="FSMState" type="fsml:FSMState"/>
+  <xsd:element ecore:ignore="true" name="FSMTransition" type="fsml:FSMTransition"/>
+  <xsd:complexType name="FSM">
+    <xsd:annotation>
+      <xsd:appinfo ecore:key="operations" source="http://www.eclipse.org/emf/2002/Ecore">
+        <operation name="hasExactOneInitialState" type="ecore:EBoolean">
+          <parameter name="diagnostics" type="ecore:EDiagnosticChain"/>
+          <parameter name="context" type="ecore:EMap{ecore:EJavaObject, ecore:EJavaObject}"/>
+        </operation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ecore:resolveProxies="true" maxOccurs="unbounded" minOccurs="0" name="states" type="fsml:FSMState"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FSMState">
+    <xsd:annotation>
+      <xsd:appinfo ecore:key="operations" source="http://www.eclipse.org/emf/2002/Ecore">
+        <operation name="hasDistinctEvents" type="ecore:EBoolean">
+          <parameter name="diagnostics" type="ecore:EDiagnosticChain"/>
+          <parameter name="context" type="ecore:EMap{ecore:EJavaObject, ecore:EJavaObject}"/>
+        </operation>
+        <operation name="isReachable" type="ecore:EBoolean">
+          <parameter name="diagnostics" type="ecore:EDiagnosticChain"/>
+          <parameter name="context" type="ecore:EMap{ecore:EJavaObject, ecore:EJavaObject}"/>
+        </operation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ecore:resolveProxies="true" maxOccurs="unbounded" minOccurs="0" name="transitions" type="fsml:FSMTransition"/>
+    </xsd:sequence>
+    <xsd:attribute ecore:unsettable="false" name="initial" type="ecore:EBoolean"/>
+    <xsd:attribute ecore:id="true" name="name" type="ecore:EString"/>
+  </xsd:complexType>
+  <xsd:complexType name="FSMTransition">
+    <xsd:attribute name="input" type="ecore:EString"/>
+    <xsd:attribute name="action" type="ecore:EString"/>
+    <xsd:attribute ecore:reference="fsml:FSMState" name="target" type="xsd:anyURI" use="required"/>
+  </xsd:complexType>
+</xsd:schema>
