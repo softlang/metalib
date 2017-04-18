@@ -1,5 +1,5 @@
 autoCompilerPlugins := true
 
 libraryDependencies ++= Seq(
-  "org.scala-lang" % "scala-reflect" % scalaVersion.value
+  "org.scalameta" %% "scalameta" % "1.6.0"
 )
