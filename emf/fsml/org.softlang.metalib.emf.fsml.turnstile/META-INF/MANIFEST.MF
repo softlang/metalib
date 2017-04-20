@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Turnstile
+Bundle-SymbolicName: org.softlang.metalib.emf.fsml.turnstile
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.softlang.metalib.emf.fsml;bundle-version="1.0.0"
