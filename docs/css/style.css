@@ -57,25 +57,31 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 .language {
-  background: red;
+  background: #a54242;
   border-radius: 1rem;
+  color: #282a2e;
   display: inline-block;
   margin: .5rem;
-  padding: .5rem; }
+  padding: .5rem;
+  text-decoration: none; }
 
 .technology {
-  background: green;
+  background: #8c9440;
   border-radius: 1rem;
+  color: #282a2e;
   display: inline-block;
   margin: .5rem;
-  padding: .5rem; }
+  padding: .5rem;
+  text-decoration: none; }
 
 .concept {
-  background: blue;
+  background: #5f819d;
   border-radius: 1rem;
+  color: #282a2e;
   display: inline-block;
   margin: .5rem;
-  padding: .5rem; }
+  padding: .5rem;
+  text-decoration: none; }
 
 .selection-all {
   background: #282a2e;
