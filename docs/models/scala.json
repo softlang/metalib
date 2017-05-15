@@ -1,0 +1,28 @@
+{
+    "name": "Scala",
+    "headline": "scalameta",
+    "sections": [
+	{
+	    "features": ["AST^+"],
+	    "headline": "Case Classes representing the AST of the FSML",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+		"languages": ["Scala"],
+		"technologies": [],
+		"concepts": ["Case Class", "Abstract Syntax Tree"],
+		"selection": {
+		    "type": "excerpt",
+		    "folded": {
+			"from": 7,
+			"to": 11
+		    },
+		    "unfolded": {
+			"from": 5,
+			"to": 13
+		    }
+		}
+	    }
+	}
+    ]
+}

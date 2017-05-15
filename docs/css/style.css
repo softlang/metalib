@@ -1,0 +1,150 @@
+@import "https://fonts.googleapis.com/css?family=Raleway";
+@import "https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+.hljs-comment,
+.hljs-quote {
+  color: #667788; }
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #cc6070; }
+
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #dd8877; }
+
+.hljs-attribute {
+  color: #eecc88; }
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #aabb88; }
+
+.hljs-title,
+.hljs-section {
+  color: #5f819d; }
+
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #85678f; }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-style: bold; }
+
+.hljs {
+  color: #fff;
+  display: block; }
+
+body {
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif; }
+
+.language {
+  background: red;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: .5rem;
+  padding: .5rem; }
+
+.technology {
+  background: green;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: .5rem;
+  padding: .5rem; }
+
+.concept {
+  background: blue;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: .5rem;
+  padding: .5rem; }
+
+.selection-all {
+  background: #282a2e;
+  padding: 1rem; }
+  .selection-all > span {
+    animation: spin 1s ease-in-out infinite;
+    color: #fff;
+    display: block;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+    width: 1.5rem; }
+  .selection-all a {
+    color: #fff;
+    display: block;
+    font-family: "Material Icons";
+    text-decoration: none;
+    width: 100%;
+    text-align: right; }
+    .selection-all a:visited {
+      color: #fff; }
+  .selection-all > div > pre {
+    margin: 0; }
+
+.selection-excerpt {
+  background: #282a2e;
+  padding: 1rem 1rem 0 1rem; }
+  .selection-excerpt a {
+    color: #fff;
+    display: block;
+    font-family: "Material Icons";
+    text-decoration: none;
+    width: 100%;
+    text-align: right; }
+    .selection-excerpt a:visited {
+      color: #fff; }
+  .selection-excerpt > div {
+    background: #282a2e;
+    overflow: hidden; }
+    .selection-excerpt > div > span {
+      animation: spin 1s ease-in-out infinite;
+      color: #fff;
+      display: block;
+      font-family: 'Material Icons';
+      font-size: 1.5rem;
+      margin: auto;
+      text-align: center;
+      width: 1.5rem; }
+    .selection-excerpt > div > button {
+      background: #282a2e;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+      width: 100%; }
+      .selection-excerpt > div > button > i {
+        display: inline-block;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        font-style: normal;
+        transition: transform .5s ease-in-out; }
+    .selection-excerpt > div > div {
+      transition: height .5s ease-in-out, margin-top .5s ease-in-out; }
+      .selection-excerpt > div > div > pre {
+        margin: 0; }
+
+@keyframes spin {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(0deg); } }

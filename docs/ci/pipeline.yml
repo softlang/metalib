@@ -1,0 +1,22 @@
+resources:
+- name: metalib
+  type: git
+  source:
+    branch: master
+    uri: git@github.com:softlang/metalib.git
+    private_key: {{private-key}}
+jobs:
+  - name: build-docs
+    plan:
+      - get: metalib
+      - task: build
+        file: metalib/docs/ci/build.yml
+      - task: commit
+        file: metalib/docs/ci/commit.yml
+        params:
+          GIT_EMAIL: simon.schauss@gmail.com
+          GIT_NAME: Simon Schauß
+      - put: metalib
+        params:
+          repository: metalib-release
+

@@ -1,0 +1,138 @@
+@import "https://fonts.googleapis.com/css?family=Raleway";
+@import "https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+@import "_hljs";
+
+$black: #282a2e;
+$white: #fff;
+$red: #a54242;
+$green: #8c9440;
+$blue: #5f819d;
+
+
+body {
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+.language {
+    background: $red;
+    border-radius: 1rem;
+    color: $black;
+    display: inline-block;
+    margin: .5rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.technology {
+    background: $green;
+    border-radius: 1rem;
+    color: $black;
+    display: inline-block;
+    margin: .5rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.concept {
+    background: $blue;
+    border-radius: 1rem;
+    color: $black;
+    display: inline-block;
+    margin: .5rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+.selection-all {
+    background: $black;
+    padding: 1rem;
+    > span {
+	animation: spin 1s ease-in-out infinite;
+	color: $white;
+	display: block;
+	font-family: 'Material Icons';
+	font-size: 1.5rem;
+	margin: auto;
+	text-align: center;
+	width: 1.5rem;
+    }
+    a {
+	color: $white;
+	display: block;
+	font-family: "Material Icons";
+	text-decoration: none;
+	width: 100%;
+	text-align: right;
+	&:visited {
+	    color: $white;
+	}
+    }
+    > div {
+	> pre {
+	    margin: 0;
+	}
+    }
+}
+
+.selection-excerpt {
+    background: $black;
+    padding: 1rem 1rem 0 1rem;
+    a {
+	color: $white;
+	display: block;
+	font-family: "Material Icons";
+	text-decoration: none;
+	width: 100%;
+	text-align: right;
+	&:visited {
+	    color: $white;
+	}
+    }
+    > div {
+	background: $black;
+	overflow: hidden;
+	> span {
+	    animation: spin 1s ease-in-out infinite;
+	    color: $white;
+	    display: block;
+	    font-family: 'Material Icons';
+	    font-size: 1.5rem;
+	    margin: auto;
+	    text-align: center;
+	    width: 1.5rem;
+	}
+	> button {
+	    background: $black;
+	    border: none;
+	    color: $white;
+	    cursor: pointer;
+	    outline: none;
+	    width: 100%;
+	    > i {
+		display: inline-block;
+		font-family: 'Material Icons';
+		font-size: 1.5rem;
+		font-style: normal;
+		transition: transform .5s ease-in-out;
+	    }
+	}
+	> div {
+	    transition: height .5s ease-in-out, margin-top .5s ease-in-out;
+	    > pre {
+		margin: 0;
+	    }
+	}
+    }
+}
+
+@keyframes spin {
+    from {
+	transform: rotate(360deg);
+    }
+    to {
+	transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,28 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: adzerk/boot-clj
+    tag: "latest"
+
+inputs:
+  - name: metalib
+
+outputs:
+  - name: metalib-build
+
+run:
+  dir: metalib/docs
+  path: sh
+  args:
+    - -exc
+    - |
+      boot build
+      mkdir -p css
+      mkdir -p js
+      mv target/public/index.html .
+      mv target/public/js/app.js js
+      mv target/public/css/style.css css
+      cp -r .. ../metalib-build
