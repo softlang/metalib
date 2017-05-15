@@ -12,5 +12,5 @@ outputs:
 run:
   path: /bin/bash
   args:
-  - metadocs/ci/commit.sh
+  - metalib/docs/ci/commit.sh
 
