@@ -1,0 +1,149 @@
+{
+	"type": "object",
+  "properties": {
+  	"name": {
+    	"type": "string"
+		},
+    "headline": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "features": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "Scannerfull Parsing",
+                "Scannerless Parsing"
+              ]
+            }
+          },
+          "headline": {
+            "type": "string"
+          },
+          "projection": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "implementation"
+                    ]
+                  },
+                  "link": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "languages": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "technologies": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "concepts": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "selection": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "nothing"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "all"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "enum": [
+                              "excerpt"
+                            ]
+                          },
+                          "folded": {
+                            "type": "object",
+                            "properties": {
+                              "from": {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              "to": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            }
+                          },
+                          "unfolded": {
+                            "type": "object",
+                            "properties": {
+                              "from": {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              "to": {
+                                "type": "integer",
+                                "minimum": 0
+                              }
+                            }
+                          }
+                        },
+                        "required": ["type", "folded"]
+                      }
+                    ]
+                  }
+                },
+                "required": ["type", "link", "selection"]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "illustration"
+                    ]
+                  },
+                  "link": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": ["type", "link"]
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": ["name", "headline", "sections"]
+}
