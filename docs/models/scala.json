@@ -3,7 +3,7 @@
     "headline": "scalameta",
     "sections": [
 	{
-	    "features": ["AST^+"],
+	    "features": ["AST^-"],
 	    "headline": "Case Classes representing the AST of the FSML",
 	    "projection": {
 		"type": "implementation",
