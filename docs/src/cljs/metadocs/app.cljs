@@ -121,13 +121,13 @@
 (defroute "/" []
   (swap! state assoc :current-page #'home))
 
-(defroute "/metadocs" []
+(defroute "/metalib" []
   (swap! state assoc :current-page #'home))
 
-(defroute "/metadocs/" []
+(defroute "/metalib/" []
   (swap! state assoc :current-page #'home))
 
-(defroute "/metadocs/index.html" []
+(defroute "/metalib/index.html" []
   (swap! state assoc :current-page #'home))
 
 (defn current-page []

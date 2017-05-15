@@ -26,6 +26,6 @@
     `(do ~@(map (fn [model-file-name]
                   (let [model-name (strip-file-extension model-file-name)
                         model (load-json model-file-name)]
-                    `(~'defroute ~(str "/metadocs/" model-name) []
+                    `(~'defroute ~(str "/metalib/" model-name) []
                       (~'swap! ~'state ~'assoc :current-page #(~contribution-component ~model)))))
                 model-file-names))))

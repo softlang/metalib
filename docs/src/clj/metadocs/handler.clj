@@ -6,8 +6,8 @@
 (defroutes routes
   (resources "/")
   (resources "/public")
-  (resources "/metadocs")
-  (ANY "/metadocs/*" [] (content-type (resource-response "index.html" {:root "public"})
+  (resources "/metalib")
+  (ANY "/metalib/*" [] (content-type (resource-response "index.html" {:root "public"})
                                       "text/html")))
 
 (def handler (-> routes))

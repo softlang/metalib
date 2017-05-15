@@ -5,10 +5,10 @@ image_resource:
   source:
     repository: getourneau/alpine-bash-git
 inputs:
-  - name: metadocs
-  - name: metadocs-build
+  - name: metalib
+  - name: metalib-build
 outputs:
-  - name: metadocs-release
+  - name: metalib-release
 run:
   path: /bin/bash
   args:

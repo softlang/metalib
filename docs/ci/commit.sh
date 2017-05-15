@@ -2,7 +2,7 @@ cd metalib-release
 
 shopt -s dotglob
 
-mv -f ../metadocs-build/* ./
+mv -f ../metalib-build/* ./
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
 
