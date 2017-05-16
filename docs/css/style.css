@@ -54,7 +54,8 @@
 
 body {
   margin: 0 auto;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  width: 80rem; }
 
 .language {
   background: #a54242;
@@ -119,18 +120,18 @@ body {
     text-align: right; }
     .selection-excerpt a:visited {
       color: #fff; }
+  .selection-excerpt > span {
+    animation: spin 1s ease-in-out infinite;
+    color: #fff;
+    display: block;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+    width: 1.5rem; }
   .selection-excerpt > div {
     background: #282a2e;
     overflow: hidden; }
-    .selection-excerpt > div > span {
-      animation: spin 1s ease-in-out infinite;
-      color: #fff;
-      display: block;
-      font-family: 'Material Icons';
-      font-size: 1.5rem;
-      margin: auto;
-      text-align: center;
-      width: 1.5rem; }
     .selection-excerpt > div > button {
       background: #282a2e;
       border: none;
@@ -154,3 +155,9 @@ body {
     transform: rotate(360deg); }
   to {
     transform: rotate(0deg); } }
+
+.toc > a {
+  color: #282a2e;
+  text-decoration: none; }
+  .toc > a:visited {
+    color: #282a2e; }
