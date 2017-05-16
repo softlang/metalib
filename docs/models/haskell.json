@@ -1,0 +1,150 @@
+{
+    "name": "Haskell",
+    "headline": "FSML implementation using Template Haskell",
+    "sections": [
+	{
+	    "features": ["AST^-"],
+	    "headline": "AST^-",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Ast.hs",
+		"languages": ["Haskell"],
+		"technologies": [],
+		"concepts": ["Algebraic data type"],
+		"selection": {
+		    "type": "excerpt",
+		    "folded": {
+			"from": 9,
+			"to": 11
+		    },
+		    "unfolded": {
+			"from": 7,
+			"to": 15
+		    }
+		}
+	    }
+	},
+	{
+	    "features": ["Text-to-AST"],
+	    "headline": "Text-to-AST",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+		"languages": ["Haskell"],
+		"technologies": [],
+		"concepts": [],
+		"selection": {
+		    "type": "nothing"
+		}
+	    }
+	},
+	{
+	    "features": ["Scannerfull parsing"],
+	    "headline": "Scannerfull parsing parser",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Parser.hs",
+		"languages": ["Haskell"],
+		"technologies": ["Parsec"],
+		"concepts": ["Parser", "Parser combinator"],
+		"selection": {
+		    "type": "excerpt",
+		    "folded": {
+			"from": 31,
+			"to": 36
+		    },
+		    "unfolded": {
+			"from": 28,
+			"to": 50
+		    }
+		}
+	    }
+	},
+	{
+	    "features": ["Scannerfull parsing"],
+	    "headline": "Scannerfull parsing lexer",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Lexer.hs",
+		"languages": ["Haskell"],
+		"technologies": ["Parsec"],
+		"concepts": ["Lexer"],
+		"selection": {
+		    "type": "excerpt",
+		    "folded": {
+			"from": 13,
+			"to": 25
+		    },
+		    "unfolded": {
+			"from": 13,
+			"to": 43
+		    }
+		}
+	    }
+	},
+	{
+	    "features": ["Creole^+-"],
+	    "headline": "Creole^+-",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+		"languages": ["Haskell"],
+		"technologies": [],
+		"concepts": [],
+		"selection": {
+		    "type": "nothing"
+		}
+	    }
+	},
+	{
+	    "features": ["Analyse^M"],
+	    "headline": "Analyse^M",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+		"languages": ["Haskell"],
+		"technologies": [],
+		"concepts": [],
+		"selection": {
+		    "type": "nothing"
+		}
+	    }
+	},
+	{
+	    "features": ["Interpret^M"],
+	    "headline": "Interpret^M",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+		"languages": ["Haskell"],
+		"technologies": [],
+		"concepts": [],
+		"selection": {
+		    "type": "nothing"
+		}
+	    }
+	},
+	{
+	    "features": ["Translate^M"],
+	    "headline": "Translate^M",
+	    "projection": {
+		"type": "implementation",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
+		"languages": ["Haskell"],
+		"technologies": ["Template Haskell"],
+		"concepts": ["Quasi-quotation"],
+		"selection": {
+		    "type": "excerpt",
+		    "folded": {
+			"from": 42,
+			"to": 50
+		    },
+		    "unfolded": {
+			"from": 22,
+			"to": 81
+		    }
+		}
+	    }
+	}
+    ]
+}

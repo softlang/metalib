@@ -10,7 +10,7 @@
             [secretary.core :refer [dispatch! locate-route]])
   (:require-macros [cljs.core.async.macros :refer [go]]
                    [secretary.core :refer [defroute]]
-                   [metadocs.macros :refer [defcontributionroutes]]))
+                   [metadocs.macros :refer [defcontributionroutes deftoc]]))
 
 (def wiki-url "https://101wiki.softlang.org/")
 (defonce state (atom {}))
@@ -60,7 +60,7 @@
          [(fn []
             (let [line-count (-> @code split-lines count)]
               [:div
-               [:div {:style {:height (str (if @folded? (if (nil? unfolded) (:to folded) (- (:to unfolded) (:from unfolded))) line-count) "rem")
+               [:div {:style {:height (str (if @folded? (if (nil? unfolded) (:to folded) (inc (- (:to folded) (:from unfolded)))) line-count) "rem")
                               :margin-top (str (if @folded? (- (if (nil? unfolded) (dec (:from folded)) (- (:from folded) (:from unfolded)))) 0) "rem")}}
                 [(highlight-block [:pre @code])]]
                [:button {:on-click #(swap! folded? not)}
@@ -72,7 +72,7 @@
 
 ;; value technolgies
 (defn technologies-component [technologies]
-  (map #(with-meta [:a.technology {:href (str wiki-url "Technolgy:" %) :target "_blank"} %] {:key %}) technologies))
+  (map #(with-meta [:a.technology {:href (str wiki-url "Technology:" %) :target "_blank"} %] {:key %}) technologies))
 
 ;; value concepts
 (defn concepts-component [concepts]
@@ -83,8 +83,11 @@
 ;; class implementation
 (defmethod projection-component "implementation" [{:keys [selection link languages technologies concepts]}]
   [:div.projection
+   ;; value languages
    (languages-component languages)
+   ;; value technologies
    (technologies-component technologies)
+   ;; value concepts
    (concepts-component concepts)
    [selection-component selection link]])
 ;; class illustration
@@ -112,9 +115,11 @@
    ;; part sections
    (map-indexed #(with-meta [section-component %2] {:key %1}) sections)])
 
+(deftoc)
+
 (defn home []
-  [:div
-   [:a {:href "scala"} "scala"]])
+  [:div.toc
+   (map #(with-meta [:a {:href (:route %)} (:name %)] {:key name}) toc)])
 
 (defcontributionroutes state contribution-component)
 
