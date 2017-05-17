@@ -1,0 +1,123 @@
+{
+  "name": "Xtext",
+  "headline": "XText with generated EMF model",
+  "sections": [
+    {
+      "features": [
+        "ASG^+"
+      ],
+      "headline": "Java classes for the EMF Model",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/FSM.java",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [],
+        "concepts": [
+          "OO Interface"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 27,
+            "to": 52
+          },
+          "unfolded": {
+            "from": 1,
+            "to": 52
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Text-to-ASG",
+        "Scannerfull parsing"
+      ],
+      "headline": "Text to EMF Model",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/parser/antlr/FsmlParser.java",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [
+          "ANTLR"
+        ],
+        "concepts": [
+          "Parser"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 12,
+            "to": 40
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Analyse^O"
+      ],
+      "headline": "Xtext Constaint Annotation",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/validation/FsmlValidator.xtend",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [],
+        "concepts": [
+          "Java annotation"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 35,
+            "to": 54
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Analyse^M"
+      ],
+      "headline": "Xtext model references by name",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
+        "languages": [
+          "Xtext Grammar"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 20,
+            "to": 21
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Rename refactoring"
+      ],
+      "headline": "Xtext default rename refactoring",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl",
+        "languages": [],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "nothing"
+        }
+      }
+    }
+  ]
+}
