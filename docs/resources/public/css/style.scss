@@ -73,6 +73,7 @@ body {
     }
     > div {
 	> pre {
+	    line-height: 1rem;
 	    margin: 0;
 	}
     }
@@ -123,6 +124,7 @@ body {
 	> div {
 	    transition: height .5s ease-in-out, margin-top .5s ease-in-out;
 	    > pre {
+		line-height: 1rem;
 		margin: 0;
 	    }
 	}
