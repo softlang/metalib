@@ -156,8 +156,8 @@ body {
   to {
     transform: rotate(0deg); } }
 
-.toc > a {
+.toc > li > a {
   color: #282a2e;
   text-decoration: none; }
-  .toc > a:visited {
+  .toc > li > a:visited {
     color: #282a2e; }
