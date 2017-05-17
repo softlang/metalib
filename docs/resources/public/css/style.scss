@@ -17,6 +17,20 @@ body {
     width: 80rem;
 }
 
+.nav {
+    border-bottom: 0.25rem solid $black;
+    width: 100%;
+}
+
+.nav-link {
+    color: $black;
+    font-size: 2rem;
+    text-decoration: none;
+    &:visited {
+	color: $black;
+    }
+}
+
 .language {
     background: $red;
     border-radius: 1rem;
@@ -138,6 +152,10 @@ body {
     to {
 	transform: rotate(0deg);
     }
+}
+
+.feature {
+    margin: 0 0.5rem;
 }
 
 .toc {

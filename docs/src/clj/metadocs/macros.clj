@@ -7,7 +7,6 @@
 (def model-dir "models/")
 (def wiki-base-url "https://101wiki.softlang.org/")
 
-
 (defn load-model-file-names [model-dir]
   (-> model-dir
       file

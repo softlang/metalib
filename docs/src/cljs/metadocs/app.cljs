@@ -24,9 +24,7 @@
 
 ;; class nothing extends selection
 (defmethod selection-component "nothing" [selection link]
-  [:div.selection-nothing
-   link
-   (str selection)])
+  [:div.selection-nothing])
 
 ;; class all extends selection
 (defmethod selection-component "all" [selection link]
@@ -96,7 +94,9 @@
 
 ;; value features
 (defn features-component [features]
-  (map #(with-meta [:span %] {:key %}) features))
+  [:div
+   "Features:"
+   (map #(with-meta [:span.feature %] {:key %}) features)])
 
 ;; class section
 (defn section-component [{:keys [features headline projection]}]
@@ -104,7 +104,7 @@
    ;; value headline
    [:h2 headline]
    ;; value features
-   [:h3 (features-component features)]
+   (features-component features)
    [projection-component projection]])
 
 ;; class contribution
@@ -138,8 +138,8 @@
   (swap! state assoc :current-page #'home))
 
 (defn nav []
-  [:nav
-   [:a {:href "/metalib/"} "home"]])
+  [:nav.nav
+   [:a.nav-link {:href "/metalib/"} "metalib"]])
 
 (defn current-page []
   [:div

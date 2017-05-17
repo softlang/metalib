@@ -13,4 +13,5 @@ git add index.html
 git add js/app.js
 git add css/style.css
 
+git add *.html
 git commit -a -m "doc update"
