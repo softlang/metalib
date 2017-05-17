@@ -66,7 +66,7 @@
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/validation/FsmlValidator.xtend",
         "languages": [
-          "Java"
+          "Xtend"
         ],
         "technologies": [],
         "concepts": [
