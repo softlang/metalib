@@ -31,6 +31,7 @@
                       (~'swap! ~'state ~'assoc :current-page #(~contribution-component ~model)))))
                 model-file-names))))
 
+
 (defmacro deftoc []
   (let [model-file-names (-> model-dir
                              load-model-file-names)]

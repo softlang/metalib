@@ -136,7 +136,7 @@
 	},
 	{
 	    "features": ["Translate^M"],
-	    "headline": "",
+	    "headline": "Translation to AST",
 	    "projection": {
 		"type": "implementation",
 		"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
