@@ -14,10 +14,8 @@ outputs:
   - name: metalib-build
 
 run:
-  dir: metalib/docs
-  run:
-    path: /bin/bash
-    args:
-    - metalib/docs/ci/commit.sh
+  path: /bin/bash
+  args:
+  - metalib/docs/ci/build.sh
 
 

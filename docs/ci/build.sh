@@ -1,3 +1,4 @@
+cd metalib/docs
 boot build
 mkdir -p css
 mkdir -p js
