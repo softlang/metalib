@@ -139,7 +139,7 @@ body {
 }
 
 .toc {
-    > a {
+    > li > a  {
 	color: $black;
 	text-decoration: none;
 	&:visited {

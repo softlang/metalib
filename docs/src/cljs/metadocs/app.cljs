@@ -118,8 +118,10 @@
 (deftoc)
 
 (defn home []
-  [:div.toc
-   (map #(with-meta [:a {:href (:route %)} (:name %)] {:key name}) toc)])
+  [:div
+   [:h1 "Technologies"]
+   [:ul.toc
+    (map #(with-meta [:li [:a {:href (:route %)} (:name %)]] {:key %}) toc)]])
 
 (defcontributionroutes state contribution-component)
 
@@ -135,8 +137,14 @@
 (defroute "/metalib/index.html" []
   (swap! state assoc :current-page #'home))
 
+(defn nav []
+  [:nav
+   [:a {:href "/metalib/"} "home"]])
+
 (defn current-page []
-  [(:current-page @state)])
+  [:div
+   [nav]
+   [(:current-page @state)]])
 
 (defn init! []
   (configure-navigation!
