@@ -1,138 +1,190 @@
 {
-    "name": "EMF",
-    "headline": "A basic EMF implementation",
-    "sections": [
-	{
-	    "features": ["ASG^+"],
-	    "headline": "Java classes for the EMF Model",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSM.java",
-		"languages": ["Java"],
-		"technologies": [],
-		"concepts": ["OO Interface"],
-		"selection": {
-		    "type": "excerpt",
-		    "folded": {
-			"from": 27,
-			"to": 52
-		    },
-		    "unfolded": {
-			"from": 1,
-			"to": 52
-		    }
-		}
-	    }
-	},
-	{
-	    "features": ["Graph editing"],
-	    "headline": "Graph editing with EMF Edit",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java",
-		"languages": ["Java"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "excerpt",
-		    "folded": {
-			"from": 168,
-			"to": 171
-		    },
-		    "unfolded": {
-			"from": 168,
-			"to": 1819
-		    }
-		}
-	    }
-	},
-	{
-	    "features": ["Text-to-ASG"],
-	    "headline": "XMI persistence",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/StandaloneFSMLScenario.java",
-		"languages": ["Java"],
-		"technologies": [],
-		"concepts": ["Persistence"],
-		"selection": {
-		    "type": "excerpt",
-		    "folded": {
-			"from": 13,
-			"to": 21
-		    },
-		    "unfolded": {
-			"from": 1,
-			"to": 24
-		    }
-		}
-	    }
-	},
-	{
-	    "features": ["Analyse^O"],
-	    "headline": "Constaint implementation in Java",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java",
-		"languages": ["Java"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "excerpt",
-		    "folded": {
-			"from": 188,
-			"to": 200
-		    },
-		    "unfolded": {
-			"from": 188,
-			"to": 217
-		    }
-		}
-	    }
-	},
-	{
-	    "features": ["Analyse^M"],
-	    "headline": "EMF Metamodel Constaints",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/model/Fsml.ecore",
-		"languages": ["XMI"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "excerpt",
-		    "folded": {
-			"from": 37,
-			"to": 38
-		    },
-		    "unfolded": {
-			"from": 1,
-			"to": 48
-		    }
-		}
-	    }
-	},
-	{
-	    "features": ["Rename refactoring"],
-	    "headline": "Rename refactoring",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl",
-		"languages": ["ATL"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "excerpt",
-		    "folded": {
-			"from": 42,
-			"to": 51
-		    },
-		    "unfolded": {
-			"from": 1,
-			"to": 62
-		    }
-		}
-	    }
-	}
-    ]
+  "name": "EMF",
+  "headline": "A basic EMF implementation",
+  "sections": [
+    {
+      "features": [
+        "ASG^+"
+      ],
+      "headline": "EMF model interface for the FSM object",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSM.java",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [],
+        "concepts": [
+          "OO interface"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 27,
+            "to": 52
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "ASG^+"
+      ],
+      "headline": "EMF model class for the FSM object",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMImpl.java",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [],
+        "concepts": [
+          "OO class"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 41,
+            "to": 51
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Graph editing"
+      ],
+      "headline": "Graph editing with EMF Edit",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [
+          "JFace",
+          "SWT"
+        ],
+        "concepts": [
+          "IDE",
+          "Structure editor"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 168,
+            "to": 171
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Graph editing"
+      ],
+      "headline": "Viewing and editing the turnstile object in the Editor",
+      "projection": {
+        "type": "illustration",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/emfturnstile.PNG"
+      }
+    },
+    {
+      "features": [
+        "Exchange format"
+      ],
+      "headline": "Textual representation of the turnstile object",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml.turnstile/Turnstile.fsml",
+        "languages": [
+          "XMI"
+        ],
+        "technologies": ["SAX"],
+        "concepts": [
+          "Persistence"
+        ],
+        "selection": {
+          "type": "all"
+        }
+      }
+    },
+    {
+      "features": [
+        "Analyse^O"
+      ],
+      "headline": "EMF delegates model validation to methods with a matching signature",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 188,
+            "to": 200
+          },
+          "unfolded": {
+            "from": 188,
+            "to": 217
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Analyse^M"
+      ],
+      "headline": "EMF Metamodel Constaints",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/model/Fsml.ecore",
+        "languages": [
+          "XMI"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 37,
+            "to": 38
+          },
+          "unfolded": {
+            "from": 1,
+            "to": 48
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Rename refactoring"
+      ],
+      "headline": "Rename refactoring",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl",
+        "languages": [
+          "ATL"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 42,
+            "to": 51
+          },
+          "unfolded": {
+            "from": 1,
+            "to": 62
+          }
+        }
+      }
+    }
+  ]
 }
