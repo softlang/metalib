@@ -99,11 +99,16 @@
    "Features:"
    (map #(with-meta [:span.feature %] {:key %}) features)])
 
+(defn perspective-component [perspective]
+  [:span.perspective perspective])
+
 ;; class section
-(defn section-component [{:keys [features headline projection]}]
+(defn section-component [{:keys [features headline projection perspective]}]
   [:div
    ;; value headline
    [:h2 headline]
+   ;; value perspective
+   (perspective-component perspective)
    ;; value features
    (features-component features)
    [projection-component projection]])

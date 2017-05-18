@@ -158,6 +158,16 @@ body {
     margin: 0 0.5rem;
 }
 
+.perspective {
+    background: $black;
+    border-radius: 1rem;
+    color: $white;
+    display: inline-block;
+    margin: .5rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
 .toc {
     > li > a  {
 	color: $black;
