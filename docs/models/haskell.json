@@ -54,7 +54,7 @@
 		"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Parser.hs",
 		"languages": ["Haskell"],
 		"technologies": ["Parsec"],
-		"concepts": ["Parser", "Parser combinator"],
+		"concepts": ["Parser combinator"],
 		"selection": {
 		    "type": "excerpt",
 		    "folded": {
