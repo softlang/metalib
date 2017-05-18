@@ -105,10 +105,10 @@
 ;; class section
 (defn section-component [{:keys [features headline projection perspective]}]
   [:div
-   ;; value headline
-   [:h2 headline]
    ;; value perspective
    (perspective-component perspective)
+   ;; value headline
+   [:h2.section-headline headline]
    ;; value features
    (features-component features)
    [projection-component projection]])
