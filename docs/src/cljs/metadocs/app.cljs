@@ -89,8 +89,9 @@
    (concepts-component concepts)
    [selection-component selection link]])
 ;; class illustration
-(defmethod projection-component "illustration" [projection]
-  [:div.projection (str projection)])
+(defmethod projection-component "illustration" [{:keys [link]}]
+  [:div.projection
+   [:img {:src link}]])
 
 ;; value features
 (defn features-component [features]
@@ -119,7 +120,7 @@
 
 (defn home []
   [:div
-   [:h1 "Technologies"]
+   [:h1 "Contributions"]
    [:ul.toc
     (map #(with-meta [:li [:a {:href (:route %)} (:name %)]] {:key %}) toc)]])
 
