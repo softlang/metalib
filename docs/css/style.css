@@ -57,6 +57,17 @@ body {
   font-family: 'Raleway', sans-serif;
   width: 80rem; }
 
+.nav {
+  border-bottom: 0.25rem solid #282a2e;
+  width: 100%; }
+
+.nav-link {
+  color: #282a2e;
+  font-size: 2rem;
+  text-decoration: none; }
+  .nav-link:visited {
+    color: #282a2e; }
+
 .language {
   background: #a54242;
   border-radius: 1rem;
@@ -106,6 +117,7 @@ body {
     .selection-all a:visited {
       color: #fff; }
   .selection-all > div > pre {
+    line-height: 1rem;
     margin: 0; }
 
 .selection-excerpt {
@@ -148,6 +160,7 @@ body {
     .selection-excerpt > div > div {
       transition: height .5s ease-in-out, margin-top .5s ease-in-out; }
       .selection-excerpt > div > div > pre {
+        line-height: 1rem;
         margin: 0; }
 
 @keyframes spin {
@@ -155,6 +168,9 @@ body {
     transform: rotate(360deg); }
   to {
     transform: rotate(0deg); } }
+
+.feature {
+  margin: 0 0.5rem; }
 
 .toc > li > a {
   color: #282a2e;
