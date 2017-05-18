@@ -1,90 +1,132 @@
 {
-    "name": "Scala",
-    "headline": "scalameta",
-    "sections": [
-	{
-	    "features": ["AST^-"],
-	    "headline": "AST^-",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
-		"languages": ["Scala"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "nothing"
-		}
-	    }
-	},
-	{
-	    "features": ["Text-to-AST"],
-	    "headline": "Text-to-AST",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
-		"languages": ["Scala"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "nothing"
-		}
-	    }
-	},
-	{
-	    "features": ["Pidgin^+-"],
-	    "headline": "Pidgin^+-",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
-		"languages": ["Scala"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "nothing"
-		}
-	    }
-	},
-	{
-	    "features": ["Analyse^M"],
-	    "headline": "Analyse^M",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
-		"languages": ["Scala"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "nothing"
-		}
-	    }
-	},
-	{
-	    "features": ["Interpret^M"],
-	    "headline": "Interpret^M",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
-		"languages": ["Scala"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "nothing"
-		}
-	    }
-	},
-	{
-	    "features": ["Translate^M"],
-	    "headline": "Translate^M",
-	    "projection": {
-		"type": "implementation",
-		"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
-		"languages": ["Scala"],
-		"technologies": [],
-		"concepts": [],
-		"selection": {
-		    "type": "nothing"
-		}
-	    }
-	}
-    ]
+  "name": "Scala",
+  "headline": "Case classes for object representation",
+  "perspective": "meta",
+  "sections": [
+    {
+      "features": [
+        "AST^-"
+      ],
+      "headline": "AST^-",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+        "languages": [
+          "Scala"
+        ],
+        "technologies": [],
+        "concepts": [
+          "Algebraic data type"
+        ],
+        "selection": {
+          "type": "all"
+        }
+      }
+    },
+    {
+      "features": [
+        "Text-to-AST",
+        "Pidgin^+-"
+      ],
+      "perspective": "object",
+      "headline": "Textual embedded turnstile parsed as valid scala AST",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/app/src/main/scala/org/softlang/fsml/Main.scala",
+        "languages": [
+          "Scala"
+        ],
+        "technologies": [],
+        "concepts": [
+          "Static annotation",
+          "Language Embedding"
+        ],
+        "selection": {
+          "type": "all"
+        }
+      }
+    },
+    {
+      "features": [
+        "Analyse^O"
+      ],
+      "headline": "Constraints are validated as part of the macro expansion",
+      "perspective": "meta",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Checker.scala",
+        "languages": [
+          "Scala"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 17,
+            "to": 24
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Analyse^M"
+      ],
+      "headline": "Distinct state ids are guarantied by lifting state to objects in the same scope",
+      "perspective": "meta",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
+        "languages": [
+          "Scala"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 8,
+            "to": 17
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Interpret^M"
+      ],
+      "headline": "Interpret^M",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+        "languages": [
+          "Scala"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "nothing"
+        }
+      }
+    },
+    {
+      "features": [
+        "Translate^M"
+      ],
+      "headline": "Translate^M",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+        "languages": [
+          "Scala"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "nothing"
+        }
+      }
+    }
+  ]
 }
