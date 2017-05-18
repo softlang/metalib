@@ -7,6 +7,7 @@
         "ASG^+"
       ],
       "headline": "EMF model interface for the FSM object",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSM.java",
@@ -31,6 +32,7 @@
         "ASG^+"
       ],
       "headline": "EMF model class for the FSM object",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMImpl.java",
@@ -54,7 +56,8 @@
       "features": [
         "Graph editing"
       ],
-      "headline": "Graph editing with EMF Edit",
+      "headline": "The generated editor",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java",
@@ -67,7 +70,7 @@
         ],
         "concepts": [
           "IDE",
-          "Structure editor"
+          "Structural editor"
         ],
         "selection": {
           "type": "excerpt",
@@ -82,7 +85,8 @@
       "features": [
         "Graph editing"
       ],
-      "headline": "Viewing and editing the turnstile object in the Editor",
+      "headline": "Viewing and editing the turnstile object in the generated editor",
+      "perspective": "object",
       "projection": {
         "type": "illustration",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/emfturnstile.PNG"
@@ -92,14 +96,17 @@
       "features": [
         "Exchange format"
       ],
-      "headline": "Textual representation of the turnstile object",
+      "headline": "The turnstile object in textual exchange format",
+      "perspective": "object",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml.turnstile/Turnstile.fsml",
         "languages": [
           "XMI"
         ],
-        "technologies": ["SAX"],
+        "technologies": [
+          "SAX"
+        ],
         "concepts": [
           "Persistence"
         ],
@@ -113,6 +120,7 @@
         "Analyse^O"
       ],
       "headline": "EMF delegates model validation to methods with a matching signature",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java",
@@ -138,7 +146,8 @@
       "features": [
         "Analyse^M"
       ],
-      "headline": "EMF Metamodel Constaints",
+      "headline": "Unique state naming is validated by setting the EMF's unique id feature",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/model/Fsml.ecore",
@@ -152,10 +161,6 @@
           "folded": {
             "from": 37,
             "to": 38
-          },
-          "unfolded": {
-            "from": 1,
-            "to": 48
           }
         }
       }
@@ -164,15 +169,21 @@
       "features": [
         "Rename refactoring"
       ],
-      "headline": "Rename refactoring",
+      "headline": "Rename refactoring by transforming the model",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl",
         "languages": [
           "ATL"
         ],
-        "technologies": [],
-        "concepts": [],
+        "technologies": [
+          "ATL"
+        ],
+        "concepts": [
+          "Model to Model transformation",
+          "Endogenous model transformation"
+        ],
         "selection": {
           "type": "excerpt",
           "folded": {
