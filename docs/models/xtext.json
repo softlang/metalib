@@ -105,6 +105,54 @@
     },
     {
       "features": [
+        "Translate^O"
+      ],
+      "headline": "Code generation",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
+        "languages": [
+          "Xtend"
+        ],
+        "technologies": [],
+        "concepts": ["Code generation"],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 80,
+            "to": 100
+          },
+          "unfolded": {
+            "from": 80,
+            "to": 185
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Graph Rendering"
+      ],
+      "headline": "DGL generation",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
+        "languages": [
+          "Xtend"
+        ],
+        "technologies": [],
+        "concepts": ["Code generation"],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 188,
+            "to": 199
+          }
+        }
+      }
+    },
+    {
+      "features": [
         "Rename refactoring"
       ],
       "headline": "Xtext default rename refactoring",

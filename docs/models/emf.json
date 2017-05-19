@@ -16,12 +16,13 @@
         ],
         "technologies": [],
         "concepts": [
-          "OO interface"
+          "OO interface",
+          "Code generation"
         ],
         "selection": {
           "type": "excerpt",
           "folded": {
-            "from": 27,
+            "from": 25,
             "to": 52
           }
         }
@@ -41,7 +42,8 @@
         ],
         "technologies": [],
         "concepts": [
-          "OO class"
+          "OO class",
+          "Code generation"
         ],
         "selection": {
           "type": "excerpt",
@@ -56,7 +58,7 @@
       "features": [
         "Graph editing"
       ],
-      "headline": "The generated editor",
+      "headline": "The generated eclipse editor for EMF models",
       "perspective": "meta",
       "projection": {
         "type": "implementation",
@@ -66,16 +68,18 @@
         ],
         "technologies": [
           "JFace",
-          "SWT"
+          "SWT",
+          "Eclipse"
         ],
         "concepts": [
           "IDE",
-          "Structural editor"
+          "Structural editor",
+          "Code generation"
         ],
         "selection": {
           "type": "excerpt",
           "folded": {
-            "from": 168,
+            "from": 166,
             "to": 171
           }
         }
@@ -85,7 +89,7 @@
       "features": [
         "Graph editing"
       ],
-      "headline": "Viewing and editing the turnstile object in the generated editor",
+      "headline": "Viewing and editing the turnstile object in the generated eclipse editor",
       "perspective": "object",
       "projection": {
         "type": "illustration",
@@ -96,7 +100,7 @@
       "features": [
         "Exchange format"
       ],
-      "headline": "The turnstile object in textual exchange format",
+      "headline": "The turnstile object in EMF's textual exchange format",
       "perspective": "object",
       "projection": {
         "type": "implementation",
@@ -119,7 +123,7 @@
       "features": [
         "Analyse^O"
       ],
-      "headline": "EMF delegates model validation to methods with a matching signature",
+      "headline": "EMF delegates model validation to methods with a certain signature",
       "perspective": "meta",
       "projection": {
         "type": "implementation",
@@ -146,7 +150,7 @@
       "features": [
         "Analyse^M"
       ],
-      "headline": "Unique state naming is validated by setting the EMF's unique id feature",
+      "headline": "Unique state names are validated by setting the EMF's unique id feature",
       "perspective": "meta",
       "projection": {
         "type": "implementation",
@@ -155,7 +159,7 @@
           "XMI"
         ],
         "technologies": [],
-        "concepts": [],
+        "concepts": ["Meta-modelling"],
         "selection": {
           "type": "excerpt",
           "folded": {
