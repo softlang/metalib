@@ -55,7 +55,8 @@
 body {
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
-  width: 80rem; }
+  width: 80rem;
+  padding-bottom: 5rem; }
 
 .nav {
   border-bottom: 0.25rem solid #282a2e;
@@ -169,8 +170,21 @@ body {
   to {
     transform: rotate(0deg); } }
 
+.section-headline {
+  display: inline-block; }
+
 .feature {
   margin: 0 0.5rem; }
+
+.perspective {
+  background: #282a2e;
+  border-radius: 1rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  margin: .5rem;
+  padding: .5rem;
+  text-decoration: none; }
 
 .toc > li > a {
   color: #282a2e;
