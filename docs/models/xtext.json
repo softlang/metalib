@@ -6,11 +6,30 @@
       "features": [
       ],
       "headline": "State-machine grammar",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
         "languages": [
           "Xtext Grammar"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "all"
+        }
+      }
+    },
+    {
+      "features": [
+      ],
+      "headline": "Turnstile",
+      "perspective": "object",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml.turnstile/src/org/softlang/metalib/xtext/fsml/turnstile/Turnstile.fsml",
+        "languages": [
+          "Xtext Turnstile Language"
         ],
         "technologies": [],
         "concepts": [],
@@ -77,6 +96,7 @@
         "Scannerfull parsing"
       ],
       "headline": "Text to EMF Model",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/parser/antlr/FsmlParser.java",
@@ -103,6 +123,7 @@
         "Analyse^O"
       ],
       "headline": "Xtext Constaint Annotation",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/validation/FsmlValidator.xtend",
@@ -127,6 +148,7 @@
         "Analyse^M"
       ],
       "headline": "Xtext model reference resolution by name",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
@@ -149,6 +171,7 @@
         "Translate^O"
       ],
       "headline": "Code generation",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
@@ -175,6 +198,7 @@
         "Graph Rendering"
       ],
       "headline": "DGL generation",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
@@ -197,6 +221,7 @@
         "Rename refactoring"
       ],
       "headline": "Xtext default rename refactoring",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl",

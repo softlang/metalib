@@ -6,7 +6,7 @@
       "features": [
       ],
       "headline": "State-machine meta-model",
-      "perspective": "object",
+      "perspective": "meta",
       "projection": {
         "type": "illustration",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/metamodel.PNG"
