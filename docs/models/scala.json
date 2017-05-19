@@ -38,8 +38,7 @@
         ],
         "technologies": [],
         "concepts": [
-          "Static annotation",
-          "Language Embedding"
+          "Static annotation"
         ],
         "selection": {
           "type": "excerpt",
@@ -100,7 +99,7 @@
       "features": [
         "Interpret^M"
       ],
-      "headline": "Annotation inlines textual embedded fsm into an scala object with initial state",
+      "headline": "Interpretation follows a chain of event definitions contained in the states scala objects",
       "perspective": "data",
       "projection": {
         "type": "implementation",
