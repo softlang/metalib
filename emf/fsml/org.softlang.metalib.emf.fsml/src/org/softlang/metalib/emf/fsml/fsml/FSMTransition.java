@@ -86,7 +86,7 @@ public interface FSMTransition extends EObject {
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(FSMState)
 	 * @see org.softlang.metalib.emf.fsml.fsml.FsmlPackage#getFSMTransition_Target()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	FSMState getTarget();

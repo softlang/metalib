@@ -4,6 +4,16 @@
   "sections": [
     {
       "features": [
+      ],
+      "headline": "State-machine meta-model",
+      "perspective": "object",
+      "projection": {
+        "type": "illustration",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/metamodel.PNG"
+      }
+    },
+    {
+      "features": [
         "ASG^+"
       ],
       "headline": "EMF model interface for the FSM object",

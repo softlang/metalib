@@ -40,7 +40,9 @@ public class Simulation {
 			return;
 
 		// Apply the next transition and inform the listeners.
-		current = next.getTarget();
+		if(next.getTarget() != null)
+			current = next.getTarget();
+		
 		for (SimulationListener l : simulationListeners)
 			l.apply(next);
 

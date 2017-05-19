@@ -68,13 +68,19 @@ public class FSMTransitionItemProvider extends ItemProviderAdapter implements IE
 	 * @generated
 	 */
 	protected void addInputPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FSMTransition_input_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FSMTransition_input_feature",
-								"_UI_FSMTransition_type"),
-						FsmlPackage.Literals.FSM_TRANSITION__INPUT, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FSMTransition_input_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FSMTransition_input_feature", "_UI_FSMTransition_type"),
+				 FsmlPackage.Literals.FSM_TRANSITION__INPUT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -84,13 +90,19 @@ public class FSMTransitionItemProvider extends ItemProviderAdapter implements IE
 	 * @generated
 	 */
 	protected void addActionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FSMTransition_action_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FSMTransition_action_feature",
-								"_UI_FSMTransition_type"),
-						FsmlPackage.Literals.FSM_TRANSITION__ACTION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FSMTransition_action_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FSMTransition_action_feature", "_UI_FSMTransition_type"),
+				 FsmlPackage.Literals.FSM_TRANSITION__ACTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -100,12 +112,19 @@ public class FSMTransitionItemProvider extends ItemProviderAdapter implements IE
 	 * @generated
 	 */
 	protected void addTargetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FSMTransition_target_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FSMTransition_target_feature",
-								"_UI_FSMTransition_type"),
-						FsmlPackage.Literals.FSM_TRANSITION__TARGET, true, false, true, null, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FSMTransition_target_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FSMTransition_target_feature", "_UI_FSMTransition_type"),
+				 FsmlPackage.Literals.FSM_TRANSITION__TARGET,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -146,11 +165,10 @@ public class FSMTransitionItemProvider extends ItemProviderAdapter implements IE
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to
-	 * update any cached children and by creating a viewer notification, which
-	 * it passes to {@link #fireNotifyChanged}. <!-- begin-user-doc --> <!--
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -158,10 +176,10 @@ public class FSMTransitionItemProvider extends ItemProviderAdapter implements IE
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FSMTransition.class)) {
-		case FsmlPackage.FSM_TRANSITION__INPUT:
-		case FsmlPackage.FSM_TRANSITION__ACTION:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case FsmlPackage.FSM_TRANSITION__INPUT:
+			case FsmlPackage.FSM_TRANSITION__ACTION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

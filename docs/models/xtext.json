@@ -4,9 +4,27 @@
   "sections": [
     {
       "features": [
+      ],
+      "headline": "State-machine grammar",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
+        "languages": [
+          "Xtext Grammar"
+        ],
+        "technologies": [],
+        "concepts": [],
+        "selection": {
+          "type": "all"
+        }
+      }
+    },
+    {
+      "features": [
         "ASG^+"
       ],
-      "headline": "Java classes for the EMF Model",
+      "headline": "EMF model interface for the FSM object",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/FSM.java",
@@ -15,17 +33,40 @@
         ],
         "technologies": [],
         "concepts": [
-          "OO Interface"
+          "OO interface",
+          "Code generation"
         ],
         "selection": {
           "type": "excerpt",
           "folded": {
-            "from": 26,
+            "from": 24,
             "to": 44
-          },
-          "unfolded": {
-            "from": 1,
-            "to": 44
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "ASG^+"
+      ],
+      "headline": "EMF model class for the FSM object",
+      "perspective": "meta",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/impl/FSMImpl.java",
+        "languages": [
+          "Java"
+        ],
+        "technologies": [],
+        "concepts": [
+          "OO class",
+          "Code generation"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 35,
+            "to": 47
           }
         }
       }
@@ -85,7 +126,7 @@
       "features": [
         "Analyse^M"
       ],
-      "headline": "Xtext model references by name",
+      "headline": "Xtext model reference resolution by name",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
@@ -93,7 +134,7 @@
           "Xtext Grammar"
         ],
         "technologies": [],
-        "concepts": [],
+        "concepts": ["Reference relationship", "Name binding"],
         "selection": {
           "type": "excerpt",
           "folded": {
