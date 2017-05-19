@@ -1,13 +1,13 @@
 {
   "name": "Scala",
-  "headline": "Case classes for object representation",
-  "perspective": "meta",
+  "headline": "scalameta",
   "sections": [
     {
       "features": [
         "AST^-"
       ],
-      "headline": "AST^-",
+      "headline": "Case classes for object representation",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
@@ -42,7 +42,11 @@
           "Language Embedding"
         ],
         "selection": {
-          "type": "all"
+          "type": "excerpt",
+          "folded": {
+            "from": 5,
+            "to": 23
+          }
         }
       }
     },
@@ -81,8 +85,8 @@
         "languages": [
           "Scala"
         ],
-        "technologies": [],
-        "concepts": [],
+        "technologies": ["scalameta"],
+        "concepts": ["Lifting", "Quasi-quotation", "Implicit conversion"],
         "selection": {
           "type": "excerpt",
           "folded": {
@@ -96,17 +100,51 @@
       "features": [
         "Interpret^M"
       ],
-      "headline": "Interpret^M",
+      "headline": "Annotation inlines textual embedded fsm into an scala object with initial state",
+      "perspective": "data",
       "projection": {
         "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/app/src/main/scala/org/softlang/fsml/Main.scala",
         "languages": [
           "Scala"
         ],
-        "technologies": [],
-        "concepts": [],
+        "technologies": [
+        ],
+        "concepts": [
+        ],
         "selection": {
-          "type": "nothing"
+          "type": "excerpt",
+          "folded": {
+            "from": 25,
+            "to": 25
+          }
+        }
+      }
+    },
+    {
+      "features": [
+        "Interpret^M"
+      ],
+      "headline": "Annotation inlines textual embedded fsm into an scala object with initial state",
+      "perspective": "meta",
+      "projection": {
+        "type": "implementation",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Fsm.scala",
+        "languages": [
+          "Scala"
+        ],
+        "technologies": [
+          "scalameta"
+        ],
+        "concepts": [
+          "Inline Macro"
+        ],
+        "selection": {
+          "type": "excerpt",
+          "folded": {
+            "from": 8,
+            "to": 25
+          }
         }
       }
     },
@@ -114,17 +152,24 @@
       "features": [
         "Translate^M"
       ],
-      "headline": "Translate^M",
+      "headline": "The transitions are translated to scala AST function definitions",
+      "perspective": "meta",
       "projection": {
         "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala",
+        "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
         "languages": [
           "Scala"
         ],
-        "technologies": [],
-        "concepts": [],
+        "technologies": ["scalameta"],
+        "concepts": [
+          "Lifting", "Quasi-quotation", "Implicit conversion"
+        ],
         "selection": {
-          "type": "nothing"
+          "type": "excerpt",
+          "folded": {
+            "from": 19,
+            "to": 48
+          }
         }
       }
     }
