@@ -13,6 +13,7 @@
                           [org.clojure/clojurescript "1.9.521"]
                           [org.clojure/core.async "0.3.442"]
                           [org.clojure/tools.nrepl "0.2.13"]
+                          [org.slf4j/slf4j-nop "1.7.25"]
                           [pandeiro/boot-http "0.8.0"]
                           [reagent "0.6.1"]
                           [reagent-utils "0.2.1"]
