@@ -137,7 +137,8 @@
         "type": "implementation",
         "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlVisualizer.py",
         "languages": [
-          "JSON + DOT"
+          "JSON",
+          "DOT"
         ],
         "technologies": [
           "Graphviz"
