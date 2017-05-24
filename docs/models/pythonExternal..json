@@ -50,46 +50,6 @@
     },
     {
       "features": [
-        "Interpret^O"
-      ],
-      "headline": "Headline",
-      "perspective": "Perspective",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlInterpreter.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Analyse^O"
-      ],
-      "headline": "Headline",
-      "perspective": "Perspective",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlConstraints.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [],
-        "concepts": [
-          "Exception"
-        ],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
         "Serialization"
       ],
       "headline": "Headline",
@@ -142,48 +102,6 @@
         ],
         "technologies": [
           "Graphviz"
-        ],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Translate^O"
-      ],
-      "headline": "Headline",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlCGenerator.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [
-          "jinja2"
-        ],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Translate^O"
-      ],
-      "headline": "Headline",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/templates/Fsm.jinja2",
-        "languages": [
-          "jinja2"
-        ],
-        "technologies": [
-          "jinja2"
         ],
         "concepts": [],
         "selection": {
