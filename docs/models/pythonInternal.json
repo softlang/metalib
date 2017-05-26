@@ -1,151 +1,166 @@
 {
-  "name": "pythonInternal",
-  "headline": "Headline",
-  "sections": [
-    {
-      "features": [
-        "API"
-      ],
-      "headline": "Headline",
-      "perspective": "object",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlSample.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [],
-        "concepts": [
-          "Fluent API"
-        ],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "API",
-        "AST+"
-      ],
-      "headline": "Headline",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlModel.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [],
-        "concepts": [
-          "Fluent API"
-        ],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Translate^O"
-      ],
-      "headline": "Headline",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlCGenerator.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [
-          "jinja2"
-        ],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Translate^O"
-      ],
-      "headline": "Headline",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/templates/Fsm.jinja2",
-        "languages": [
-          "jinja2"
-        ],
-        "technologies": [
-          "jinja2"
-        ],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Analyse^O"
-      ],
-      "headline": "Headline",
-      "perspective": "Perspective",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlConstraints.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [],
-        "concepts": [
-          "Exception"
-        ],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Interpret^O"
-      ],
-      "headline": "Headline",
-      "perspective": "Perspective",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlInterpreter.py",
-        "languages": [
-          "Python"
-        ],
-        "technologies": [],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "Graph rendering"
-      ],
-      "headline": "Headline",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/dot/sample.dot",
-        "languages": [
-          "DOT"
-        ],
-        "technologies": [],
-        "concepts": [
-        ],
-        "selection": {
-          "type": "all"
-        }
-      }
-    }
-  ]
-}
+	"name" : "pythonInternal",
+	"headline" : "Undefined Headline",
+	"sections" : [
+	 {
+			"features" : [ "API" ],
+			"headline" : " API  Feature",
+			"perspective" : "object",
+			"projection" : 
+				{
+						"languages" : [ "Python" ],
+						"type": "implementation",
+						"concepts" : [ "Fluent API" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlSample.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "API" , "AST^+" ],
+			"headline" : " API,   AST^+  Features",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Python" ],
+						"type": "implementation",
+						"concepts" : [ "Fluent API" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlModel.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Translate^O" ],
+			"headline" : " Translate^O  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Python" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [ "jinja2" ],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlCGenerator.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Translate^O" ],
+			"headline" : " Translate^O  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "jinja2" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [ "jinja2" ],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/templates/Fsm.jinja2",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Analyse^O" ],
+			"headline" : " Analyse^O  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Python" ],
+						"type": "implementation",
+						"concepts" : [ "Exception" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlConstraints.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interpret^O" ],
+			"headline" : " Interpret^O  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Python" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlInterpreter.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Graph rendering" ],
+			"headline" : " Graph rendering  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "DOT" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/dot/sample.dot",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Graph rendering" ],
+			"headline" : " Graph rendering  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "JSON" , "DOT" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [ "Graphviz" ],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlVisualizer.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interpretation" ],
+			"headline" : "Input for interpretation",
+			"perspective" : "test",
+			"projection" : 
+				{
+						"languages" : [ "JSON" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/sample.input",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interpretation" ],
+			"headline" : "Output for interpretation",
+			"perspective" : "test",
+			"projection" : 
+				{
+						"languages" : [ "JSON" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/sample.output",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			}
+		]
+	}

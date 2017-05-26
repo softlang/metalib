@@ -1,0 +1,86 @@
+{
+	"name" : "javaFluentInternal",
+	"headline" : "Undefined Headline",
+	"sections" : [
+	 {
+			"features" : [ "Interface" ],
+			"headline" : " Interface  Feature",
+			"perspective" : "object",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [ "Fluent API" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/fluent/Sample.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interface" ],
+			"headline" : " Interface  Feature (Not showing all artifacts) ",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [ "Fluent API" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/fluent/Fsm.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "AST^+" ],
+			"headline" : "Implementation of fluent API",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [ "Fluent API" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/fluent/FsmImpl.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interpret^O" ],
+			"headline" : " Interpret^O  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/fluent/FsmlInterpreter.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interpret^O" ],
+			"headline" : " Interpret^O  Feature",
+			"perspective" : "test",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [ "JUnit" ],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/FluentTest.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			}
+		]
+	}

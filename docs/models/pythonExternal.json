@@ -1,0 +1,118 @@
+{
+	"name" : "pythonExternal",
+	"headline" : "Undefined Headline",
+	"sections" : [
+	 {
+			"features" : [ "Concrete syntax" ],
+			"headline" : " Concrete syntax  Feature",
+			"perspective" : "object",
+			"projection" : 
+				{
+						"languages" : [],
+						"type": "implementation",
+						"concepts" : [ "External DSL" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/sample.fsml",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Scanning" ],
+			"headline" : " Scanning  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [],
+						"type": "implementation",
+						"concepts" : [ "Parser generation" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlLexer.py",
+						"selection": {
+						          "type": "nothing"
+						}
+						}
+			},
+	  {
+			"features" : [ "Text-to-AST" ],
+			"headline" : " Text-to-AST  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [],
+						"type": "implementation",
+						"concepts" : [ "Parser generation" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlParser.py",
+						"selection": {
+						          "type": "nothing"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interface" , "AST+" ],
+			"headline" : " Interface,   AST+  Features",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Python" ],
+						"type": "implementation",
+						"concepts" : [ "dictionary" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlModel.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Scanning" , "Text-to-AST" ],
+			"headline" : " Scanning,   Text-to-AST  Features",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "ANTLR" ],
+						"type": "implementation",
+						"concepts" : [ "Semantic action" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/Fsml.g4",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Serialization" ],
+			"headline" : " Serialization  Feature",
+			"perspective" : "object",
+			"projection" : 
+				{
+						"languages" : [ "JSON" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/sample.json",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Serialization" , "Parsing" ],
+			"headline" : " Serialization,   Parsing  Features",
+			"perspective" : "test",
+			"projection" : 
+				{
+						"languages" : [ "Python" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlToJSON.py",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			}
+		]
+	}

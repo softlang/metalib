@@ -1,0 +1,134 @@
+{
+	"name" : "javaInfluentInternal",
+	"headline" : "Undefined Headline",
+	"sections" : [
+	 {
+			"features" : [ "Interface" ],
+			"headline" : " Interface  Feature",
+			"perspective" : "object",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [ "Getter" , "Setter" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/ImperativeSample.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interface" ],
+			"headline" : " Interface  Feature",
+			"perspective" : "object",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [ "Functional constructor" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FunctionalSample.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "AST+" ],
+			"headline" : " AST+  Feature (Not showing all artifacts) ",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [ "Functional constructor" ],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/Fsm.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interpret^O" ],
+			"headline" : " Interpret^O  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlInterpreter.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Interpret^O" ],
+			"headline" : " Interpret^O  Feature",
+			"perspective" : "test",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [ "JUnit" ],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/InfluentTest.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Translate^O" ],
+			"headline" : " Translate^O  Feature",
+			"perspective" : "object",
+			"projection" : 
+				{
+						"languages" : [ "C" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/Turnstile.c",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Translate^O" ],
+			"headline" : " Translate^O  Feature",
+			"perspective" : "meta",
+			"projection" : 
+				{
+						"languages" : [ "StringTemplate" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [ "StringTemplate" ],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/templates/Fsm.stg",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			},
+	  {
+			"features" : [ "Translate^O" ],
+			"headline" : " Translate^O  Feature",
+			"perspective" : "test",
+			"projection" : 
+				{
+						"languages" : [ "Java" ],
+						"type": "implementation",
+						"concepts" : [],
+						"technologies" : [ "StringTemplate" , "JUnit" ],
+						 "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/CGeneratorTest.java",
+						"selection": {
+						          "type": "all"
+						}
+						}
+			}
+		]
+	}
