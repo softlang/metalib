@@ -23,14 +23,13 @@
 (defmacro defcontributionroutes [state contribution-component]
   (let [model-file-names (-> model-dir
                              load-model-file-names)]
-    `(do ~@(map (fn [model-file-name] 
+    `(do ~@(map (fn [model-file-name]                  
                   (let [model-name (strip-file-extension model-file-name)
                         model (load-json model-file-name)]
                     (copy (file "resources/public/index.html") (file (str "resources/public/" model-name ".html")))
                     `(~'defroute ~(str "/metalib/" model-name ".html") []
                       (~'swap! ~'state ~'assoc :current-page #(~contribution-component ~model)))))
                 model-file-names))))
-
 
 (defmacro deftoc []
   (let [model-file-names (-> model-dir

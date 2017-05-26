@@ -1,237 +1,239 @@
 {
-  "name": "Xtext",
-  "headline": "XText with generated EMF model",
-  "sections": [
-    {
-      "features": [
-      ],
-      "headline": "State-machine grammar",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
-        "languages": [
-          "Xtext Grammar"
-        ],
-        "technologies": [],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-      ],
-      "headline": "Turnstile",
-      "perspective": "object",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml.turnstile/src/org/softlang/metalib/xtext/fsml/turnstile/Turnstile.fsml",
-        "languages": [
-          "Xtext Turnstile Language"
-        ],
-        "technologies": [],
-        "concepts": [],
-        "selection": {
-          "type": "all"
-        }
-      }
-    },
-    {
-      "features": [
-        "ASG^+"
-      ],
-      "headline": "EMF model interface for the FSM object",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/FSM.java",
-        "languages": [
-          "Java"
-        ],
-        "technologies": [],
-        "concepts": [
-          "OO interface",
-          "Code generation"
-        ],
-        "selection": {
-          "type": "excerpt",
-          "folded": {
-            "from": 24,
-            "to": 44
-          }
-        }
-      }
-    },
-    {
-      "features": [
-        "ASG^+"
-      ],
-      "headline": "EMF model class for the FSM object",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/impl/FSMImpl.java",
-        "languages": [
-          "Java"
-        ],
-        "technologies": [],
-        "concepts": [
-          "OO class",
-          "Code generation"
-        ],
-        "selection": {
-          "type": "excerpt",
-          "folded": {
-            "from": 35,
-            "to": 47
-          }
-        }
-      }
-    },
-    {
-      "features": [
-        "Text-to-ASG",
-        "Scannerfull parsing"
-      ],
-      "headline": "Text to EMF Model",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/parser/antlr/FsmlParser.java",
-        "languages": [
-          "Java"
-        ],
-        "technologies": [
-          "ANTLR"
-        ],
-        "concepts": [
-          "Parser"
-        ],
-        "selection": {
-          "type": "excerpt",
-          "folded": {
-            "from": 12,
-            "to": 40
-          }
-        }
-      }
-    },
-    {
-      "features": [
-        "Analyse^O"
-      ],
-      "headline": "Xtext Constaint Annotation",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/validation/FsmlValidator.xtend",
-        "languages": [
-          "Xtend"
-        ],
-        "technologies": [],
-        "concepts": [
-          "Java annotation"
-        ],
-        "selection": {
-          "type": "excerpt",
-          "folded": {
-            "from": 35,
-            "to": 54
-          }
-        }
-      }
-    },
-    {
-      "features": [
-        "Analyse^M"
-      ],
-      "headline": "Xtext model reference resolution by name",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
-        "languages": [
-          "Xtext Grammar"
-        ],
-        "technologies": [],
-        "concepts": ["Reference relationship", "Name binding"],
-        "selection": {
-          "type": "excerpt",
-          "folded": {
-            "from": 20,
-            "to": 21
-          }
-        }
-      }
-    },
-    {
-      "features": [
-        "Translate^O"
-      ],
-      "headline": "Code generation",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
-        "languages": [
-          "Xtend"
-        ],
-        "technologies": [],
-        "concepts": ["Code generation"],
-        "selection": {
-          "type": "excerpt",
-          "folded": {
-            "from": 80,
-            "to": 100
-          },
-          "unfolded": {
-            "from": 80,
-            "to": 185
-          }
-        }
-      }
-    },
-    {
-      "features": [
-        "Graph Rendering"
-      ],
-      "headline": "DGL generation",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
-        "languages": [
-          "Xtend"
-        ],
-        "technologies": [],
-        "concepts": ["Code generation"],
-        "selection": {
-          "type": "excerpt",
-          "folded": {
-            "from": 188,
-            "to": 199
-          }
-        }
-      }
-    },
-    {
-      "features": [
-        "Rename refactoring"
-      ],
-      "headline": "Xtext default rename refactoring",
-      "perspective": "meta",
-      "projection": {
-        "type": "implementation",
-        "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl",
-        "languages": [],
-        "technologies": [],
-        "concepts": [],
-        "selection": {
-          "type": "nothing"
-        }
-      }
-    }
-  ]
+    "name": "Xtext",
+    "headline": "XText with generated EMF model",
+    "sections": [
+	{
+	    "features": [
+	    ],
+	    "headline": "State-machine grammar",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Xtext Grammar"
+		],
+		"technologies": [],
+		"concepts": [],
+		"artifacts": [
+		    {
+			"type": "all",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext"
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+	    ],
+	    "headline": "Turnstile",
+	    "perspective": "object",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Xtext Turnstile Language"
+		],
+		"technologies": [],
+		"concepts": [],
+		"artifacts": [
+		    {
+			"type": "all",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml.turnstile/src/org/softlang/metalib/xtext/fsml/turnstile/Turnstile.fsml"
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"ASG^+"
+	    ],
+	    "headline": "EMF model interface for the FSM object",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Java"
+		],
+		"technologies": [],
+		"concepts": [
+		    "OO interface",
+		    "Code generation"
+		],
+		"artifacts": [
+		    {
+			"type": "some",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/FSM.java",
+			"from": 24,
+			"to": 44
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"ASG^+"
+	    ],
+	    "headline": "EMF model class for the FSM object",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Java"
+		],
+		"technologies": [],
+		"concepts": [
+		    "OO class",
+		    "Code generation"
+		],
+		"artifacts": [
+		    {
+			"type": "some",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/impl/FSMImpl.java",
+			"from": 35,
+			"to": 47
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"Text-to-ASG",
+		"Scannerfull parsing"
+	    ],
+	    "headline": "Text to EMF Model",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Java"
+		],
+		"technologies": [
+		    "ANTLR"
+		],
+		"concepts": [
+		    "Parser"
+		],
+		"artifacts": [
+		    {
+			"type": "some",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/parser/antlr/FsmlParser.java",
+			"from": 12,
+			"to": 40
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"Analyse^O"
+	    ],
+	    "headline": "Xtext Constaint Annotation",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Xtend"
+		],
+		"technologies": [],
+		"concepts": [
+		    "Java annotation"
+		],
+		"artifacts": [
+		    {
+			"type": "some",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/validation/FsmlValidator.xtend",
+			"from": 35,
+			"to": 54
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"Analyse^M"
+	    ],
+	    "headline": "Xtext model reference resolution by name",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Xtext Grammar"
+		],
+		"technologies": [],
+		"concepts": ["Reference relationship", "Name binding"],
+		"artifacts":  [
+		    {
+			"type": "some",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/Fsml.xtext",
+			"from": 20,
+			"to": 21
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"Translate^O"
+	    ],
+	    "headline": "Code generation",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Xtend"
+		],
+		"technologies": [],
+		"concepts": ["Code generation"],
+		"artifacts": [
+		    {
+			"type": "some",
+		"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
+			"from": 80,
+			"to": 185
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"Graph Rendering"
+	    ],
+	    "headline": "DGL generation",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [
+		    "Xtend"
+		],
+		"technologies": [],
+		"concepts": ["Code generation"],
+		"artifacts": [
+		    {
+			"type": "some",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/xtext/fsml/org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/generator/FsmlGenerator.xtend",
+			"from": 188,
+			"to": 199
+		    }
+		]
+	    }
+	},
+	{
+	    "features": [
+		"Rename refactoring"
+	    ],
+	    "headline": "Xtext default rename refactoring",
+	    "perspective": "meta",
+	    "projection": {
+		"type": "component",
+		"languages": [],
+		"technologies": [],
+		"concepts": [],
+		"artifacts": [
+		    {
+			"type": "none",
+			"link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl"
+		    }
+		]
+	    }
+	}
+    ]
 }

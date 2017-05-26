@@ -12,6 +12,8 @@
                    [secretary.core :refer [defroute]]
                    [metadocs.macros :refer [defcontributionroutes deftoc]]))
 
+(enable-console-print!)
+
 (def wiki-url "https://101wiki.softlang.org/")
 (defonce state (atom {}))
 
@@ -20,49 +22,43 @@
     {:component-did-mount #(.highlightBlock js/hljs (dom-node %))}))
 
 ;; abstract class selection
-(defmulti selection-component #(:type %1))
+(defmulti artifact-component #(:type %))
 
-;; class nothing extends selection
-(defmethod selection-component "nothing" [selection link]
-  [:div.selection-nothing])
+;; class nothing extends artifact
+(defmethod artifact-component "none" [{:keys [link]}]
+  [:div.artifact-none
+   [:a {:href link :target "_blank"} "open_in_new"]])
 
-;; class all extends selection
-(defmethod selection-component "all" [selection link]
+;; class all extends artifact
+(defmethod artifact-component "all" [{:keys [link]}]
   (let [code (atom nil)]
     (go (let [response (<! (http/get link {:with-credentials? false}))]
           (reset! code (:body response))))
     (fn []
-      [:div.selection-all
+      [:div.artifact-all
        [:a {:href link :target "_blank"} "open_in_new"]
        (if (nil? @code)
          [:span "sync"]
          [:div
           [(highlight-block [:pre @code])]])])))
 
-;; class excerpt extends selection
-(defmethod selection-component "excerpt" [{:keys [folded unfolded]} link]
-  (let [folded? (atom true)
-        code (atom nil)]
+;; class some extends artifact
+(defmethod artifact-component "some" [{:keys [from to link]}]
+  (let [code (atom nil)]
     (go (let [response (<! (http/get link {:with-credentials? false}))]
-          (reset! code (if (nil? unfolded) (:body response) (->> response
-                                                                 :body
-                                                                 split-lines
-                                                                 (take (:to unfolded))
-                                                                 (drop (- (:from unfolded) 1))
-                                                                 (join "\n"))))))
+          (reset! code (->> response
+                            :body
+                            split-lines
+                            (take to)
+                            (drop (dec from))
+                            (join "\n")))))
     (fn []
-      [:div.selection-excerpt
+      [:div.artifact-some
        [:a {:href link :target "_blank"} "open_in_new"]
        (if (nil? @code)
          [:span "sync"]
-         [(fn []
-            (let [line-count (-> @code split-lines count)]
-              [:div
-               [:div {:style {:height (str (if @folded? (if (nil? unfolded) (:to folded) (inc (- (:to folded) (:from unfolded)))) line-count) "rem")
-                              :margin-top (str (if @folded? (- (if (nil? unfolded) (dec (:from folded)) (- (:from folded) (:from unfolded)))) 0) "rem")}}
-                [(highlight-block [:pre @code])]]
-               [:button {:on-click #(swap! folded? not)}
-                [:i {:style {:transform (str "rotateX(" (if @folded? 0 180) "deg")}} "expand_more"]]]))])])))
+         [:div
+          [(highlight-block [:pre @code])]])])))
 
 ;; value languages
 (defn languages-component [languages]
@@ -76,21 +72,33 @@
 (defn concepts-component [concepts]
   (map #(with-meta [:a.concept {:href (str wiki-url %) :target "_blank"} %] {:key %}) concepts))
 
+;; part artifacts
+(defn artifacts-component [artifacts]
+  (map #(with-meta [artifact-component %] {:key (:link %)}) artifacts))
+
 ;; abstract class projection
 (defmulti projection-component :type)
 ;; class implementation
-(defmethod projection-component "implementation" [{:keys [selection link languages technologies concepts]}]
-  [:div.projection
+(defmethod projection-component "component" [{:keys [artifacts languages technologies concepts]}]
+  [:div.projection-component
    ;; value languages
    (languages-component languages)
    ;; value technologies
    (technologies-component technologies)
    ;; value concepts
    (concepts-component concepts)
-   [selection-component selection link]])
+   ;; part artifacts
+   (artifacts-component artifacts)])
+
 ;; class illustration
-(defmethod projection-component "illustration" [{:keys [link]}]
-  [:div.projection
+(defmethod projection-component "capture" [{:keys [link]}]
+  [:div.projection-capture
+   ;; value languages
+   (languages-component languages)
+   ;; value technologies
+   (technologies-component technologies)
+   ;; value concepts
+   (concepts-component concepts)
    [:img {:src link}]])
 
 ;; value features
@@ -99,18 +107,20 @@
    "Features:"
    (map #(with-meta [:span.feature %] {:key %}) features)])
 
+;; abstract class perspective
 (defn perspective-component [perspective]
   [:span.perspective perspective])
 
 ;; class section
 (defn section-component [{:keys [features headline projection perspective]}]
   [:div
-   ;; value perspective
+   ;; part perspective
    (perspective-component perspective)
    ;; value headline
    [:h2.section-headline headline]
    ;; value features
    (features-component features)
+   ;; part projection
    [projection-component projection]])
 
 ;; class contribution

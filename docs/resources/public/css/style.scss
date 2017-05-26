@@ -14,7 +14,10 @@ $pink: #ff69b4;
 body {
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
-    width: 80rem;
+    width: 100%;
+    @media (min-width: 80em) {
+	width: 80rem;
+    }
     padding-bottom: 5rem;
 }
 
@@ -62,7 +65,23 @@ body {
     text-decoration: none;
 }
 
-.selection-all {
+.artifact-none {
+    background: $black;
+    padding: 1rem;
+    a {
+	color: $white;
+	display: block;
+	font-family: "Material Icons";
+	text-decoration: none;
+	width: 100%;
+	text-align: right;
+	&:visited {
+	    color: $white;
+	}
+    }
+}
+
+.artifact-all {
     background: $black;
     padding: 1rem;
     > span {
@@ -90,13 +109,14 @@ body {
 	> pre {
 	    line-height: 1rem;
 	    margin: 0;
+	    overflow-x: auto;
 	}
     }
 }
 
-.selection-excerpt {
+.artifact-some {
     background: $black;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
     a {
 	color: $white;
 	display: block;
@@ -119,29 +139,10 @@ body {
 	width: 1.5rem;
     }
     > div {
-	background: $black;
-	overflow: hidden;
-	> button {
-	    background: $black;
-	    border: none;
-	    color: $white;
-	    cursor: pointer;
-	    outline: none;
-	    width: 100%;
-	    > i {
-		display: inline-block;
-		font-family: 'Material Icons';
-		font-size: 1.5rem;
-		font-style: normal;
-		transition: transform .5s ease-in-out;
-	    }
-	}
-	> div {
-	    transition: height .5s ease-in-out, margin-top .5s ease-in-out;
-	    > pre {
-		line-height: 1rem;
-		margin: 0;
-	    }
+	> pre {
+	    line-height: 1rem;
+	    margin: 0;
+	    overflow-x: auto;
 	}
     }
 }
