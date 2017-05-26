@@ -55,8 +55,11 @@
 body {
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
-  width: 80rem;
+  width: 100%;
   padding-bottom: 5rem; }
+  @media (min-width: 80em) {
+    body {
+      width: 80rem; } }
 
 .nav {
   border-bottom: 0.25rem solid #282a2e;
@@ -96,44 +99,23 @@ body {
   padding: .5rem;
   text-decoration: none; }
 
-.selection-all {
+.artifact-none {
   background: #282a2e;
   padding: 1rem; }
-  .selection-all > span {
-    animation: spin 1s ease-in-out infinite;
-    color: #fff;
-    display: block;
-    font-family: 'Material Icons';
-    font-size: 1.5rem;
-    margin: auto;
-    text-align: center;
-    width: 1.5rem; }
-  .selection-all a {
+  .artifact-none a {
     color: #fff;
     display: block;
     font-family: "Material Icons";
     text-decoration: none;
     width: 100%;
     text-align: right; }
-    .selection-all a:visited {
+    .artifact-none a:visited {
       color: #fff; }
-  .selection-all > div > pre {
-    line-height: 1rem;
-    margin: 0; }
 
-.selection-excerpt {
+.artifact-all {
   background: #282a2e;
-  padding: 1rem 1rem 0 1rem; }
-  .selection-excerpt a {
-    color: #fff;
-    display: block;
-    font-family: "Material Icons";
-    text-decoration: none;
-    width: 100%;
-    text-align: right; }
-    .selection-excerpt a:visited {
-      color: #fff; }
-  .selection-excerpt > span {
+  padding: 1rem; }
+  .artifact-all > span {
     animation: spin 1s ease-in-out infinite;
     color: #fff;
     display: block;
@@ -142,27 +124,45 @@ body {
     margin: auto;
     text-align: center;
     width: 1.5rem; }
-  .selection-excerpt > div {
-    background: #282a2e;
-    overflow: hidden; }
-    .selection-excerpt > div > button {
-      background: #282a2e;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      outline: none;
-      width: 100%; }
-      .selection-excerpt > div > button > i {
-        display: inline-block;
-        font-family: 'Material Icons';
-        font-size: 1.5rem;
-        font-style: normal;
-        transition: transform .5s ease-in-out; }
-    .selection-excerpt > div > div {
-      transition: height .5s ease-in-out, margin-top .5s ease-in-out; }
-      .selection-excerpt > div > div > pre {
-        line-height: 1rem;
-        margin: 0; }
+  .artifact-all a {
+    color: #fff;
+    display: block;
+    font-family: "Material Icons";
+    text-decoration: none;
+    width: 100%;
+    text-align: right; }
+    .artifact-all a:visited {
+      color: #fff; }
+  .artifact-all > div > pre {
+    line-height: 1rem;
+    margin: 0;
+    overflow-x: auto; }
+
+.artifact-some {
+  background: #282a2e;
+  padding: 1rem; }
+  .artifact-some a {
+    color: #fff;
+    display: block;
+    font-family: "Material Icons";
+    text-decoration: none;
+    width: 100%;
+    text-align: right; }
+    .artifact-some a:visited {
+      color: #fff; }
+  .artifact-some > span {
+    animation: spin 1s ease-in-out infinite;
+    color: #fff;
+    display: block;
+    font-family: 'Material Icons';
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: center;
+    width: 1.5rem; }
+  .artifact-some > div > pre {
+    line-height: 1rem;
+    margin: 0;
+    overflow-x: auto; }
 
 @keyframes spin {
   from {
