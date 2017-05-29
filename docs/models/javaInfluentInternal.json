@@ -1,16 +1,17 @@
 {
   "name": "javaInfluentInternal",
+  "baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Java/",
   "headline": "Java influent internal",
   "sections": [
     {
       "features": [
         "Interface"
       ],
-      "perspective": "object",
+      "perspectives": ["object"],
       "languages": [
         "Java"
       ],
-      "type": "component",
+      
       "concepts": [
         "Getter",
         "Setter"
@@ -19,7 +20,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/ImperativeSample.java"
+          "link": "org/softlang/fsml/ImperativeSample.java"
         }
       ]
     },
@@ -27,11 +28,11 @@
       "features": [
         "Interface"
       ],
-      "perspective": "object",
+      "perspectives": ["object"],
       "languages": [
         "Java"
       ],
-      "type": "component",
+      
       "concepts": [
         "Functional constructor"
       ],
@@ -39,7 +40,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FunctionalSample.java"
+          "link": "org/softlang/fsml/FunctionalSample.java"
         }
       ]
     },
@@ -47,11 +48,11 @@
       "features": [
         "AST+"
       ],
-      "perspective": "meta",
+      "perspectives": ["meta"],
       "languages": [
         "Java"
       ],
-      "type": "component",
+      
       "concepts": [
         "Functional constructor",
         "Getter",
@@ -61,15 +62,15 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/Fsm.java"
+          "link": "org/softlang/fsml/Fsm.java"
         },
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/State.java"
+          "link": "org/softlang/fsml/State.java"
         },
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/Transition.java"
+          "link": "org/softlang/fsml/Transition.java"
         }
       ]
     },
@@ -77,17 +78,17 @@
       "features": [
         "Interpret^O"
       ],
-      "perspective": "meta",
+      "perspectives": ["meta"],
       "languages": [
         "Java"
       ],
-      "type": "component",
+      
       "concepts": [],
       "technologies": [],
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlInterpreter.java"
+          "link": "org/softlang/fsml/FsmlInterpreter.java"
         }
       ]
     },
@@ -95,11 +96,11 @@
       "features": [
         "Interpret^O"
       ],
-      "perspective": "test",
+      "perspectives": ["test"],
       "languages": [
         "Java"
       ],
-      "type": "component",
+      
       "concepts": [],
       "technologies": [
         "JUnit"
@@ -107,7 +108,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/InfluentTest.java"
+          "link": "org/softlang/fsml/tests/InfluentTest.java"
         }
       ]
     },
@@ -116,11 +117,11 @@
         "Translate^O"
       ],
       "headline": " Translate^O  Feature",
-      "perspective": "object",
+      "perspectives": ["object"],
       "languages": [
         "C"
       ],
-      "type": "component",
+      
       "concepts": [
         "Generated code"
       ],
@@ -128,7 +129,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/Turnstile.c"
+          "link": "org/softlang/fsml/tests/Turnstile.c"
         }
       ]
     },
@@ -136,11 +137,11 @@
       "features": [
         "Translate^O"
       ],
-      "perspective": "meta",
+      "perspectives": ["meta"],
       "languages": [
         "StringTemplate"
       ],
-      "type": "component",
+      
       "concepts": [
         "Template processing"
       ],
@@ -150,7 +151,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/templates/Fsm.stg"
+          "link": "templates/Fsm.stg"
         }
       ]
     },
@@ -158,11 +159,11 @@
       "features": [
         "Translate^O"
       ],
-      "perspective": "test",
+      "perspectives": ["test"],
       "languages": [
         "Java"
       ],
-      "type": "component",
+      
       "concepts": [],
       "technologies": [
         "StringTemplate",
@@ -171,7 +172,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/CGeneratorTest.java"
+          "link": "org/softlang/fsml/tests/CGeneratorTest.java"
         }
       ]
     }
