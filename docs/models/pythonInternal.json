@@ -1,7 +1,7 @@
 {
     "name": "pythonInternal",
     "baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Python/",
-    "headline": "Python internal",
+    "headline": "Internal DSL style with Python",
     "sections": [
 	{
 	    "features": [

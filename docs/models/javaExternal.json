@@ -1,7 +1,7 @@
 {
     "name": "javaExternal",
     "baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/",
-    "headline": "Java external",
+    "headline": "External DSL style with ANTLR and Java",
     "sections": [
 	{
 	    "features": [

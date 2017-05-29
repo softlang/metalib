@@ -1,6 +1,6 @@
 {
     "name": "EMF",
-    "headline": "Basic EMF",
+    "headline": "Basic EMF usecase",
     "baseuri": "https://github.com/softlang/metalib/blob/master/emf/fsml/",
     "sections": [
 	{

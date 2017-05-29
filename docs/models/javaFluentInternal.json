@@ -1,7 +1,7 @@
 {
     "name": "javaFluentInternal",
     "baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Java/",
-    "headline": "Java fluent internal",
+    "headline": "Internal DSL style with Java with a fluent API",
     "sections": [
 	{
 	    "features": [

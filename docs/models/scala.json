@@ -1,7 +1,7 @@
 {
     "name": "Scala",
     "baseuri": "https://github.com/softlang/metalib/blob/master/scala/fsml/",
-    "headline": "scalameta",
+    "headline": "Scala-based implementation with macros",
     "sections": [
 	{
 	    "features": [

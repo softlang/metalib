@@ -1,7 +1,7 @@
 {
   "name": "javaInfluentInternal",
   "baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Java/",
-  "headline": "Java influent internal",
+  "headline": "Internal DSL style with Java and an influent API",
   "sections": [
     {
       "features": [

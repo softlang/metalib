@@ -1,6 +1,6 @@
 {
   "name": "pythonExternal",
-  "headline": "Python external",
+  "headline": "External DSL style with ANTLR and Python",
   "baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/",
   "sections": [
     {
