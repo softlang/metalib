@@ -8,24 +8,23 @@
 	    ],
 	    "headline": "AST implementation",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [],
-		"concepts": [
-		    "Algebraic data type"
-		],
-		"artifacts":  [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Ast.hs",
-			"from": 7,
-			"to": 15
-		    }
-		]
-	    }
+
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"Algebraic data type"
+	    ],
+	    "artifacts":  [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Ast.hs",
+		    "from": 7,
+		    "to": 15
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -33,26 +32,25 @@
 	    ],
 	    "headline": "Lexer definition",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [
-		    "Parsec"
-		],
-		"concepts": [
-		    "Lexer"
-		],
-		"artifacts":  [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Lexer.hs",
-			"from": 13,
-			"to": 43
-		    }
-		]
-	    }
+	    
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [
+		"Parsec"
+	    ],
+	    "concepts": [
+		"Lexer"
+	    ],
+	    "artifacts":  [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Lexer.hs",
+		    "from": 13,
+		    "to": 43
+		}
+	    ]   
 	},
 	{
 	    "features": [
@@ -61,26 +59,24 @@
 	    ],
 	    "headline": "Parser combinator",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [
-		    "Parsec"
-		],
-		"concepts": [
-		    "Parser combinator"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Parser.hs",
-			"from": 28,
-			"to": 50
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [
+		"Parsec"
+	    ],
+	    "concepts": [
+		"Parser combinator"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Parser.hs",
+		    "from": 28,
+		    "to": 50
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -88,26 +84,24 @@
 	    ],
 	    "headline": "Embedded turnstile object in Haskell declaration context",
 	    "perspective": "object",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [
-		    "Template Haskell"
-		],
-		"concepts": [
-		    "Quasi-quotation"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/app/Main.hs",
-			"from": 7,
-			"to": 22
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [
+		"Template Haskell"
+	    ],
+	    "concepts": [
+		"Quasi-quotation"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/app/Main.hs",
+		    "from": 7,
+		    "to": 22
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -115,22 +109,20 @@
 	    ],
 	    "headline": "Constraint checking",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [],
-		"concepts": [],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Checker.hs",
-			"from": 8,
-			"to": 46
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [],
+	    "concepts": [],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Checker.hs",
+		    "from": 8,
+		    "to": 46
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -138,22 +130,20 @@
 	    ],
 	    "headline": "By generating alternatives for the state data type distinct state ids are guaranteed",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [],
-		"concepts": [],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
-			"from": 42,
-			"to": 50
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [],
+	    "concepts": [],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
+		    "from": 42,
+		    "to": 50
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -161,25 +151,23 @@
 	    ],
 	    "headline": "Transitioning between states by folding over the generated event functions",
 	    "perspective": "data",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [],
-		"concepts": [
-		    "Currying",
-		    "Fold"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/app/Main.hs",
-			"from": 24,
-			"to": 28
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"Currying",
+		"Fold"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/app/Main.hs",
+		    "from": 24,
+		    "to": 28
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -187,26 +175,24 @@
 	    ],
 	    "headline": "Transitions are translated to Haskell AST",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Haskell"
-		],
-		"technologies": [
-		    "Template Haskell"
-		],
-		"concepts": [
-		    "Quasi-quotation"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
-			"from": 52,
-			"to": 75
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Haskell"
+	    ],
+	    "technologies": [
+		"Template Haskell"
+	    ],
+	    "concepts": [
+		"Quasi-quotation"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
+		    "from": 52,
+		    "to": 75
+		}
+	    ]
 	}
     ]
 }

@@ -6,127 +6,106 @@
 	    "features" : [ "Concrete syntax" ],
 	    "headline" : " Concrete syntax  Feature",
 	    "perspective" : "object",
-	    "projection" : 
-	    {
-		"languages" : [],
-		"type": "component",
-		"concepts" : [ "External DSL" ],
-		"technologies" : [],
-		"artifacts": [
-		    {
-			"type": "all",
-			"link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/sample.fsml"
-		    }
-		]
-	    }
+	    "languages" : [],
+	    "type": "component",
+	    "concepts" : [ "External DSL" ],
+	    "technologies" : [],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/sample.fsml"
+		}
+	    ]
 	},
 	{
 	    "features" : [ "Scanning" , "Text-to-CST" ],
 	    "headline" : " Scanning,   Text-to-CST  Features",
 	    "perspective" : "meta",
-	    "projection" : 
-	    {
-		"languages" : [ "ANTLR Grammar" ],
-		"type": "component",
-		"concepts" : [],
-		"technologies" : [ "ANTLR" ],
-		"artifacts": [
-		    {
-			"type": "all",
-			"link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/Fsml.g4"
-		    }
-		]
-	    }
+	    "languages" : [ "ANTLR Grammar" ],
+	    "type": "component",
+	    "concepts" : [],
+	    "technologies" : [ "ANTLR" ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/Fsml.g4"
+		}
+	    ]
 	},
 	{
 	    "features" : [ "AST^+" ],
 	    "headline" : " AST^+  Feature (Not showing all artifacts) ",
 	    "perspective" : "meta",
-	    "projection" : 
-	    {
-		"languages" : [],
-		"type": "component",
-		"concepts" : [ "Functional constructor" ],
-		"technologies" : [],
-		"artifacts": [
-		    {
-			"type": "all",
-			"link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/Fsm.java"
-		    }
-		]
-	    }
+	    "languages" : [],
+	    "type": "component",
+	    "concepts" : [ "Functional constructor" ],
+	    "technologies" : [],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/Fsm.java"
+		}
+	    ]
 	},
 	{
 	    "features" : [ "Abstraction" ],
 	    "headline" : " Abstraction  Feature",
 	    "perspective" : "meta",
-	    "projection" : 
-	    {
-		"languages" : [],
-		"type": "component",
-		"concepts" : [ "Listener" ],
-		"technologies" : [],
-		"artifacts": [
-		    {
-			"type": "all",
-			"link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlToObjects.java"
-		    }
-		]
-	    }
+	    "languages" : [],
+	    "type": "component",
+	    "concepts" : [ "Listener" ],
+	    "technologies" : [],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlToObjects.java"
+		}
+	    ]
 	},
 	{
 	    "features" : [ "Text-to-CST" ],
 	    "headline" : " Text-to-CST  Feature",
 	    "perspective" : "meta",
-	    "projection" : 
-	    {
-		"languages" : [],
-		"type": "component",
-		"concepts" : [ "Parser generation" ],
-		"technologies" : [],
-		"artifacts": [
-		    {
-			"type": "none",
-			"link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlParser.java"
-		    }
-		]
-	    }
+	    "languages" : [],
+	    "type": "component",
+	    "concepts" : [ "Parser generation" ],
+	    "technologies" : [],
+	    "artifacts": [
+		{
+		    "type": "none",
+		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlParser.java"
+		}
+	    ]
 	},
 	{
 	    "features" : [ "Text-to-CST" ],
 	    "headline" : "Driver code for syntax checking",
 	    "perspective" : "test",
-	    "projection" : 
-	    {
-		"languages" : [],
-		"type": "component",
-		"concepts" : [],
-		"technologies" : [ "ANTLR" ],
-		"artifacts": [
-		    {
-			"type": "all",
-			"link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlSyntaxChecker.java"
-		    }
-		]
-	    }
+	    "languages" : [],
+	    "type": "component",
+	    "concepts" : [],
+	    "technologies" : [ "ANTLR" ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlSyntaxChecker.java"
+		}
+	    ]
 	},
 	{
 	    "features" : [ "Text-to-AST" ],
 	    "headline" : "Driver code for parsing",
 	    "perspective" : "test",
-	    "projection" : 
-	    {
-		"languages" : [],
-		"type": "component",
-		"concepts" : [],
-		"technologies" : [ "ANTLR" , "JUnit" ],
-		"artifacts": [
-		    {
-			"type": "all",
-			"link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/FsmlToObjectsTest.java"
-		    }
-		]
-	    }
+	    "languages" : [],
+	    "type": "component",
+	    "concepts" : [],
+	    "technologies" : [ "ANTLR" , "JUnit" ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/FsmlToObjectsTest.java"
+		}
+	    ]
 	}
     ]
 }

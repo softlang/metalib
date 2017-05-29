@@ -8,22 +8,20 @@
 	    ],
 	    "headline": "Case classes for object representation",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": [],
-		"concepts": [
-		    "Algebraic data type"
-		],
-		"artifacts": [
-		    {
-			"type": "all",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala"
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"Algebraic data type"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/AST.scala"
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -32,24 +30,22 @@
 	    ],
 	    "perspective": "object",
 	    "headline": "Textual embedded turnstile parsed as valid scala AST",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": [],
-		"concepts": [
-		    "Static annotation"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/app/src/main/scala/org/softlang/fsml/Main.scala",
-			"from": 5,
-			"to": 23
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"Static annotation"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/app/src/main/scala/org/softlang/fsml/Main.scala",
+		    "from": 5,
+		    "to": 23
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -58,24 +54,22 @@
 	    ],
 	    "perspective": "meta",
 	    "headline": "Textual embedded turnstile parsed as valid scala AST",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": [],
-		"concepts": [
-		    "Static annotation"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
-			"from": 50,
-			"to": 65
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"Static annotation"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
+		    "from": 50,
+		    "to": 66
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -83,22 +77,20 @@
 	    ],
 	    "headline": "Constraints validated as part of the macro expansion",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": [],
-		"concepts": [],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Checker.scala",
-			"from": 17,
-			"to": 24
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": [],
+	    "concepts": [],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Checker.scala",
+		    "from": 17,
+		    "to": 24
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -106,22 +98,20 @@
 	    ],
 	    "headline": "Distinct state ids are guarantied by lifting state to objects in the same scope",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": ["scalameta"],
-		"concepts": ["Lifting", "Quasi-quotation", "Implicit conversion"],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
-			"from": 8,
-			"to": 17
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": ["scalameta"],
+	    "concepts": ["Lifting", "Quasi-quotation", "Implicit conversion"],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
+		    "from": 8,
+		    "to": 17
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -129,24 +119,22 @@
 	    ],
 	    "headline": "Interpretation represented as a object property access chain",
 	    "perspective": "application",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": [
-		],
-		"concepts": [
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/app/src/main/scala/org/softlang/fsml/Main.scala",
-			"from": 25,
-			"to": 25
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": [
+	    ],
+	    "concepts": [
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/app/src/main/scala/org/softlang/fsml/Main.scala",
+		    "from": 25,
+		    "to": 25
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -155,26 +143,24 @@
 	    ],
 	    "headline": "Annotation inlines textual embedded fsm into an scala object with initial state",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": [
-		    "scalameta"
-		],
-		"concepts": [
-		    "Inline Macro"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Fsm.scala",
-			"from": 8,
-			"to": 25
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": [
+		"scalameta"
+	    ],
+	    "concepts": [
+		"Inline Macro"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Fsm.scala",
+		    "from": 8,
+		    "to": 25
+		}
+	    ]
 	},
 	{
 	    "features": [
@@ -182,24 +168,22 @@
 	    ],
 	    "headline": "The transitions are translated to scala AST function definitions",
 	    "perspective": "meta",
-	    "projection": {
-		"type": "component",
-		"languages": [
-		    "Scala"
-		],
-		"technologies": ["scalameta"],
-		"concepts": [
-		    "Lifting", "Quasi-quotation", "Implicit conversion"
-		],
-		"artifacts": [
-		    {
-			"type": "some",
-			"link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
-			"from": 19,
-			"to": 48
-		    }
-		]
-	    }
+	    "type": "component",
+	    "languages": [
+		"Scala"
+	    ],
+	    "technologies": ["scalameta"],
+	    "concepts": [
+		"Lifting", "Quasi-quotation", "Implicit conversion"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/scala/fsml/core/src/main/scala/org/softlang/fsml/Quotations.scala",
+		    "from": 19,
+		    "to": 48
+		}
+	    ]
 	}
     ]
 }
