@@ -6,12 +6,14 @@
 
 $black: #282a2e;
 $white: #fff;
+$grey: #ddd;
 $red: #a54242;
 $green: #8c9440;
 $blue: #5f819d;
 $pink: #ff69b4;
 
 body {
+    background: $grey;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
     width: 100%;
@@ -32,6 +34,23 @@ body {
     text-decoration: none;
     &:visited {
 	color: $black;
+    }
+}
+
+.contribution-headline {
+    text-align: center;
+}
+
+.section {
+    background: $white;
+    border-radius: .5rem;
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.projection-capture {
+    > img {
+	max-width: 100%;
     }
 }
 

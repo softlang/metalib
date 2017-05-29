@@ -80,18 +80,10 @@
 (defmulti projection-component :type)
 ;; class implementation
 (defmethod projection-component "component" [{:keys [artifacts languages technologies concepts]}]
-  [:div.projection-component
-   ;; value languages
-   (languages-component languages)
-   ;; value technologies
-   (technologies-component technologies)
-   ;; value concepts
-   (concepts-component concepts)
-   ;; part artifacts
-   (artifacts-component artifacts)])
+  [:div.projection-component])
 
 ;; class illustration
-(defmethod projection-component "capture" [{:keys [link]}]
+(defmethod projection-component "capture" [{:keys [link languages technologies concepts]}]
   [:div.projection-capture
    ;; value languages
    (languages-component languages)
@@ -112,22 +104,28 @@
   [:span.perspective perspective])
 
 ;; class section
-(defn section-component [{:keys [features headline projection perspective]}]
-  [:div
-   ;; part perspective
-   (perspective-component perspective)
+(defn section-component [{:keys [headline perspective features languages technologies concepts artifacts]}]
+  [:div.section
    ;; value headline
    [:h2.section-headline headline]
+   ;; part perspective
+   (perspective-component perspective)
    ;; value features
    (features-component features)
-   ;; part projection
-   [projection-component projection]])
+   ;; value languages
+   (languages-component languages)
+   ;; value technologies
+   (technologies-component technologies)
+   ;; value concepts
+   (concepts-component concepts)
+   ;; part artifacts
+   (artifacts-component artifacts)])
 
 ;; class contribution
 (defn contribution-component [{:keys [headline sections]}]
   [:div.contribution
    ;; value headline
-   [:h1 headline]
+   [:h1.contribution-headline headline]
    ;; part sections
    (map-indexed #(with-meta [section-component %2] {:key %1}) sections)])
 

@@ -120,7 +120,7 @@
 		    "type": "all",
 		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/CGeneratorTest.java"
 		}
-	    }
+	    ]
 	}
     ]
 }
