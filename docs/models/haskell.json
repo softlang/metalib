@@ -1,15 +1,16 @@
 {
     "name": "Haskell",
+    "baseuri": "https://github.com/softlang/metalib/blob/master/haskell/fsml/",
     "headline": "FSML implementation using Template Haskell",
     "sections": [
 	{
 	    "features": [
-		"AST^-"
+		"AST-"
 	    ],
 	    "headline": "AST implementation",
-	    "perspective": "meta",
-
-	    "type": "component",
+	    "perspectives": [
+		"meta"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -20,7 +21,7 @@
 	    "artifacts":  [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Ast.hs",
+		    "link": "src/Language/FSML/Ast.hs",
 		    "from": 7,
 		    "to": 15
 		}
@@ -31,9 +32,9 @@
 		"Scannerfull parsing"
 	    ],
 	    "headline": "Lexer definition",
-	    "perspective": "meta",
-	    
-	    "type": "component",
+	    "perspectives": [
+		"meta"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -46,7 +47,7 @@
 	    "artifacts":  [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Lexer.hs",
+		    "link": "src/Language/FSML/Lexer.hs",
 		    "from": 13,
 		    "to": 43
 		}
@@ -58,8 +59,9 @@
 		"Text-to-AST"
 	    ],
 	    "headline": "Parser combinator",
-	    "perspective": "meta",
-	    "type": "component",
+	    "perspectives": [
+		"meta"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -72,7 +74,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Parser.hs",
+		    "link": "src/Language/FSML/Parser.hs",
 		    "from": 28,
 		    "to": 50
 		}
@@ -83,8 +85,9 @@
 		"Creole^+-"
 	    ],
 	    "headline": "Embedded turnstile object in Haskell declaration context",
-	    "perspective": "object",
-	    "type": "component",
+	    "perspectives": [
+		"object"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -97,7 +100,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/app/Main.hs",
+		    "link": "app/Main.hs",
 		    "from": 7,
 		    "to": 22
 		}
@@ -108,8 +111,9 @@
 		"Analyse^O"
 	    ],
 	    "headline": "Constraint checking",
-	    "perspective": "meta",
-	    "type": "component",
+	    "perspectives": [
+		"meta"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -118,7 +122,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/Checker.hs",
+		    "link": "src/Language/FSML/Checker.hs",
 		    "from": 8,
 		    "to": 46
 		}
@@ -129,8 +133,9 @@
 		"Analyse^M"
 	    ],
 	    "headline": "By generating alternatives for the state data type distinct state ids are guaranteed",
-	    "perspective": "meta",
-	    "type": "component",
+	    "perspectives": [
+		"meta"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -139,7 +144,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
+		    "link": "src/Language/FSML/QuasiQuoter.hs",
 		    "from": 42,
 		    "to": 50
 		}
@@ -150,8 +155,9 @@
 		"Interpret^M"
 	    ],
 	    "headline": "Transitioning between states by folding over the generated event functions",
-	    "perspective": "data",
-	    "type": "component",
+	    "perspectives": [
+		"data"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -163,7 +169,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/app/Main.hs",
+		    "link": "app/Main.hs",
 		    "from": 24,
 		    "to": 28
 		}
@@ -174,8 +180,9 @@
 		"Translate^M"
 	    ],
 	    "headline": "Transitions are translated to Haskell AST",
-	    "perspective": "meta",
-	    "type": "component",
+	    "perspectives": [
+		"meta"
+	    ],
 	    "languages": [
 		"Haskell"
 	    ],
@@ -188,7 +195,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/haskell/fsml/src/Language/FSML/QuasiQuoter.hs",
+		    "link": "src/Language/FSML/QuasiQuoter.hs",
 		    "from": 52,
 		    "to": 75
 		}

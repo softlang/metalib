@@ -90,7 +90,7 @@
 
 ;; abstract class perspective
 (defn perspective-component [perspectives]
-  (map #(with-meta [:span [:a {:href (str wiki-url "Perspective:" %)} %]]) perspectives))
+  (map #(with-meta [:span [:a {:href (str wiki-url "Perspective:" %)} %]] {:key %}) perspectives))
 
 ;; class section
 (defn section-component [baseuri {:keys [headline perspectives features languages technologies concepts artifacts]}]
