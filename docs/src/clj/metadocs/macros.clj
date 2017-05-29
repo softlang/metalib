@@ -37,5 +37,5 @@
     `(def metadocs.app/toc (list ~@(map (fn [model-file-name]
                                           (let [model-name (strip-file-extension model-file-name)
                                                 model (load-json model-file-name)]
-                                            `{:name ~(:name model) :route ~(str "/metalib/" model-name ".html")}))
+                                            `{:name ~(:name model) :route ~(str "/" model-name ".html")}))
                                         model-file-names)))))
