@@ -1,111 +1,147 @@
 {
-    "name" : "pythonExternal",
-    "headline" : "Undefined Headline",
-    "sections" : [
-	{
-	    "features" : [ "Concrete syntax" ],
-	    "headline" : " Concrete syntax  Feature",
-	    "perspective" : "object",
-	    "languages" : [],
-	    "type": "component",
-	    "concepts" : [ "External DSL" ],
-	    "technologies" : [],
-	    "artifacts": [
-		{
-		    "type": "all",
-		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/sample.fsml"
-		}
-	    ]
-	},
-	{
-	    "features" : [ "Scanning" ],
-	    "headline" : " Scanning  Feature",
-	    "perspective" : "meta",
-	    "languages" : [],
-	    "type": "component",
-	    "concepts" : [ "Parser generation" ],
-	    "technologies" : [],
-	    "artifacts": [
-		{
-		    "type": "none",
-		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlLexer.py"
-		}
-	    ]
-	},
-	{
-	    "features" : [ "Text-to-AST" ],
-	    "headline" : " Text-to-AST  Feature",
-	    "perspective" : "meta",
-	    "languages" : [],
-	    "type": "component",
-	    "concepts" : [ "Parser generation" ],
-	    "technologies" : [],
-	    "artifacts": [
-		{
-		    "type": "none",
-		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlParser.py"
-		}
-	    ]
-	},
-	{
-	    "features" : [ "Interface" , "AST+" ],
-	    "headline" : " Interface,   AST+  Features",
-	    "perspective" : "meta",
-	    "languages" : [ "Python" ],
-	    "type": "component",
-	    "concepts" : [ "dictionary" ],
-	    "technologies" : [],
-	    "artifacts": [
-		{
-		    "type": "all",
-		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlModel.py"
-		}
-	    ]
-	},
-	{
-	    "features" : [ "Scanning" , "Text-to-AST" ],
-	    "headline" : " Scanning,   Text-to-AST  Features",
-	    "perspective" : "meta",
-	    "languages" : [ "ANTLR" ],
-	    "type": "component",
-	    "concepts" : [ "Semantic action" ],
-	    "technologies" : [],
-	    "artifacts": [
-		{
-		    "type": "all",
-		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/Fsml.g4"
-		}
-	    ]
-	},
-	{
-	    "features" : [ "Serialization" ],
-	    "headline" : " Serialization  Feature",
-	    "perspective" : "object",
-	    "languages" : [ "JSON" ],
-	    "type": "component",
-	    "concepts" : [],
-	    "technologies" : [],
-	    "artifacts": [
-		{
-		    "type": "all",
-		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/sample.json"
-		}
-	    ]
-	},
-	{
-	    "features" : [ "Serialization" , "Parsing" ],
-	    "headline" : " Serialization,   Parsing  Features",
-	    "perspective" : "test",
-	    "languages" : [ "Python" ],
-	    "type": "component",
-	    "concepts" : [],
-	    "technologies" : [],
-	    "artifacts": [
-		{
-		    "type": "all",
-		    "link" : "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlToJSON.py"
-		}
-	    ]
-	}
-    ]
+  "name": "pythonExternal",
+  "headline": "Python external",
+  "sections": [
+    {
+      "features": [
+        "Concrete syntax"
+      ],
+      "perspective": "object",
+      "languages": [],
+      "type": "component",
+      "concepts": [
+        "External DSL"
+      ],
+      "technologies": [],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/sample.fsml"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Scanning"
+      ],
+      "perspective": "meta",
+      "languages": [
+        "Python"
+      ],
+      "type": "component",
+      "concepts": [
+        "Parser generation",
+        "Generated code"
+      ],
+      "technologies": ["ANTLR4"],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlLexer.py"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Text-to-AST"
+      ],
+      "perspective": "meta",
+      "languages": [
+        "Python"
+      ],
+      "type": "component",
+      "concepts": [
+        "Parser generation",
+        "Generated code"
+      ],
+      "technologies": ["ANTLR4"],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlParser.py"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Interface",
+        "AST+"
+      ],
+      "perspective": "meta",
+      "languages": [
+        "Python"
+      ],
+      "type": "component",
+      "concepts": [
+        "dictionary"
+      ],
+      "technologies": [],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlModel.py"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Scanning",
+        "Text-to-AST"
+      ],
+      "perspective": "meta",
+      "languages": [
+        "ANTLR4"
+      ],
+      "type": "component",
+      "concepts": [
+        "Semantic action"
+      ],
+      "technologies": [
+        "ANTLR4"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/Fsml.g4"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Serialization"
+      ],
+      "perspective": "object",
+      "languages": [
+        "JSON"
+      ],
+      "type": "component",
+      "concepts": [],
+      "technologies": [],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/sample.json"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Serialization",
+        "Parsing"
+      ],
+      "perspective": "test",
+      "languages": [
+        "Python"
+      ],
+      "type": "component",
+      "concepts": [],
+      "technologies": [],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Python/FsmlToJSON.py"
+        }
+      ]
+    }
+  ]
 }
