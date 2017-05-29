@@ -1,162 +1,170 @@
 {
-  "name": "javaExternal",
-  "headline": "Java external",
-  "sections": [
-    {
-      "features": [
-        "Concrete syntax"
-      ],
-      "perspective": "object",
-      "languages": [],
-      "type": "component",
-      "concepts": [
-        "External DSL"
-      ],
-      "technologies": [],
-      "artifacts": [
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/sample.fsml"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Scanning",
-        "Text-to-CST"
-      ],
-      "perspective": "meta",
-      "languages": [
-        "ANTLR4"
-      ],
-      "type": "component",
-      "concepts": [],
-      "technologies": [
-        "ANTLR4"
-      ],
-      "artifacts": [
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/Fsml.g4"
-        }
-      ]
-    },
-    {
-      "features": [
-        "AST^+"
-      ],
-      "perspective": "meta",
-      "languages": [
-        "Java"
-      ],
-      "type": "component",
-      "concepts": [
-        "Functional constructor",
-        "Getter",
-        "Setter"
-      ],
-      "technologies": [],
-      "artifacts": [
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/Fsm.java"
-        },
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/State.java"
-        },
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/Transition.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Abstraction"
-      ],
-      "perspective": "meta",
-      "languages": [
-        "Java"
-      ],
-      "type": "component",
-      "concepts": [
-        "Listener"
-      ],
-      "technologies": [],
-      "artifacts": [
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlToObjects.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Text-to-CST"
-      ],
-      "perspective": "meta",
-      "languages": [
-        "Java"
-      ],
-      "type": "component",
-      "concepts": [
-        "Parser generation"
-      ],
-      "technologies": [],
-      "artifacts": [
-        {
-          "type": "none",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlParser.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Text-to-CST"
-      ],
-      "headline": "Driver code for syntax checking",
-      "perspective": "test",
-      "languages": [
-        "Java"
-      ],
-      "type": "component",
-      "concepts": [
-        "Boilerplate code"
-      ],
-      "technologies": [
-        "ANTLR4"
-      ],
-      "artifacts": [
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/FsmlSyntaxChecker.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Text-to-AST"
-      ],
-      "headline": "Driver code for parsing",
-      "perspective": "test",
-      "languages": [
-        "Java"
-      ],
-      "type": "component",
-      "concepts": [
-        "Boilerplate code"
-      ],
-      "technologies": [
-        "ANTLR4",
-        "JUnit"
-      ],
-      "artifacts": [
-        {
-          "type": "all",
-          "link": "https://raw.githubusercontent.com/softlang/yas/master/languages/FSML/Java/org/softlang/fsml/tests/FsmlToObjectsTest.java"
-        }
-      ]
-    }
-  ]
+    "name": "javaExternal",
+    "baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/",
+    "headline": "Java external",
+    "sections": [
+	{
+	    "features": [
+		"Concrete syntax"
+	    ],
+	    "perspectives": [
+		"object"
+	    ],
+	    "languages": [],
+	    "concepts": [
+		"External DSL"
+	    ],
+	    "technologies": [],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "sample.fsml"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Scanning",
+		"Text-to-CST"
+	    ],
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"ANTLR4"
+	    ],
+	    "concepts": [],
+	    "technologies": [
+		"ANTLR4"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "Java/Fsml.g4"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"AST+"
+	    ],
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "concepts": [
+		"Functional constructor",
+		"Getter",
+		"Setter"
+	    ],
+	    "technologies": [],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "Java/org/softlang/fsml/Fsm.java"
+		},
+		{
+		    "type": "all",
+		    "link": "Java/org/softlang/fsml/State.java"
+		},
+		{
+		    "type": "all",
+		    "link": "Java/org/softlang/fsml/Transition.java"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Abstraction"
+	    ],
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "concepts": [
+		"Listener"
+	    ],
+	    "technologies": [],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "Java/org/softlang/fsml/FsmlToObjects.java"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Text-to-CST"
+	    ],
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "concepts": [
+		"Parser generation"
+	    ],
+	    "technologies": [],
+	    "artifacts": [
+		{
+		    "type": "none",
+		    "link": "Java/org/softlang/fsml/FsmlParser.java"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Text-to-CST"
+	    ],
+	    "headline": "Driver code for syntax checking",
+	    "perspectives": [
+		"test"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "concepts": [
+		"Boilerplate code"
+	    ],
+	    "technologies": [
+		"ANTLR4"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "Java/org/softlang/fsml/FsmlSyntaxChecker.java"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Text-to-AST"
+	    ],
+	    "headline": "Driver code for parsing",
+	    "perspectives": [
+		"test"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "concepts": [
+		"Boilerplate code"
+	    ],
+	    "technologies": [
+		"ANTLR4",
+		"JUnit"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "Java/org/softlang/fsml/tests/FsmlToObjectsTest.java"
+		}
+	    ]
+	}
+    ]
 }
