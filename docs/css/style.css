@@ -53,6 +53,7 @@
   display: block; }
 
 body {
+  background: #ddd;
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   width: 100%;
@@ -72,49 +73,80 @@ body {
   .nav-link:visited {
     color: #282a2e; }
 
-.language {
-  background: #a54242;
-  border-radius: 1rem;
-  color: #282a2e;
-  display: inline-block;
-  margin: .5rem;
-  padding: .5rem;
-  text-decoration: none; }
+.contribution-headline {
+  text-align: center; }
 
-.technology {
-  background: #8c9440;
-  border-radius: 1rem;
-  color: #282a2e;
-  display: inline-block;
+.section {
+  background: #fff;
+  border-radius: .5rem;
   margin: .5rem;
-  padding: .5rem;
-  text-decoration: none; }
+  padding: .5rem; }
 
-.concept {
-  background: #5f819d;
-  border-radius: 1rem;
-  color: #282a2e;
-  display: inline-block;
-  margin: .5rem;
-  padding: .5rem;
-  text-decoration: none; }
+.section-table {
+  display: flex; }
+  .section-table > div {
+    align-self: top;
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0.5rem; }
+    .section-table > div > span {
+      text-align: center; }
+      .section-table > div > span > a {
+        color: #282a2e;
+        text-decoration: none; }
+        .section-table > div > span > a:visited {
+          color: #282a2e; }
+    .section-table > div > span:first-child {
+      color: #fff;
+      margin-bottom: 0.5rem; }
+    .section-table > div > span:not(:first-child) {
+      background: #ddd;
+      border-radius: 1rem;
+      font-weight: 900;
+      margin: 0.25rem;
+      padding: 0.25rem; }
+
+.perspectives {
+  background: #294f48; }
+
+.features {
+  background: #519612; }
+
+.languages {
+  background: #bc9326; }
+
+.technologies {
+  background: #d57c3b; }
+
+.concepts {
+  background: #cf4844; }
+
+.projection-capture > img {
+  max-width: 100%; }
 
 .artifact-none {
   background: #282a2e;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-top: 1rem; }
   .artifact-none a {
     color: #fff;
     display: block;
-    font-family: "Material Icons";
     text-decoration: none;
     width: 100%;
-    text-align: right; }
+    text-align: center; }
     .artifact-none a:visited {
       color: #fff; }
+    .artifact-none a:after {
+      content: "open_in_new";
+      font-family: "Material Icons";
+      padding-left: 0.25rem; }
 
 .artifact-all {
   background: #282a2e;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-top: 1rem; }
   .artifact-all > span {
     animation: spin 1s ease-in-out infinite;
     color: #fff;
@@ -127,12 +159,15 @@ body {
   .artifact-all a {
     color: #fff;
     display: block;
-    font-family: "Material Icons";
     text-decoration: none;
     width: 100%;
-    text-align: right; }
+    text-align: center; }
     .artifact-all a:visited {
       color: #fff; }
+    .artifact-all a:after {
+      content: "open_in_new";
+      font-family: "Material Icons";
+      padding-left: 0.25rem; }
   .artifact-all > div > pre {
     line-height: 1rem;
     margin: 0;
@@ -140,16 +175,20 @@ body {
 
 .artifact-some {
   background: #282a2e;
-  padding: 1rem; }
+  padding: 1rem;
+  margin-top: 1rem; }
   .artifact-some a {
     color: #fff;
     display: block;
-    font-family: "Material Icons";
     text-decoration: none;
     width: 100%;
-    text-align: right; }
+    text-align: center; }
     .artifact-some a:visited {
       color: #fff; }
+    .artifact-some a:after {
+      content: "open_in_new";
+      font-family: "Material Icons";
+      padding-left: 0.25rem; }
   .artifact-some > span {
     animation: spin 1s ease-in-out infinite;
     color: #fff;
