@@ -48,54 +48,82 @@ body {
     padding: .5rem;
 }
 
+.section-table {
+    display: flex;
+    > div {
+	> span {
+	    > a {
+		color: $black;
+		text-decoration: none;
+		&:visited {
+		    color: $black;
+		}
+	    }
+	    text-align: center;
+	}
+	> span:first-child {
+	    color: $white;
+	    margin-bottom: 0.5rem;
+	}
+	> span:not(:first-child) {
+	    background: $grey;
+	    border-radius: 1rem;
+	    font-weight: 900;
+	    margin: 0.25rem;
+	    padding: 0.25rem;
+	}
+	align-self: top;
+	display: flex;
+	flex-basis: 0;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 0.5rem;
+    }
+}
+
+.perspectives {
+    background: #294f48;
+}
+
+.features {
+    background: #519612;
+}
+
+.languages {
+    background: #bc9326;
+}
+
+.technologies {
+    background: #d57c3b;
+}
+
+.concepts {
+    background: #cf4844;
+}
+
 .projection-capture {
     > img {
 	max-width: 100%;
     }
 }
 
-.language {
-    background: $red;
-    border-radius: 1rem;
-    color: $black;
-    display: inline-block;
-    margin: .5rem;
-    padding: .5rem;
-    text-decoration: none;
-}
-
-.technology {
-    background: $green;
-    border-radius: 1rem;
-    color: $black;
-    display: inline-block;
-    margin: .5rem;
-    padding: .5rem;
-    text-decoration: none;
-}
-
-.concept {
-    background: $blue;
-    border-radius: 1rem;
-    color: $black;
-    display: inline-block;
-    margin: .5rem;
-    padding: .5rem;
-    text-decoration: none;
-}
-
 .artifact-none {
     background: $black;
     padding: 1rem;
+    margin-top: 1rem;
     a {
 	color: $white;
 	display: block;
-	font-family: "Material Icons";
 	text-decoration: none;
 	width: 100%;
-	text-align: right;
+	text-align: center;
 	&:visited {
 	    color: $white;
+	}
+	&:after {
+	    content: "open_in_new";
+	    font-family: "Material Icons";
+	    padding-left: 0.25rem;
 	}
     }
 }
@@ -103,6 +131,7 @@ body {
 .artifact-all {
     background: $black;
     padding: 1rem;
+    margin-top: 1rem;
     > span {
 	animation: spin 1s ease-in-out infinite;
 	color: $white;
@@ -116,12 +145,16 @@ body {
     a {
 	color: $white;
 	display: block;
-	font-family: "Material Icons";
 	text-decoration: none;
 	width: 100%;
-	text-align: right;
+	text-align: center;
 	&:visited {
 	    color: $white;
+	}
+	&:after {
+	    content: "open_in_new";
+	    font-family: "Material Icons";
+	    padding-left: 0.25rem;
 	}
     }
     > div {
@@ -136,15 +169,21 @@ body {
 .artifact-some {
     background: $black;
     padding: 1rem;
+    margin-top: 1rem;
     a {
 	color: $white;
 	display: block;
 	font-family: "Material Icons";
 	text-decoration: none;
 	width: 100%;
-	text-align: right;
+	text-align: center;
 	&:visited {
 	    color: $white;
+	}
+	&:after {
+	    content: "open_in_new";
+	    font-family: "Material Icons";
+	    padding-left: 0.25rem;
 	}
     }
     > span {

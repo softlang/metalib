@@ -27,7 +27,7 @@
 ;; class nothing extends artifact
 (defmethod artifact-component "none" [{:keys [link]}]
   [:div.artifact-none
-   [:a {:href link :target "_blank"} "open_in_new"]])
+   [:a {:href link :target "_blank"} link]])
 
 ;; class all extends artifact
 (defmethod artifact-component "all" [{:keys [link]}]
@@ -36,7 +36,7 @@
           (reset! code (:body response))))
     (fn []
       [:div.artifact-all
-       [:a {:href link :target "_blank"} "open_in_new"]
+       [:a {:href link :target "_blank"} link]
        (if (nil? @code)
          [:span "sync"]
          [:div
@@ -54,7 +54,7 @@
                             (join "\n")))))
     (fn []
       [:div.artifact-some
-       [:a {:href link :target "_blank"} "open_in_new"]
+       [:a {:href link :target "_blank"} link]
        (if (nil? @code)
          [:span "sync"]
          [:div
@@ -62,15 +62,15 @@
 
 ;; value languages
 (defn languages-component [languages]
-  (map #(with-meta [:a.language {:href (str wiki-url "Language:" %) :target "_blank"} %] {:key %}) languages))
+  (map #(with-meta [:span [:a {:href (str wiki-url "Language:" %) :target "_blank"} %]] {:key %}) languages))
 
 ;; value technolgies
 (defn technologies-component [technologies]
-  (map #(with-meta [:a.technology {:href (str wiki-url "Technology:" %) :target "_blank"} %] {:key %}) technologies))
+  (map #(with-meta [:span [:a {:href (str wiki-url "Technology:" %) :target "_blank"} %]] {:key %}) technologies))
 
 ;; value concepts
 (defn concepts-component [concepts]
-  (map #(with-meta [:a.concept {:href (str wiki-url %) :target "_blank"} %] {:key %}) concepts))
+  (map #(with-meta [:span [:a {:href (str wiki-url %) :target "_blank"} %]] {:key %}) concepts))
 
 ;; part artifacts
 (defn artifacts-component [artifacts]
@@ -95,29 +95,38 @@
 
 ;; value features
 (defn features-component [features]
-  [:div
-   "Features:"
-   (map #(with-meta [:span.feature %] {:key %}) features)])
+   (map #(with-meta [:span %] {:key %}) features))
 
 ;; abstract class perspective
 (defn perspective-component [perspective]
-  [:span.perspective perspective])
+  [:span perspective])
 
 ;; class section
 (defn section-component [{:keys [headline perspective features languages technologies concepts artifacts]}]
   [:div.section
    ;; value headline
    [:h2.section-headline headline]
-   ;; part perspective
-   (perspective-component perspective)
-   ;; value features
-   (features-component features)
-   ;; value languages
-   (languages-component languages)
-   ;; value technologies
-   (technologies-component technologies)
-   ;; value concepts
-   (concepts-component concepts)
+   [:div.section-table
+    ;; part perspective
+    [:div.perspectives
+     [:span "Perspective"]
+     (perspective-component perspective)]
+    ;; value features
+    [:div.features
+     [:span "Features"]
+     (features-component features)]
+    ;; value languages
+    [:div.languages
+     [:span "Languages"]
+     (languages-component languages)]
+    ;; value technologies
+    [:div.technologies
+     [:span "Technologies"]
+     (technologies-component technologies)]
+    ;; value concepts
+    [:div.concepts
+     [:span "Concepts"]
+     (concepts-component concepts)]]
    ;; part artifacts
    (artifacts-component artifacts)])
 
