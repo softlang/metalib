@@ -1,6 +1,7 @@
 {
     "name": "EMF",
     "headline": "A basic EMF implementation",
+    "baseuri": "https://github.com/softlang/metalib/blob/master/emf/fsml/",
     "sections": [
 	{
 	    "features": [
@@ -8,7 +9,7 @@
 	    "headline": "State-machine meta-model",
 	    "perspective": "meta",
 	    "type": "capture",
-	    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/metamodel.PNG"
+	    "link": "metamodel.PNG"
 	},
 	{
 	    "features": [
@@ -28,7 +29,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSM.java",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSM.java",
 		    "from": 25,
 		    "to": 52
 		}
@@ -52,7 +53,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMImpl.java",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMImpl.java",
 		    "from": 41,
 		    "to": 51
 		}
@@ -81,7 +82,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java",
+		    "link": "org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java",
 		    "from": 166,
 		    "to": 171
 		}
@@ -94,7 +95,7 @@
 	    "headline": "Viewing and editing the turnstile object in the generated eclipse editor",
 	    "perspective": "object",
 	    "type": "capture",
-	    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/emfturnstile.PNG"
+	    "link": "emfturnstile.PNG"
 	},
 	{
 	    "features": [
@@ -115,7 +116,7 @@
 	    "artifacts": [
 		{
 		    "type": "all",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml.turnstile/Turnstile.fsml"
+		    "link": "org.softlang.metalib.emf.fsml.turnstile/Turnstile.fsml"
 		}
 	    ]
 	},
@@ -134,7 +135,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java",
 		    "from": 188,
 		    "to": 217
 		}
@@ -155,7 +156,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/model/Fsml.ecore",
+		    "link": "org.softlang.metalib.emf.fsml/model/Fsml.ecore",
 		    "from": 37,
 		    "to": 38
 		}
@@ -181,7 +182,7 @@
 	    "artifacts": [
 		{
 		    "type": "some",
-		    "link": "https://raw.githubusercontent.com/softlang/metalib/master/emf/fsml/org.softlang.metalib.emf.fsml/transformation/rename.atl",
+		    "link": "org.softlang.metalib.emf.fsml/transformation/rename.atl",
 		    "from": 1,
 		    "to": 62
 		}

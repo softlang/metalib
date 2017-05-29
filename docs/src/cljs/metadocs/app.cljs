@@ -5,7 +5,7 @@
             [cljsjs.highlight.langs.java]
             [cljsjs.highlight.langs.haskell]
             [cljsjs.highlight.langs.scala]
-            [clojure.string :refer [join split-lines]]
+            [clojure.string :refer [replace join split-lines]]
             [reagent.core :refer [atom dom-node render]]
             [secretary.core :refer [dispatch! locate-route]])
   (:require-macros [cljs.core.async.macros :refer [go]]
@@ -21,31 +21,34 @@
   (with-meta (fn [] block)
     {:component-did-mount #(.highlightBlock js/hljs (dom-node %))}))
 
+(defn to-raw-uri [uri]
+  (replace (replace uri "/blob" "") "github.com" "raw.githubusercontent.com"))
+
 ;; abstract class selection
-(defmulti artifact-component #(:type %))
+(defmulti artifact-component #(:type %2))
 
 ;; class nothing extends artifact
-(defmethod artifact-component "none" [{:keys [link]}]
+(defmethod artifact-component "none" [baseuri {:keys [link]}]
   [:div.artifact-none
-   [:a {:href link :target "_blank"} link]])
+   [:a {:href (str baseuri link) :target "_blank"} link]])
 
 ;; class all extends artifact
-(defmethod artifact-component "all" [{:keys [link]}]
+(defmethod artifact-component "all" [baseuri {:keys [link]}]
   (let [code (atom nil)]
-    (go (let [response (<! (http/get link {:with-credentials? false}))]
+    (go (let [response (<! (http/get (to-raw-uri (str baseuri link)) {:with-credentials? false}))]
           (reset! code (:body response))))
     (fn []
       [:div.artifact-all
-       [:a {:href link :target "_blank"} link]
+       [:a {:href (str baseuri link) :target "_blank"} link]
        (if (nil? @code)
          [:span "sync"]
          [:div
           [(highlight-block [:pre @code])]])])))
 
 ;; class some extends artifact
-(defmethod artifact-component "some" [{:keys [from to link]}]
+(defmethod artifact-component "some" [baseuri {:keys [from to link]}]
   (let [code (atom nil)]
-    (go (let [response (<! (http/get link {:with-credentials? false}))]
+    (go (let [response (<! (http/get (to-raw-uri (str baseuri link)) {:with-credentials? false}))]
           (reset! code (->> response
                             :body
                             split-lines
@@ -54,7 +57,7 @@
                             (join "\n")))))
     (fn []
       [:div.artifact-some
-       [:a {:href link :target "_blank"} link]
+       [:a {:href (str baseuri link) :target "_blank"} link]
        (if (nil? @code)
          [:span "sync"]
          [:div
@@ -73,8 +76,8 @@
   (map #(with-meta [:span [:a {:href (str wiki-url %) :target "_blank"} %]] {:key %}) concepts))
 
 ;; part artifacts
-(defn artifacts-component [artifacts]
-  (map #(with-meta [artifact-component %] {:key (:link %)}) artifacts))
+(defn artifacts-component [baseuri artifacts]
+  (map #(with-meta [artifact-component baseuri %] {:key (:link %)}) artifacts))
 
 ;; abstract class projection
 (defmulti projection-component :type)
@@ -95,14 +98,14 @@
 
 ;; value features
 (defn features-component [features]
-   (map #(with-meta [:span %] {:key %}) features))
+   (map #(with-meta [:span [:a {:href (str wiki-url "Feature:" %)} %]] {:key %}) features))
 
 ;; abstract class perspective
 (defn perspective-component [perspective]
-  [:span perspective])
+  [:span [:a {:href (str wiki-url "Perspective:" perspective)} perspective]])
 
 ;; class section
-(defn section-component [{:keys [headline perspective features languages technologies concepts artifacts]}]
+(defn section-component [baseuri {:keys [headline perspective features languages technologies concepts artifacts]}]
   [:div.section
    ;; value headline
    [:h2.section-headline headline]
@@ -128,15 +131,15 @@
      [:span "Concepts"]
      (concepts-component concepts)]]
    ;; part artifacts
-   (artifacts-component artifacts)])
+   (artifacts-component baseuri artifacts)])
 
 ;; class contribution
-(defn contribution-component [{:keys [headline sections]}]
+(defn contribution-component [{:keys [headline baseuri sections]}]
   [:div.contribution
    ;; value headline
    [:h1.contribution-headline headline]
    ;; part sections
-   (map-indexed #(with-meta [section-component %2] {:key %1}) sections)])
+   (map-indexed #(with-meta [section-component baseuri %2] {:key %1}) sections)])
 
 (deftoc)
 
