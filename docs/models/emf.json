@@ -1,222 +1,223 @@
 {
-  "name": "EMF",
-  "headline": "Basic EMF",
-  "baseuri": "https://github.com/softlang/metalib/blob/master/emf/fsml/"
-  "sections": [
-    {
-      "features": [
-        "AST+"
-      ],
-      "technologies": [],
-      "concepts": [
-        "Metamodel"
-      ],
-      "languages": [
-        "Ecore"
-      ],
-      "perspectives": [
-        "meta",
-        "capture"
-      ],
-      "artifacts": [
-        {
-          "link": "metamodel.PNG"
-        }
-      ]
-    },
-    {
-      "features": [
-        "ASG+"
-      ],
-      "headline": "EMF model interface for the FSM object",
-      "perspectives": [
-        "meta"
-      ],
-      "languages": [
-        "Java"
-      ],
-      "technologies": [],
-      "concepts": [
-        "OO interface",
-        "Generated code",
-        "Getter",
-        "Setter"
-      ],
-      "artifacts": [
-        {
-          "type": "some",
-          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSM.java",
-          "from": 25,
-          "to": 52
-        },
-        {
-          "type": "none",
-          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSMState.java"
-        },
-        {
-          "type": "none",
-          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSMTransition.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "ASG^+"
-      ],
-      "headline": "EMF model class for the FSM object",
-      "perspectives": [
-        "meta"
-      ],
-      "languages": [
-        "Java"
-      ],
-      "technologies": [],
-      "concepts": [
-        "OO class",
-        "Generated code"
-      ],
-      "artifacts": [
-        {
-          "type": "some",
-          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMImpl.java",
-          "from": 41,
-          "to": 51
-        },
-        {
-          "type": "none",
-          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java"
-        },
-        {
-          "type": "none",
-          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMTransitionImpl.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Graph editing"
-      ],
-      "headline": "The generated eclipse editor for EMF models",
-      "perspectives": [
-        "meta"
-      ],
-      "languages": [
-        "Java"
-      ],
-      "technologies": [
-        "JFace",
-        "SWT",
-        "Eclipse"
-      ],
-      "concepts": [
-        "IDE",
-        "Structural editor",
-        "Generated code"
-      ],
-      "artifacts": [
-        {
-          "type": "none",
-          "link": "org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Graph editing"
-      ],
-      "headline": "Viewing and editing the turnstile object in the generated eclipse editor",
-      "perspectives": [
-        "object",
-        "capture"
-      ],
-      "languages": [
-      ],
-      "technologies": [
-        "JFace",
-        "SWT",
-        "Eclipse"
-      ],
-      "concepts": [
-        "IDE",
-        "Structural editor",
-        "Generated code"
-      ],
-      "artifacts": [
-        {
-          "link": "emfturnstile.PNG"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Serialization"
-      ],
-      "headline": "The turnstile object in EMF's textual exchange format",
-      "perspectives": [
-        "object"
-      ],
-      "languages": [
-        "XMI"
-      ],
-      "technologies": [
-        "SAX"
-      ],
-      "concepts": [
-        "Persistence"
-      ],
-      "artifacts": [
-        {
-          "type": "all",
-          "link": "org.softlang.metalib.emf.fsml.turnstile/Turnstile.fsml"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Analyse^O"
-      ],
-      "headline": "EMF delegates model validation to methods with a certain signature",
-      "perspectives": [
-        "meta"
-      ],
-      "type": "component",
-      "languages": [
-        "Java"
-      ],
-      "technologies": [],
-      "concepts": [],
-      "artifacts": [
-        {
-          "type": "some",
-          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java",
-          "from": 188,
-          "to": 217
-        }
-      ]
-    },
-    {
-      "features": [
-        "Analyse^M"
-      ],
-      "headline": "Unique state names are validated by setting the EMF's unique id feature",
-      "perspectives": [
-        "meta"
-      ],
-      "languages": [
-        "XMI"
-      ],
-      "technologies": [],
-      "concepts": [
-        "Metamodel"
-      ],
-      "artifacts": [
-        {
-          "type": "some",
-          "link": "org.softlang.metalib.emf.fsml/model/Fsml.ecore",
-          "from": 37,
-          "to": 38
-        }
-      ]
-    }
-  ]
+    "name": "EMF",
+    "headline": "Basic EMF",
+    "baseuri": "https://github.com/softlang/metalib/blob/master/emf/fsml/",
+    "sections": [
+	{
+	    "features": [
+		"AST+"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"Metamodel"
+	    ],
+	    "languages": [
+		"Ecore"
+	    ],
+	    "perspectives": [
+		"meta",
+		"capture"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "metamodel.PNG"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"ASG+"
+	    ],
+	    "headline": "EMF model interface for the FSM object",
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"OO interface",
+		"Generated code",
+		"Getter",
+		"Setter"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSM.java",
+		    "from": 25,
+		    "to": 52
+		},
+		{
+		    "type": "none",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSMState.java"
+		},
+		{
+		    "type": "none",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FSMTransition.java"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"ASG^+"
+	    ],
+	    "headline": "EMF model class for the FSM object",
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"OO class",
+		"Generated code"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMImpl.java",
+		    "from": 41,
+		    "to": 51
+		},
+		{
+		    "type": "none",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java"
+		},
+		{
+		    "type": "none",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMTransitionImpl.java"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Graph editing"
+	    ],
+	    "headline": "The generated eclipse editor for EMF models",
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "technologies": [
+		"JFace",
+		"SWT",
+		"Eclipse"
+	    ],
+	    "concepts": [
+		"IDE",
+		"Structural editor",
+		"Generated code"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "none",
+		    "link": "org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Graph editing"
+	    ],
+	    "headline": "Viewing and editing the turnstile object in the generated eclipse editor",
+	    "perspectives": [
+		"object",
+		"capture"
+	    ],
+	    "languages": [
+	    ],
+	    "technologies": [
+		"JFace",
+		"SWT",
+		"Eclipse"
+	    ],
+	    "concepts": [
+		"IDE",
+		"Structural editor",
+		"Generated code"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "emfturnstile.PNG"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Serialization"
+	    ],
+	    "headline": "The turnstile object in EMF's textual exchange format",
+	    "perspectives": [
+		"object"
+	    ],
+	    "languages": [
+		"XMI"
+	    ],
+	    "technologies": [
+		"SAX"
+	    ],
+	    "concepts": [
+		"Persistence"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "all",
+		    "link": "org.softlang.metalib.emf.fsml.turnstile/Turnstile.fsml"
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Analyse^O"
+	    ],
+	    "headline": "EMF delegates model validation to methods with a certain signature",
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"Java"
+	    ],
+	    "technologies": [],
+	    "concepts": [],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMStateImpl.java",
+		    "from": 188,
+		    "to": 217
+		}
+	    ]
+	},
+	{
+	    "features": [
+		"Analyse^M"
+	    ],
+	    "headline": "Unique state names are validated by setting the EMF's unique id feature",
+	    "perspectives": [
+		"meta"
+	    ],
+	    "languages": [
+		"XMI"
+	    ],
+	    "technologies": [],
+	    "concepts": [
+		"Metamodel"
+	    ],
+	    "artifacts": [
+		{
+		    "type": "some",
+		    "link": "org.softlang.metalib.emf.fsml/model/Fsml.ecore",
+		    "from": 37,
+		    "to": 38
+		}
+	    ]
+	}
+    ]
 }

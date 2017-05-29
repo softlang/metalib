@@ -5,7 +5,7 @@
             [cljsjs.highlight.langs.java]
             [cljsjs.highlight.langs.haskell]
             [cljsjs.highlight.langs.scala]
-            [clojure.string :refer [replace join split-lines]]
+            [clojure.string :refer [lower-case ends-with? replace join split-lines]]
             [reagent.core :refer [atom dom-node render]]
             [secretary.core :refer [dispatch! locate-route]])
   (:require-macros [cljs.core.async.macros :refer [go]]
@@ -77,35 +77,23 @@
 
 ;; part artifacts
 (defn artifacts-component [baseuri artifacts]
-  (map #(with-meta [artifact-component baseuri %] {:key (:link %)}) artifacts))
-
-;; abstract class projection
-(defmulti projection-component :type)
-;; class implementation
-(defmethod projection-component "component" [{:keys [artifacts languages technologies concepts]}]
-  [:div.projection-component])
-
-;; class illustration
-(defmethod projection-component "capture" [{:keys [link languages technologies concepts]}]
-  [:div.projection-capture
-   ;; value languages
-   (languages-component languages)
-   ;; value technologies
-   (technologies-component technologies)
-   ;; value concepts
-   (concepts-component concepts)
-   [:img {:src link}]])
+  (map (fn [artifact]
+         (with-meta 
+           (if (some true? (map #(ends-with? (lower-case (:link artifact)) %) (list ".png")))
+             [:img.artifact-all {:src (to-raw-uri (str baseuri (:link artifact)))}]
+             [artifact-component baseuri artifact]) {:key (:link artifact)}))
+       artifacts))
 
 ;; value features
 (defn features-component [features]
    (map #(with-meta [:span [:a {:href (str wiki-url "Feature:" %)} %]] {:key %}) features))
 
 ;; abstract class perspective
-(defn perspective-component [perspective]
-  [:span [:a {:href (str wiki-url "Perspective:" perspective)} perspective]])
+(defn perspective-component [perspectives]
+  (map #(with-meta [:span [:a {:href (str wiki-url "Perspective:" %)} %]]) perspectives))
 
 ;; class section
-(defn section-component [baseuri {:keys [headline perspective features languages technologies concepts artifacts]}]
+(defn section-component [baseuri {:keys [headline perspectives features languages technologies concepts artifacts]}]
   [:div.section
    ;; value headline
    [:h2.section-headline headline]
@@ -113,7 +101,7 @@
     ;; part perspective
     [:div.perspectives
      [:span "Perspective"]
-     (perspective-component perspective)]
+     (perspective-component perspectives)]
     ;; value features
     [:div.features
      [:span "Features"]
