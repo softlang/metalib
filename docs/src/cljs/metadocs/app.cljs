@@ -89,7 +89,7 @@
    (map #(with-meta [:span [:a {:href (str wiki-url "Feature:" %)} %]] {:key %}) features))
 
 ;; abstract class perspective
-(defn perspective-component [perspectives]
+(defn perspectives-component [perspectives]
   (map #(with-meta [:span [:a {:href (str wiki-url "Perspective:" %)} %]] {:key %}) perspectives))
 
 ;; class section
@@ -100,8 +100,8 @@
    [:div.section-table
     ;; part perspective
     [:div.perspectives
-     [:span "Perspective"]
-     (perspective-component perspectives)]
+     [:span "Perspectives"]
+     (perspectives-component perspectives)]
     ;; value features
     [:div.features
      [:span "Features"]
@@ -121,11 +121,36 @@
    ;; part artifacts
    (artifacts-component baseuri artifacts)])
 
+(defn summary-component [sections]
+  (let [perspectives (sort (distinct (mapcat :perspectives sections)))
+        features (sort (distinct (mapcat :features sections)))
+        languages (sort (distinct (mapcat :languages sections)))
+        technologies (sort (distinct (mapcat :technologies sections)))
+        concepts (sort (distinct (mapcat :concepts sections)))]
+    [:div.section-table
+     [:div.perspectives
+      [:span "Perspectives"]
+      (perspectives-component perspectives)]
+     [:div.features
+      [:span "Features"]
+      (features-component features)]
+     [:div.languages
+      [:span "Languages"]
+      (languages-component languages)]
+     [:div.technologies
+      [:span "Technologies"]
+      (technologies-component technologies)]
+     [:div.concepts
+      [:span "Concepts"]
+      (concepts-component concepts)]]))
+
 ;; class contribution
 (defn contribution-component [{:keys [headline baseuri sections]}]
   [:div.contribution
    ;; value headline
    [:h1.contribution-headline headline]
+   ;; virtual summary
+   [summary-component sections]
    ;; part sections
    (map-indexed #(with-meta [section-component baseuri %2] {:key %1}) sections)])
 
