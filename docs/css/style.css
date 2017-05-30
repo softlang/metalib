@@ -53,7 +53,6 @@
   display: block; }
 
 body {
-  background: #ddd;
   margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   width: 100%;
@@ -79,15 +78,17 @@ body {
 .section {
   background: #fff;
   border-radius: .5rem;
+  box-shadow: 0 0 1rem #282a2e;
   margin: .5rem;
   padding: .5rem; }
 
 .section-table {
   display: flex; }
+  @media (max-width: 50rem) {
+    .section-table {
+      flex-direction: column; } }
   .section-table > div {
-    align-self: top;
     display: flex;
-    flex-basis: 0;
     flex-direction: column;
     flex-grow: 1;
     padding: 0.5rem; }
@@ -135,6 +136,7 @@ body {
     display: block;
     text-decoration: none;
     width: 100%;
+    word-wrap: break-word;
     text-align: center; }
     .artifact-none a:visited {
       color: #fff; }
@@ -162,6 +164,7 @@ body {
     padding-bottom: 1rem;
     text-decoration: none;
     width: 100%;
+    word-wrap: break-word;
     text-align: center; }
     .artifact-all a:visited {
       color: #fff; }
@@ -184,6 +187,7 @@ body {
     padding-bottom: 1rem;
     text-decoration: none;
     width: 100%;
+    word-wrap: break-word;
     text-align: center; }
     .artifact-some a:visited {
       color: #fff; }
