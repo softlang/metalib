@@ -26,7 +26,7 @@
                   (let [model-name (strip-file-extension model-file-name)
                         model (load-json model-file-name)]
                     (copy (file "resources/public/index.html") (file (str "resources/public/" model-name ".html")))
-                    `(~'defroute ~(str "/metalib/" model-name ".html") []
+                    `(~'defroute ~(str "/" model-name ".html") []
                       (~'swap! ~'state ~'assoc :current-page #(~contribution-component ~model)))))
                 model-file-names))))
 
@@ -36,5 +36,5 @@
     `(def metadocs.app/toc (list ~@(map (fn [model-file-name]
                                           (let [model-name (strip-file-extension model-file-name)
                                                 model (load-json model-file-name)]
-                                            `{:name ~(:name model) :route ~(str "/metalib/" model-name ".html")}))
+                                            `{:name ~(:name model) :route ~(str "/" model-name ".html")}))
                                         model-file-names)))))
