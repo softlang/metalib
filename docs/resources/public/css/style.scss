@@ -40,9 +40,15 @@ body {
     text-align: center;
 }
 
+.summary {
+    //border-radius: .5rem;
+    box-shadow: 0 0 1rem $black;
+    margin: .5rem .5rem 2rem .5rem;
+    padding: .5rem;
+}
+
 .section {
-    background: $white;
-    border-radius: .5rem;
+    //border-radius: .5rem;
     box-shadow: 0 0 1rem $black;
     margin: .5rem;
     padding: .5rem;
@@ -50,6 +56,7 @@ body {
 
 .section-table {
     display: flex;
+    font-size: 0.75rem;
     @media (max-width: 50rem) {
 	flex-direction: column;
     }
@@ -223,23 +230,8 @@ body {
     display: inline-block;
 }
 
-.feature {
-    margin: 0 0.5rem;
-}
-
-.perspective {
-    background: $black;
-    border-radius: 1rem;
-    color: $white;
-    display: inline-block;
-    font-weight: bold;
-    margin: .5rem;
-    padding: .5rem;
-    text-decoration: none;
-}
-
 .toc {
-    > li > a  {
+    > div > a  {
 	color: $black;
 	text-decoration: none;
 	&:visited {

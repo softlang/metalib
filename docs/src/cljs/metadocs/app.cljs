@@ -10,12 +10,22 @@
             [secretary.core :refer [dispatch! locate-route]])
   (:require-macros [cljs.core.async.macros :refer [go]]
                    [secretary.core :refer [defroute]]
-                   [metadocs.macros :refer [defcontributionroutes deftoc]]))
+                   [metadocs.macros :refer [defcontributionroutes defcontributions]]))
 
 (enable-console-print!)
 
 (def wiki-url "https://101wiki.softlang.org/")
 (defonce state (atom {}))
+
+(defn elide [code]
+  (letfn [(elide [lines skip result]
+            (cond
+              (empty? lines) result
+              (some? (re-find #"BEGIN ..." (first lines))) (elide (rest lines) true result)
+              (some? (re-find #"END ..." (first lines))) (elide (rest lines) false result)
+              (true? skip) (elide (rest lines) true result)
+              :else (elide (rest lines) false (concat result [(first lines)]))))]
+    (join "\n" (elide (split-lines code) false []))))
 
 (defn highlight-block [block]
   (with-meta (fn [] block)
@@ -36,7 +46,7 @@
 (defmethod artifact-component "all" [baseuri {:keys [link]}]
   (let [code (atom nil)]
     (go (let [response (<! (http/get (to-raw-uri (str baseuri link)) {:with-credentials? false}))]
-          (reset! code (:body response))))
+          (reset! code (elide (:body response)))))
     (fn []
       [:div.artifact-all
        [:a {:href (str baseuri link) :target "_blank"} link]
@@ -54,7 +64,8 @@
                             split-lines
                             (take to)
                             (drop (dec from))
-                            (join "\n")))))
+                            (join "\n")
+                            elide))))
     (fn []
       [:div.artifact-some
        [:a {:href (str baseuri link) :target "_blank"} link]
@@ -86,7 +97,7 @@
 
 ;; value features
 (defn features-component [features]
-   (map #(with-meta [:span [:a {:href (str wiki-url "Feature:" %)} %]] {:key %}) features))
+  (map #(with-meta [:span [:a {:href (str wiki-url "Feature:" %)} %]] {:key %}) features))
 
 ;; abstract class perspective
 (defn perspectives-component [perspectives]
@@ -127,22 +138,23 @@
         languages (sort (distinct (mapcat :languages sections)))
         technologies (sort (distinct (mapcat :technologies sections)))
         concepts (sort (distinct (mapcat :concepts sections)))]
-    [:div.section-table
-     [:div.perspectives
-      [:span "Perspectives"]
-      (perspectives-component perspectives)]
-     [:div.features
-      [:span "Features"]
-      (features-component features)]
-     [:div.languages
-      [:span "Languages"]
-      (languages-component languages)]
-     [:div.technologies
-      [:span "Technologies"]
-      (technologies-component technologies)]
-     [:div.concepts
-      [:span "Concepts"]
-      (concepts-component concepts)]]))
+    [:div.summary
+     [:div.section-table
+      [:div.perspectives
+       [:span "Perspectives"]
+       (perspectives-component perspectives)]
+      [:div.features
+       [:span "Features"]
+       (features-component features)]
+      [:div.languages
+       [:span "Languages"]
+       (languages-component languages)]
+      [:div.technologies
+       [:span "Technologies"]
+       (technologies-component technologies)]
+      [:div.concepts
+       [:span "Concepts"]
+       (concepts-component concepts)]]]))
 
 ;; class contribution
 (defn contribution-component [{:keys [headline baseuri sections]}]
@@ -154,13 +166,18 @@
    ;; part sections
    (map-indexed #(with-meta [section-component baseuri %2] {:key %1}) sections)])
 
-(deftoc)
+(defcontributions)
 
 (defn home []
-  [:div
-   [:h1 "Contributions"]
-   [:ul.toc
-    (map #(with-meta [:li [:a {:href (:route %)} (:name %)]] {:key %}) toc)]])
+  (let [sections (mapcat :sections contributions)]
+    [:div
+     [:h1 "Contributions"]
+     [:div.toc
+      (map #(with-meta [:div
+                       [:a {:href (str "/" (:name %) ".html")}
+                        (str (:name %) " \u2015 " (:headline %))]] {:key %})
+          contributions)]
+     [summary-component sections]]))
 
 (defcontributionroutes state contribution-component)
 

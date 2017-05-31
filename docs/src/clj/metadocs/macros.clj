@@ -30,11 +30,9 @@
                       (~'swap! ~'state ~'assoc :current-page #(~contribution-component ~model)))))
                 model-file-names))))
 
-(defmacro deftoc []
+(defmacro defcontributions []
   (let [model-file-names (-> model-dir
-                             load-model-file-names)]
-    `(def metadocs.app/toc (list ~@(map (fn [model-file-name]
-                                          (let [model-name (strip-file-extension model-file-name)
-                                                model (load-json model-file-name)]
-                                            `{:name ~(:name model) :route ~(str "/" model-name ".html")}))
-                                        model-file-names)))))
+                             load-model-file-names)
+        contributions (map load-json model-file-names)]
+    `(def metadocs.app/contributions (list ~@contributions))))
+
