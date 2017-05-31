@@ -97,11 +97,11 @@
 
 ;; value features
 (defn features-component [features]
-  (map #(with-meta [:span [:a {:href (str wiki-url "Feature:" %)} %]] {:key %}) features))
+  (map #(with-meta [:span [:a {:href (str wiki-url "Feature:" %) :target "_blank"} %]] {:key %}) features))
 
 ;; abstract class perspective
 (defn perspectives-component [perspectives]
-  (map #(with-meta [:span [:a {:href (str wiki-url "Perspective:" %)} %]] {:key %}) perspectives))
+  (map #(with-meta [:span [:a {:href (str wiki-url "Perspective:" %) :target "_blank"} %]] {:key %}) perspectives))
 
 ;; class section
 (defn section-component [baseuri {:keys [headline perspectives features languages technologies concepts artifacts]}]

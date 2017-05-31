@@ -11,11 +11,6 @@
       file
       .list))
 
-(defn strip-file-extension [file-name]
-  (subs file-name
-        0
-        (last-index-of file-name ".")))
-
 (defn load-json [file-name]
   (parse-stream (reader (str model-dir file-name)) true))
 
@@ -23,8 +18,9 @@
   (let [model-file-names (-> model-dir
                              load-model-file-names)]
     `(do ~@(map (fn [model-file-name]                  
-                  (let [model-name (strip-file-extension model-file-name)
-                        model (load-json model-file-name)]
+                  (let [model (-> model-file-name
+                                       load-json)
+                        model-name (:name model)]
                     (copy (file "resources/public/index.html") (file (str "resources/public/" model-name ".html")))
                     `(~'defroute ~(str "/" model-name ".html") []
                       (~'swap! ~'state ~'assoc :current-page #(~contribution-component ~model)))))
