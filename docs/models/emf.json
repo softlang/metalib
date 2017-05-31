@@ -5,7 +5,7 @@
     "sections": [
 	{
 	    "features": [
-		"AST+"
+		"ASG+"
 	    ],
 	    "technologies": [],
 	    "concepts": [
@@ -62,7 +62,7 @@
 	},
 	{
 	    "features": [
-		"ASG^+"
+		"ASG+"
 	    ],
 	    "headline": "EMF model class for the FSM object",
 	    "perspectives": [
