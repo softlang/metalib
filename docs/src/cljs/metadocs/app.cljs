@@ -174,7 +174,7 @@
      [:h1 "Contributions"]
      [:div.toc
       (map #(with-meta [:div
-                       [:a {:href (str "/" (:name %) ".html")}
+                       [:a {:href (str "/metalib/" (:name %) ".html")}
                         (str (:name %) " \u2015 " (:headline %))]] {:key %})
           contributions)]
      [summary-component sections]]))
