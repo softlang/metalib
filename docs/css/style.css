@@ -75,15 +75,19 @@ body {
 .contribution-headline {
   text-align: center; }
 
+.summary {
+  box-shadow: 0 0 1rem #282a2e;
+  margin: .5rem .5rem 2rem .5rem;
+  padding: .5rem; }
+
 .section {
-  background: #fff;
-  border-radius: .5rem;
   box-shadow: 0 0 1rem #282a2e;
   margin: .5rem;
   padding: .5rem; }
 
 .section-table {
-  display: flex; }
+  display: flex;
+  font-size: 0.75rem; }
   @media (max-width: 50rem) {
     .section-table {
       flex-direction: column; } }
@@ -218,21 +222,8 @@ body {
 .section-headline {
   display: inline-block; }
 
-.feature {
-  margin: 0 0.5rem; }
-
-.perspective {
-  background: #282a2e;
-  border-radius: 1rem;
-  color: #fff;
-  display: inline-block;
-  font-weight: bold;
-  margin: .5rem;
-  padding: .5rem;
-  text-decoration: none; }
-
-.toc > li > a {
+.toc > div > a {
   color: #282a2e;
   text-decoration: none; }
-  .toc > li > a:visited {
+  .toc > div > a:visited {
     color: #282a2e; }
