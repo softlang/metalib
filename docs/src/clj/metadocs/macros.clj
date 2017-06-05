@@ -22,7 +22,7 @@
                                        load-json)
                         model-name (:name model)]
                     (copy (file "resources/public/index.html") (file (str "resources/public/" model-name ".html")))
-                    `(~'defroute ~(str "/" model-name ".html") []
+                    `(~'defroute ~(str "/metalib" model-name ".html") []
                       (~'swap! ~'state ~'assoc :current-page #(~contribution-component ~model)))))
                 model-file-names))))
 
