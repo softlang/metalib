@@ -1,5 +1,5 @@
 {
-    "name": "Haskell",
+    "name": "HaskellQuasiQuotation",
     "baseuri": "https://github.com/softlang/metalib/blob/master/haskell/fsml/",
     "headline": "Use of quasi-quotation and Template Haskell",
     "sections": [

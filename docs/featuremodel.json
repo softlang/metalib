@@ -17,6 +17,9 @@
               "mandatory": true,
               "alternative": [
                 {
+                  "feature": "Semantic domain"
+                },
+                {
                   "feature": "AST",
                   "alternative": [
                     {

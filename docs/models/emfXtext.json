@@ -1,6 +1,6 @@
 {
-  "name": "Xtext",
-  "headline": "XText with generated EMF model",
+  "name": "emfXtext",
+  "headline": "XText with derived EMF model",
   "baseuri": "https://github.com/softlang/metalib/blob/master/xtext/fsml/",
   "sections": [
     {

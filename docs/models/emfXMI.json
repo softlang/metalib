@@ -1,6 +1,6 @@
 {
-    "name": "EMF",
-    "headline": "Basic EMF usecase",
+    "name": "EMFXMI",
+    "headline": "EMF with XMI persistence",
     "baseuri": "https://github.com/softlang/metalib/blob/master/emf/fsml/",
     "sections": [
 	{

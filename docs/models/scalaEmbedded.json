@@ -1,7 +1,7 @@
 {
-    "name": "Scala",
+    "name": "Scala embedded",
     "baseuri": "https://github.com/softlang/metalib/blob/master/scala/fsml/",
-    "headline": "Scala-based implementation with macros",
+    "headline": "Scala-based embedded language implementation with macros",
     "sections": [
 	{
 	    "features": [

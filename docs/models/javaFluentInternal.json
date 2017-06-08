@@ -47,7 +47,7 @@
 	},
 	{
 	    "features": [
-		"AST^+"
+		"Semantic domain"
 	    ],
 	    "headline": "Implementation of fluent API",
 	    "perspectives": [ "meta"],
