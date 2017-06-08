@@ -1,0 +1,83 @@
+{
+  "feature": "Language implementation",
+  "composition": [
+    {
+      "feature": "Syntax",
+      "mandatory": true,
+      "or": [
+        {
+          "feature": "Abstract syntax",
+          "composition": [
+            {
+              "feature": "Interface",
+              "mandatory": false
+            },
+            {
+              "feature": "Representation",
+              "mandatory": true,
+              "alternative": [
+                {
+                  "feature": "AST",
+                  "alternative": [
+                    {
+                      "feature": "AST+"
+                    },
+                    {
+                      "feature": "AST-"
+                    }
+                  ]
+                },
+                {
+                  "feature": "ASG",
+                  "alternative": [
+                    {
+                      "feature": "ASG+"
+                    },
+                    {
+                      "feature": "ASG-"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "feature": "Serialization",
+              "mandatory": false
+            },
+            {
+              "feature": "Abstraction",
+              "mandatory": false
+            }
+          ]
+        },
+        {
+          "feature": "Concrete syntax",
+          "or": [
+            {
+              "feature": "Textual syntax"
+            },
+            {
+              "feature": "Visual syntax",
+              "or": [
+                {
+                  "feature": "Graph rendering"
+                },
+                {
+                  "feature": "Graphediting"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "feature": "Semantics",
+      "mandatory": false
+    },
+    {
+      "feature": "Ecosystem",
+      "mandatory": false
+    }
+  ]
+}
