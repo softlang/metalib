@@ -7,11 +7,12 @@
       "features": [
         "Interface"
       ],
-      "perspectives": ["object"],
+      "perspectives": [
+        "object"
+      ],
       "languages": [
         "Java"
       ],
-      
       "concepts": [
         "Getter",
         "Setter"
@@ -28,11 +29,12 @@
       "features": [
         "Interface"
       ],
-      "perspectives": ["object"],
+      "perspectives": [
+        "object"
+      ],
       "languages": [
         "Java"
       ],
-      
       "concepts": [
         "Functional constructor"
       ],
@@ -48,11 +50,12 @@
       "features": [
         "AST+"
       ],
-      "perspectives": ["meta"],
+      "perspectives": [
+        "meta"
+      ],
       "languages": [
         "Java"
       ],
-      
       "concepts": [
         "Functional constructor",
         "Getter",
@@ -78,11 +81,12 @@
       "features": [
         "Interpret^O"
       ],
-      "perspectives": ["meta"],
+      "perspectives": [
+        "meta"
+      ],
       "languages": [
         "Java"
       ],
-      
       "concepts": [],
       "technologies": [],
       "artifacts": [
@@ -96,11 +100,12 @@
       "features": [
         "Interpret^O"
       ],
-      "perspectives": ["test"],
+      "perspectives": [
+        "test"
+      ],
       "languages": [
         "Java"
       ],
-      
       "concepts": [],
       "technologies": [
         "JUnit"
@@ -117,11 +122,12 @@
         "Translate^O"
       ],
       "headline": " Translate^O  Feature",
-      "perspectives": ["object"],
+      "perspectives": [
+        "object"
+      ],
       "languages": [
         "C"
       ],
-      
       "concepts": [
         "Generated code"
       ],
@@ -137,11 +143,12 @@
       "features": [
         "Translate^O"
       ],
-      "perspectives": ["meta"],
+      "perspectives": [
+        "meta"
+      ],
       "languages": [
         "StringTemplate"
       ],
-      
       "concepts": [
         "Template processing"
       ],
@@ -159,11 +166,33 @@
       "features": [
         "Translate^O"
       ],
-      "perspectives": ["test"],
+      "perspectives": [
+        "meta"
+      ],
       "languages": [
         "Java"
       ],
-      
+      "concepts": [
+      ],
+      "technologies": [
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "https://github.com/softlang/yas/blob/master/languages/FSML/Java/org/softlang/fsml/FsmlCGenerator.java"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Translate^O"
+      ],
+      "perspectives": [
+        "test"
+      ],
+      "languages": [
+        "Java"
+      ],
       "concepts": [],
       "technologies": [
         "StringTemplate",
