@@ -54,7 +54,56 @@
           "feature": "Concrete syntax",
           "or": [
             {
-              "feature": "Textual syntax"
+              "feature": "Textual syntax",
+              "or": [
+                {
+                  "feature": "Parsing",
+                  "composition": [
+                    {
+                      "feature": "Text-to-",
+                      "mandatory": true,
+                      "alternative": [
+                        {
+                          "feature": "Text-to-CST"
+                        },
+                        {
+                          "feature": "Text-to-AST"
+                        },
+                        {
+                          "feature": "Text-to-ASG"
+                        }
+                      ]
+                    },
+                    {
+                      "feature": "Scanning",
+                      "mandatory": false
+                    }
+                  ]
+                },
+                {
+                  "feature": "Replacement"
+                },
+                {
+                  "feature": "Text rendering",
+                  "alternative": [
+                    {
+                      "feature": "Text-to-Text"
+                    },
+                    {
+                      "feature": "CST-to-Text"
+                    },
+                    {
+                      "feature": "AST-to-Text"
+                    },
+                    {
+                      "feature": "ASG-to-Text"
+                    }
+                  ]
+                },
+                {
+                  "feature": "Text editing"
+                }
+              ]
             },
             {
               "feature": "Visual syntax",
@@ -73,11 +122,67 @@
     },
     {
       "feature": "Semantics",
-      "mandatory": false
+      "mandatory": false,
+      "composition": [
+        {
+          "feature": "Static semantics",
+          "mandatory": false,
+          "or": [
+            {
+              "feature": "Analyse^O"
+            },
+            {
+              "feature": "Analyse^M"
+            }
+          ]
+        },
+        {
+          "feature": "Dynamic semantics",
+          "mandatory": false,
+          "or": [
+            {
+              "feature": "Interpret^O"
+            },
+            {
+              "feature": "Interpret^M"
+            }
+          ]
+        },
+        {
+          "feature": "Translation semantics",
+          "mandatory": false,
+          "or": [
+            {
+              "feature": "Translate^O"
+            },
+            {
+              "feature": "Translate^M"
+            }
+          ]
+        }
+      ]
     },
     {
       "feature": "Ecosystem",
-      "mandatory": false
+      "mandatory": false,
+      "composition": [
+        {
+          "feature": "Metrics",
+          "mandatory": false
+        },
+        {
+          "feature": "Refactoring",
+          "mandatory": false
+        },
+        {
+          "feature": "Composition",
+          "mandatory": false
+        },
+        {
+          "feature": "IDE",
+          "mandatory": false
+        }
+      ]
     }
   ]
 }
