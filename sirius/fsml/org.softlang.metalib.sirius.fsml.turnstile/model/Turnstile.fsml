@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsml:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsml="http://www.softlang.org/metalib/sirius/fsml/model/Fsml">
+  <states initial="true" name="locked">
+    <transitions input="pass" action="alarm" target="//@states.2"/>
+    <transitions input="ticket" action="collect" target="//@states.1"/>
+  </states>
+  <states name="unlocked">
+    <transitions input="pass" action="" target="//@states.0"/>
+    <transitions input="ticket" action="eject" target="//@states.1"/>
+  </states>
+  <states name="exception">
+    <transitions input="release" action="" target="//@states.0"/>
+    <transitions input="mute" action="" target="//@states.2"/>
+    <transitions input="pass" action="" target="//@states.2"/>
+    <transitions input="ticket" action="eject" target="//@states.2"/>
+  </states>
+</fsml:FSM>
