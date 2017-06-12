@@ -5,7 +5,7 @@
   "sections": [
     {
       "features": [
-        "ASG+"
+        "ASG"
       ],
       "technologies": [],
       "concepts": [
@@ -15,7 +15,7 @@
         "Ecore"
       ],
       "perspectives": [
-        "meta",
+        "implementation",
         "capture"
       ],
       "artifacts": [
@@ -31,11 +31,11 @@
     },
     {
       "features": [
-        "ASG+"
+        "ASG"
       ],
       "headline": "EMF model interface for the FSM object",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Java"
@@ -66,11 +66,11 @@
     },
     {
       "features": [
-        "ASG+"
+        "ASG"
       ],
       "headline": "EMF model class for the FSM object",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Java"
@@ -99,39 +99,12 @@
     },
     {
       "features": [
-        "Graph editing"
-      ],
-      "headline": "The generated eclipse editor for EMF models",
-      "perspectives": [
-        "meta"
-      ],
-      "languages": [
-        "Java"
-      ],
-      "technologies": [
-        "JFace",
-        "SWT",
-        "Eclipse"
-      ],
-      "concepts": [
-        "IDE",
-        "Structured Editor",
-        "Generated code"
-      ],
-      "artifacts": [
-        {
-          "type": "none",
-          "link": "org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java"
-        }
-      ]
-    },
-    {
-      "features": [
-        "Graph editing"
+        "Graph editing",
+        "Model projection"
       ],
       "headline": "Viewing and editing the turnstile object in the generated eclipse editor",
       "perspectives": [
-        "object",
+        "data",
         "capture"
       ],
       "languages": [
@@ -155,11 +128,40 @@
     },
     {
       "features": [
-        "Serialization"
+        "Graph editing",
+        "Model projection"
+      ],
+      "headline": "The generated eclipse editor for EMF models",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Java"
+      ],
+      "technologies": [
+        "JFace",
+        "SWT",
+        "Eclipse"
+      ],
+      "concepts": [
+        "IDE",
+        "Structured Editor",
+        "Generated code"
+      ],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "org.softlang.metalib.emf.fsml.editor/src/org/softlang/metalib/emf/fsml/fsml/presentation/FsmlEditor.java"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Serialization", "Resolution", "AST"
       ],
       "headline": "The turnstile object in EMF's textual exchange format",
       "perspectives": [
-        "object"
+        "data"
       ],
       "languages": [
         "XMI"
@@ -168,7 +170,7 @@
         "SAX"
       ],
       "concepts": [
-        "Persistence"
+        "Persistence", "URI"
       ],
       "artifacts": [
         {
@@ -179,11 +181,11 @@
     },
     {
       "features": [
-        "Analyse^O"
+        "Analyse"
       ],
       "headline": "EMF delegates model validation to methods with a certain signature",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Java"
@@ -201,11 +203,11 @@
     },
     {
       "features": [
-        "Analyse^M"
+        "Piggyback"
       ],
       "headline": "Unique state names are validated by setting the EMF's unique id feature",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "XMI"

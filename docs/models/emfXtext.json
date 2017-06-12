@@ -5,12 +5,12 @@
   "sections": [
     {
       "features": [
-        "AST+",
-        "Text-to-AST"
+        "ASG",
+        "Text-to-ASG"
       ],
       "headline": "State-machine grammar",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Xtext"
@@ -31,7 +31,7 @@
       ],
       "headline": "A Turnstile FSM",
       "perspectives": [
-        "object"
+        "data"
       ],
       "languages": [
       ],
@@ -46,11 +46,11 @@
     },
     {
       "features": [
-        "ASG^+"
+        "ASG"
       ],
       "headline": "EMF model interfaces",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Java"
@@ -81,11 +81,11 @@
     },
     {
       "features": [
-        "ASG^+"
+        "ASG"
       ],
       "headline": "EMF model classes",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Java"
@@ -120,7 +120,7 @@
         "Scannerfull parsing"
       ],
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Java"
@@ -142,11 +142,11 @@
     },
     {
       "features": [
-        "Analyse^O"
+        "Analyse"
       ],
       "headline": "Xtext Constaint Annotation",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Xtend"
@@ -166,11 +166,11 @@
     },
     {
       "features": [
-        "Analyse^M"
+        "Piggyback", "Resolution"
       ],
       "headline": "Xtext model reference resolution by name",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Xtext"
@@ -191,10 +191,10 @@
     },
     {
       "features": [
-        "Translate^O"
+        "Compilation"
       ],
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Xtend"
@@ -218,7 +218,7 @@
       ],
       "headline": "DGL generation",
       "perspectives": [
-        "meta"
+        "implementation"
       ],
       "languages": [
         "Xtend"
