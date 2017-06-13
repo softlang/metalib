@@ -21,4 +21,4 @@
         (map #(with-meta [technology/component %] {:key %}) technologies)]
        [:div.concepts
         [:span "Concepts"]
-        (map #(with-meta [concept/component %] {:key %}) perspectives)]])
+        (map #(with-meta [concept/component %] {:key %}) concepts)]])

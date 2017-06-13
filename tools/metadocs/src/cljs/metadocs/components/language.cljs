@@ -3,4 +3,4 @@
 
 
 (defn component [language]
-      [:span [:a {:href (str config/wiki-url "Language:" language) :target "_blank"} language]])
+      [:span [:a {:href (str config/base-path "/languages/" language ".html")} language]])

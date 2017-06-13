@@ -3,4 +3,4 @@
 
 
 (defn component [feature]
-      [:span [:a {:href (str config/wiki-url "Feature:" feature) :target "_blank"} feature]])
+      [:span [:a {:href (str config/base-path "/features/" feature ".html")} feature]])

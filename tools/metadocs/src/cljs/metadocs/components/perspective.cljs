@@ -2,4 +2,4 @@
   (:require [metadocs.config :as config]))
 
 (defn component [perspective]
-      [:span [:a {:href (str config/wiki-url "Perspective:" perspective) :target "_blank"} perspective]])
+      [:span [:a {:href (str config/base-path "/perspectives/" perspective ".html")} perspective]])
