@@ -12,14 +12,14 @@
       .list))
 
 (defn load-json [file-name]
-  (parse-stream (reader (str model-dir file-name)) true))
+  (parse-stream (reader file-name) true))
 
 (defmacro defcontributionroutes [state contribution-component]
   (let [model-file-names (-> model-dir
                              load-model-file-names)]
     `(do ~@(map (fn [model-file-name]                  
-                  (let [model (-> model-file-name
-                                       load-json)
+                  (let [model (-> (str model-dir model-file-name)
+                                  load-json)
                         model-name (:name model)]
                     (copy (file "resources/public/index.html") (file (str "resources/public/" model-name ".html")))
                     `(~'defroute ~(str "/metalib/" model-name ".html") []
@@ -29,6 +29,6 @@
 (defmacro defcontributions []
   (let [model-file-names (-> model-dir
                              load-model-file-names)
-        contributions (map load-json model-file-names)]
+        contributions (map #(load-json (str model-dir %)) model-file-names)]
     `(def metadocs.app/contributions (list ~@contributions))))
 

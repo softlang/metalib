@@ -28,7 +28,8 @@
          '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]]
          '[adzerk.boot-reload :refer [reload]]
          '[deraen.boot-sass :refer [sass]]
-         '[pandeiro.boot-http :refer [serve]])
+         '[pandeiro.boot-http :refer [serve]]
+         '[metadocs.validator])
 
 (task-options!
  repl {:middleware '[cemerick.piggieback/wrap-cljs-repl]})
@@ -43,7 +44,7 @@
         (cljs :compiler-options {:optimizations :none
                                  :parallel-build true})))
 
-(deftask build []
+(deftask build "build project" []
   (comp
    (notify)
    (sass)
@@ -51,6 +52,10 @@
                             :parallel-build true
                             :source-map     false})
    (target "target")))
+
+(deftask run []
+  (with-pass-thru _
+    (metadocs.validator/validate)))
 
 (deftask prod []
   (comp
