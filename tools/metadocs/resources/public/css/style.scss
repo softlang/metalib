@@ -22,12 +22,12 @@ body {
     padding-bottom: 5rem;
 }
 
-.nav {
+.navigation {
     border-bottom: 0.25rem solid $black;
     width: 100%;
 }
 
-.nav-link {
+.navigation-link {
     color: $black;
     font-size: 2rem;
     text-decoration: none;
@@ -54,7 +54,7 @@ body {
     padding: .5rem;
 }
 
-.section-table {
+.summary {
     display: flex;
     font-size: 0.75rem;
     @media (max-width: 50rem) {

@@ -5,4 +5,3 @@ build:
 	mv target/public/*.html .
 	mv target/public/js/app.js js
 	mv target/public/css/style.css css
-

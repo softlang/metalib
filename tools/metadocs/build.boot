@@ -44,19 +44,6 @@
         (cljs :compiler-options {:optimizations :none
                                  :parallel-build true})))
 
-(deftask build "build project" []
-  (comp
-   (notify)
-   (sass)
-   (cljs :compiler-options {:optimizations  :advanced
-                            :parallel-build true
-                            :source-map     false})
-   (target "target")))
-
-(deftask run []
-  (with-pass-thru _
-    (metadocs.validator/validate)))
-
 (deftask prod []
   (comp
    (notify)
