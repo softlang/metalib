@@ -58,3 +58,7 @@
    (jar :file "metadocs.jar"
         :main 'metadocs.server)
    (target "target")))
+
+(deftask run []
+   (with-pass-thru _
+     (metadocs.validator/validate)))

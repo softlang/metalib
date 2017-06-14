@@ -9,46 +9,30 @@
           "feature": "Abstract syntax",
           "composition": [
             {
-              "feature": "Interface",
-              "mandatory": false
-            },
-            {
-              "feature": "Representation",
+              "feature": "Model",
               "mandatory": true,
-              "alternative": [
+              "or": [
+                {
+                  "feature": "AST"
+                },
+                {
+                  "feature": "ASG"
+                },
                 {
                   "feature": "Semantic domain"
-                },
-                {
-                  "feature": "AST",
-                  "alternative": [
-                    {
-                      "feature": "AST+"
-                    },
-                    {
-                      "feature": "AST-"
-                    }
-                  ]
-                },
-                {
-                  "feature": "ASG",
-                  "alternative": [
-                    {
-                      "feature": "ASG+"
-                    },
-                    {
-                      "feature": "ASG-"
-                    }
-                  ]
                 }
               ]
+            },
+            {
+              "feature": "API",
+              "mandatory": false
             },
             {
               "feature": "Serialization",
               "mandatory": false
             },
             {
-              "feature": "Abstraction",
+              "feature": "Resolution",
               "mandatory": false
             }
           ]
@@ -58,12 +42,12 @@
           "or": [
             {
               "feature": "Textual syntax",
-              "or": [
+              "alternative": [
                 {
                   "feature": "Parsing",
                   "composition": [
                     {
-                      "feature": "Text-to-",
+                      "feature": "Text-to-model",
                       "mandatory": true,
                       "alternative": [
                         {
@@ -80,42 +64,37 @@
                     {
                       "feature": "Scanning",
                       "mandatory": false
+                    },
+                    {
+                      "feature": "Abstraction",
+                      "mandatory": false
                     }
                   ]
                 },
                 {
                   "feature": "Replacement"
-                },
-                {
-                  "feature": "Text rendering",
-                  "alternative": [
-                    {
-                      "feature": "Text-to-Text"
-                    },
-                    {
-                      "feature": "CST-to-Text"
-                    },
-                    {
-                      "feature": "AST-to-Text"
-                    },
-                    {
-                      "feature": "ASG-to-Text"
-                    }
-                  ]
-                },
-                {
-                  "feature": "Text editing"
                 }
               ]
             },
             {
-              "feature": "Visual syntax",
+              "feature": "Graphical syntax",
               "or": [
                 {
                   "feature": "Graph rendering"
                 },
                 {
-                  "feature": "Graphediting"
+                  "feature": "Graph editing"
+                }
+              ]
+            },
+            {
+              "feature": "Projectional syntax",
+              "or": [
+                {
+                  "feature": "Model projection"
+                },
+                {
+                  "feature": "Text projection"
                 }
               ]
             }
@@ -126,64 +105,39 @@
     {
       "feature": "Semantics",
       "mandatory": false,
-      "composition": [
+      "or": [
         {
-          "feature": "Static semantics",
-          "mandatory": false,
+          "feature": "Dynamic semantics",
           "or": [
             {
-              "feature": "Analyse^O"
+              "feature": "Interpretation"
             },
             {
-              "feature": "Analyse^M"
+              "feature": "Run-time system"
             }
           ]
         },
         {
-          "feature": "Dynamic semantics",
-          "mandatory": false,
+          "feature": "Static semantics",
           "or": [
             {
-              "feature": "Interpret^O"
+              "feature": "Analysis"
             },
             {
-              "feature": "Interpret^M"
+              "feature": "Piggyback"
             }
           ]
         },
         {
           "feature": "Translation semantics",
-          "mandatory": false,
           "or": [
             {
-              "feature": "Translate^O"
+              "feature": "Compilation"
             },
             {
-              "feature": "Translate^M"
+              "feature": "Staging"
             }
           ]
-        }
-      ]
-    },
-    {
-      "feature": "Ecosystem",
-      "mandatory": false,
-      "composition": [
-        {
-          "feature": "Metrics",
-          "mandatory": false
-        },
-        {
-          "feature": "Refactoring",
-          "mandatory": false
-        },
-        {
-          "feature": "Composition",
-          "mandatory": false
-        },
-        {
-          "feature": "IDE",
-          "mandatory": false
         }
       ]
     }

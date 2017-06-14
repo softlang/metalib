@@ -5,7 +5,7 @@
     <use id="1e0d5fd6-c07a-4df5-9c9b-c73735ba6c37" name="fsml" version="0" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
     <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
   </languages>
   <imports>
     <import index="4dy3" ref="r:d52f619a-92bb-4609-884f-25be2b756cb6(fsml.runtime)" />
@@ -113,11 +113,11 @@
       <concept id="4524322011154244496" name="fsml.structure.Initial" flags="ng" index="3aBvPP" />
       <concept id="4524322011154244455" name="fsml.structure.Transition" flags="ng" index="3aBvQ2">
         <reference id="4524322011154245782" name="target" index="3aBvpN" />
-        <child id="4524322011154245777" name="input" index="3aBvpO" />
+        <child id="4524322011154245777" name="event" index="3aBvpO" />
         <child id="4524322011154245779" name="action" index="3aBvpQ" />
       </concept>
       <concept id="4524322011154244431" name="fsml.structure.Action" flags="ng" index="3aBvQE" />
-      <concept id="4524322011154244439" name="fsml.structure.Input" flags="ng" index="3aBvQM" />
+      <concept id="4524322011154244439" name="fsml.structure.Event" flags="ng" index="3aBvQM" />
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1204796164442" name="jetbrains.mps.baseLanguage.collections.structure.InternalSequenceOperation" flags="nn" index="23sCx2">

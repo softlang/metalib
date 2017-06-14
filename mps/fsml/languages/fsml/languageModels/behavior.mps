@@ -2,7 +2,7 @@
 <model ref="r:58959aaf-bfb9-4a71-b862-816460a5ed9b(fsml.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -167,7 +167,7 @@
                 <node concept="2OqwBi" id="3V9BInOnVpP" role="2Oq$k0">
                   <node concept="13iPFW" id="3V9BInOnVkw" role="2Oq$k0" />
                   <node concept="3Tsc0h" id="3V9BInOnVAR" role="2OqNvi">
-                    <ref role="3TtcxE" to="go7p:3V9BInOl6xO" />
+                    <ref role="3TtcxE" to="go7p:3V9BInOl6xO" resolve="states" />
                   </node>
                 </node>
                 <node concept="3zZkjj" id="3V9BInOo1$G" role="2OqNvi">
@@ -180,7 +180,7 @@
                               <ref role="3cqZAo" node="3V9BInOo1$K" resolve="it" />
                             </node>
                             <node concept="3TrEf2" id="3V9BInOo2b3" role="2OqNvi">
-                              <ref role="3Tt5mk" to="go7p:3V9BInOl6y0" />
+                              <ref role="3Tt5mk" to="go7p:3V9BInOl6y0" resolve="initial" />
                             </node>
                           </node>
                           <node concept="3x8VRR" id="3V9BInOo3ct" role="2OqNvi" />
@@ -214,11 +214,11 @@
                       <ref role="3cqZAo" node="lDEcpPHVuY" resolve="visitedStates" />
                     </node>
                     <node concept="13MTOL" id="3V9BInOodkD" role="2OqNvi">
-                      <ref role="13MTZf" to="go7p:3V9BInOl6y2" />
+                      <ref role="13MTZf" to="go7p:3V9BInOl6y2" resolve="transitions" />
                     </node>
                   </node>
                   <node concept="13MTOL" id="3V9BInOodKl" role="2OqNvi">
-                    <ref role="13MTZf" to="go7p:3V9BInOl6ym" />
+                    <ref role="13MTZf" to="go7p:3V9BInOl6ym" resolve="target" />
                   </node>
                 </node>
                 <node concept="3zZkjj" id="lDEcpPI1L5" role="2OqNvi">
@@ -376,7 +376,7 @@
                       <node concept="2OqwBi" id="lDEcpPN2Dx" role="2Oq$k0">
                         <node concept="13iPFW" id="lDEcpPN2Dy" role="2Oq$k0" />
                         <node concept="3Tsc0h" id="3V9BInOogBC" role="2OqNvi">
-                          <ref role="3TtcxE" to="go7p:3V9BInOl6xO" />
+                          <ref role="3TtcxE" to="go7p:3V9BInOl6xO" resolve="states" />
                         </node>
                       </node>
                       <node concept="3zZkjj" id="lDEcpPN2D$" role="2OqNvi">
@@ -439,7 +439,7 @@
                   <node concept="2OqwBi" id="lDEcpPMTSl" role="2Oq$k0">
                     <node concept="13iPFW" id="lDEcpPMTDn" role="2Oq$k0" />
                     <node concept="3Tsc0h" id="3V9BInOohtd" role="2OqNvi">
-                      <ref role="3TtcxE" to="go7p:3V9BInOl6xO" />
+                      <ref role="3TtcxE" to="go7p:3V9BInOl6xO" resolve="states" />
                     </node>
                   </node>
                   <node concept="3zZkjj" id="lDEcpPMWTy" role="2OqNvi">
@@ -503,11 +503,11 @@
                             <ref role="3cqZAo" node="lDEcpPHVa6" resolve="statesToVisit" />
                           </node>
                           <node concept="13MTOL" id="3V9BInOolD_" role="2OqNvi">
-                            <ref role="13MTZf" to="go7p:3V9BInOl6y2" />
+                            <ref role="13MTZf" to="go7p:3V9BInOl6y2" resolve="transitions" />
                           </node>
                         </node>
                         <node concept="13MTOL" id="3V9BInOomsz" role="2OqNvi">
-                          <ref role="13MTZf" to="go7p:3V9BInOl6ym" />
+                          <ref role="13MTZf" to="go7p:3V9BInOl6ym" resolve="target" />
                         </node>
                       </node>
                       <node concept="3zZkjj" id="lDEcpPKA0e" role="2OqNvi">
