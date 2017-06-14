@@ -1,0 +1,118 @@
+{
+  "name": "Spoofax",
+  "baseuri": "https://github.com/softlang/metalib/blob/master/spoofax/fsml/",
+  "headline": "Spoofax AST",
+  "sections": [
+    {
+      "features": [
+        "AST"
+      ],
+      "headline": "FSML Grammar in Spoofax",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "SDF3"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Grammar"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "syntax/fsml.sdf3"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Textual syntax"
+      ],
+      "headline": "Turnstile sample in CS",
+      "perspectives": [
+        "data"
+      ],
+      "languages": [
+        "FSML"
+      ],
+      "technologies": [],
+      "concepts": [
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "test/Turnstile.fsm"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Analysis"
+      ],
+      "headline": "Name binding",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "NABL"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Name binding"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "trans/names.nab"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Analysis"
+      ],
+      "headline": "Check Initial",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Stratego"
+      ],
+      "technologies": [],
+      "concepts": [
+
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "trans/check.str",
+          "from": 61,
+          "to": 62
+        }
+      ]
+    },
+    {
+      "features": [
+        "Compilation"
+      ],
+      "headline": "Compilation to Java",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Stratego"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Name binding"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "trans/generate.str"
+        }
+      ]
+    }
+  ]
+}

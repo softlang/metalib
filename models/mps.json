@@ -1,0 +1,118 @@
+{
+  "name": "MPS",
+  "baseuri": "https://github.com/softlang/metalib/tree/master/mps/fsml",
+  "headline": "MPS implementation based on projectional editing",
+  "sections": [
+    {
+      "features": [
+        "AST"
+      ],
+      "headline": "Projectional Editor on AST",
+      "perspectives": [
+        "capture"
+      ],
+      "languages": [
+
+      ],
+      "technologies": [
+        "MPS"
+      ],
+      "concepts": [],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "editor_state.png"
+        }
+      ]
+    },
+    {
+      "features": [
+        "AST"
+      ],
+      "headline": "Projectional Editor on AST",
+      "perspectives": [
+        "capture"
+      ],
+      "languages": [
+
+      ],
+      "technologies": [
+        "MPS"
+      ],
+      "concepts": [],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "structure_event.png"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Analysis"
+      ],
+      "headline": "Check determinism",
+      "perspectives": [
+        "capture"
+      ],
+      "languages": [
+
+      ],
+      "technologies": [
+        "MPS"
+      ],
+      "concepts": [],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "typesystem_check_input.png"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Compilation"
+      ],
+      "headline": "Compilation",
+      "perspectives": [
+        "capture"
+      ],
+      "languages": [
+
+      ],
+      "technologies": [
+        "MPS"
+      ],
+      "concepts": [],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "compilation_state.png"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Projectional Syntax"
+      ],
+      "headline": "Sample Turnstile",
+      "perspectives": [
+        "capture",
+        "data"
+      ],
+      "languages": [
+
+      ],
+      "technologies": [
+        "MPS"
+      ],
+      "concepts": [],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "turnstile.png"
+        }
+      ]
+    }
+  ]
+}

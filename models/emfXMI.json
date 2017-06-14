@@ -6,12 +6,15 @@
     {
       "features": [
         "AST",
-        "Model projection"
+        "ASG",
+        "Resolution"
       ],
       "technologies": [],
       "concepts": [
         "Metamodel",
-        "Structured editor"
+        "Structured editor",
+        "Reference",
+        "Package"
       ],
       "languages": [
         "Ecore"
@@ -46,9 +49,7 @@
       "technologies": [],
       "concepts": [
         "OO interface",
-        "Generated code",
-        "Getter",
-        "Setter"
+        "Generated code"
       ],
       "artifacts": [
         {
@@ -97,6 +98,69 @@
         {
           "type": "none",
           "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/impl/FSMTransitionImpl.java"
+        }
+      ]
+    },
+    {
+      "features" : [
+        "AST",
+        "ASG"
+      ],
+      "headline" : "EMF Packages",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Java"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Package",
+        "Factory"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FsmlFactory.java",
+          "from": 49,
+          "to": 58
+        },
+        {
+          "type": "none",
+          "link": "org.softlang.metalib.emf.fsml/src/org/softlang/metalib/emf/fsml/fsml/FsmlPackage.java"
+        }
+      ]
+    },
+    {
+      "features" : [
+        "Model projection"
+      ],
+      "headline" : "EMF Item provider",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Java"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Adapter",
+        "Command"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "org.softlang.metalib.emf.fsml.edit/src/org/softlang/metalib/emf/fsml/fsml/provider/FSMItemProvider.java",
+          "from": 76,
+          "to": 83
+        },
+        {
+          "type": "none",
+          "link": "org.softlang.metalib.emf.fsml.edit/src/org/softlang/metalib/emf/fsml/fsml/provider/FSMStateItemProvider.java"
+        },
+        {
+          "type": "none",
+          "link": "org.softlang.metalib.emf.fsml.edit/src/org/softlang/metalib/emf/fsml/fsml/provider/FSMTransitionItemProvider.java"
         }
       ]
     },
