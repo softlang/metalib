@@ -1,6 +1,6 @@
 {
   "name": "MPS",
-  "baseuri": "https://github.com/softlang/metalib/tree/master/mps/fsml",
+  "baseuri": "https://github.com/softlang/metalib/tree/master/mps/",
   "headline": "MPS implementation based on projectional editing",
   "sections": [
     {
@@ -20,7 +20,7 @@
       "concepts": [],
       "artifacts": [
         {
-          "type": "none",
+          "type": "all",
           "link": "editor_state.png"
         }
       ]
@@ -42,7 +42,7 @@
       "concepts": [],
       "artifacts": [
         {
-          "type": "none",
+          "type": "all",
           "link": "structure_event.png"
         }
       ]
@@ -64,7 +64,7 @@
       "concepts": [],
       "artifacts": [
         {
-          "type": "none",
+          "type": "all",
           "link": "typesystem_check_input.png"
         }
       ]
@@ -86,7 +86,7 @@
       "concepts": [],
       "artifacts": [
         {
-          "type": "none",
+          "type": "all",
           "link": "compilation_state.png"
         }
       ]
@@ -109,8 +109,8 @@
       "concepts": [],
       "artifacts": [
         {
-          "type": "none",
-          "link": "turnstile.png"
+          "type": "all",
+          "link": "sample.png"
         }
       ]
     }
