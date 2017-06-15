@@ -54,30 +54,30 @@
                           "feature": "Text-to-CST"
                         },
                         {
+                          "feature": "Scanning",
+                          "mandatory": false
+                        },
+                        {
+                          "feature": "Abstraction",
+                          "mandatory": false
+                        }
+                      ]
+                    },
+                    {
+                      "feature": "Replacement"
+                    }
+                  ]
+                },
+                {
+                  "feature": "
+                        {
                           "feature": "Text-to-AST"
                         },
                         {
                           "feature": "Text-to-ASG"
                         }
                       ]
-                    },
-                    {
-                      "feature": "Scanning",
-                      "mandatory": false
-                    },
-                    {
-                      "feature": "Abstraction",
-                      "mandatory": false
-                    }
-                  ]
-                },
-                {
-                  "feature": "Replacement"
-                }
-              ]
-            },
-            {
-              "feature": "Graphical syntax",
+                    },Graphical syntax",
               "or": [
                 {
                   "feature": "Graph rendering"
