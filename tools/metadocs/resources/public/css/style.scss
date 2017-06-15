@@ -21,6 +21,10 @@ body {
   padding-bottom: 5rem;
 }
 
+img {
+  width: calc(100% - 2rem);
+}
+
 .tagcloud {
   width: (80rem/2);
   height: (80rem/2);
