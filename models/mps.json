@@ -1,6 +1,6 @@
 {
   "name": "MPS",
-  "baseuri": "https://github.com/softlang/metalib/tree/master/mps/",
+  "baseuri": "https://github.com/softlang/metalib/blob/master/mps/",
   "headline": "MPS implementation based on projectional editing",
   "sections": [
     {
