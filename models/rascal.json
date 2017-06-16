@@ -1,7 +1,7 @@
 {
   "name": "Rascal",
-  "headline": "Rascal",
-  "baseuri": "https://github.com/softlang/metalib/tree/master/rascal/fsml/src",
+  "headline": "Rascal CST-focused metaprogramming",
+  "baseuri": "https://github.com/softlang/metalib/blob/master/rascal/fsml/src/",
   "sections": [
     {
       "features": [
@@ -9,9 +9,11 @@
       ],
       "headline":"CST for FSML",
       "technologies": [],
-      "concepts": [ ],
+      "concepts": [
+        "Grammar"
+      ],
       "languages": [
-        "Rascal Grammar"
+        "Rascal"
       ],
 
       "perspectives": [
@@ -38,7 +40,8 @@
       ],
 
       "perspectives": [
-        "implementation"
+        "implementation",
+        "test"
       ],
       "artifacts": [
         {
@@ -46,6 +49,39 @@
           "link": "main/rascal/org/softlang/fsml/Checker.rsc",
           "from": 31,
           "to": 34
+        },
+        {
+          "type": "some",
+          "link": "main/rascal/org/softlang/fsml/Test.rsc",
+          "from": 17,
+          "to": 20
+        }
+      ]
+    },
+    {
+      "features": [
+        "Graph rendering"
+      ],
+      "headline":"Visualizer",
+      "technologies": [
+        "Rascal.vis"
+      ],
+      "concepts": [
+        "Visitor"
+      ],
+      "languages": [
+        "Rascal"
+      ],
+
+      "perspectives": [
+        "implementation"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "main/rascal/org/softlang/fsml/Visualizer.rsc",
+          "from": 10,
+          "to": 19
         }
       ]
     },
@@ -53,9 +89,12 @@
       "features": [
         "Compilation"
       ],
-      "headline":"FSML CST to Java that instantiates the Fluent API",
+      "headline":"FSML CST to Java Fluent API",
       "technologies": [],
-      "concepts": [ ],
+      "concepts": [
+        "Template processing",
+        "Language Embedding"
+      ],
       "languages": [
         "Rascal"
       ],
