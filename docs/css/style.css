@@ -61,9 +61,6 @@ body {
     body {
       width: 80rem; } }
 
-img {
-  width: calc(100% - 2rem); }
-
 .tagcloud {
   width: 40rem;
   height: 40rem; }
@@ -187,6 +184,8 @@ img {
     line-height: 1rem;
     margin: 0;
     overflow-x: auto; }
+  .artifact-all > img {
+    width: calc(100% - 2rem); }
 
 .artifact-some {
   background: #282a2e;
