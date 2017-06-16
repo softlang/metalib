@@ -62,8 +62,8 @@ body {
       width: 80rem; } }
 
 .tagcloud {
-  width: 40rem;
-  height: 40rem; }
+  display: block;
+  margin: auto; }
 
 .navigation {
   border-bottom: 0.25rem solid #282a2e;
