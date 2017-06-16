@@ -18,6 +18,10 @@
         {
           "type": "all",
           "link": "Turnstile.PNG"
+        },
+        {
+          "type": "none",
+          "link": " org.softlang.metalib.sirius.fsml.turnstile/model/Turnstile.fsml"
         }
       ]
     },
@@ -66,7 +70,7 @@
           "link": "Projection.PNG"
         },
         {
-          "type": "all",
+          "type": "none",
           "link": "org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign"
         }
       ]

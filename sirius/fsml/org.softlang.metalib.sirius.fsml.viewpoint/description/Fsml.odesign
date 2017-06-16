@@ -2,7 +2,6 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Fsml" version="11.1.1.201610211630">
   <ownedViewpoints name="Fsml">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="fsml.FSM" label="State Diagram" initialisation="true" domainClass="fsml.FSM" enablePopupBars="true">
-      <metamodel href="http://www.softlang.org/metalib/sirius/fsml/model/Fsml#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="fsml.FSMState" deletionDescription="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@toolSections.0/@ownedTools[name='fsml.FSMState.delete']" labelDirectEdit="//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@toolSections.0/@ownedTools[name='fsml.FSMState.editlabel']" domainClass="fsml.FSMState">
           <conditionnalStyles predicateExpression="[self.initial._not()/]">

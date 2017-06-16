@@ -1,283 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:fsml="http://www.softlang.org/metalib/sirius/fsml/model/Fsml" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis xmi:id="_Wb798E9wEee_07RTs788pA" selectedViews="_Xe86IE9wEee_07RTs788pA" version="11.1.0.201608251200">
+  <viewpoint:DAnalysis xmi:id="_TB9vMFKWEeelK9SwePEonA" selectedViews="_T2_SsFKWEeelK9SwePEonA" version="11.1.0.201608251200">
     <semanticResources>model/Turnstile.fsml</semanticResources>
-    <ownedViews xmi:type="viewpoint:DView" xmi:id="_Xe86IE9wEee_07RTs788pA">
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_T2_SsFKWEeelK9SwePEonA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_Xi0GcE9wEee_07RTs788pA" name="State Diagram" representation="_Xi0GcU9wEee_07RTs788pA">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_T3tEYFKWEeelK9SwePEonA" name="State Diagram" representation="_T3tEYVKWEeelK9SwePEonA">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']"/>
         <target xmi:type="fsml:FSM" href="model/Turnstile.fsml#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram xmi:id="_Xi0GcU9wEee_07RTs788pA" name="State Diagram">
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_Xi0Gck9wEee_07RTs788pA" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_Xi0Gc09wEee_07RTs788pA"/>
+  <diagram:DSemanticDiagram xmi:id="_T3tEYVKWEeelK9SwePEonA" name="State Diagram">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_T3tEYlKWEeelK9SwePEonA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_T3tEY1KWEeelK9SwePEonA"/>
     </ownedAnnotationEntries>
-    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_XjGaUE9wEee_07RTs788pA" source="GMF_DIAGRAMS">
-      <data xmi:type="notation:Diagram" xmi:id="_XjGaUU9wEee_07RTs788pA" type="Sirius" element="_Xi0GcU9wEee_07RTs788pA" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_XjUcwE9wEee_07RTs788pA" type="2001" element="_Xi0GdE9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XjsQME9wEee_07RTs788pA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_XjsQMU9wEee_07RTs788pA" x="31"/>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_T32OUFKWEeelK9SwePEonA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_T32OUVKWEeelK9SwePEonA" type="Sirius" element="_T3tEYVKWEeelK9SwePEonA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_T33ccFKWEeelK9SwePEonA" type="2001" element="_T3tEZFKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T37G0FKWEeelK9SwePEonA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_T37G0VKWEeelK9SwePEonA" x="31"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_Xj8u4E9wEee_07RTs788pA" type="3002" element="_Xi0GdU9wEee_07RTs788pA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_Xj8u4U9wEee_07RTs788pA" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xj8u4k9wEee_07RTs788pA"/>
+          <children xmi:type="notation:Node" xmi:id="_T3__UFKWEeelK9SwePEonA" type="3002" element="_T3tEZVKWEeelK9SwePEonA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_T3__UVKWEeelK9SwePEonA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T3__UlKWEeelK9SwePEonA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_XjUcwU9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XjUcwk9wEee_07RTs788pA" width="30" height="30"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_T33ccVKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T33cclKWEeelK9SwePEonA" x="186" y="174" width="30" height="30"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Xj6SoE9wEee_07RTs788pA" type="2001" element="_Xi0Gdk9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_Xj65sE9wEee_07RTs788pA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_Xj65sU9wEee_07RTs788pA" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_T39jEFKWEeelK9SwePEonA" type="2001" element="_T3tEZlKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T3-xMFKWEeelK9SwePEonA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_T3-xMVKWEeelK9SwePEonA" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_Xj9V8E9wEee_07RTs788pA" type="3016" element="_Xi0Gd09wEee_07RTs788pA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_Xj9V8U9wEee_07RTs788pA" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xj9V8k9wEee_07RTs788pA"/>
+          <children xmi:type="notation:Node" xmi:id="_T3__U1KWEeelK9SwePEonA" type="3016" element="_T3tEZ1KWEeelK9SwePEonA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_T3__VFKWEeelK9SwePEonA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T3__VVKWEeelK9SwePEonA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Xj6SoU9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xj6Sok9wEee_07RTs788pA" width="30" height="30"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_T3-KIFKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T3-KIVKWEeelK9SwePEonA" x="360" y="54" width="114" height="42"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_Xj65sk9wEee_07RTs788pA" type="2001" element="_Xi0GeE9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_Xj7gwE9wEee_07RTs788pA" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_Xj7gwU9wEee_07RTs788pA" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_T3-xMlKWEeelK9SwePEonA" type="2001" element="_T3tEaFKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T3_YQFKWEeelK9SwePEonA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_T3_YQVKWEeelK9SwePEonA" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_Xj99AE9wEee_07RTs788pA" type="3016" element="_Xi0GeU9wEee_07RTs788pA">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_Xj99AU9wEee_07RTs788pA" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xj99Ak9wEee_07RTs788pA"/>
+          <children xmi:type="notation:Node" xmi:id="_T4AmYFKWEeelK9SwePEonA" type="3016" element="_T3tEaVKWEeelK9SwePEonA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_T4AmYVKWEeelK9SwePEonA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4AmYlKWEeelK9SwePEonA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Xj65s09wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xj65tE9wEee_07RTs788pA" width="30" height="30"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_T3-xM1KWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T3-xNFKWEeelK9SwePEonA" x="354" y="276" width="114" height="42"/>
         </children>
-        <styles xmi:type="notation:DiagramStyle" xmi:id="_XjGaUk9wEee_07RTs788pA"/>
-        <edges xmi:type="notation:Edge" xmi:id="_XkLYYE9wEee_07RTs788pA" type="4001" element="_Xi0Gek9wEee_07RTs788pA" source="_XjUcwE9wEee_07RTs788pA" target="_Xj65sk9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkMmgE9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkMmgU9wEee_07RTs788pA" y="-10"/>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_T32OUlKWEeelK9SwePEonA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4BNcFKWEeelK9SwePEonA" type="4001" element="_T3tEalKWEeelK9SwePEonA" source="_T33ccFKWEeelK9SwePEonA" target="_T3-xMlKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4CbkFKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4CbkVKWEeelK9SwePEonA" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkNNkE9wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkNNkU9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4CbklKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4Cbk1KWEeelK9SwePEonA" x="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkNNkk9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkNNk09wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4DCoFKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4DCoVKWEeelK9SwePEonA" y="10"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XkLYYU9wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_XkLYYk9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XkLYY09wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkVJYE9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkVJYU9wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4BNcVKWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4BNclKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4BNc1KWEeelK9SwePEonA" points="[0, 30, -159, -90]$[0, 114, -159, -6]$[153, 114, -6, -6]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4DpsFKWEeelK9SwePEonA" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4DpsVKWEeelK9SwePEonA" id="(0.05263157894736842,0.42857142857142855)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_XkVwcE9wEee_07RTs788pA" type="4001" element="_Xi0GfU9wEee_07RTs788pA" source="_XjUcwE9wEee_07RTs788pA" target="_Xj6SoE9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkVwdE9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkVwdU9wEee_07RTs788pA" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4EQwFKWEeelK9SwePEonA" type="4001" element="_T3tEbVKWEeelK9SwePEonA" source="_T33ccFKWEeelK9SwePEonA" target="_T39jEFKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4EQxFKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4EQxVKWEeelK9SwePEonA" x="21" y="22"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkVwdk9wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkVwd09wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4EQxlKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4EQx1KWEeelK9SwePEonA" x="1" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkWXgE9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkWXgU9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4EQyFKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4EQyVKWEeelK9SwePEonA" x="-1" y="2"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XkVwcU9wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_XkVwck9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XkVwc09wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkWXgk9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkWXg09wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4EQwVKWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4EQwlKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4EQw1KWEeelK9SwePEonA" points="[15, -9, -158, 84]$[173, -93, 0, 0]"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4E30VKWEeelK9SwePEonA" id="(0.13081395348837208,1.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_XkWXhE9wEee_07RTs788pA" type="4001" element="_Xi0GgE9wEee_07RTs788pA" source="_Xj6SoE9wEee_07RTs788pA" target="_XjUcwE9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkW-kE9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkW-kU9wEee_07RTs788pA" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4E30lKWEeelK9SwePEonA" type="4001" element="_T3tEcFKWEeelK9SwePEonA" source="_T39jEFKWEeelK9SwePEonA" target="_T33ccFKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4E31lKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4E311KWEeelK9SwePEonA" x="1" y="24"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkW-kk9wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkW-k09wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4E32FKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4E32VKWEeelK9SwePEonA" x="20" y="2"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkW-lE9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkW-lU9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4E32lKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4E321KWEeelK9SwePEonA" x="-1" y="1"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XkWXhU9wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_XkWXhk9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XkWXh09wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkW-lk9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkW-l09wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4E301KWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4E31FKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4E31VKWEeelK9SwePEonA" points="[-5, 0, 159, -102]$[-164, -6, 0, -108]$[-164, 102, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4E33FKWEeelK9SwePEonA" id="(0.043859649122807015,0.42857142857142855)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4E33VKWEeelK9SwePEonA" id="(0.5,0.0)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_XkXloE9wEee_07RTs788pA" type="4001" element="_Xi0tgE9wEee_07RTs788pA" source="_Xj6SoE9wEee_07RTs788pA" target="_Xj6SoE9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkXlpE9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkXlpU9wEee_07RTs788pA" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4E33lKWEeelK9SwePEonA" type="4001" element="_T3tEc1KWEeelK9SwePEonA" source="_T39jEFKWEeelK9SwePEonA" target="_T39jEFKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4Fe4FKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4Fe4VKWEeelK9SwePEonA" x="11" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkXlpk9wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkXlp09wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4Fe4lKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4Fe41KWEeelK9SwePEonA" x="4" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkXlqE9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkXlqU9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4Fe5FKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4Fe5VKWEeelK9SwePEonA" x="16" y="7"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XkXloU9wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_XkXlok9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XkXlo09wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkYMsE9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkYMsU9wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4E331KWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4E34FKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4E34VKWEeelK9SwePEonA" points="[100, 4, 24, 3]$[162, 4, 86, 3]$[162, 77, 86, 76]$[72, 77, -4, 76]$[72, 15, -4, 14]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4Fe5lKWEeelK9SwePEonA" id="(0.13081395348837208,0.6428571428571429)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4Fe51KWEeelK9SwePEonA" id="(0.7894736842105263,0.6666666666666666)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_XkYMsk9wEee_07RTs788pA" type="4001" element="_Xi0tg09wEee_07RTs788pA" source="_Xj65sk9wEee_07RTs788pA" target="_XjUcwE9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkYMtk9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkYMt09wEee_07RTs788pA" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4Fe6FKWEeelK9SwePEonA" type="4001" element="_T3tEdlKWEeelK9SwePEonA" source="_T3-xMlKWEeelK9SwePEonA" target="_T33ccFKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4Fe7FKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4Fe7VKWEeelK9SwePEonA" x="-3" y="11"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkYzwE9wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkYzwU9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4Fe7lKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4Fe71KWEeelK9SwePEonA" x="-9" y="-1"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkYzwk9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkYzw09wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4Fe8FKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4Fe8VKWEeelK9SwePEonA" x="-2" y="-8"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XkYMs09wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_XkYMtE9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XkYMtU9wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkYzxE9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkYzxU9wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4Fe6VKWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4Fe6lKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4Fe61KWEeelK9SwePEonA" points="[0, -42, 158, 81]$[0, -123, 158, 0]$[-152, -123, 6, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4GF8FKWEeelK9SwePEonA" id="(0.13081395348837208,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4GF8VKWEeelK9SwePEonA" id="(0.8,0.7)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_XkYzxk9wEee_07RTs788pA" type="4001" element="_Xi0thk9wEee_07RTs788pA" source="_Xj65sk9wEee_07RTs788pA" target="_Xj65sk9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkZa0E9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkZa0U9wEee_07RTs788pA" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4GF8lKWEeelK9SwePEonA" type="4001" element="_T3tEeVKWEeelK9SwePEonA" source="_T3-xMlKWEeelK9SwePEonA" target="_T3-xMlKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4GF9lKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4GF91KWEeelK9SwePEonA" x="13" y="-10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkZa0k9wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkZa009wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4GF-FKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4GF-VKWEeelK9SwePEonA" x="5" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkZa1E9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkZa1U9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4GF-lKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4GF-1KWEeelK9SwePEonA" x="19" y="7"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XkYzx09wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_XkYzyE9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XkYzyU9wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkZa1k9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkaB4E9wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4GF81KWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4GF9FKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4GF9VKWEeelK9SwePEonA" points="[100, 4, 33, -8]$[162, 4, 95, -8]$[162, 77, 95, 65]$[72, 77, 5, 65]$[72, 15, 5, 3]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4GF_FKWEeelK9SwePEonA" id="(0.13081395348837208,0.6428571428571429)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fWD-EFKWEeelK9SwePEonA" id="(0.7105263157894737,0.9285714285714286)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_XkaB4U9wEee_07RTs788pA" type="4001" element="_Xi0tiU9wEee_07RTs788pA" source="_Xj65sk9wEee_07RTs788pA" target="_Xj65sk9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkaB5U9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkaB5k9wEee_07RTs788pA" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4GtAFKWEeelK9SwePEonA" type="4001" element="_T3tEfFKWEeelK9SwePEonA" source="_T3-xMlKWEeelK9SwePEonA" target="_T3-xMlKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4GtBFKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4GtBVKWEeelK9SwePEonA" y="12"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkaB509wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkaB6E9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4GtBlKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4GtB1KWEeelK9SwePEonA" x="3" y="9"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkaB6U9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkaB6k9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4GtCFKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4GtCVKWEeelK9SwePEonA" x="8" y="8"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XkaB4k9wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_XkaB409wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XkaB5E9wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Xkao8E9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Xkao8U9wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4GtAVKWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4GtAlKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4GtA1KWEeelK9SwePEonA" points="[-3, 2, -31, 9]$[-3, 64, -31, 71]$[25, 64, -3, 71]$[25, 2, -3, 9]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4GtClKWEeelK9SwePEonA" id="(0.40350877192982454,0.9523809523809523)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4GtC1KWEeelK9SwePEonA" id="(0.6491228070175439,0.7857142857142857)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_Xkao8k9wEee_07RTs788pA" type="4001" element="_Xi0tjE9wEee_07RTs788pA" source="_Xj65sk9wEee_07RTs788pA" target="_Xj65sk9wEee_07RTs788pA">
-          <children xmi:type="notation:Node" xmi:id="_XkbQAE9wEee_07RTs788pA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkbQAU9wEee_07RTs788pA" y="-10"/>
+        <edges xmi:type="notation:Edge" xmi:id="_T4GtDFKWEeelK9SwePEonA" type="4001" element="_T3tEf1KWEeelK9SwePEonA" source="_T3-xMlKWEeelK9SwePEonA" target="_T3-xMlKWEeelK9SwePEonA">
+          <children xmi:type="notation:Node" xmi:id="_T4GtEFKWEeelK9SwePEonA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4GtEVKWEeelK9SwePEonA" x="13" y="12"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkbQAk9wEee_07RTs788pA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkbQA09wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4HUEFKWEeelK9SwePEonA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4HUEVKWEeelK9SwePEonA" x="2" y="10"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XkbQBE9wEee_07RTs788pA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XkbQBU9wEee_07RTs788pA" y="10"/>
+          <children xmi:type="notation:Node" xmi:id="_T4HUElKWEeelK9SwePEonA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4HUE1KWEeelK9SwePEonA" x="2" y="11"/>
           </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Xkao809wEee_07RTs788pA"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_Xkao9E9wEee_07RTs788pA" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Xkao9U9wEee_07RTs788pA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkbQBk9wEee_07RTs788pA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XkbQB09wEee_07RTs788pA" id="(0.5,0.5)"/>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_T4GtDVKWEeelK9SwePEonA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_T4GtDlKWEeelK9SwePEonA" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T4GtD1KWEeelK9SwePEonA" points="[-14, 4, -14, 4]$[-76, 4, -76, 4]$[-76, 77, -76, 77]$[0, 77, 0, 77]$[0, 15, 0, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4HUFFKWEeelK9SwePEonA" id="(0.13081395348837208,0.6428571428571429)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_T4HUFVKWEeelK9SwePEonA" id="(0.13081395348837208,0.6428571428571429)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Xi0GdE9wEee_07RTs788pA" name="locked" outgoingEdges="_Xi0Gek9wEee_07RTs788pA _Xi0GfU9wEee_07RTs788pA" incomingEdges="_Xi0GgE9wEee_07RTs788pA _Xi0tg09wEee_07RTs788pA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_T3tEZFKWEeelK9SwePEonA" name="locked" outgoingEdges="_T3tEalKWEeelK9SwePEonA _T3tEbVKWEeelK9SwePEonA" incomingEdges="_T3tEcFKWEeelK9SwePEonA _T3tEdlKWEeelK9SwePEonA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="fsml:FSMState" href="model/Turnstile.fsml#//@states.0"/>
       <semanticElements xmi:type="fsml:FSMState" href="model/Turnstile.fsml#//@states.0"/>
-      <ownedStyle xmi:type="diagram:Dot" xmi:id="_Xi0GdU9wEee_07RTs788pA" showIcon="false" labelAlignment="RIGHT" backgroundColor="0,0,0">
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Dot" xmi:id="_T3tEZVKWEeelK9SwePEonA" showIcon="false" labelAlignment="RIGHT" backgroundColor="0,0,0">
         <description xmi:type="style:DotDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Xi0Gdk9wEee_07RTs788pA" name="unlocked" outgoingEdges="_Xi0GgE9wEee_07RTs788pA _Xi0tgE9wEee_07RTs788pA" incomingEdges="_Xi0GfU9wEee_07RTs788pA _Xi0tgE9wEee_07RTs788pA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_T3tEZlKWEeelK9SwePEonA" name="unlocked" outgoingEdges="_T3tEcFKWEeelK9SwePEonA _T3tEc1KWEeelK9SwePEonA" incomingEdges="_T3tEbVKWEeelK9SwePEonA _T3tEc1KWEeelK9SwePEonA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="fsml:FSMState" href="model/Turnstile.fsml#//@states.1"/>
       <semanticElements xmi:type="fsml:FSMState" href="model/Turnstile.fsml#//@states.1"/>
-      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_Xi0Gd09wEee_07RTs788pA" showIcon="false" labelPosition="node" color="246,139,139">
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_T3tEZ1KWEeelK9SwePEonA" showIcon="false" labelPosition="node" color="246,139,139">
         <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']/@conditionnalStyles.0/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Xi0GeE9wEee_07RTs788pA" name="exception" outgoingEdges="_Xi0tg09wEee_07RTs788pA _Xi0thk9wEee_07RTs788pA _Xi0tiU9wEee_07RTs788pA _Xi0tjE9wEee_07RTs788pA" incomingEdges="_Xi0Gek9wEee_07RTs788pA _Xi0thk9wEee_07RTs788pA _Xi0tiU9wEee_07RTs788pA _Xi0tjE9wEee_07RTs788pA" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_T3tEaFKWEeelK9SwePEonA" name="exception" outgoingEdges="_T3tEdlKWEeelK9SwePEonA _T3tEeVKWEeelK9SwePEonA _T3tEfFKWEeelK9SwePEonA _T3tEf1KWEeelK9SwePEonA" incomingEdges="_T3tEalKWEeelK9SwePEonA _T3tEeVKWEeelK9SwePEonA _T3tEfFKWEeelK9SwePEonA _T3tEf1KWEeelK9SwePEonA" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="fsml:FSMState" href="model/Turnstile.fsml#//@states.2"/>
       <semanticElements xmi:type="fsml:FSMState" href="model/Turnstile.fsml#//@states.2"/>
-      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_Xi0GeU9wEee_07RTs788pA" showIcon="false" labelPosition="node" color="246,139,139">
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_T3tEaVKWEeelK9SwePEonA" showIcon="false" labelPosition="node" color="246,139,139">
         <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']/@conditionnalStyles.0/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@nodeMappings[name='fsml.FSMState']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0Gek9wEee_07RTs788pA" name="pass/alarm" sourceNode="_Xi0GdE9wEee_07RTs788pA" targetNode="_Xi0GeE9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEalKWEeelK9SwePEonA" name="pass/alarm" sourceNode="_T3tEZFKWEeelK9SwePEonA" targetNode="_T3tEaFKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.0/@transitions.0"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.0/@transitions.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0Ge09wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEa1KWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0GfE9wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEbFKWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0GfU9wEee_07RTs788pA" name="ticket/collect" sourceNode="_Xi0GdE9wEee_07RTs788pA" targetNode="_Xi0Gdk9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEbVKWEeelK9SwePEonA" name="ticket/collect" sourceNode="_T3tEZFKWEeelK9SwePEonA" targetNode="_T3tEZlKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.0/@transitions.1"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.0/@transitions.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0Gfk9wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEblKWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0Gf09wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEb1KWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0GgE9wEee_07RTs788pA" name="pass/" sourceNode="_Xi0Gdk9wEee_07RTs788pA" targetNode="_Xi0GdE9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEcFKWEeelK9SwePEonA" name="pass/" sourceNode="_T3tEZlKWEeelK9SwePEonA" targetNode="_T3tEZFKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.1/@transitions.0"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.1/@transitions.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0GgU9wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEcVKWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0Ggk9wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEclKWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0tgE9wEee_07RTs788pA" name="ticket/eject" sourceNode="_Xi0Gdk9wEee_07RTs788pA" targetNode="_Xi0Gdk9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEc1KWEeelK9SwePEonA" name="ticket/eject" sourceNode="_T3tEZlKWEeelK9SwePEonA" targetNode="_T3tEZlKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.1/@transitions.1"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.1/@transitions.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0tgU9wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEdFKWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0tgk9wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEdVKWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0tg09wEee_07RTs788pA" name="release/" sourceNode="_Xi0GeE9wEee_07RTs788pA" targetNode="_Xi0GdE9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEdlKWEeelK9SwePEonA" name="release/" sourceNode="_T3tEaFKWEeelK9SwePEonA" targetNode="_T3tEZFKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.0"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.0"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0thE9wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEd1KWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0thU9wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEeFKWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0thk9wEee_07RTs788pA" name="mute/" sourceNode="_Xi0GeE9wEee_07RTs788pA" targetNode="_Xi0GeE9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEeVKWEeelK9SwePEonA" name="mute/" sourceNode="_T3tEaFKWEeelK9SwePEonA" targetNode="_T3tEaFKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.1"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0th09wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEelKWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0tiE9wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEe1KWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0tiU9wEee_07RTs788pA" name="pass/" sourceNode="_Xi0GeE9wEee_07RTs788pA" targetNode="_Xi0GeE9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEfFKWEeelK9SwePEonA" name="pass/" sourceNode="_T3tEaFKWEeelK9SwePEonA" targetNode="_T3tEaFKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.2"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0tik9wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEfVKWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0ti09wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEflKWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Xi0tjE9wEee_07RTs788pA" name="ticket/eject" sourceNode="_Xi0GeE9wEee_07RTs788pA" targetNode="_Xi0GeE9wEee_07RTs788pA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_T3tEf1KWEeelK9SwePEonA" name="ticket/eject" sourceNode="_T3tEaFKWEeelK9SwePEonA" targetNode="_T3tEaFKWEeelK9SwePEonA">
       <target xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.3"/>
       <semanticElements xmi:type="fsml:FSMTransition" href="model/Turnstile.fsml#//@states.2/@transitions.3"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Xi0tjU9wEee_07RTs788pA" size="2" strokeColor="0,0,0">
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_T3tEgFKWEeelK9SwePEonA" size="2" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_Xi0tjk9wEee_07RTs788pA" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_T3tEgVKWEeelK9SwePEonA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer/@edgeMappings[name='fsml.FSMTransition']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']"/>
-    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_Xi0tj09wEee_07RTs788pA"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_T3tEglKWEeelK9SwePEonA"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.softlang.metalib.sirius.fsml.viewpoint/description/Fsml.odesign#//@ownedViewpoints[name='Fsml']/@ownedRepresentations[name='fsml.FSM']/@defaultLayer"/>
     <target xmi:type="fsml:FSM" href="model/Turnstile.fsml#/"/>
   </diagram:DSemanticDiagram>
