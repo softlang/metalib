@@ -10,9 +10,9 @@ jobs:
   plan:
   - get: metalib
   - task: build
-    file: metalib/docs/ci/build.yml
+    file: metalib/ci/build.yml
   - task: commit
-    file: metalib/docs/ci/commit.yml
+    file: metalib/ci/commit.yml
     params:
        GIT_EMAIL: simon.schauss@gmail.com
        GIT_NAME: Simon Schauß

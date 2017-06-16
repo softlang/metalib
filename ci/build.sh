@@ -1,9 +1,10 @@
-cd metalib/docs
-boot build
-mkdir -p css
-mkdir -p js
-mv target/public/*.html .
-mv target/public/js/app.js js
-mv target/public/css/style.css css
-cp -r .. ../../metalib-build
-
+cd metalib/tools/metadocs
+boot prod
+ls
+cd ../..
+rm -rf docs
+mv tools/metadocs/target/public docs
+rm -r docs/css/*.scss
+rm docs/js/app.cljs.edn
+rm -r docs/js/app.out
+cp -r . ../metalib-build
