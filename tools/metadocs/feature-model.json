@@ -1,10 +1,10 @@
 {
-  "feature": "Language implementation",
+  "feature": "Language Implementation",
   "composition": [
     {
       "feature": "Syntax",
       "mandatory": true,
-      "or": [
+      "or":[
         {
           "feature": "Abstract syntax",
           "composition": [
@@ -54,30 +54,30 @@
                           "feature": "Text-to-CST"
                         },
                         {
-                          "feature": "Scanning",
-                          "mandatory": false
-                        },
-                        {
-                          "feature": "Abstraction",
-                          "mandatory": false
-                        }
-                      ]
-                    },
-                    {
-                      "feature": "Replacement"
-                    }
-                  ]
-                },
-                {
-                  "feature": "
-                        {
                           "feature": "Text-to-AST"
                         },
                         {
                           "feature": "Text-to-ASG"
                         }
                       ]
-                    },Graphical syntax",
+                    },
+                    {
+                      "feature": "Scanning",
+                      "mandatory": false
+                    },
+                    {
+                      "feature": "Abstraction",
+                      "mandatory": false
+                    }
+                  ]
+                },
+                {
+                  "feature": "Replacement"
+                }
+              ]
+            },
+            {
+              "feature": "Graphical syntax",
               "or": [
                 {
                   "feature": "Graph rendering"
@@ -118,7 +118,7 @@
           ]
         },
         {
-          "feature": "Static semantics",
+          "feature": "Statics semantics",
           "or": [
             {
               "feature": "Analysis"
@@ -130,7 +130,7 @@
         },
         {
           "feature": "Translation semantics",
-          "or": [
+          "alternative": [
             {
               "feature": "Compilation"
             },
