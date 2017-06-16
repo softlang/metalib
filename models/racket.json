@@ -5,6 +5,30 @@
   "sections": [
     {
       "features": [
+        "Replacement"
+      ],
+      "headline": "",
+      "perspectives": [
+        "data"
+      ],
+      "languages": [
+        "Racket"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Internal DSL"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "usage.rkt",
+          "from": 4,
+          "to": 18
+        }
+      ]
+    },
+    {
+      "features": [
         "AST"
       ],
       "headline": "",
@@ -29,7 +53,7 @@
     },
     {
       "features": [
-        "AST"
+        "Replacement"
       ],
       "headline": "",
       "perspectives": [
@@ -40,14 +64,109 @@
       ],
       "technologies": [],
       "concepts": [
-        "Case Class"
+        "Quote"
       ],
       "artifacts": [
         {
           "type": "some",
           "link": "fsml.rkt",
-          "from": 16,
-          "to": 18
+          "from": 31,
+          "to": 46
+        }
+      ]
+    },
+    {
+      "features": [
+        "Analysis"
+      ],
+      "headline": "",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Racket"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Tail recursion"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "fsml.rkt",
+          "from": 87,
+          "to": 109
+        }
+      ]
+    },
+    {
+      "features": [
+        "Piggyback"
+      ],
+      "headline": "",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Racket"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Quote"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "fsml.rkt",
+          "from": 128,
+          "to": 133
+        }
+      ]
+    },
+    {
+      "features": [
+        "Interpretation"
+      ],
+      "headline": "Runtime evaluator for FSMs",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Racket"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Quasi-quotation",
+        "Tail recursion"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "fsml.rkt",
+          "from": 145,
+          "to": 156
+        }
+      ]
+    },
+    {
+      "features": [
+        "Interpretation"
+      ],
+      "headline": "",
+      "perspectives": [
+        "test"
+      ],
+      "languages": [
+        "Racket"
+      ],
+      "technologies": [],
+      "concepts": [],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "usage.rkt",
+          "from": 22,
+          "to": 28
         }
       ]
     }

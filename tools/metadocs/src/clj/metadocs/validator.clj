@@ -16,32 +16,24 @@
 
 (defmethod validate-features :composition [tree mandatory feature-set]
   (let [children (:composition tree)]
-    (println tree mandatory)
     (or (not mandatory) (every? identity (map #(if (and mandatory (:mandatory %1) (not %2))
-                              (throw (Error. (str "no mandatory feature " (:feature %1))))
-                              true)
-                           children
-                           (map #(validate-features % (and mandatory (:mandatory %)) feature-set) children))))))
+                                                 (throw (Error. (str "no mandatory feature " (:feature %1))))
+                                                 true)
+                                              children
+                                              (map #(validate-features % (and mandatory (:mandatory %)) feature-set) children))))))
 
 (defmethod validate-features :or [tree mandatory feature-set]
   (let [children (:or tree)]
-    (if (< 0 (count (filter identity (map #(validate-features % false feature-set) children))))
-      true
-      (throw (Error. (str "no feature for or " (:feature tree)))))))
+    (< 0 (count (filter identity (map #(validate-features % mandatory feature-set) children))))))
 
 (defmethod validate-features :alternative [tree mandatory feature-set]
   (let [children (:alternative tree)]
-    (case (compare (count (filter identity (map #(validate-features % false feature-set) children))) 1)
-      -1 (throw (Error. (str "no feature for alternative " (:feature tree))))
-      0 true
-      1 (throw (Error. (str "more than one feature for alternative " (:feature tree) (map :feature children)))))))
+    (= 1 (count (filter identity (map #(validate-features % mandatory feature-set) children))))))
 
 (defmethod validate-features :leaf [{:keys [feature]} mandatory feature-set]
   (contains? feature-set feature))
 
-(defn validate []
+(defn validate [feature-set]
   (let [feature-model (load-json feature-model-filename)]
-    (print (pr-str (validate-features feature-model
-                                      true
-                                      #{"AST" "CST"})))))
+    (throw (Error. (pr-str (validate-features feature-model true feature-set))))))
 

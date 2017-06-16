@@ -29,6 +29,54 @@
     },
     {
       "features": [
+        "Graph editing",
+        "Model projection"
+      ],
+      "technologies": [
+        "GMF",
+        "Eclipse"
+      ],
+      "concepts": [
+        "IDE",
+        "Palette"
+      ],
+      "languages": [],
+      "perspectives": [
+        "capture",
+        "implementation"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "Palette.PNG"
+        }
+      ]
+    },
+    {
+      "features": [
+        "Graph rendering"
+      ],
+      "technologies": [
+        "Sirius"
+      ],
+      "concepts": [
+      ],
+      "languages": [
+        "AIRD"
+      ],
+      "perspectives": [
+        "capture",
+        "data"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "org.softlang.metalib.sirius.fsml.turnstile/representations.aird"
+        }
+      ]
+    },
+    {
+      "features": [
         "AST",
         "Serialization"
       ],
@@ -88,7 +136,9 @@
         "ASG",
         "Resolution"
       ],
-      "technologies": [],
+      "technologies": [
+        "EMF"
+      ],
       "concepts": [
         "OO class"
       ],
@@ -117,7 +167,9 @@
       "features": [
         "ASG"
       ],
-      "technologies": [],
+      "technologies": [
+        "Eclipse"
+      ],
       "concepts": [
         "Metamodel",
         "Structured Editor",
@@ -125,7 +177,7 @@
         "Package"
       ],
       "languages": [
-        "Ecore"
+        "Ecore XMI"
       ],
       "perspectives": [
         "implementation",
@@ -150,7 +202,8 @@
         "Acceleo"
       ],
       "concepts": [
-        "Structured Editor"
+        "Structured Editor",
+        "Viewpoint"
       ],
       "languages": [
         "Sirius viewpoint specification"
