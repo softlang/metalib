@@ -5,10 +5,16 @@
   "sections": [
     {
       "features": [
-        "Graph editing"
+        "Graph editing",
+        "Model projection"
       ],
-      "technologies": [],
-      "concepts": [],
+      "technologies": [
+        "GMF",
+        "Eclipse"
+      ],
+      "concepts": [
+        "IDE"
+      ],
       "languages": [],
       "perspectives": [
         "data",
@@ -23,11 +29,19 @@
     },
     {
       "features": [
-        "AST","Serialization"
+        "AST",
+        "Serialization"
       ],
-      "technologies": [],
-      "concepts": [],
-      "languages": ["XMI"],
+      "technologies": [
+        "SAX"
+      ],
+      "concepts": [
+        "Persistence",
+        "URI"
+      ],
+      "languages": [
+        "XMI"
+      ],
       "perspectives": [
         "data"
       ],
@@ -40,11 +54,17 @@
     },
     {
       "features": [
-        "ASG","Resolution","API"
+        "ASG",
+        "Resolution",
+        "API"
       ],
       "technologies": [],
-      "concepts": ["OO interface"],
-      "languages": ["Java"],
+      "concepts": [
+        "OO interface"
+      ],
+      "languages": [
+        "Java"
+      ],
       "perspectives": [
         "implementation"
       ],
@@ -65,11 +85,16 @@
     },
     {
       "features": [
-        "ASG","Resolution"
+        "ASG",
+        "Resolution"
       ],
       "technologies": [],
-      "concepts": ["OO class"],
-      "languages": ["Java"],
+      "concepts": [
+        "OO class"
+      ],
+      "languages": [
+        "Java"
+      ],
       "perspectives": [
         "implementation"
       ],
@@ -94,7 +119,10 @@
       ],
       "technologies": [],
       "concepts": [
-        "Metamodel"
+        "Metamodel",
+        "Structured Editor",
+        "Reference",
+        "Package"
       ],
       "languages": [
         "Ecore"
@@ -118,8 +146,12 @@
       "features": [
         "Model projection"
       ],
-      "technologies": [],
-      "concepts": [],
+      "technologies": [
+        "Acceleo"
+      ],
+      "concepts": [
+        "Structured Editor"
+      ],
       "languages": [
         "Sirius viewpoint specification"
       ],
