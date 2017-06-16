@@ -51,12 +51,6 @@
    (cljs :compiler-options {:optimizations  :advanced
                             :parallel-build true
                             :source-map     false})
-   (aot :namespace '#{metadocs.server})
-   (pom :project 'metadocs
-        :version "1.0.0")
-   (uber)
-   (jar :file "metadocs.jar"
-        :main 'metadocs.server)
    (target "target")))
 
 (deftask run []
