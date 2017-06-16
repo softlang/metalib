@@ -272,7 +272,8 @@
     },
     {
       "features": [
-        "Piggyback"
+        "ASG",
+        "Resolution"
       ],
       "headline": "Unique state names are validated by setting the EMF's unique id feature",
       "perspectives": [

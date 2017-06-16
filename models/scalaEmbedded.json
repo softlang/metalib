@@ -152,7 +152,8 @@
     {
       "features": [
         "Run-time system",
-        "Staging"
+        "Staging",
+        "Replacement"
       ],
       "headline": "Annotation inlines textual embedded fsm into an scala object with initial state",
       "perspectives": [

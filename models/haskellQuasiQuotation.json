@@ -238,7 +238,6 @@
 		{
 			"features": 
 			[
-				"Dynamic semantics",
 				"Run-time system"
 			],
 
@@ -269,7 +268,7 @@
 					"type": "some",
 					"link": "app/Main.hs",
 					"from": 24,
-					"to": 28
+					"to": 25
 				}
 			]
 		},

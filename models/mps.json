@@ -117,6 +117,30 @@
           "link": "sample.png"
         }
       ]
+    },
+    {
+      "features": [
+        "Replacement"
+      ],
+      "headline": "Change Initial State Test",
+      "perspectives": [
+        "test"
+      ],
+      "languages": [
+        "MPS-Test Language"
+      ],
+      "technologies": [
+        "MPS"
+      ],
+      "concepts": [
+        "Transformation Rule"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "test_initial.png"
+        }
+      ]
     }
   ]
 }
