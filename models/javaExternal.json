@@ -175,7 +175,8 @@
 			"concepts": 
 			[
 				"Parser generation",
-				"Code generation"
+				"Code generation",
+				"Parser"
 			],
 
 			"technologies": 
@@ -261,42 +262,6 @@
 				{
 					"type": "all",
 					"link": "Java/org/softlang/fsml/tests/FsmlToObjectsTest.java"
-				}
-			]
-		},
-		
-		{
-			"features": 
-			[
-				"Compilation"
-			],
-
-			"headline": "Compilation to C",
-			"perspectives": 
-			[
-				"implementation"
-			],
-
-			"languages": 
-			[
-				"Java"
-			],
-
-			"concepts": 
-			[
-				"Template Processing"
-			],
-
-			"technologies": 
-			[
-				"Stringtemplate"
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "all",
-					"link": "Java/org/softlang/fsml/FsmlCGenerator.java"
 				}
 			]
 		}

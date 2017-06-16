@@ -1,0 +1,134 @@
+{
+  "name": "Rascal",
+  "headline": "Rascal",
+  "baseuri": "https://github.com/softlang/metalib/tree/master/rascal/fsml/src",
+  "sections": [
+    {
+      "features": [
+        "Text-To-CST"
+      ],
+      "headline":"CST for FSML",
+      "technologies": [],
+      "concepts": [ ],
+      "languages": [
+        "Rascal Grammar"
+      ],
+
+      "perspectives": [
+        "implementation"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "main/rascal/org/softlang/fsml/ConcreteSyntax.rsc",
+          "from": 5,
+          "to": 7
+        }
+      ]
+    },
+    {
+      "features": [
+        "Analysis"
+      ],
+      "headline":"CST for FSML",
+      "technologies": [],
+      "concepts": [ ],
+      "languages": [
+        "Rascal"
+      ],
+
+      "perspectives": [
+        "implementation"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "main/rascal/org/softlang/fsml/Checker.rsc",
+          "from": 31,
+          "to": 34
+        }
+      ]
+    },
+    {
+      "features": [
+        "Compilation"
+      ],
+      "headline":"FSML CST to Java that instantiates the Fluent API",
+      "technologies": [],
+      "concepts": [ ],
+      "languages": [
+        "Rascal"
+      ],
+
+      "perspectives": [
+        "implementation"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "main/rascal/org/softlang/fsml/Generator.rsc",
+          "from": 16,
+          "to": 27
+        }
+      ]
+    },
+    {
+      "features": [
+        "AST",
+        "API"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Fluent API"
+      ],
+      "languages": [
+        "Java"
+      ],
+      "headline": "Fluent API sample turnstile",
+      "perspectives": [
+        "data"
+      ],
+      "artifacts": [
+        {
+          "type": "all",
+          "link": "gen/java/org/softlang/fluent/Sample.java"
+        }
+      ]
+    },
+    {
+      "features": [
+        "AST",
+        "API"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Fluent API"
+      ],
+      "languages": [
+        "Java"
+      ],
+      "headline": "Fluent API implementation",
+      "perspectives": [
+        "data"
+      ],
+      "artifacts": [
+        {
+          "type": "none",
+          "link": "main/java/org/softlang/FsmlObservation.java"
+        },
+        {
+          "type": "all",
+          "link": "main/java/org/softlang/fluent/Fsml.java"
+        },
+        {
+          "type": "none",
+          "link": "main/java/org/softlang/fluent/FsmlConstruction.java"
+        },
+        {
+          "type": "none",
+          "link": "main/java/org/softlang/fluent/FsmlImpl.java"
+        }
+      ]
+    }
+  ]
+}

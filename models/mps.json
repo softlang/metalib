@@ -5,14 +5,14 @@
   "sections": [
     {
       "features": [
-        "AST"
+        "Text projection"
       ],
       "headline": "Projectional Editor on AST",
       "perspectives": [
         "capture"
       ],
       "languages": [
-
+        "MPS-Editor Language"
       ],
       "technologies": [
         "MPS"
@@ -34,12 +34,14 @@
         "capture"
       ],
       "languages": [
-
+        "MPS-Structure Language"
       ],
       "technologies": [
         "MPS"
       ],
-      "concepts": [],
+      "concepts": [
+        "Projectional Editing"
+      ],
       "artifacts": [
         {
           "type": "all",
@@ -56,7 +58,7 @@
         "capture"
       ],
       "languages": [
-
+        "MPS-Type System Language"
       ],
       "technologies": [
         "MPS"
@@ -78,7 +80,7 @@
         "capture"
       ],
       "languages": [
-
+        "MPS-Generator Language"
       ],
       "technologies": [
         "MPS"
@@ -101,12 +103,14 @@
         "data"
       ],
       "languages": [
-
+        "MPS-Base Language"
       ],
       "technologies": [
         "MPS"
       ],
-      "concepts": [],
+      "concepts": [
+        "Language Extension"
+      ],
       "artifacts": [
         {
           "type": "all",
