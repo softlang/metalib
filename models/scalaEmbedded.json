@@ -129,7 +129,7 @@
     },
     {
       "features": [
-        "Run-time system"
+        "Staging"
       ],
       "headline": "Interpretation represented as a object property access chain",
       "perspectives": [
@@ -151,7 +151,6 @@
     },
     {
       "features": [
-        "Run-time system",
         "Staging",
         "Replacement"
       ],

@@ -1,314 +1,211 @@
 {
-	"name": "HaskellQuasiQuotation",
-	"baseuri": "https://github.com/softlang/metalib/blob/master/haskell/fsml/",
-	"headline": "Use of quasi-quotation and Template Haskell",
-	"sections": 
-	[
-		{
-			"features": 
-			[
-				"AST"
-			],
-
-			"headline": "AST implementation",
-			"perspectives": 
-			[
-				"implementation"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				
-			],
-
-			"concepts": 
-			[
-				"Algebraic data type",
-				"Record type"
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "src/Language/FSML/Ast.hs",
-					"from": 7,
-					"to": 15
-				}
-			]
-		},
-
-		{
-			"features": 
-			[
-				"Scanning"
-			],
-
-			"headline": "Lexer definition",
-			"perspectives": 
-			[
-				"implementation"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				"Parsec"
-			],
-
-			"concepts": 
-			[
-				"Lexer",
-				"Parser combinator"
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "src/Language/FSML/Lexer.hs",
-					"from": 13,
-					"to": 43
-				}
-			]
-		},
-
-		{
-			"features": 
-			[
-				"Scanning",
-				"Text-to-AST"
-			],
-
-			"headline": "Parser combinator",
-			"perspectives": 
-			[
-				"implementation"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				"Parsec"
-			],
-
-			"concepts": 
-			[
-				"Parser combinator"
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "src/Language/FSML/Parser.hs",
-					"from": 28,
-					"to": 50
-				}
-			]
-		},
-
-		{
-			"features": 
-			[
-				"AST"
-			],
-
-			"headline": "Embedded turnstile object in Haskell declaration context",
-			"perspectives": 
-			[
-				"data"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				"Template Haskell"
-			],
-
-			"concepts": 
-			[
-				"Quasi-quotation"
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "app/Main.hs",
-					"from": 7,
-					"to": 22
-				}
-			]
-		},
-
-		{
-			"features": 
-			[
-				"Analysis"
-			],
-
-			"headline": "Constraint checking",
-			"perspectives": 
-			[
-				"implementation"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				
-			],
-
-			"concepts": 
-			[
-				
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "src/Language/FSML/Checker.hs",
-					"from": 8,
-					"to": 46
-				}
-			]
-		},
-
-		{
-			"features": 
-			[
-				"Piggyback"
-			],
-
-			"headline": "By generating alternatives for the state data type distinct state ids are guaranteed",
-			"perspectives": 
-			[
-				"implementation"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				
-			],
-
-			"concepts": 
-			[
-				
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "src/Language/FSML/QuasiQuoter.hs",
-					"from": 42,
-					"to": 50
-				}
-			]
-		},
-
-		{
-			"features": 
-			[
-				"Run-time system"
-			],
-
-			"headline": "Transitioning between states by folding over the generated event functions",
-			"perspectives": 
-			[
-				"data"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				
-			],
-
-			"concepts": 
-			[
-				
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "app/Main.hs",
-					"from": 24,
-					"to": 25
-				}
-			]
-		},
-
-		{
-			"features": 
-			[
-				"Staging"
-			],
-
-			"headline": "Transitions are translated to Haskell AST",
-			"perspectives": 
-			[
-				"implementation"
-			],
-
-			"languages": 
-			[
-				"Haskell"
-			],
-
-			"technologies": 
-			[
-				"Template Haskell"
-			],
-
-			"concepts": 
-			[
-				"Quasi-quotation"
-			],
-
-			"artifacts": 
-			[
-				{
-					"type": "some",
-					"link": "src/Language/FSML/QuasiQuoter.hs",
-					"from": 52,
-					"to": 75
-				}
-			]
-		}
-	]
+  "name": "HaskellQuasiQuotation",
+  "baseuri": "https://github.com/softlang/metalib/blob/master/haskell/fsml/",
+  "headline": "Use of quasi-quotation and Template Haskell",
+  "sections": [
+    {
+      "features": [
+        "AST"
+      ],
+      "headline": "AST implementation",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+      ],
+      "concepts": [
+        "Algebraic data type",
+        "Record type"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "src/Language/FSML/Ast.hs",
+          "from": 7,
+          "to": 15
+        }
+      ]
+    },
+    {
+      "features": [
+        "Scanning"
+      ],
+      "headline": "Lexer definition",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+        "Parsec"
+      ],
+      "concepts": [
+        "Lexer",
+        "Parser combinator"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "src/Language/FSML/Lexer.hs",
+          "from": 13,
+          "to": 43
+        }
+      ]
+    },
+    {
+      "features": [
+        "Scanning",
+        "Text-to-AST"
+      ],
+      "headline": "Parser combinator",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+        "Parsec"
+      ],
+      "concepts": [
+        "Parser combinator"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "src/Language/FSML/Parser.hs",
+          "from": 28,
+          "to": 50
+        }
+      ]
+    },
+    {
+      "features": [
+        "AST"
+      ],
+      "headline": "Embedded turnstile object in Haskell declaration context",
+      "perspectives": [
+        "data"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+        "Template Haskell"
+      ],
+      "concepts": [
+        "Quasi-quotation"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "app/Main.hs",
+          "from": 7,
+          "to": 22
+        }
+      ]
+    },
+    {
+      "features": [
+        "Analysis"
+      ],
+      "headline": "Constraint checking",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+      ],
+      "concepts": [
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "src/Language/FSML/Checker.hs",
+          "from": 8,
+          "to": 46
+        }
+      ]
+    },
+    {
+      "features": [
+        "Piggyback"
+      ],
+      "headline": "By generating alternatives for the state data type distinct state ids are guaranteed",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+      ],
+      "concepts": [
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "src/Language/FSML/QuasiQuoter.hs",
+          "from": 42,
+          "to": 50
+        }
+      ]
+    },
+    {
+      "features": [
+        "Staging"
+      ],
+      "headline": "Transitioning between states by folding over the generated event functions",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+      ],
+      "concepts": [
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "app/Main.hs",
+          "from": 24,
+          "to": 25
+        }
+      ]
+    },
+    {
+      "features": [
+        "Staging"
+      ],
+      "headline": "Transitions are translated to Haskell AST",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Haskell"
+      ],
+      "technologies": [
+        "Template Haskell"
+      ],
+      "concepts": [
+        "Quasi-quotation"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "src/Language/FSML/QuasiQuoter.hs",
+          "from": 52,
+          "to": 75
+        }
+      ]
+    }
+  ]
 }
