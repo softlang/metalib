@@ -1,0 +1,55 @@
+{
+  "name": "Racket",
+  "baseuri": "https://github.com/softlang/metalib/blob/master/racket/fsml/",
+  "headline": "Scala-based embedded language implementation with macros",
+  "sections": [
+    {
+      "features": [
+        "AST"
+      ],
+      "headline": "",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Racket"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Struct"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "fsml.rkt",
+          "from": 16,
+          "to": 18
+        }
+      ]
+    },
+    {
+      "features": [
+        "AST"
+      ],
+      "headline": "",
+      "perspectives": [
+        "implementation"
+      ],
+      "languages": [
+        "Racket"
+      ],
+      "technologies": [],
+      "concepts": [
+        "Case Class"
+      ],
+      "artifacts": [
+        {
+          "type": "some",
+          "link": "fsml.rkt",
+          "from": 16,
+          "to": 18
+        }
+      ]
+    }
+  ]
+}

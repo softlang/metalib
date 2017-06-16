@@ -2,4 +2,6 @@
 
 (defn component []
       [:nav.navigation
-       [:a.navigation-link {:href "/metalib/"} "metalib"]])
+       [:a.navigation-link {:href "/metalib/"}
+        [:b "metalib"]
+        " - A Chrestomathy of DSL implementations"]])
