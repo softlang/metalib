@@ -1,1 +1,362 @@
-{"name":"pythonInternal","baseuri":"https://github.com/softlang/yas/blob/master/languages/FSML/Python/","headline":"Internal DSL style with Python","sections":[{"features":["API"],"perspectives":["data"],"languages":["Python"],"concepts":["Fluent API"],"technologies":[],"artifacts":[{"type":"all","link":"FsmlSample.py"}]},{"features":["API","AST"],"perspectives":["implementation"],"languages":["Python"],"concepts":["Fluent API"],"technologies":[],"artifacts":[{"type":"all","link":"FsmlModel.py"}]},{"features":["Compilation"],"perspectives":["implementation"],"languages":["Python"],"concepts":["Template Processing"],"technologies":["jinja2"],"artifacts":[{"type":"all","link":"FsmlCGenerator.py"}]},{"features":["Compilation"],"perspectives":["implementation"],"languages":["jinja2"],"concepts":["Template processing"],"technologies":["jinja2"],"artifacts":[{"type":"all","link":"templates/Fsm.jinja2"}]},{"features":["Analysis"],"perspectives":["implementation"],"languages":["Python"],"concepts":["Exception"],"technologies":[],"artifacts":[{"type":"all","link":"FsmlConstraints.py"}]},{"features":["Interpretation"],"perspectives":["implementation"],"languages":["Python"],"concepts":[],"technologies":[],"artifacts":[{"type":"all","link":"FsmlInterpreter.py"}]},{"features":["Graph rendering"],"perspectives":["data"],"languages":["DOT"],"concepts":[],"technologies":["Graphviz"],"artifacts":[{"type":"all","link":"dot/sample.dot"}]},{"features":["Graph rendering"],"perspectives":["implementation"],"languages":["JSON","DOT","Python"],"concepts":["Internal DSL"],"technologies":["Graphviz"],"artifacts":[{"type":"all","link":"FsmlVisualizer.py"}]},{"features":["Interpretation"],"headline":"Input for interpretation","perspectives":["test"],"languages":["JSON"],"concepts":[],"technologies":[],"artifacts":[{"type":"all","link":"sample.input"}]},{"features":["Interpretation"],"headline":"Output for interpretation","perspectives":["test"],"languages":["JSON"],"concepts":[],"technologies":[],"artifacts":[{"type":"all","link":"sample.output"}]}]}
+{
+	"name": "pythonInternal",
+	"baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Python/",
+	"headline": "Internal DSL style with Python",
+	"sections": 
+	[
+		{
+			"features": 
+			[
+				"API"
+			],
+
+			"perspectives": 
+			[
+				"data"
+			],
+
+			"languages": 
+			[
+				"Python"
+			],
+
+			"concepts": 
+			[
+				"Fluent API"
+			],
+
+			"technologies": 
+			[
+				
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "FsmlSample.py"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"API",
+				"AST"
+			],
+
+			"perspectives": 
+			[
+				"implementation"
+			],
+
+			"languages": 
+			[
+				"Python"
+			],
+
+			"concepts": 
+			[
+				"Fluent API"
+			],
+
+			"technologies": 
+			[
+				
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "FsmlModel.py"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Compilation"
+			],
+
+			"perspectives": 
+			[
+				"implementation"
+			],
+
+			"languages": 
+			[
+				"Python"
+			],
+
+			"concepts": 
+			[
+				"Template Processing"
+			],
+
+			"technologies": 
+			[
+				"jinja2"
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "FsmlCGenerator.py"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Compilation"
+			],
+
+			"perspectives": 
+			[
+				"implementation"
+			],
+
+			"languages": 
+			[
+				"jinja2"
+			],
+
+			"concepts": 
+			[
+				"Template processing"
+			],
+
+			"technologies": 
+			[
+				"jinja2"
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "templates/Fsm.jinja2"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Analysis"
+			],
+
+			"perspectives": 
+			[
+				"implementation"
+			],
+
+			"languages": 
+			[
+				"Python"
+			],
+
+			"concepts": 
+			[
+				"Exception"
+			],
+
+			"technologies": 
+			[
+				
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "FsmlConstraints.py"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Interpretation"
+			],
+
+			"perspectives": 
+			[
+				"implementation"
+			],
+
+			"languages": 
+			[
+				"Python"
+			],
+
+			"concepts": 
+			[
+				
+			],
+
+			"technologies": 
+			[
+				
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "FsmlInterpreter.py"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Graph rendering"
+			],
+
+			"perspectives": 
+			[
+				"data"
+			],
+
+			"languages": 
+			[
+				"DOT"
+			],
+
+			"concepts": 
+			[
+				
+			],
+
+			"technologies": 
+			[
+				"Graphviz"
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "dot/sample.dot"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Graph rendering"
+			],
+
+			"perspectives": 
+			[
+				"implementation"
+			],
+
+			"languages": 
+			[
+				"JSON",
+				"DOT",
+				"Python"
+			],
+
+			"concepts": 
+			[
+				"Internal DSL"
+			],
+
+			"technologies": 
+			[
+				"Graphviz"
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "FsmlVisualizer.py"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Interpretation"
+			],
+
+			"headline": "Input for interpretation",
+			"perspectives": 
+			[
+				"test"
+			],
+
+			"languages": 
+			[
+				"JSON"
+			],
+
+			"concepts": 
+			[
+				
+			],
+
+			"technologies": 
+			[
+				
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "sample.input"
+				}
+			]
+		},
+
+		{
+			"features": 
+			[
+				"Interpretation"
+			],
+
+			"headline": "Output for interpretation",
+			"perspectives": 
+			[
+				"test"
+			],
+
+			"languages": 
+			[
+				"JSON"
+			],
+
+			"concepts": 
+			[
+				
+			],
+
+			"technologies": 
+			[
+				
+			],
+
+			"artifacts": 
+			[
+				{
+					"type": "all",
+					"link": "sample.output"
+				}
+			]
+		}
+	]
+}
