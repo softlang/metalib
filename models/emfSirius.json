@@ -27,7 +27,7 @@
       ],
       "technologies": [],
       "concepts": [],
-      "languages": [],
+      "languages": ["XMI"],
       "perspectives": [
         "data"
       ],
