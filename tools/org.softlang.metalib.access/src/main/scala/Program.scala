@@ -26,7 +26,7 @@ object Program {
       "Textual syntax" -> List("Text-to-CST", "Text-to-AST", "Text-to-ASG", "Scanning", "Abstraction", "Replacement"),
       "Graphical syntax" -> List("Graph rendering", "Graph editing"),
       "Projectional syntax" -> List("Model projection", "Text projection"),
-      "Dynamic semantics" -> List("Interpretation", "Run-time system"),
+      "Dynamic semantics" -> List("Interpretation"),
       "Static semantics" -> List("Analysis", "Piggyback"),
       "Translation semantics" -> List("Compilation", "Staging")
     )
