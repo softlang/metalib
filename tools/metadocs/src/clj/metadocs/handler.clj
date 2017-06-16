@@ -7,7 +7,7 @@
            (resources "/")
            (resources "/public")
            (resources "/metalib")
-           (ANY "/metalib/" [] (content-type (resource-response "index.html" {:root "public"})
+           (GET "/metalib/" [] (content-type (resource-response "index.html" {:root "public"})
                                             "text/html")))
 
 (def handler (-> routes))
