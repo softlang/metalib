@@ -9,7 +9,7 @@
 			[
 				"Concrete syntax"
 			],
-
+			"headline" : "FSML example",
 			"perspectives": 
 			[
 				"data"
@@ -17,12 +17,12 @@
 
 			"languages": 
 			[
-				
+				"FSML"
 			],
 
 			"concepts": 
 			[
-				"External DSL"
+				
 			],
 
 			"technologies": 
@@ -44,7 +44,7 @@
 			[
 				"Scanning"
 			],
-
+			"headline": "Generated Lexer",
 			"perspectives": 
 			[
 				"implementation"
@@ -80,7 +80,7 @@
 			[
 				"Text-to-AST"
 			],
-
+			"headline" : "Generated Parser",
 			"perspectives": 
 			[
 				"implementation"
@@ -117,7 +117,7 @@
 				"API",
 				"AST"
 			],
-
+			"headline": "AST implementation based on dictionaries",
 			"perspectives": 
 			[
 				"implementation"
@@ -153,7 +153,7 @@
 				"Scanning",
 				"Text-to-AST"
 			],
-
+			"headline": "ANTLR grammar for FSML including semantic actions",
 			"perspectives": 
 			[
 				"implementation"
@@ -166,6 +166,7 @@
 
 			"concepts": 
 			[
+				"Grammar",
 				"Semantic action"
 			],
 
@@ -188,7 +189,7 @@
 			[
 				"Serialization"
 			],
-
+			"headline": "Serialized Turnstile",
 			"perspectives": 
 			[
 				"data"

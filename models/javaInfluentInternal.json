@@ -7,7 +7,8 @@
 		{
 			"features": 
 			[
-				"API"
+				"API",
+				"AST"
 			],
 
 			"perspectives": 
@@ -22,8 +23,7 @@
 
 			"concepts": 
 			[
-				"Getter",
-				"Setter"
+				"Batch"
 			],
 
 			"technologies": 
@@ -93,9 +93,8 @@
 
 			"concepts": 
 			[
-				"Functional constructor",
-				"Getter",
-				"Setter"
+				"OO Class",
+				"Functional constructor"
 			],
 
 			"technologies": 

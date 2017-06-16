@@ -28,7 +28,8 @@
 
 			"concepts": 
 			[
-				"Algebraic data type"
+				"Algebraic data type",
+				"Record type"
 			],
 
 			"artifacts": 
@@ -66,7 +67,8 @@
 
 			"concepts": 
 			[
-				"Lexer"
+				"Lexer",
+				"Parser combinator"
 			],
 
 			"artifacts": 
@@ -122,7 +124,7 @@
 		{
 			"features": 
 			[
-				"Remove Creole^+-"
+				"AST"
 			],
 
 			"headline": "Embedded turnstile object in Haskell declaration context",
@@ -236,7 +238,8 @@
 		{
 			"features": 
 			[
-				"Run-time system?"
+				"Dynamic semantics",
+				"Run-time system"
 			],
 
 			"headline": "Transitioning between states by folding over the generated event functions",
@@ -257,8 +260,7 @@
 
 			"concepts": 
 			[
-				"Currying",
-				"Fold"
+				
 			],
 
 			"artifacts": 
