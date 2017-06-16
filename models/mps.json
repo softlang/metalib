@@ -17,7 +17,9 @@
       "technologies": [
         "MPS"
       ],
-      "concepts": [],
+      "concepts": [
+        "IDE"
+      ],
       "artifacts": [
         {
           "type": "all",
@@ -40,7 +42,8 @@
         "MPS"
       ],
       "concepts": [
-        "Projectional Editing"
+        "Projectional Editing",
+        "IDE"
       ],
       "artifacts": [
         {
@@ -63,7 +66,9 @@
       "technologies": [
         "MPS"
       ],
-      "concepts": [],
+      "concepts": [
+        "IDE"
+      ],
       "artifacts": [
         {
           "type": "all",
@@ -85,7 +90,10 @@
       "technologies": [
         "MPS"
       ],
-      "concepts": [],
+      "concepts": [
+        "IDE",
+        "Reduction"
+      ],
       "artifacts": [
         {
           "type": "all",
@@ -109,7 +117,8 @@
         "MPS"
       ],
       "concepts": [
-        "Language Extension"
+        "Language Extension",
+        "IDE"
       ],
       "artifacts": [
         {
@@ -133,7 +142,8 @@
         "MPS"
       ],
       "concepts": [
-        "Transformation Rule"
+        "Transformation Rule",
+        "IDE"
       ],
       "artifacts": [
         {

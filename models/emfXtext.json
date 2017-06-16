@@ -162,7 +162,6 @@
     },
     {
       "features": [
-        "Piggyback",
         "Resolution"
       ],
       "headline": "Xtext model reference resolution by name",
