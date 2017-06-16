@@ -21,8 +21,13 @@
             contributions)]]
      [:h1 "Ontological summary"]
      [summary/component perspectives features languages technologies concepts]
-     [tagcloud/component (mapcat :perspectives sections)]
-     [tagcloud/component (mapcat :features sections)]
-     [tagcloud/component (mapcat :languages sections)]
-     [tagcloud/component (mapcat :technologies sections)]
-     [tagcloud/component (mapcat :concepts sections)]]))
+     [:h1 "Perspectives"]
+     [tagcloud/component (mapcat #(set (mapcat :perspectives (:sections %))) contributions) 1280 320]
+     [:h1 "Features"]
+     [tagcloud/component (mapcat #(set (mapcat :features (:sections %))) contributions) 1280 640]
+     [:h1 "Languages"]
+     [tagcloud/component (mapcat #(set (mapcat :languages (:sections %))) contributions) 1280 320]
+     [:h1 "Technologies"]
+     [tagcloud/component (mapcat #(set (mapcat :technologies (:sections %))) contributions) 1280 480]
+     [:h1 "Concepts"]
+     [tagcloud/component (mapcat #(set (mapcat :concepts (:sections %))) contributions) 1280 480]]))

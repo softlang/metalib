@@ -30,7 +30,7 @@
         "Text-to-AST"
       ],
       "perspectives": [
-        "data"
+        "test"
       ],
       "headline": "Textual embedded turnstile parsed as valid scala AST",
       "languages": [
@@ -133,7 +133,7 @@
       ],
       "headline": "Interpretation represented as a object property access chain",
       "perspectives": [
-        "application"
+        "test"
       ],
       "languages": [
         "Scala"

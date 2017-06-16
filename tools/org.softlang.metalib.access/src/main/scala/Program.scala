@@ -17,18 +17,18 @@ object Program {
   // TODO: Change way to count concepts if assigned in one contribution multiple times.
   def main(args: Array[String]): Unit = {
 
-    val contributions = (new File("C:\\Data\\Repos\\metalib\\docs\\models").listFiles())
-      .map(f => f.getName.substring(0, f.getName.size - 10) -> loadJson(f.getPath())).
+    val contributions = (new File("C:\\Data\\Repos\\metalib\\models").listFiles())
+      .map(f => f.getName.substring(0, f.getName.size - 5) -> loadJson(f.getPath())).
       map { case (id, json) => id -> (json \\ "features").children.map(x => x.children).flatten.map { case JString(x) => x }.toSet }
 
-    val features = Map(
-      "Abstract syntax" -> Set("AST", "ASG", "Semantic domain", "API", "Serialization", "Resolution"),
-      "Textual syntax" -> Set("Text-to-CST", "Text-to-AST", "Text-to-ASG", "Scanning", "Abstraction", "Replacement"),
-      "Projectional syntax" -> Set("Model projection", "Text projection"),
-      "Graphical syntax" -> Set("Graph rendering", "Graph editing"),
-      "Dynamic semantics" -> Set("Interpretation", "Run-time system"),
-      "Static semantics" -> Set("Analysis", "Piggyback"),
-      "Translation semantics" -> Set("Compilation", "Staging")
+    val features = List(
+      "Abstract syntax" -> List("AST", "ASG", "Semantic domain", "API", "Serialization", "Resolution"),
+      "Textual syntax" -> List("Text-to-CST", "Text-to-AST", "Text-to-ASG", "Scanning", "Abstraction", "Replacement"),
+      "Graphical syntax" -> List("Graph rendering", "Graph editing"),
+      "Projectional syntax" -> List("Model projection", "Text projection"),
+      "Dynamic semantics" -> List("Interpretation", "Run-time system"),
+      "Static semantics" -> List("Analysis", "Piggyback"),
+      "Translation semantics" -> List("Compilation", "Staging")
     )
 
     val nhline = " \\\\ \n"
@@ -38,7 +38,7 @@ object Program {
       val begin = "\\begin{tabular}{ |l|" + contributions.map(_ => "c").reduce(_ + " " + _) + "| } \n \\hline \n"
       val header = "~ & " + contributions.map(x => "\\matrixx{" + x._1 + "} ").reduce(_ + " & \n" + _)
       val rows = features.map { case (high, lows) =>
-        def highrow = "\\textbf{" + high + "} & " + contributions.map { case (_, cfeatures) => if (cfeatures.intersect(lows).isEmpty) "~" else "\\xo{2}" }.reduce(_ + " & " + _)
+        def highrow = "\\textbf{" + high + "} & " + contributions.map { case (_, cfeatures) => if (cfeatures.toSet.intersect(lows.toSet).isEmpty) "~" else "\\xo{2}" }.reduce(_ + " & " + _)
 
         def lowrows = lows.map { case low => low + " & " + contributions.map { case (_, cfeatures) => if (!cfeatures.contains(low)) "~" else "\\xo{2}" }.reduce(_ + " & " + _) }
 
@@ -49,7 +49,7 @@ object Program {
       begin + header + hline + rows + hline + end
     }
 
-    def verticalContributions(features: List[(String,Set[String])]) = {
+    def verticalContributions(features: List[(String,List[String])]) = {
 
       val leafFeatures = features.flatMap(_._2.toList)
 

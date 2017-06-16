@@ -1,42 +1,43 @@
 (ns metadocs.macros
   (:require [cheshire.core :as json]
             [clj-http.client :as http]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [metadocs.validator :as validator]))
 
-(def model-dir "../../models/")
+(def contribution-dir "../../models/")
 
-(defn load-model-file-names [model-dir]
-  (-> model-dir
+(defn dir-contents [dir]
+  (-> dir
       io/file
       .list))
 
 (defn load-json [file-name]
   (json/parse-stream (io/reader file-name) true))
 
-(defn load-models []
-  (let [model-file-names (-> model-dir
-                             load-model-file-names)]
-    (map #(load-json (str model-dir %)) model-file-names)))
+(defn load-contributions []
+  (let [model-file-names (-> contribution-dir
+                             dir-contents)]
+    (map #(load-json (str contribution-dir %)) model-file-names)))
 
 (defn delete-dir-contents [dir]
   (doseq [file (-> dir io/file .list)]
     (io/delete-file file true)))
 
 (defmacro defcontributionroutes [state page]
-  (let [model-file-names (-> model-dir
-                             load-model-file-names)]
+  (let [model-file-names (-> contribution-dir
+                             dir-contents)]
     (delete-dir-contents "resources/public/contributions/")
-    `(do ~@(map (fn [model-file-name]
-                  (let [model (-> (str model-dir model-file-name)
+    `(do ~@(map (fn [contribution-file-name]
+                  (let [contribution (-> (str contribution-dir contribution-file-name)
                                   load-json)
-                        model-name (:name model)]
-                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/contributions/" model-name ".html")))
-                    `(~'defroute ~(str "/metalib/contributions/" model-name ".html") []
-                       (~'swap! ~state ~'assoc :current-page #(~page ~model)))))
+                        contribution-name (:name contribution)]
+                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/contributions/" contribution-name ".html")))
+                    `(~'defroute ~(str "/metalib/contributions/" contribution-name ".html") []
+                       (~'swap! ~state ~'assoc :current-page #(~page ~contribution)))))
                 model-file-names))))
 
 (defmacro defperspectiveroutes [state page]
-  (let [models (load-models)
+  (let [models (load-contributions)
         sections (mapcat :sections models)
         perspectives (set (mapcat :perspectives sections))]
     (delete-dir-contents "resources/public/perspectives/")
@@ -48,7 +49,7 @@
                 perspectives))))
 
 (defmacro deffeatureroutes [state page]
-  (let [models (load-models)
+  (let [models (load-contributions)
         sections (mapcat :sections models)
         features (set (mapcat :features sections))]
     (delete-dir-contents "resources/public/features/")
@@ -60,7 +61,7 @@
                 features))))
 
 (defmacro deflanguageroutes [state page]
-  (let [models (load-models)
+  (let [models (load-contributions)
         sections (mapcat :sections models)
         languages (set (mapcat :languages sections))]
     (delete-dir-contents "resources/public/languages/")
@@ -72,7 +73,7 @@
                 languages))))
 
 (defmacro deftechnologyroutes [state page]
-  (let [models (load-models)
+  (let [models (load-contributions)
         sections (mapcat :sections models)
         technologies (set (mapcat :technologies sections))]
     (delete-dir-contents "resources/public/technologies/")
@@ -84,7 +85,7 @@
                 technologies))))
 
 (defmacro defconceptroutes [state page]
-  (let [models (load-models)
+  (let [models (load-contributions)
         sections (mapcat :sections models)
         concepts (set (mapcat :concepts sections))]
     (delete-dir-contents "resources/public/concepts/")
@@ -96,8 +97,8 @@
                 concepts))))
 
 (defmacro contributions []
-  (let [model-file-names (-> model-dir
-                             load-model-file-names)
-        contributions (map #(load-json (str model-dir %)) model-file-names)]
+  (let [model-file-names (-> contribution-dir
+                             dir-contents)
+        contributions (map #(load-json (str contribution-dir %)) model-file-names)]
     `(list ~@contributions)))
 
