@@ -52,7 +52,3 @@
                             :parallel-build true
                             :source-map     false})
    (target "target")))
-
-(deftask run []
-   (with-pass-thru _
-     (metadocs.validator/validate)))

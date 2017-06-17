@@ -29,8 +29,10 @@
     (delete-dir-contents "resources/public/contributions/")
     `(do ~@(map (fn [contribution-file-name]
                   (let [contribution (-> (str contribution-dir contribution-file-name)
-                                  load-json)
-                        contribution-name (:name contribution)]
+                                         load-json)
+                        contribution-name (:name contribution)
+                        feature-set (set (mapcat :features (:sections contribution)))]
+                    (validator/validate contribution-name feature-set)
                     (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/contributions/" contribution-name ".html")))
                     `(~'defroute ~(str "/metalib/contributions/" contribution-name ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~contribution)))))
