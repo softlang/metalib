@@ -2,36 +2,36 @@
 	"name": "javaInfluentInternal",
 	"baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Java/",
 	"headline": "Internal DSL style with Java and an influent API",
-	"sections": 
+	"sections":
 	[
 		{
-			"features": 
+			"features":
 			[
 				"API",
 				"AST"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Batch"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -41,32 +41,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"API"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Functional constructor"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -76,33 +76,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"AST"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"OO class",
 				"Functional constructor"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -122,32 +122,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Interpretation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -157,103 +157,103 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Interpretation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"JUnit"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
-					"link": "org/softlang/fsml/tests/InfluentTest.java"
+					"link": "org/softlang/fsml/Tests/InfluentTest.java"
 				}
 			]
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Compilation"
 			],
 
 			"headline": " Translate^O  Feature",
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"C"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Generated code"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
-					"link": "org/softlang/fsml/tests/Turnstile.c"
+					"link": "org/softlang/fsml/Tests/Turnstile.c"
 				}
 			]
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Compilation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"StringTemplate"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Template processing"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"StringTemplate"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -263,32 +263,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Compilation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -298,37 +298,37 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Compilation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"StringTemplate",
 				"JUnit"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
-					"link": "org/softlang/fsml/tests/CGeneratorTest.java"
+					"link": "org/softlang/fsml/Tests/CGeneratorTest.java"
 				}
 			]
 		}

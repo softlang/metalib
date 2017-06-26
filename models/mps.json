@@ -9,7 +9,7 @@
       ],
       "headline": "Projectional Editor on AST",
       "perspectives": [
-        "capture"
+        "Capture"
       ],
       "languages": [
         "MPS-Editor Language"
@@ -33,7 +33,7 @@
       ],
       "headline": "Projectional Editor on AST",
       "perspectives": [
-        "capture"
+        "Capture"
       ],
       "languages": [
         "MPS-Structure Language"
@@ -58,7 +58,7 @@
       ],
       "headline": "Check determinism",
       "perspectives": [
-        "capture"
+        "Capture"
       ],
       "languages": [
         "MPS-Type System Language"
@@ -82,7 +82,7 @@
       ],
       "headline": "Compilation",
       "perspectives": [
-        "capture"
+        "Capture"
       ],
       "languages": [
         "MPS-Generator Language"
@@ -107,8 +107,8 @@
       ],
       "headline": "Sample Turnstile",
       "perspectives": [
-        "capture",
-        "data"
+        "Capture",
+        "Data"
       ],
       "languages": [
         "MPS-Base Language"
@@ -133,7 +133,7 @@
       ],
       "headline": "Change Initial State Test",
       "perspectives": [
-        "test"
+        "Test"
       ],
       "languages": [
         "MPS-Test Language"
@@ -148,7 +148,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "test_initial.png"
+          "link": "Test_initial.png"
         }
       ]
     }

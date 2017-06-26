@@ -9,7 +9,7 @@
       ],
       "headline": "FSML Grammar in Spoofax",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "SDF3"
@@ -31,7 +31,7 @@
       ],
       "headline": "Turnstile sample in CS",
       "perspectives": [
-        "data"
+        "Data"
       ],
       "languages": [
         "FSML"
@@ -42,7 +42,7 @@
       "artifacts": [
         {
           "type": "all",
-          "link": "test/Turnstile.fsm"
+          "link": "Test/Turnstile.fsm"
         }
       ]
     },
@@ -52,7 +52,7 @@
       ],
       "headline": "Name binding",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "NABL"
@@ -74,7 +74,7 @@
       ],
       "headline": "Check Initial",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Stratego"
@@ -98,7 +98,7 @@
       ],
       "headline": "Compilation to Java",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Stratego"

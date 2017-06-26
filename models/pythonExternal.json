@@ -2,35 +2,35 @@
 	"name": "pythonExternal",
 	"headline": "External DSL style with ANTLR and Python",
 	"baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/",
-	"sections": 
+	"sections":
 	[
 		{
-			"features": 
+			"features":
 			[
 				"Concrete syntax"
 			],
 			"headline" : "FSML example",
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"FSML"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -40,33 +40,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Scanning"
 			],
 			"headline": "Generated Lexer",
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Parser generation",
 				"Generated code"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "none",
@@ -76,33 +76,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Text-to-AST"
 			],
 			"headline" : "Generated Parser",
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Parser generation",
 				"Generated code"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "none",
@@ -112,33 +112,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"API",
 				"AST"
 			],
 			"headline": "AST implementation based on dictionaries",
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"dictionary"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -148,34 +148,34 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Scanning",
 				"Text-to-AST"
 			],
 			"headline": "ANTLR grammar for FSML including semantic actions",
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"ANTLR4"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Grammar",
 				"Semantic action"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -185,32 +185,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Serialization"
 			],
 			"headline": "Serialized Turnstile",
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"JSON"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -220,33 +220,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Serialization",
 				"Parsing"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",

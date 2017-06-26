@@ -1,7 +1,7 @@
 {
   "name": "Scala embedded",
   "baseuri": "https://github.com/softlang/metalib/blob/master/scala/fsml/",
-  "headline": "Scala-based embedded language implementation with macros",
+  "headline": "Scala-based embedded language Implementation with macros",
   "sections": [
     {
       "features": [
@@ -9,7 +9,7 @@
       ],
       "headline": "Case classes for object representation",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Scala"
@@ -30,7 +30,7 @@
         "Text-to-AST"
       ],
       "perspectives": [
-        "test"
+        "Test"
       ],
       "headline": "Textual embedded turnstile parsed as valid scala AST",
       "languages": [
@@ -55,7 +55,7 @@
         "Text-to-AST"
       ],
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "headline": "Unlifting FSM expressions",
       "languages": [
@@ -82,7 +82,7 @@
       ],
       "headline": "Constraints validated as part of the macro expansion",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Scala"
@@ -104,7 +104,7 @@
       ],
       "headline": "Distinct state ids are guarantied by lifting state to objects in the same scope",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "type": "component",
       "languages": [
@@ -133,7 +133,7 @@
       ],
       "headline": "Interpretation represented as a object property access chain",
       "perspectives": [
-        "test"
+        "Test"
       ],
       "languages": [
         "Scala"
@@ -156,7 +156,7 @@
       ],
       "headline": "Annotation inlines textual embedded fsm into an scala object with initial state",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Scala"
@@ -182,7 +182,7 @@
       ],
       "headline": "The transitions are translated to scala AST function definitions",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Scala"

@@ -2,35 +2,35 @@
 	"name": "pythonInternal",
 	"baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Python/",
 	"headline": "Internal DSL style with Python",
-	"sections": 
+	"sections":
 	[
 		{
-			"features": 
+			"features":
 			[
 				"API"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Fluent API"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -40,33 +40,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"API",
 				"AST"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Fluent API"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -76,32 +76,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Compilation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Template processing"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"jinja2"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -111,32 +111,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Compilation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"jinja2"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Template processing"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"jinja2"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -146,32 +146,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Analysis"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Exception"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -181,32 +181,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Interpretation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -216,32 +216,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Graph rendering"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"DOT"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"Graphviz"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -251,34 +251,34 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Graph rendering"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"JSON",
 				"DOT",
 				"Python"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Internal DSL"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"Graphviz"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -288,33 +288,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Interpretation"
 			],
 
 			"headline": "Input for interpretation",
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"JSON"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -324,33 +324,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Interpretation"
 			],
 
 			"headline": "Output for interpretation",
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"JSON"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",

@@ -10,7 +10,7 @@
       ],
       "headline": "State-machine grammar",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Xtext"
@@ -32,7 +32,7 @@
       ],
       "headline": "A Turnstile FSM",
       "perspectives": [
-        "data"
+        "Data"
       ],
       "languages": [
         "FSML"
@@ -52,7 +52,7 @@
       ],
       "headline": "EMF model interfaces",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -84,7 +84,7 @@
       ],
       "headline": "EMF model classes",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -117,7 +117,7 @@
       ],
       "headline": "Generated Parser",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -144,7 +144,7 @@
       ],
       "headline": "Xtext Constraint",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Xtend"
@@ -166,7 +166,7 @@
       ],
       "headline": "Xtext model reference resolution by name",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Xtext"
@@ -191,7 +191,7 @@
       ],
       "headline": "",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Xtend"
@@ -215,7 +215,7 @@
       ],
       "headline": "DGL generation",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Xtend"

@@ -17,8 +17,8 @@
       ],
       "languages": [],
       "perspectives": [
-        "data",
-        "capture"
+        "Data",
+        "Capture"
       ],
       "artifacts": [
         {
@@ -42,8 +42,8 @@
       ],
       "languages": [],
       "perspectives": [
-        "capture",
-        "implementation"
+        "Capture",
+        "Implementation"
       ],
       "artifacts": [
         {
@@ -65,8 +65,8 @@
         "AIRD"
       ],
       "perspectives": [
-        "capture",
-        "data"
+        "Capture",
+        "Data"
       ],
       "artifacts": [
         {
@@ -91,7 +91,7 @@
         "XMI"
       ],
       "perspectives": [
-        "data"
+        "Data"
       ],
       "artifacts": [
         {
@@ -114,7 +114,7 @@
         "Java"
       ],
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "artifacts": [
         {
@@ -146,7 +146,7 @@
         "Java"
       ],
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "artifacts": [
         {
@@ -180,8 +180,8 @@
         "Ecore XMI"
       ],
       "perspectives": [
-        "implementation",
-        "capture"
+        "Implementation",
+        "Capture"
       ],
       "artifacts": [
         {
@@ -209,8 +209,8 @@
         "Sirius viewpoint specification"
       ],
       "perspectives": [
-        "implementation",
-        "capture"
+        "Implementation",
+        "Capture"
       ],
       "artifacts": [
         {

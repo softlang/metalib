@@ -1,7 +1,7 @@
 {
   "name": "Racket",
   "baseuri": "https://github.com/softlang/metalib/blob/master/racket/fsml/",
-  "headline": "Scala-based embedded language implementation with macros",
+  "headline": "Scala-based embedded language Implementation with macros",
   "sections": [
     {
       "features": [
@@ -9,7 +9,7 @@
       ],
       "headline": "",
       "perspectives": [
-        "data"
+        "Data"
       ],
       "languages": [
         "Racket"
@@ -33,7 +33,7 @@
       ],
       "headline": "",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Racket"
@@ -57,7 +57,7 @@
       ],
       "headline": "",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Racket"
@@ -81,7 +81,7 @@
       ],
       "headline": "",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Racket"
@@ -105,7 +105,7 @@
       ],
       "headline": "",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Racket"
@@ -130,7 +130,7 @@
       ],
       "headline": "Runtime evaluator for FSMs",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Racket"
@@ -155,7 +155,7 @@
       ],
       "headline": "",
       "perspectives": [
-        "test"
+        "Test"
       ],
       "languages": [
         "Racket"

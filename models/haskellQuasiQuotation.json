@@ -9,7 +9,7 @@
       ],
       "headline": "AST implementation",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Haskell"
@@ -35,7 +35,7 @@
       ],
       "headline": "Lexer definition",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Haskell"
@@ -63,7 +63,7 @@
       ],
       "headline": "Parser combinator",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Haskell"
@@ -89,7 +89,7 @@
       ],
       "headline": "Embedded turnstile object in Haskell declaration context",
       "perspectives": [
-        "data"
+        "Data"
       ],
       "languages": [
         "Haskell"
@@ -115,7 +115,7 @@
       ],
       "headline": "Constraint checking",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Haskell"
@@ -139,7 +139,7 @@
       ],
       "headline": "By generating alternatives for the state data type distinct state ids are guaranteed",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Haskell"
@@ -163,7 +163,7 @@
       ],
       "headline": "Transitioning between states by folding over the generated event functions",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Haskell"
@@ -187,7 +187,7 @@
       ],
       "headline": "Transitions are translated to Haskell AST",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Haskell"

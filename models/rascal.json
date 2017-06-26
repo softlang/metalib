@@ -17,7 +17,7 @@
       ],
 
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "artifacts": [
         {
@@ -40,8 +40,8 @@
       ],
 
       "perspectives": [
-        "implementation",
-        "test"
+        "Implementation",
+        "Test"
       ],
       "artifacts": [
         {
@@ -74,7 +74,7 @@
       ],
 
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "artifacts": [
         {
@@ -100,7 +100,7 @@
       ],
 
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "artifacts": [
         {
@@ -125,7 +125,7 @@
       ],
       "headline": "Fluent API sample turnstile",
       "perspectives": [
-        "data"
+        "Data"
       ],
       "artifacts": [
         {
@@ -146,9 +146,9 @@
       "languages": [
         "Java"
       ],
-      "headline": "Fluent API implementation",
+      "headline": "Fluent API Implementation",
       "perspectives": [
-        "data"
+        "Data"
       ],
       "artifacts": [
         {

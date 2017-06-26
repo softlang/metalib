@@ -20,8 +20,8 @@
         "Ecore"
       ],
       "perspectives": [
-        "implementation",
-        "capture"
+        "Implementation",
+        "Capture"
       ],
       "artifacts": [
         {
@@ -41,7 +41,7 @@
       ],
       "headline": "EMF model interface for the FSM object",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -74,7 +74,7 @@
       ],
       "headline": "EMF model class for the FSM object",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -108,7 +108,7 @@
       ],
       "headline" : "EMF Packages",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -137,7 +137,7 @@
       ],
       "headline" : "EMF Item provider",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -171,8 +171,8 @@
       ],
       "headline": "Viewing and editing the turnstile object in the generated eclipse editor",
       "perspectives": [
-        "data",
-        "capture"
+        "Data",
+        "Capture"
       ],
       "languages": [],
       "technologies": [
@@ -199,7 +199,7 @@
       ],
       "headline": "The generated eclipse editor for EMF models",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -229,7 +229,7 @@
       ],
       "headline": "The turnstile object in EMF's textual exchange format",
       "perspectives": [
-        "data"
+        "Data"
       ],
       "languages": [
         "XMI"
@@ -254,7 +254,7 @@
       ],
       "headline": "EMF delegates model validation to methods with a certain signature",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "Java"
@@ -277,7 +277,7 @@
       ],
       "headline": "Unique state names are validated by setting the EMF's unique id feature",
       "perspectives": [
-        "implementation"
+        "Implementation"
       ],
       "languages": [
         "XMI"

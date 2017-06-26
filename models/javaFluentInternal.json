@@ -2,35 +2,35 @@
 	"name": "javaFluentInternal",
 	"baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/Java/",
 	"headline": "Internal DSL style with Java with a fluent API",
-	"sections": 
+	"sections":
 	[
 		{
-			"features": 
+			"features":
 			[
 				"API"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Fluent API"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -40,32 +40,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"API"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Fluent API"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -80,33 +80,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Semantic domain"
 			],
 
 			"headline": "Implementation of fluent API",
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Fluent API"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -116,32 +116,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Interpretation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -151,36 +151,36 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Interpretation"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
-				
+
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"JUnit"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
-					"link": "org/softlang/fsml/tests/FluentTest.java"
+					"link": "org/softlang/fsml/Tests/FluentTest.java"
 				}
 			]
 		}

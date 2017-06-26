@@ -2,35 +2,35 @@
 	"name": "javaExternal",
 	"baseuri": "https://github.com/softlang/yas/blob/master/languages/FSML/",
 	"headline": "External DSL style with ANTLR and Java",
-	"sections": 
+	"sections":
 	[
 		{
-			"features": 
+			"features":
 			[
 				"Concrete syntax"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"data"
+				"Data"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"FSML"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"External DSL"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -40,33 +40,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Scanning",
 				"Text-to-CST"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"ANTLR4"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Grammar"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -76,32 +76,32 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"AST"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Functional constructor"
 			],
 
-			"technologies": 
+			"technologies":
 			[
-				
+
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -121,33 +121,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Abstraction"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Listener",
 				"Tree Walker"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -157,34 +157,34 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Text-to-CST"
 			],
 
-			"perspectives": 
+			"perspectives":
 			[
-				"implementation"
+				"Implementation"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Parser generation",
 				"Code generation",
 				"Parser"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "none",
@@ -194,33 +194,33 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Text-to-CST"
 			],
 
 			"headline": "Driver code for syntax checking",
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Acceptor"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
@@ -230,38 +230,38 @@
 		},
 
 		{
-			"features": 
+			"features":
 			[
 				"Text-to-AST"
 			],
 
 			"headline": "Driver code for parsing",
-			"perspectives": 
+			"perspectives":
 			[
-				"test"
+				"Test"
 			],
 
-			"languages": 
+			"languages":
 			[
 				"Java"
 			],
 
-			"concepts": 
+			"concepts":
 			[
 				"Boilerplate code"
 			],
 
-			"technologies": 
+			"technologies":
 			[
 				"ANTLR4",
 				"JUnit"
 			],
 
-			"artifacts": 
+			"artifacts":
 			[
 				{
 					"type": "all",
-					"link": "Java/org/softlang/fsml/tests/FsmlToObjectsTest.java"
+					"link": "Java/org/softlang/fsml/Tests/FsmlToObjectsTest.java"
 				}
 			]
 		}
