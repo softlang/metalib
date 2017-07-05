@@ -180,7 +180,7 @@
 			[
 				{
 					"type": "all",
-					"link": "org/softlang/fsml/Tests/FluentTest.java"
+					"link": "org/softlang/fsml/tests/FluentTest.java"
 				}
 			]
 		}
