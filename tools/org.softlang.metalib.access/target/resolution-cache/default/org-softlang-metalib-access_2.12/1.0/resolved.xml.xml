@@ -4,7 +4,7 @@
 		module="org-softlang-metalib-access_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20170613135934"
+		publication="20170706103119"
 	>
 		<description>
 		org.softlang.metalib.access
@@ -36,5 +36,8 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.1" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.json4s" name="json4s-native_2.12" rev="3.5.2" conf="compile->default(compile)"/>
 		<dependency org="com.google.guava" name="guava" rev="22.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.commons" name="commons-io" rev="1.3.2" conf="compile->default(compile)"/>
+		<dependency org="org.scala-lang.modules" name="scala-parser-combinators_2.12" rev="1.0.6" conf="compile->default(compile)"/>
+		<dependency org="org.apache.lucene" name="lucene-analyzers" rev="3.4.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

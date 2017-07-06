@@ -1,4 +1,4 @@
-[info] Updating {file:/C:/Data/Repos/metalib/org.softlang.metalib.access/project/}org-softlang-metalib-access-build...
+[info] Updating {file:/C:/Data/Repos/metalib/tools/org.softlang.metalib.access/project/}org-softlang-metalib-access-build...
 [debug] :: resolving dependencies :: default#org-softlang-metalib-access-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -6070,19 +6070,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 539ms :: artifacts dl 17ms
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT compile produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-compile.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT runtime produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-runtime.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT test produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-test.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT provided produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-provided.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT optional produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-optional.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT compile-internal produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-compile-internal.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT runtime-internal produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-runtime-internal.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT test-internal produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-test-internal.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT plugin produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-plugin.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT sources produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-sources.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT docs produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-docs.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT pom produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-pom.xml
-[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT scala-tool produced in C:\Data\Repos\metalib\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-scala-tool.xml
-[debug] 	resolve done (539ms resolve - 17ms download)
+[debug] :: resolution report :: resolve 1305ms :: artifacts dl 26ms
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT compile produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-compile.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT runtime produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-runtime.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT test produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-test.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT provided produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-provided.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT optional produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-optional.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT compile-internal produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-compile-internal.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT runtime-internal produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-runtime-internal.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT test-internal produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-test-internal.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT plugin produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-plugin.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT sources produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-sources.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT docs produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-docs.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT pom produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-pom.xml
+[debug] 	report for default#org-softlang-metalib-access-build;0.1-SNAPSHOT scala-tool produced in C:\Data\Repos\metalib\tools\org.softlang.metalib.access\project\target\resolution-cache\reports\default-org-softlang-metalib-access-build-scala-tool.xml
+[debug] 	resolve done (1305ms resolve - 26ms download)
 [info] Done updating.
