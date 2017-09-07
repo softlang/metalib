@@ -48,7 +48,8 @@
     },
     {
       "features": [
-        "ASG"
+        "ASG",
+        "API"
       ],
       "headline": "EMF model interfaces",
       "perspectives": [
@@ -113,6 +114,8 @@
     {
       "features": [
         "Text-to-ASG",
+        "Text-to-AST",
+        "AST",
         "Scanning"
       ],
       "headline": "Generated Parser",

@@ -5,7 +5,7 @@
   "sections": [
     {
       "features": [
-        "Text projection"
+        "Projectional editing"
       ],
       "headline": "Projectional Editor on AST",
       "perspectives": [
@@ -103,7 +103,7 @@
     },
     {
       "features": [
-        "Projectional syntax"
+        "Projectional editing"
       ],
       "headline": "Sample Turnstile",
       "perspectives": [

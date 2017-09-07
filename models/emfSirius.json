@@ -6,7 +6,7 @@
     {
       "features": [
         "Graph editing",
-        "Model projection"
+        "Model editing"
       ],
       "technologies": [
         "GMF",
@@ -30,7 +30,7 @@
     {
       "features": [
         "Graph editing",
-        "Model projection"
+        "Model editing"
       ],
       "technologies": [
         "GMF",
@@ -196,7 +196,7 @@
     },
     {
       "features": [
-        "Model projection"
+        "Model editing"
       ],
       "technologies": [
         "Acceleo"

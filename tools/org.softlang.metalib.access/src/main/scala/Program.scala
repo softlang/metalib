@@ -22,10 +22,9 @@ object Program {
       map { case (id, json) => id -> (json \\ "features").children.map(x => x.children).flatten.map { case JString(x) => x }.toSet }
 
     val features = List(
-      "Abstract syntax" -> List("AST", "ASG", "Semantic domain", "API", "Serialization", "Resolution"),
-      "Textual syntax" -> List("Text-to-CST", "Text-to-AST", "Text-to-ASG", "Scanning", "Abstraction", "Replacement"),
+      "Abstract syntax" -> List("AST", "ASG", "Semantic domain","Model editing", "API", "Serialization", "Resolution"),
+      "Textual syntax" -> List("Text-to-CST", "Text-to-AST", "Text-to-ASG","Projectional editing", "Scanning", "Abstraction", "Replacement"),
       "Graphical syntax" -> List("Graph rendering", "Graph editing"),
-      "Projectional syntax" -> List("Model projection", "Text projection"),
       "Dynamic semantics" -> List("Interpretation"),
       "Static semantics" -> List("Analysis", "Piggyback"),
       "Translation semantics" -> List("Compilation", "Staging")
