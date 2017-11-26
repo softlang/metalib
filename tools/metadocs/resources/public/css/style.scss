@@ -12,235 +12,237 @@ $blue: #5f819d;
 $pink: #ff69b4;
 
 body {
-  margin: 0 auto;
-  font-family: 'Raleway', sans-serif;
-  width: 100%;
-  @media (min-width: 80em) {
-    width: 80rem;
-  }
-  padding-bottom: 5rem;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    @media (min-width: 80em) {
+	width: 80rem;
+    }
+    padding-bottom: 5rem;
 }
 
 .tagcloud {
-  display: block;
-  margin: auto;
+    display: block;
+    margin: auto;
 }
 
 .navigation {
-  border-bottom: 0.25rem solid $black;
-  width: 100%;
+    border-bottom: 0.25rem solid $black;
+    width: 100%;
 }
 
 .navigation-link {
-  color: $black;
-  font-size: 2rem;
-  text-decoration: none;
-  &:visited {
     color: $black;
-  }
+    font-size: 2rem;
+    text-decoration: none;
+    &:visited {
+	color: $black;
+    }
 }
 
 .contribution-headline {
-  text-align: center;
+    text-align: center;
 }
 
 .summary {
-  box-shadow: 0 0 1rem $black;
-  margin: .5rem .5rem 2rem .5rem;
-  padding: .5rem;
+    box-shadow: 0 0 1rem $black;
+    margin: .5rem .5rem 2rem .5rem;
+    padding: .5rem;
 }
 
 .section {
-  box-shadow: 0 0 1rem $black;
-  margin: .5rem;
-  padding: .5rem;
+    box-shadow: 0 0 1rem $black;
+    margin: .5rem;
+    padding: .5rem;
 }
 
 .summary {
-  display: flex;
-  font-size: 0.75rem;
-  @media (max-width: 50rem) {
-    flex-direction: column;
-  }
-  > div {
-    > span {
-      > a {
-        color: $black;
-        text-decoration: none;
-        &:visited {
-          color: $black;
-        }
-      }
-      text-align: center;
-    }
-    > span:first-child {
-      color: $white;
-      margin-bottom: 0.5rem;
-    }
-    > span:not(:first-child) {
-      background: $grey;
-      border-radius: 1rem;
-      font-weight: 900;
-      margin: 0.25rem;
-      padding: 0.25rem;
-    }
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 0.5rem;
-  }
+    font-size: 0.75rem;
+    @media (max-width: 50rem) {
+	flex-direction: column;
+    }
+    > div {
+	> a {
+	    box-sizing: border-box;
+            color: $black;
+	    display: inline-block;
+	    text-align: center;
+            text-decoration: none;
+	    width: 100%;
+	    background: $grey;
+	    border-radius: 1rem;
+	    font-weight: 900;
+	    margin-bottom: 0.5rem;
+	    padding: 0.25rem;
+            &:visited {
+		color: $black;
+		width: 100%;
+            }
+	}
+	> span {
+	    color: $white;
+	    margin-bottom: 0.5rem;
+	    text-align: center;
+	    font-weight: 900;
+	}
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 0.5rem;
+    }
 }
 
 .perspectives {
-  background: #294f48;
+    background: #294f48;
 }
 
 .features {
-  background: #519612;
+    background: #519612;
 }
 
 .languages {
-  background: #bc9326;
+    background: #bc9326;
 }
 
 .technologies {
-  background: #d57c3b;
+    background: #d57c3b;
 }
 
 .concepts {
-  background: #cf4844;
+    background: #cf4844;
 }
 
 .projection-capture {
-  > img {
-    max-width: 100%;
-  }
+    > img {
+	max-width: 100%;
+    }
 }
 
 .artifact-none {
-  background: $black;
-  padding: 1rem;
-  margin-top: 1rem;
-  a {
-    color: $white;
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    word-wrap: break-word;
-    text-align: center;
-    &:visited {
-      color: $white;
+    background: $black;
+    padding: 1rem;
+    margin-top: 1rem;
+    a {
+	color: $white;
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	word-wrap: break-word;
+	text-align: center;
+	&:visited {
+	    color: $white;
+	}
+	&:after {
+	    content: "open_in_new";
+	    font-family: "Material Icons";
+	    padding-left: 0.25rem;
+	}
     }
-    &:after {
-      content: "open_in_new";
-      font-family: "Material Icons";
-      padding-left: 0.25rem;
-    }
-  }
 }
 
 .artifact-all {
-  background: $black;
-  padding: 1rem;
-  margin-top: 1rem;
-  > span {
-    animation: spin 1s ease-in-out infinite;
-    color: $white;
-    display: block;
-    font-family: 'Material Icons';
-    font-size: 1.5rem;
-    margin: auto;
-    text-align: center;
-    width: 1.5rem;
-  }
-  a {
-    color: $white;
-    display: block;
-    padding-bottom: 1rem;
-    text-decoration: none;
-    width: 100%;
-    word-wrap: break-word;
-    text-align: center;
-    &:visited {
-      color: $white;
+    background: $black;
+    padding: 1rem;
+    margin-top: 1rem;
+    > span {
+	animation: spin 1s ease-in-out infinite;
+	color: $white;
+	display: block;
+	font-family: 'Material Icons';
+	font-size: 1.5rem;
+	margin: auto;
+	text-align: center;
+	width: 1.5rem;
     }
-    &:after {
-      content: "open_in_new";
-      font-family: "Material Icons";
-      padding-left: 0.25rem;
+    a {
+	color: $white;
+	display: block;
+	padding-bottom: 1rem;
+	text-decoration: none;
+	width: 100%;
+	word-wrap: break-word;
+	text-align: center;
+	&:visited {
+	    color: $white;
+	}
+	&:after {
+	    content: "open_in_new";
+	    font-family: "Material Icons";
+	    padding-left: 0.25rem;
+	}
     }
-  }
-  > div {
-    > pre {
-      line-height: 1rem;
-      margin: 0;
-      overflow-x: auto;
+    > div {
+	> pre {
+	    line-height: 1rem;
+	    margin: 0;
+	    overflow-x: auto;
+	}
     }
-  }
-  > img {
-    width: calc(100% - 2rem);
-  }
+    > img {
+	width: calc(100% - 2rem);
+    }
 }
 
 .artifact-some {
-  background: $black;
-  padding: 1rem;
-  margin-top: 1rem;
-  a {
-    color: $white;
-    display: block;
-    padding-bottom: 1rem;
-    text-decoration: none;
-    width: 100%;
-    word-wrap: break-word;
-    text-align: center;
-    &:visited {
-      color: $white;
+    background: $black;
+    padding: 1rem;
+    margin-top: 1rem;
+    a {
+	color: $white;
+	display: block;
+	padding-bottom: 1rem;
+	text-decoration: none;
+	width: 100%;
+	word-wrap: break-word;
+	text-align: center;
+	&:visited {
+	    color: $white;
+	}
+	&:after {
+	    content: "open_in_new";
+	    font-family: "Material Icons";
+	    padding-left: 0.25rem;
+	}
     }
-    &:after {
-      content: "open_in_new";
-      font-family: "Material Icons";
-      padding-left: 0.25rem;
+    > span {
+	animation: spin 1s ease-in-out infinite;
+	color: $white;
+	display: block;
+	font-family: 'Material Icons';
+	font-size: 1.5rem;
+	margin: auto;
+	text-align: center;
+	width: 1.5rem;
     }
-  }
-  > span {
-    animation: spin 1s ease-in-out infinite;
-    color: $white;
-    display: block;
-    font-family: 'Material Icons';
-    font-size: 1.5rem;
-    margin: auto;
-    text-align: center;
-    width: 1.5rem;
-  }
-  > div {
-    > pre {
-      line-height: 1rem;
-      margin: 0;
-      overflow-x: auto;
+    > div {
+	> pre {
+	    line-height: 1rem;
+	    margin: 0;
+	    overflow-x: auto;
+	}
     }
-  }
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+    from {
+	transform: rotate(360deg);
+    }
+    to {
+	transform: rotate(0deg);
+    }
 }
 
 .section-headline {
-  display: inline-block;
+    display: inline-block;
 }
 
 .toc {
-  > div > a {
-    color: $black;
-    text-decoration: none;
-    &:visited {
-      color: $black;
+    > div > a {
+	color: $black;
+	text-decoration: none;
+	&:visited {
+	    color: $black;
+	}
     }
-  }
 }

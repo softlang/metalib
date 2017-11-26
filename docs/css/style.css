@@ -100,22 +100,26 @@ body {
     flex-direction: column;
     flex-grow: 1;
     padding: 0.5rem; }
-    .summary > div > span {
-      text-align: center; }
-      .summary > div > span > a {
-        color: #282a2e;
-        text-decoration: none; }
-        .summary > div > span > a:visited {
-          color: #282a2e; }
-    .summary > div > span:first-child {
-      color: #fff;
-      margin-bottom: 0.5rem; }
-    .summary > div > span:not(:first-child) {
+    .summary > div > a {
+      box-sizing: border-box;
+      color: #282a2e;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
       background: #ddd;
       border-radius: 1rem;
       font-weight: 900;
-      margin: 0.25rem;
+      margin-bottom: 0.5rem;
       padding: 0.25rem; }
+      .summary > div > a:visited {
+        color: #282a2e;
+        width: 100%; }
+    .summary > div > span {
+      color: #fff;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      font-weight: 900; }
 
 .perspectives {
   background: #294f48; }
