@@ -2,6 +2,7 @@
   (:require [cheshire.core :as json]
             [clj-http.client :as http]
             [clojure.java.io :as io]
+            [clojure.string :as string]
             [metadocs.validator :as validator]))
 
 (def contribution-dir "../../models/")
@@ -23,6 +24,9 @@
   (doseq [file (-> dir io/file .list)]
     (io/delete-file file true)))
 
+(defn sanitize [s]
+  (string/replace s #" " "_"))
+
 (defmacro defcontributionroutes [state page]
   (let [model-file-names (-> contribution-dir
                              dir-contents)]
@@ -30,7 +34,7 @@
     `(do ~@(map (fn [contribution-file-name]
                   (let [contribution (-> (str contribution-dir contribution-file-name)
                                          load-json)
-                        contribution-name (:name contribution)
+                        contribution-name (-> contribution :name sanitize)
                         feature-set (set (mapcat :features (:sections contribution)))]
                     (validator/validate contribution-name feature-set)
                     (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/contributions/" contribution-name ".html")))
@@ -56,7 +60,8 @@
         features (set (mapcat :features sections))]
     (delete-dir-contents "resources/public/features/")
     `(do ~@(map (fn [feature]
-                  (let [contributions (map :name (filter #(contains? (set (mapcat :features (:sections %))) feature) models))]
+                  (let [contributions (map :name (filter #(contains? (set (mapcat :features (:sections %))) feature) models))
+                        feature (sanitize feature)]
                     (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/features/" feature ".html")))
                     `(~'defroute ~(str "/metalib/features/" feature ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~feature (list ~@contributions))))))
@@ -68,7 +73,8 @@
         languages (set (mapcat :languages sections))]
     (delete-dir-contents "resources/public/languages/")
     `(do ~@(map (fn [language]
-                  (let [contributions (map :name (filter #(contains? (set (mapcat :languages (:sections %))) language) models))]
+                  (let [contributions (map :name (filter #(contains? (set (mapcat :languages (:sections %))) language) models))
+                        language (sanitize language)]
                     (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/languages/" language ".html")))
                     `(~'defroute ~(str "/metalib/languages/" language ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~language (list ~@contributions))))))
@@ -80,7 +86,8 @@
         technologies (set (mapcat :technologies sections))]
     (delete-dir-contents "resources/public/technologies/")
     `(do ~@(map (fn [technology]
-                  (let [contributions (map :name (filter #(contains? (set (mapcat :technologies (:sections %))) technology) models))]
+                  (let [contributions (map :name (filter #(contains? (set (mapcat :technologies (:sections %))) technology) models))
+                        technology (sanitize technology)]
                     (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/technologies/" technology ".html")))
                     `(~'defroute ~(str "/metalib/technologies/" technology ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~technology (list ~@contributions))))))
@@ -92,7 +99,8 @@
         concepts (set (mapcat :concepts sections))]
     (delete-dir-contents "resources/public/concepts/")
     `(do ~@(map (fn [concept]
-                  (let [contributions (map :name (filter #(contains? (set (mapcat :concepts (:sections %))) concept) models))]
+                  (let [contributions (map :name (filter #(contains? (set (mapcat :concepts (:sections %))) concept) models))
+                        concept (sanitize concept)]
                     (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/concepts/" concept ".html")))
                     `(~'defroute ~(str "/metalib/concepts/" concept ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~concept (list ~@contributions))))))
@@ -103,4 +111,3 @@
                              dir-contents)
         contributions (map #(load-json (str contribution-dir %)) model-file-names)]
     `(list ~@contributions)))
-

@@ -6,7 +6,6 @@
 (defn component [tags width height]
   (let [list (reduce-kv #(conj %1 [%2 %3]) [] (frequencies tags))
         maximum (apply max (map second list))]
-    (.log js/console maximum)
     [(with-meta (fn [] [:canvas.tagcloud {:width  width
                                           :height height}])
                 {:component-did-mount (fn [this]

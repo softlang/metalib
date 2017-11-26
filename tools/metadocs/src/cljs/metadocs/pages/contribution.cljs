@@ -2,7 +2,6 @@
   (:require [metadocs.components.section :as section]
             [metadocs.components.summary :as summary]))
 
-
 (defn page [{:keys [headline baseuri sections]}]
       (let [perspectives (sort (distinct (mapcat :perspectives sections)))
             features (sort (distinct (mapcat :features sections)))

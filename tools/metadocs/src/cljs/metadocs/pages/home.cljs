@@ -1,6 +1,7 @@
 (ns metadocs.pages.home
   (:require [metadocs.components.summary :as summary]
-            [metadocs.components.tagcloud :as tagcloud])
+            [metadocs.components.tagcloud :as tagcloud]
+            [metadocs.utils.url :as url])
   (:require-macros [metadocs.macros :as macros]))
 
 (defn page []
@@ -16,7 +17,7 @@
      [:table.toc
       [:tbody
        (map #(with-meta [:tr
-                         [:td [:a {:href (str "/metalib/contributions/" (:name %) ".html")} (:name %)]]
+                         [:td [:a {:href (str "/metalib/contributions/" (-> % :name url/sanitize) ".html")} (:name %)]]
                          [:td (:headline %)]] {:key %})
             contributions)]]
      [:h1 "Ontological summary"]
