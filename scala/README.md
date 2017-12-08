@@ -7,4 +7,4 @@
 Use the Makefile to build the binaries and run the tests.
 Or cd to the source dir and run
 - `sbt test` to run the test
-- `sbt test/run` to execute the example use case
+- `sbt app/run` to execute the example use case
