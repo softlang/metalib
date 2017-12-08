@@ -71,11 +71,11 @@
         },
         {
           "type": "none",
-          "link": "org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/fsml/FSMState.java"
+          "link": "org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/FSMState.java"
         },
         {
           "type": "none",
-          "link": "org.softlang.metalib.xtext.fsml/src/org/softlang/metalib/xtext/fsml/fsml/FSMTransition.java"
+          "link": "org.softlang.metalib.xtext.fsml/src-gen/org/softlang/metalib/xtext/fsml/fsml/FSMTransition.java"
         }
       ]
     },
