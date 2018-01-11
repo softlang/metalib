@@ -4,10 +4,19 @@
 
 (defn page [technology contributions]
   (let [wiki-url (str config/wiki-url "Technology:" technology)]
-    [:div [:h1 "Technology: " technology]
-     [:div
-      [:h2 "Contributions"]
-      [:ul (map #(with-meta [:li [:a {:href (str "/metalib/contributions/" (url/sanitize %) ".html")} %]] {:key %}) contributions)]]
-     [:div
-      [:h2 "101Wiki"]
-      [:a {:href wiki-url :target "_blank"} wiki-url]]]))
+    [:div
+     [:section {:class "section"}
+      [:div {:class "container"}
+       [:h2 {:class "title is-2"}
+        "Technology: " technology]]]
+     [:section {:class "section"}
+      [:div {:class "container"}
+       [:h3 {:class "title is-3"}
+        "Contributions"]
+       [:ul (map #(with-meta [:li [:a {:href (str "/metalib/contributions/" (url/sanitize %) ".html")} %]] {:key %}) contributions)]]]
+     [:section {:class "section"}
+      [:div {:class "container"}
+       [:h3 {:class "title is-3"}
+        "101Wiki"]
+       [:a {:href wiki-url :target "_blank"} wiki-url]]]]))
+

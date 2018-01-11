@@ -2,8 +2,7 @@
   (:require [cheshire.core :as json]
             [clj-http.client :as http]
             [clojure.java.io :as io]
-            [clojure.string :as string]
-            [metadocs.validator :as validator]))
+            [clojure.string :as string]))
 
 (def contribution-dir "../../models/")
 
@@ -36,7 +35,6 @@
                                          load-json)
                         contribution-name (-> contribution :name sanitize)
                         feature-set (set (mapcat :features (:sections contribution)))]
-                    (validator/validate contribution-name feature-set)
                     (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/contributions/" contribution-name ".html")))
                     `(~'defroute ~(str "/metalib/contributions/" contribution-name ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~contribution)))))
@@ -49,9 +47,9 @@
     (delete-dir-contents "resources/public/perspectives/")
     `(do ~@(map (fn [perspective]
                   (let [contributions (map :name (filter #(contains? (set (mapcat :perspectives (:sections %))) perspective) models))]
-                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/perspectives/" perspective ".html")))
-                    `(~'defroute ~(str "/metalib/perspectives/" perspective ".html") []
-                       (~'swap! ~state ~'assoc :current-page #(~page ~perspective (list ~@contributions))))))
+                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/perspectives/" (sanitize perspective) ".html")))
+                    `(~'defroute ~(str "/metalib/perspectives/" (sanitize perspective) ".html") []
+                      (~'swap! ~state ~'assoc :current-page #(~page ~perspective (list ~@contributions))))))
                 perspectives))))
 
 (defmacro deffeatureroutes [state page]
@@ -60,11 +58,10 @@
         features (set (mapcat :features sections))]
     (delete-dir-contents "resources/public/features/")
     `(do ~@(map (fn [feature]
-                  (let [contributions (map :name (filter #(contains? (set (mapcat :features (:sections %))) feature) models))
-                        feature (sanitize feature)]
-                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/features/" feature ".html")))
-                    `(~'defroute ~(str "/metalib/features/" feature ".html") []
-                       (~'swap! ~state ~'assoc :current-page #(~page ~feature (list ~@contributions))))))
+                  (let [contributions (map :name (filter #(contains? (set (mapcat :features (:sections %))) feature) models))]
+                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/features/" (sanitize feature) ".html")))
+                    `(~'defroute ~(str "/metalib/features/" (sanitize feature) ".html") []
+                      (~'swap! ~state ~'assoc :current-page #(~page ~feature (list ~@contributions))))))
                 features))))
 
 (defmacro deflanguageroutes [state page]
@@ -75,8 +72,8 @@
     `(do ~@(map (fn [language]
                   (let [contributions (map :name (filter #(contains? (set (mapcat :languages (:sections %))) language) models))
                         language (sanitize language)]
-                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/languages/" language ".html")))
-                    `(~'defroute ~(str "/metalib/languages/" language ".html") []
+                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/languages/" (sanitize language) ".html")))
+                    `(~'defroute ~(str "/metalib/languages/" (sanitize language) ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~language (list ~@contributions))))))
                 languages))))
 
@@ -86,10 +83,9 @@
         technologies (set (mapcat :technologies sections))]
     (delete-dir-contents "resources/public/technologies/")
     `(do ~@(map (fn [technology]
-                  (let [contributions (map :name (filter #(contains? (set (mapcat :technologies (:sections %))) technology) models))
-                        technology (sanitize technology)]
-                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/technologies/" technology ".html")))
-                    `(~'defroute ~(str "/metalib/technologies/" technology ".html") []
+                  (let [contributions (map :name (filter #(contains? (set (mapcat :technologies (:sections %))) technology) models))]
+                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/technologies/" (sanitize technology) ".html")))
+                    `(~'defroute ~(str "/metalib/technologies/" (sanitize technology) ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~technology (list ~@contributions))))))
                 technologies))))
 
@@ -99,10 +95,9 @@
         concepts (set (mapcat :concepts sections))]
     (delete-dir-contents "resources/public/concepts/")
     `(do ~@(map (fn [concept]
-                  (let [contributions (map :name (filter #(contains? (set (mapcat :concepts (:sections %))) concept) models))
-                        concept (sanitize concept)]
-                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/concepts/" concept ".html")))
-                    `(~'defroute ~(str "/metalib/concepts/" concept ".html") []
+                  (let [contributions (map :name (filter #(contains? (set (mapcat :concepts (:sections %))) concept) models))]
+                    (io/copy (io/file "resources/public/index.html") (io/file (str "resources/public/concepts/" (sanitize concept) ".html")))
+                    `(~'defroute ~(str "/metalib/concepts/" (sanitize concept) ".html") []
                        (~'swap! ~state ~'assoc :current-page #(~page ~concept (list ~@contributions))))))
                 concepts))))
 

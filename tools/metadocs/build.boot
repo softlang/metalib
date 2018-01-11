@@ -5,6 +5,7 @@
                           [cheshire "5.7.1"]
                           [clj-http "3.5.0"]
                           [cljs-http "0.1.43"]
+                          [cljsjs/filesaverjs "1.3.3-0"]
                           [cljsjs/highlight "9.6.0-0"]
                           [compojure "1.6.0"]
                           [deraen/boot-sass "0.3.1"]
@@ -12,6 +13,9 @@
                           [org.clojure/clojure "1.9.0-alpha16"]
                           [org.clojure/clojurescript "1.9.521"]
                           [org.clojure/core.async "0.3.442"]
+                          [org.clojure/core.logic "0.8.11"]
+                          [org.clojure/core.match "0.3.0-alpha5"]
+                          [org.clojure/core.unify "0.5.7"]
                           [org.clojure/tools.nrepl "0.2.13"]
                           [org.slf4j/slf4j-nop "1.7.25"]
                           [pandeiro/boot-http "0.8.0"]
@@ -28,8 +32,7 @@
          '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]]
          '[adzerk.boot-reload :refer [reload]]
          '[deraen.boot-sass :refer [sass]]
-         '[pandeiro.boot-http :refer [serve]]
-         '[metadocs.validator])
+         '[pandeiro.boot-http :refer [serve]])
 
 (task-options!
  repl {:middleware '[cemerick.piggieback/wrap-cljs-repl]})

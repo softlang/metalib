@@ -1,145 +1,132 @@
 {
-  "feature": "Language Implementation",
-  "composition": [
-    {
-      "feature": "Syntax",
-      "mandatory": true,
-      "or":[
-        {
-          "feature": "Abstract syntax",
-          "composition": [
-            {
-              "feature": "Model",
-              "mandatory": true,
-              "or": [
-                {
-                  "feature": "AST"
-                },
-                {
-                  "feature": "ASG"
-                },
-                {
-                  "feature": "Semantic domain"
-                }
-              ]
-            },
-            {
-              "feature": "API",
-              "mandatory": false
-            },
-            {
-              "feature": "Serialization",
-              "mandatory": false
-            },
-            {
-              "feature": "Resolution",
-              "mandatory": false
-            }
-          ]
-        },
-        {
-          "feature": "Concrete syntax",
-          "or": [
-            {
-              "feature": "Textual syntax",
-              "alternative": [
-                {
-                  "feature": "Parsing",
-                  "composition": [
-                    {
-                      "feature": "Text-to-model",
-                      "mandatory": true,
-                      "alternative": [
-                        {
-                          "feature": "Text-to-CST"
-                        },
-                        {
-                          "feature": "Text-to-AST"
-                        },
-                        {
-                          "feature": "Text-to-ASG"
-                        }
-                      ]
-                    },
-                    {
-                      "feature": "Scanning",
-                      "mandatory": false
-                    },
-                    {
-                      "feature": "Abstraction",
-                      "mandatory": false
-                    }
-                  ]
-                },
-                {
-                  "feature": "Replacement"
-                }
-              ]
-            },
-            {
-              "feature": "Graphical syntax",
-              "or": [
-                {
-                  "feature": "Graph rendering"
-                },
-                {
-                  "feature": "Graph editing"
-                }
-              ]
-            },
-            {
-              "feature": "Projectional syntax",
-              "or": [
-                {
-                  "feature": "Model projection"
-                },
-                {
-                  "feature": "Text projection"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "feature": "Semantics",
-      "mandatory": false,
-      "or": [
-        {
-          "feature": "Dynamic semantics",
-          "or": [
-            {
-              "feature": "Interpretation"
-            },
-            {
-              "feature": "Run-time system"
-            }
-          ]
-        },
-        {
-          "feature": "Statics semantics",
-          "or": [
-            {
-              "feature": "Analysis"
-            },
-            {
-              "feature": "Piggyback"
-            }
-          ]
-        },
-        {
-          "feature": "Translation semantics",
-          "alternative": [
-            {
-              "feature": "Compilation"
-            },
-            {
-              "feature": "Staging"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    "feature": "Language Implementation",
+    "composition": [
+	{
+	    "feature": "Syntax",
+	    "mandatory": true,
+	    "or": [
+		{
+		    "feature": "Abstract syntax",
+		    "composition": [
+			{
+			    "feature": "Model",
+			    "mandatory": true,
+			    "or": [
+				{
+				    "feature": "AST"
+				},
+				{
+				    "feature": "ASG"
+				},
+				{
+				    "feature": "Semantic Domain"
+				}
+			    ]
+			},
+			{
+			    "feature": "API"
+			},
+			{
+			    "feature": "Model editing"
+			},
+			{
+			    "feature": "Serialization"
+			},
+			{
+			    "feature": "Resolution"
+			}
+		    ]
+		},
+		{
+		    "feature": "Concrete syntax",
+		    "or": [
+			{
+			    "feature": "Textual syntax",
+			    "alternative": [
+				{
+				    "feature": "Parsing",
+				    "composition": [
+					{
+					    "feature": "Text-to-model",
+					    "mandatory": true,
+					    "alternative": [
+						{
+						    "feature": "Text-to-CST"
+						},
+						{
+						    "feature": "Text-to-AST"
+						},
+						{
+						    "feature": "Text-to-ASG"
+						}
+					    ]
+					},
+					{
+					    "feature": "Scanning"
+					},
+					{
+					    "feature": "Abstraction"
+					}
+				    ]
+				},
+				{
+				    "feature": "Projectional editing"
+				},
+				{
+				    "feature": "Replacement"
+				}
+			    ]
+			},
+			{
+			    "feature": "Graphical syntax",
+			    "or": [
+				{
+				    "feature": "Graph rendering"
+				},
+				{
+				    "feature": "Graph editing"
+				}
+			    ]
+			}
+		    ]
+		}
+	    ]
+	},
+	{
+	    "feature": "Semantics",
+	    "or": [
+		{
+		    "feature": "Dynamic semantics",
+		    "composition": [
+			{
+			    "feature": "Interpretation",
+			    "mandatory": true
+			}
+		    ]
+		},
+		{
+		    "feature": "Static semantics",
+		    "or": [
+			{
+			    "feature": "Analysis"
+			},
+			{
+			    "feature": "Piggyback"
+			}
+		    ]
+		},
+		{
+		    "feature": "Translation semantics",
+		    "alternative": [
+			{
+			    "feature": "Compilation"
+			},
+			{
+			    "feature": "Staging"
+			}
+		    ]
+		}
+	    ]
+	}
+    ]
 }

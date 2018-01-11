@@ -1,7 +1,7 @@
 (ns metadocs.handler
     (:require [compojure.core :refer [ANY GET defroutes]]
-      [compojure.route :refer [files resources not-found]]
-      [ring.util.response :refer [content-type resource-response]]))
+              [compojure.route :refer [files resources not-found]]
+              [ring.util.response :refer [content-type resource-response]]))
 
 (defroutes routes
            (resources "/")

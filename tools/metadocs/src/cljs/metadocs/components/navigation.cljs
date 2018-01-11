@@ -1,7 +1,8 @@
 (ns metadocs.components.navigation)
 
 (defn component []
-      [:nav.navigation
-       [:a.navigation-link {:href "/metalib/"}
-        [:b "metalib"]
-        " - A Chrestomathy of DSL implementations"]])
+  [:nav {:class "navbar" :role "navigation" :aria-label "main navigation"}
+   [:div {:class "container"}
+    [:div {:class "navbar-brand"}
+     [:a {:class "navbar-item" :href "/metalib/"}
+      "metalib"]]]])

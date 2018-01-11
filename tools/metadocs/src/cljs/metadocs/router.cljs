@@ -7,6 +7,7 @@
             [metadocs.pages.technology :as technology]
             [metadocs.pages.concept :as concept]
             [metadocs.pages.home :as home]
+            [metadocs.pages.verification :as verification]
             [metadocs.state :as state]
             [secretary.core :as secretary])
   (:require-macros [metadocs.macros :refer [defcontributionroutes
@@ -18,7 +19,10 @@
                    [secretary.core :refer [defroute]]))
 
 (defroute "/metalib/" []
-          (swap! state/db assoc :current-page #'home/page))
+  (swap! state/db assoc :current-page #'home/page))
+
+(defroute "/metalib/verification.html" []
+  (swap! state/db assoc :current-page #'verification/page))
 
 (defcontributionroutes state/db contribution/page)
 
