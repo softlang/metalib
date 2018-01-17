@@ -10,6 +10,10 @@
 (defn delete [atom key]
   (reset! atom (into [] (concat (take key @atom) (drop (inc key) @atom)))))
 
+(defn add-artifact [artifacts]
+  (swap! artifacts conj {:type "none"
+                         :link ""}))
+
 (defn component [baseuri section move-section-up move-section-down remove-section sections]
   (let [headline (reagent/cursor section [:headline])
         headline-edit? (reagent/atom false)
@@ -119,6 +123,11 @@
                    (with-meta [concept/component concept (partial delete concepts %)] {:key %}))
                 (-> @concepts count range))]]
          (map #(let [artifact (reagent/cursor artifacts [%])]
-                 (with-meta [artifact/component baseuri artifact] {:key %}))
-              (-> @artifacts count range))]]])))
+                 (with-meta [artifact/component baseuri artifact (partial delete artifacts %)] {:key %}))
+              (-> @artifacts count range))
+         [:div {:class "columns is-centered"}
+          [:div {:class "column is-narrow"}
+           [:button {:class "button is-large" :on-click (partial add-artifact artifacts)}
+            [:span {:class "icon is-medium"}
+             [:i {:class "far fa-plus-square"}]]]]]]]])))
 
