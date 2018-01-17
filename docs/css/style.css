@@ -1,239 +1,127 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css";
 @import "https://fonts.googleapis.com/css?family=Raleway";
 @import "https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700";
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8; }
+
 .hljs-comment,
 .hljs-quote {
-  color: #667788; }
-
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-  color: #cc6070; }
-
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-  color: #dd8877; }
-
-.hljs-attribute {
-  color: #eecc88; }
-
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-  color: #aabb88; }
-
-.hljs-title,
-.hljs-section {
-  color: #5f819d; }
+  color: #998;
+  font-style: italic; }
 
 .hljs-keyword,
-.hljs-selector-tag {
-  color: #85678f; }
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold; }
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080; }
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14; }
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold; }
+
+.hljs-subst {
+  font-weight: normal; }
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold; }
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal; }
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926; }
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073; }
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3; }
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold; }
+
+.hljs-deletion {
+  background: #fdd; }
+
+.hljs-addition {
+  background: #dfd; }
 
 .hljs-emphasis {
   font-style: italic; }
 
 .hljs-strong {
-  font-style: bold; }
+  font-weight: bold; }
 
-.hljs {
-  color: #fff;
-  display: block; }
+.perspective-column .add-button,
+.feature-column .add-button,
+.language-column .add-button,
+.technology-column .add-button,
+.concept-column .add-button {
+  visibility: hidden; }
 
-body {
-  margin: 0 auto;
-  font-family: 'Raleway', sans-serif;
-  width: 100%;
-  padding-bottom: 5rem; }
-  @media (min-width: 80em) {
-    body {
-      width: 80rem; } }
+.perspective-column:hover .add-button,
+.feature-column:hover .add-button,
+.language-column:hover .add-button,
+.technology-column:hover .add-button,
+.concept-column:hover .add-button {
+  visibility: visible; }
 
-.tagcloud {
-  display: block;
-  margin: auto; }
+a[disabled]:hover {
+  color: #3273dc; }
 
-.navigation {
-  border-bottom: 0.25rem solid #282a2e;
-  width: 100%; }
+.section-card-header > .card-header-icon {
+  visibility: hidden; }
+  .section-card-header > .card-header-icon[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5; }
 
-.navigation-link {
-  color: #282a2e;
-  font-size: 2rem;
-  text-decoration: none; }
-  .navigation-link:visited {
-    color: #282a2e; }
+.section-card-header:hover > .card-header-icon {
+  visibility: visible; }
 
-.contribution-headline {
-  text-align: center; }
+.perspective.tags.has-addons > .tag:not(:last-child) {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px; }
 
-.summary {
-  box-shadow: 0 0 1rem #282a2e;
-  margin: .5rem .5rem 2rem .5rem;
-  padding: .5rem; }
+.perspective > .is-edit,
+.perspective > .is-remove {
+  visibility: hidden; }
 
-.section {
-  box-shadow: 0 0 1rem #282a2e;
-  margin: .5rem;
-  padding: .5rem; }
+.perspective:hover.tags.has-addons > .tag:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
 
-.summary {
-  display: flex;
-  font-size: 0.75rem; }
-  @media (max-width: 50rem) {
-    .summary {
-      flex-direction: column; } }
-  .summary > div {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 0.5rem; }
-    .summary > div > a {
-      box-sizing: border-box;
-      color: #282a2e;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      width: 100%;
-      background: #ddd;
-      border-radius: 1rem;
-      font-weight: 900;
-      margin-bottom: 0.5rem;
-      padding: 0.25rem; }
-      .summary > div > a:visited {
-        color: #282a2e;
-        width: 100%; }
-    .summary > div > span {
-      color: #fff;
-      margin-bottom: 0.5rem;
-      text-align: center;
-      font-weight: 900; }
+.perspective:hover > .is-edit,
+.perspective:hover > .is-remove {
+  visibility: visible; }
 
-.perspectives {
-  background: #294f48; }
+.artifact button.is-edit {
+  visibility: hidden; }
 
-.features {
-  background: #519612; }
-
-.languages {
-  background: #bc9326; }
-
-.technologies {
-  background: #d57c3b; }
-
-.concepts {
-  background: #cf4844; }
-
-.projection-capture > img {
-  max-width: 100%; }
-
-.artifact-none {
-  background: #282a2e;
-  padding: 1rem;
-  margin-top: 1rem; }
-  .artifact-none a {
-    color: #fff;
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    word-wrap: break-word;
-    text-align: center; }
-    .artifact-none a:visited {
-      color: #fff; }
-    .artifact-none a:after {
-      content: "open_in_new";
-      font-family: "Material Icons";
-      padding-left: 0.25rem; }
-
-.artifact-all {
-  background: #282a2e;
-  padding: 1rem;
-  margin-top: 1rem; }
-  .artifact-all > span {
-    animation: spin 1s ease-in-out infinite;
-    color: #fff;
-    display: block;
-    font-family: 'Material Icons';
-    font-size: 1.5rem;
-    margin: auto;
-    text-align: center;
-    width: 1.5rem; }
-  .artifact-all a {
-    color: #fff;
-    display: block;
-    padding-bottom: 1rem;
-    text-decoration: none;
-    width: 100%;
-    word-wrap: break-word;
-    text-align: center; }
-    .artifact-all a:visited {
-      color: #fff; }
-    .artifact-all a:after {
-      content: "open_in_new";
-      font-family: "Material Icons";
-      padding-left: 0.25rem; }
-  .artifact-all > div > pre {
-    line-height: 1rem;
-    margin: 0;
-    overflow-x: auto; }
-  .artifact-all > img {
-    width: calc(100% - 2rem); }
-
-.artifact-some {
-  background: #282a2e;
-  padding: 1rem;
-  margin-top: 1rem; }
-  .artifact-some a {
-    color: #fff;
-    display: block;
-    padding-bottom: 1rem;
-    text-decoration: none;
-    width: 100%;
-    word-wrap: break-word;
-    text-align: center; }
-    .artifact-some a:visited {
-      color: #fff; }
-    .artifact-some a:after {
-      content: "open_in_new";
-      font-family: "Material Icons";
-      padding-left: 0.25rem; }
-  .artifact-some > span {
-    animation: spin 1s ease-in-out infinite;
-    color: #fff;
-    display: block;
-    font-family: 'Material Icons';
-    font-size: 1.5rem;
-    margin: auto;
-    text-align: center;
-    width: 1.5rem; }
-  .artifact-some > div > pre {
-    line-height: 1rem;
-    margin: 0;
-    overflow-x: auto; }
-
-@keyframes spin {
-  from {
-    transform: rotate(360deg); }
-  to {
-    transform: rotate(0deg); } }
-
-.section-headline {
-  display: inline-block; }
-
-.toc > div > a {
-  color: #282a2e;
-  text-decoration: none; }
-  .toc > div > a:visited {
-    color: #282a2e; }
+.artifact:hover button.is-edit {
+  visibility: visible; }
