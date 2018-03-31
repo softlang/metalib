@@ -14,7 +14,7 @@ test:
 	@echo main | ${ghci}
 
 clean:
-	rm -f ./Language/FSML/*.hi ./Language/FSML/*.o ./tmp/FsmlAcceptor.run
+	rm -f ./Language/FSML/*.hi ./Language/FSML/*.o ./tmp/FsmlAcceptor.run ./Language/FSML/*.dyn_hi ./Language/FSML/*.dyn_o
 
 run:
 	${ghci}
