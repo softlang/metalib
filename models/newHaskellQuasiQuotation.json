@@ -1,0 +1,245 @@
+{
+    "name": "NewHaskellQuasiQuotation",
+    "baseuri": "https://github.com/softlang/metalib/blob/master/newHaskell/",
+    "headline": "Use of quasi-quotation and Template Haskell",
+    "sections": [
+        {
+            "features": [
+                "AST"
+            ],
+            "headline": "AST implementation",
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Algebraic data type",
+                "Record type"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/Syntax.hs",
+                    "from": 6,
+                    "to": 30
+                }
+            ]
+        },
+        {
+            "features": [
+                "Scanning"
+            ],
+            "headline": "Lexer definition",
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [
+                "Parsec"
+            ],
+            "concepts": [
+                "Lexer",
+                "Parser combinator",
+                "Monads"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/Lexer.hs",
+                    "from": 13,
+                    "to": 41
+                }
+            ]
+        },
+        {
+            "features": [
+                "Scanning",
+                "Text-to-AST"
+            ],
+            "headline": "Parser combinator",
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [
+                "Parsec"
+            ],
+            "concepts": [
+                "Parser combinator",
+                "Monads"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/ApplicativeParser.hs",
+                    "from": 11,
+                    "to": 31
+                }
+            ]
+        },
+        {
+            "features": [
+                "Analysis"
+            ],
+            "headline": "Constraint checking",
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/StringChecker.hs",
+                    "from": 8,
+                    "to": 67
+                }
+            ]
+        },
+        {
+            "features": [
+                "Text-to-AST"
+            ],
+            "headline": "Convert value representation",
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [
+                "Template Haskell"
+            ],
+            "concepts": [
+                "Lifting",
+                "Quotation"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/QuasiQuoter.hs",
+                    "from": 19,
+                    "to": 24
+                }
+            ]
+        },
+        {
+            "features": [],
+            "headline": "Embedded turnstile object in Haskell expression context",
+            "perspectives": [
+                "Data"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [
+                "Template Haskell"
+            ],
+            "concepts": [
+                "Quasi-quotation"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/QQ/Sample.hs",
+                    "from": 8,
+                    "to": 24
+                }
+            ]
+        },
+        {
+            "features": [],
+            "headline": "CLI actions to get embedded turnstile object",
+            "perspectives": [
+                "Capture",
+                "Data"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Algebraic data type",
+                "Record type"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "output/cli.txt",
+                    "from": 1,
+                    "to": 3
+                }
+            ]
+        },
+        {
+            "features": [],
+            "headline": "Sample Input and Output",
+            "perspectives": [
+                "Data"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/SampleIO.hs",
+                    "from": 7,
+                    "to": 21
+                }
+            ]
+        },
+        {
+            "features": ["Interpretation"],
+            "headline": "Generating transitions and runtime by folding over generated event functions",
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Language/FSML/Interpreter.hs",
+                    "from": 9,
+                    "to": 27
+                }
+            ]
+        },
+        {
+            "features": [],
+            "headline": "Run FSM",
+            "perspectives": [
+                "Test"
+            ],
+            "languages": [
+                "Haskell"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "Run.hs",
+                    "from": 7,
+                    "to": 11
+                }
+            ]
+        }
+    ]
+}
