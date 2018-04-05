@@ -3,3 +3,6 @@
 [#]*[#]
 .\#*
 .idea
+newHaskell/Language/FSML/QQ/*.dyn_*
+newHaskell/Language/FSML/QQ/*.hi
+newHaskell/Language/FSML/QQ/*.o
