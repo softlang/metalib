@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fsml:FSM xmlns:fsml="http://www.softlang.org/metalib/emf/Fsml">
+  <states name="locked">
+    <transitions input="ticket" action="collect" target="unlocked"/>
+    <transitions input="pass" action="alarm" target="exception"/>
+  </states>
+  <states name="unlocked">
+    <transitions input="ticket" action="eject" target="unlocked"/>
+    <transitions input="pass" target="locked"/>
+  </states>
+  <states name="exception">
+    <transitions input="mute" action="" target="exception"/>
+    <transitions input="ticket" action="eject" target="exception"/>
+    <transitions input="release" target="locked"/>
+  </states>
+</fsml:FSM>
