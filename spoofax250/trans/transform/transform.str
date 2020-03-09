@@ -1,0 +1,20 @@
+module transform
+
+imports
+  nabl2shared
+  nabl2runtime
+  statics/fsml
+  codegen/java
+  codegen/dot
+  
+rules
+
+  // Transform FSM to Java Class
+  generate-java: (selected, _, _, path, project-path) -> (filename, result)
+    with filename := <guarantee-extension(|"java")> path     
+       ; result   := <to-java(|<base-filename; remove-extension> filename)> selected
+
+  // Transform FSM to Graphviz dot file
+  generate-dot: (selected, _, _, path, project-path) -> (filename, result)
+    with filename := <guarantee-extension(|"dot")> path     
+       ; result   := <to-dot(|<base-filename; remove-extension> filename)> selected

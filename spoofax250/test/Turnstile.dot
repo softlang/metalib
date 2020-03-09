@@ -1,0 +1,21 @@
+digraph fsm  {
+
+		//setup
+		graph [nodesep=0.5, rankdir=LR, title="Sample FSM"];
+		
+		locked		[style=filled]; //initial state     
+		locked -> unlocked	[label="ticket/collect"]; // transition
+		locked -> exception	[label="pass/alarm"]; // transition
+		
+		unlocked; // state     
+		unlocked -> unlocked	[label="ticket/eject"]; // transition
+		unlocked -> locked	[label="pass"]; // transition
+		
+		exception; // state     
+		exception -> exception	[label="ticket/eject"]; // transition
+		exception -> exception	[label="pass"]; // transition
+		exception -> exception	[label="mute"]; // transition
+		exception -> locked	[label="release"]; // transition
+		
+		    				
+}

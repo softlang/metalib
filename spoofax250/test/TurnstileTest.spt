@@ -1,0 +1,36 @@
+module tests
+
+language Fsml
+
+test duplicate event id [[
+	initial state s1 {e;e;}
+]] 2 error
+
+test duplicate state id [[
+	initial state s {}
+	state s {}
+]] 2 error
+
+test duplicate state id 2 [[
+	initial state s1 {}
+	state s2 {}
+	state s2 {}
+]] 2 error
+
+test no initial state [[
+	state s {}
+]] 1 error
+
+test multiple initial states [[
+	initial state s1 {}
+	initial state s2 {}
+]] 2 error
+
+test unreachable state [[
+	initial state s1 {}
+	state s2 {}
+]] 1 warning
+
+test missing state [[
+	initial state s1 {e->s2;}
+]] 1 error

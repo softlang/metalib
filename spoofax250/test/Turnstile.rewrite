@@ -1,0 +1,34 @@
+Fsm(
+  [ State(
+      Some(Initial(){TermIndex("test/Turnstile.fsm", 1)}){TermIndex("test/Turnstile.fsm", 2)}
+    , "locked-rewrite"
+    , [ Transition(
+          Input("ticket"{TermIndex("test/Turnstile.fsm", 4)}){TermIndex("test/Turnstile.fsm", 5)}
+        , Some(Action("collect"{TermIndex("test/Turnstile.fsm", 6)}){TermIndex("test/Turnstile.fsm", 7)}){TermIndex("test/Turnstile.fsm", 8)}
+        , Some(Target("unlocked"{TermIndex("test/Turnstile.fsm", 9)}){TermIndex("test/Turnstile.fsm", 10)}){TermIndex("test/Turnstile.fsm", 11)}
+        ){TermIndex("test/Turnstile.fsm", 12)}
+      , Transition(
+          Input("pass"{TermIndex("test/Turnstile.fsm", 13)}){TermIndex("test/Turnstile.fsm", 14)}
+        , Some(Action("alarm"{TermIndex("test/Turnstile.fsm", 15)}){TermIndex("test/Turnstile.fsm", 16)}){TermIndex("test/Turnstile.fsm", 17)}
+        , Some(Target("exception"{TermIndex("test/Turnstile.fsm", 18)}){TermIndex("test/Turnstile.fsm", 19)}){TermIndex("test/Turnstile.fsm", 20)}
+        ){TermIndex("test/Turnstile.fsm", 21)}
+      ]
+    )
+  , State(
+      None(){TermIndex("test/Turnstile.fsm", 27)}
+    , "unlocked-rewrite"
+    , [ Transition(Input("ticket"{TermIndex("test/Turnstile.fsm", 29)}){TermIndex("test/Turnstile.fsm", 30)}, Some(Action("eject"{TermIndex("test/Turnstile.fsm", 31)}){TermIndex("test/Turnstile.fsm", 32)}){TermIndex("test/Turnstile.fsm", 33)}, None(){TermIndex("test/Turnstile.fsm", 34)}){TermIndex("test/Turnstile.fsm", 35)}
+      , Transition(Input("pass"{TermIndex("test/Turnstile.fsm", 36)}){TermIndex("test/Turnstile.fsm", 37)}, None(){TermIndex("test/Turnstile.fsm", 38)}, Some(Target("locked"{TermIndex("test/Turnstile.fsm", 39)}){TermIndex("test/Turnstile.fsm", 40)}){TermIndex("test/Turnstile.fsm", 41)}){TermIndex("test/Turnstile.fsm", 42)}
+      ]
+    )
+  , State(
+      None(){TermIndex("test/Turnstile.fsm", 48)}
+    , "exception-rewrite"
+    , [ Transition(Input("ticket"{TermIndex("test/Turnstile.fsm", 50)}){TermIndex("test/Turnstile.fsm", 51)}, Some(Action("eject"{TermIndex("test/Turnstile.fsm", 52)}){TermIndex("test/Turnstile.fsm", 53)}){TermIndex("test/Turnstile.fsm", 54)}, None(){TermIndex("test/Turnstile.fsm", 55)}){TermIndex("test/Turnstile.fsm", 56)}
+      , Transition(Input("pass"{TermIndex("test/Turnstile.fsm", 57)}){TermIndex("test/Turnstile.fsm", 58)}, None(){TermIndex("test/Turnstile.fsm", 59)}, None(){TermIndex("test/Turnstile.fsm", 60)}){TermIndex("test/Turnstile.fsm", 61)}
+      , Transition(Input("mute"{TermIndex("test/Turnstile.fsm", 62)}){TermIndex("test/Turnstile.fsm", 63)}, None(){TermIndex("test/Turnstile.fsm", 64)}, None(){TermIndex("test/Turnstile.fsm", 65)}){TermIndex("test/Turnstile.fsm", 66)}
+      , Transition(Input("release"{TermIndex("test/Turnstile.fsm", 67)}){TermIndex("test/Turnstile.fsm", 68)}, None(){TermIndex("test/Turnstile.fsm", 69)}, Some(Target("locked"{TermIndex("test/Turnstile.fsm", 70)}){TermIndex("test/Turnstile.fsm", 71)}){TermIndex("test/Turnstile.fsm", 72)}){TermIndex("test/Turnstile.fsm", 73)}
+      ]
+    )
+  ]
+){TermIndex("test/Turnstile.fsm", 86)}

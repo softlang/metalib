@@ -1,0 +1,10 @@
+module Main
+
+imports Syntax Transformation Analysis
+
+language
+
+  extensions : fsm
+
+  provider : target/metaborg/stratego.jar
+  provider : target/metaborg/stratego-javastrat.jar

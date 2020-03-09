@@ -1,0 +1,34 @@
+Fsm(
+  [ State(
+      Some(Initial())
+    , "locked"
+    , [ Transition(
+          Input("ticket")
+        , Some(Action("collect"))
+        , Some(Target("unlocked"))
+        )
+      , Transition(
+          Input("pass")
+        , Some(Action("alarm"))
+        , Some(Target("exception"))
+        )
+      ]
+    )
+  , State(
+      None()
+    , "unlocked"
+    , [ Transition(Input("ticket"), Some(Action("eject")), None())
+      , Transition(Input("pass"), None(), Some(Target("locked")))
+      ]
+    )
+  , State(
+      None()
+    , "exception"
+    , [ Transition(Input("ticket"), Some(Action("eject")), None())
+      , Transition(Input("pass"), None(), None())
+      , Transition(Input("mute"), None(), None())
+      , Transition(Input("release"), None(), Some(Target("locked")))
+      ]
+    )
+  ]
+)

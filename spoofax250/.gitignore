@@ -1,0 +1,7 @@
+/.cache
+/bin
+/src-gen
+/target
+
+/.settings
+/.factorypath

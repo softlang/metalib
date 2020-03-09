@@ -1,0 +1,31 @@
+module outline
+
+imports
+  
+  signatures/Fsml-sig
+  libspoofax/editor/outline
+
+rules
+  
+  editor-outline:
+    (_, _, ast, path, project-path) -> outline
+    where
+      outline := <simple-label-outline(to-outline-label)> ast
+  
+  to-outline-label :
+    State(None(), name, _) -> $[[name] : State ] 
+
+  to-outline-label :
+    State(Some(Initial()), name, _) -> $[[name] : initial State ] 
+
+//  to-outline-label :
+//    Transition(Input(input), None(), None()) -> $[[input] : Transition ] 
+    
+  to-outline-label :
+    Transition(Input(input), Some(Action(action)), None()) -> $[[input] / [action] : Transition ]  
+    
+  to-outline-label :
+    Transition(Input(input), Some(Action(action)), Some(Target(target))) -> $[[input] / [action] -> [target] : Transition ]      
+
+  to-outline-label :
+    Transition(Input(input), None(), Some(Target(target))) -> $[[input] -> [target] : Transition ]        

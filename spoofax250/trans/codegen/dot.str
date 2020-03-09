@@ -1,0 +1,89 @@
+module codegen/dot
+
+imports 
+  signatures/-
+  nabl2/api
+
+rules
+
+	//Transform FSM to Graphviz Dot
+  	to-dot(|filename) :
+    	Fsm(state*) ->
+	    $[digraph fsm  {
+	    
+	    		//setup
+    			graph [open]nodesep=0.5, rankdir=LR, title="Sample FSM"[close];
+    			
+    			[state'*]    				
+		}]
+		with state'* := <map(to-dot-state)> state*
+      	with open := "["
+ 		with close := "]"
+	
+	//initial state
+	to-dot-state:
+		State(Some(intial), id_, transition*) ->
+	    $[[id_]	[open]style=filled[close]; //initial state     
+ 	     [transition'*]
+ 	    ]
+	    with transition'* := <map(to-dot-transition(|$[[id_]]))> transition*
+	    with open := "["
+ 		with close := "]"
+	
+	//non initial states    
+	to-dot-state:
+		State(None(), id_, transition*) ->
+	    $[[id_]; // state     
+ 	     [transition'*]
+ 	    ]
+	    with transition'* := <map(to-dot-transition(|$[[id_]]))> transition*
+	
+	//trasition with action and target 	
+ 	to-dot-transition(|parentId):
+ 		Transition(input, Some(action), Some(target)) ->
+ 		$[[parentId] -> [target']	[open]label="[input']/[action']"[close]; // transition
+ 		]
+ 		with input' := <to-dot-input> input
+		with action' := <to-dot-action> action
+		with target' := <to-dot-target> target
+		with open := "["
+ 		with close := "]"
+ 		
+ 	//transition with action
+ 	to-dot-transition(|parentId):
+ 		Transition(input, Some(action), None()) ->
+ 		$[[parentId] -> [parentId]	[open]label="[input']/[action']"[close]; // transition
+ 		]
+ 		with input' := <to-dot-input> input
+		with action' := <to-dot-action> action
+		with open := "["
+ 		with close := "]"
+ 		
+ 	//transition with target
+ 	to-dot-transition(|parentId):
+ 		Transition(input, None(), Some(target)) ->
+ 		$[[parentId] -> [target']	[open]label="[input']"[close]; // transition
+ 		]
+ 		with input' := <to-dot-input> input
+		with target' := <to-dot-target> target
+		with open := "["
+ 		with close := "]"
+ 	
+ 	//transition without action wor target	
+ 	to-dot-transition(|parentId):
+ 		Transition(input, None(), None()) ->
+ 		$[[parentId] -> [parentId]	[open]label="[input']"[close]; // transition
+ 		]
+ 		with input' := <to-dot-input> input
+		with open := "["
+ 		with close := "]"
+
+	to-dot-input:
+		Input(input) -> $[[input]]
+
+	to-dot-action:
+		Action(action) -> $[[action]]
+
+	to-dot-target:
+		Target(target) -> $[[target]]
+	        	

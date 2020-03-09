@@ -1,0 +1,46 @@
+scope graph {
+  scope #test/Turnstile.fsm-stateScope-3 {
+    declarations {
+      Transition{Input("release") @test/Turnstile.fsm:68}
+      Transition{Input("pass") @test/Turnstile.fsm:58}
+      Transition{Input("ticket") @test/Turnstile.fsm:51}
+      Transition{Input("mute") @test/Turnstile.fsm:63}
+    }
+  }
+  scope #test/Turnstile.fsm-stateScope-2 {
+    declarations {
+      Transition{Input("ticket") @test/Turnstile.fsm:30}
+      Transition{Input("pass") @test/Turnstile.fsm:37}
+    }
+  }
+  scope #-s-1 {
+    declarations {
+      InitialAll{"init" @test/Turnstile.fsm:47}
+      State{"locked" @test/Turnstile.fsm:3}
+      TransitionTarget{"locked" @test/Turnstile.fsm:70}
+      TransitionTarget{"locked" @test/Turnstile.fsm:39}
+      InitialAll{"init" @test/Turnstile.fsm:80}
+      TransitionTarget{"exception" @test/Turnstile.fsm:18}
+      TransitionTarget{"unlocked" @test/Turnstile.fsm:9}
+      InitialTest{"init" @test/Turnstile.fsm:26}
+      State{"exception" @test/Turnstile.fsm:49}
+      State{"unlocked" @test/Turnstile.fsm:28}
+      InitialAll{"init" @test/Turnstile.fsm:26}
+      Initial{Some(Initial()) @test/Turnstile.fsm:26}
+    }
+    references {
+      TransitionTarget{"exception" @test/Turnstile.fsm:49}
+      TransitionTarget{"unlocked" @test/Turnstile.fsm:28}
+      State{"unlocked" @test/Turnstile.fsm:9}
+      State{"exception" @test/Turnstile.fsm:18}
+      State{"locked" @test/Turnstile.fsm:39}
+      State{"locked" @test/Turnstile.fsm:70}
+    }
+  }
+  scope #test/Turnstile.fsm-stateScope-1 {
+    declarations {
+      Transition{Input("ticket") @test/Turnstile.fsm:5}
+      Transition{Input("pass") @test/Turnstile.fsm:14}
+    }
+  }
+}

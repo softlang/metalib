@@ -1,0 +1,18 @@
+module fsml
+
+imports
+  
+  completion/completion
+  pp
+  transform/transform
+  transform/outline
+  statics/analysis
+
+rules // Debugging
+  
+  debug-show-aterm:
+    (node, _, _, path, project-path) -> (filename, result)
+    with
+      filename := <guarantee-extension(|"aterm")> path
+    ; result   := node
+ 

@@ -1,0 +1,324 @@
+{
+    "name": "spoofax250",
+    "baseuri": "https://github.com/64kilobit/FsmlSpoofaxMigration/blob/master/",
+    "headline": "Spoofax version 2.5.0",
+    "sections": [
+        {
+            "headline": "Capture of Editor",
+            "features": [
+                "Textual Syntax"
+            ],
+            "perspectives": [
+                "Capture"
+            ],
+            "languages": [
+                "FSML"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Structured Editor"
+            ],
+            "artifacts": [
+                {
+                    "type": "all",
+                    "link": "test/editor.png"
+                }
+            ]
+        },
+        {
+            "headline": "Input Data",
+            "features": [
+                "Concrete Syntax"
+            ],
+            "perspectives": [
+                "Data"
+            ],
+            "languages": [
+                "FSML"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "all",
+                    "link": "test/Turnstile.fsm"
+                }
+            ]
+        },
+        {
+            "headline": "Syntax definition",
+            "features": [
+                "Text-to-CST"
+            ],
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "SDF3"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Grammar"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "syntax/Fsml.sdf3",
+                    "from": 4,
+                    "to": 222
+                }
+            ]
+        },
+        {
+            "headline": "Capture of Editor with Error markers",
+            "features": [
+                "Analysis"
+            ],
+            "perspectives": [
+                "Capture"
+            ],
+            "languages": [
+                "FSML"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Structured Editor",
+                "Error"
+            ],
+            "artifacts": [
+                {
+                    "type": "all",
+                    "link": "test/errorMarkers.png"
+                }
+            ]
+        },
+        {
+            "headline": "Constraints in NaBL2 for showing error markers",
+            "features": [
+                "Analysis"
+            ],
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "NaBL2"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Error",
+                "Multiset",
+                "Name binding",
+                "Query",
+                "Scope"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "trans/statics/fsml.nabl2",
+                    "from": 5,
+                    "to": 24
+                }
+            ]
+        },
+        {
+            "headline": "How to generate DOT",
+            "features": [],
+            "perspectives": [
+                "Capture"
+            ],
+            "languages": [
+                "FSML"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "all",
+                    "link": "test/generateDot.png"
+                }
+            ]
+        },
+        {
+            "headline": "Translation rules for DOT",
+            "features": [
+                "Translation"
+            ],
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Stratego"
+            ],
+            "technologies": [
+                "Stratego/XT"
+            ],
+            "concepts": [
+                "Template processing"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "trans/codegen/dot.str",
+                    "from": 7,
+                    "to": 22
+                }
+            ]
+        },
+        {
+            "headline": "How to generate Java",
+            "features": [
+                "Code generator"
+            ],
+            "perspectives": [
+                "Capture"
+            ],
+            "languages": [
+                "FSML"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "all",
+                    "link": "test/generateJava.png"
+                }
+            ]
+        },
+        {
+            "headline": "Translation rules for Java",
+            "features": [
+                "Compilation"
+            ],
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Stratego"
+            ],
+            "technologies": [
+                "Stratego/XT"
+            ],
+            "concepts": [
+                "Template processing",
+                "Code generation"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "trans/codegen/java.str",
+                    "from": 7,
+                    "to": 30
+                }
+            ]
+        },
+        {
+            "headline": "Capture of Editor and Outlining",
+            "features": [],
+            "perspectives": [
+                "Capture"
+            ],
+            "languages": [
+                "FSML"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Structured Editor",
+                "Outlining"
+            ],
+            "artifacts": [
+                {
+                    "type": "all",
+                    "link": "test/outlining.png"
+                }
+            ]
+        },
+        {
+            "headline": "Outlining",
+            "features": [
+                "Translation"
+            ],
+            "perspectives": [
+                "Implementation"
+            ],
+            "languages": [
+                "Stratego"
+            ],
+            "technologies": [
+                "Stratego/XT"
+            ],
+            "concepts": [
+                "Stuctured Editor"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "trans/transform/outline.str",
+                    "from": 8,
+                    "to": 16
+                }
+            ]
+        },
+        {
+            "headline": "Scope Graph",
+            "features": [],
+            "perspectives": [
+                "Data"
+            ],
+            "languages": [
+                "Spoofax-Scopegraph-Language"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Scoping"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "/test/project.scope-graph",
+                    "from": 1,
+                    "to": 15
+                }
+            ]
+        },
+        {
+            "headline": "How to show scope graph",
+            "features": [],
+            "perspectives": [
+                "Capture"
+            ],
+            "languages": [
+                "FSML"
+            ],
+            "technologies": [],
+            "concepts": [],
+            "artifacts": [
+                {
+                    "type": "all",
+                    "link": "test/scopeGraph.png"
+                }
+            ]
+        },
+        {
+            "headline": "Testing",
+            "features": [],
+            "perspectives": [
+                "Test"
+            ],
+            "languages": [
+                "spt"
+            ],
+            "technologies": [],
+            "concepts": [
+                "Testing"
+            ],
+            "artifacts": [
+                {
+                    "type": "some",
+                    "link": "test/TurnstileTest.spt",
+                    "from": 1,
+                    "to": 12
+                }
+            ]
+        }
+    ]
+}
